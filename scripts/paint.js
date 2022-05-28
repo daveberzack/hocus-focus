@@ -42,7 +42,7 @@ const setUpCanvases = (imageName, d)=>{
 
     layers[0].beginPath();
     layers[0].rect(0, 0, d, d);
-    layers[0].fillStyle = "#CCCCFF";
+    layers[0].fillStyle = "#FFFFFF";
     layers[0].fill();
 
 }
