@@ -105,6 +105,8 @@ const doPaint = () => {
 }
 
 const startGame = (data) => {
+    
+    window.addEventListener( 'touchmove', function() {})
 
     const challenge = Math.floor( Math.random()*data.length );
     $clue.html(data[challenge].clue);
