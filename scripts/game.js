@@ -19,22 +19,7 @@ let hasWon = false;
 const doWin =()=>{
     hasWon = true;
     clearInterval(loopInterval);
-
-    const minV = 1;
-    const maxV = 60;
-    const appearFrames = 400;
-    let appearCounter=0;
-    let appearInterval = setInterval(()=>{
-        vFactor = minV + (maxV-minV)* (1-appearCounter/appearFrames);
-        for (let i=0; i<15; i++){
-            //const x = x_in*naturalGameWidth/actualGameWidth;
-            paint(Math.random()*canvasDimensions, Math.random()*canvasDimensions, Math.random()*vFactor);
-        }
-        if (appearCounter>appearFrames) clearInterval(appearInterval);
-        pic.style.opacity = Math.pow(appearCounter/appearFrames, 2) ;
-        appearCounter++;
-    },10);
-
+    revealAll(xPos, yPos, canvasDimensions);
 }
 
 const doPenalty =()=>{
@@ -45,7 +30,7 @@ const doPenalty =()=>{
     },500);
 }
 
-const onClick = () => {
+const onClick = (e) => {
     if (hasWon) return;
 
     const p = hitContext.getImageData(xPos, yPos, 1, 1).data;
@@ -105,8 +90,8 @@ const doPaint = () => {
 }
 
 const startGame = (data) => {
-    
-    window.addEventListener( 'touchmove', function() {})
+
+    document.addEventListener("touchmove", (e)=> {e.preventDefault();}, {passive: false});
 
     const challenge = Math.floor( Math.random()*data.length );
     $clue.html(data[challenge].clue);

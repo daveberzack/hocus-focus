@@ -96,3 +96,42 @@ const paint = (x,y,v) => {
     if (Math.random()>1) drawRect(x,y,r,hex,layerIndex);
     else drawCircle(x,y,r,hex,layerIndex);
 }
+
+const revealAll = (clickX, clickY, dimension)=> {
+    
+    const minV = 1;
+    const maxV = 60;
+    const appearFrames = 400;
+    let appearCounter=0;
+    const margin=50;
+
+    let appearInterval = setInterval(()=>{
+        appearCounter++;
+
+        let opacity = Math.pow(appearCounter/appearFrames, 2);
+        pic.style.opacity = opacity ;
+
+        vFactor = minV + (maxV-minV)* (1-appearCounter/appearFrames);
+        for (let i=0; i<50; i++){
+            const v = Math.random()*vFactor*3*appearCounter/appearFrames;
+            const d = (Math.random()-.5)*2 * dimension * appearCounter/appearFrames +v*5;
+            const a = Math.random()*Math.PI*2;
+            const {x, y} = getNewCoordinates(clickX, clickY, a, d);
+            if (x>-margin && y>-margin && x<dimension+margin && y<dimension+margin){
+                paint(x, y, v);
+                //paint(Math.random()*dimension, Math.random()*dimension, Math.random()*vFactor);
+            }
+            
+        }
+
+        if (appearCounter>appearFrames) clearInterval(appearInterval);
+    },10);
+    
+}
+
+
+const getNewCoordinates = (x0,y0,radians,distance) => {
+    const dy = distance*Math.cos(radians);
+    const dx = distance*Math.sin(radians);
+    return {x:x0+dx, y:y0+dy};
+}
