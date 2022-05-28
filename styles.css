@@ -1,0 +1,167 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+* {
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: 500;
+}
+
+body {
+    background-color: #000000;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+header {
+    background: #FFFFFF;
+    padding: 10px;
+}
+#logo {
+    font-weight: 700;
+    font-size:40px;
+    color: #000000;
+}
+#help-link {
+    display: block;
+    font-family: 'Signika Negative', sans-serif;
+    position: absolute;
+    top:10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 30px;
+    background-color: #000000;
+    padding: 5px;
+    border-radius: 99px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+#clue {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 40px;
+}
+
+#timer {
+    margin: 30px auto;
+    width: 600px;
+    height: 30px;
+    overflow: hidden;
+    border-radius:90px;
+}
+#timer-label {
+    border-radius:90px;
+    background: #FFFFFF;
+    color: #000000;
+    font-weight: 700;
+    min-width: 30px;
+    width: 0%;
+    font-size: 26px;
+    margin:0px auto;
+    height: 26px;
+    padding: 2px;
+    text-align: center;
+
+    transition: box-shadow 500ms linear;
+    transition: background-color 500ms linear;
+}
+x {
+    -webkit-box-shadow: 0px 0px 15px 10px #000000; 
+    box-shadow: 0px 0px 15px 10px #000000;  
+}
+#game {
+    width:600px;
+    margin:30px auto;
+    position: relative;
+    background-color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    overflow: hidden;
+}
+
+#game >canvas{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#game #paint0 {
+    position: static;
+}
+
+#pic {
+    opacity: 0;
+}
+#hit {
+    opacity: 0;
+}
+
+
+#paint0 {
+    filter: blur(6px);
+}
+#paint1 {
+    filter: blur(5px);
+}
+#paint2 {
+    filter: blur(4px);
+}
+#paint3 {
+    filter: blur(3px);
+}
+#paint4 {
+    filter: blur(2px);
+}
+#paint5 {
+    filter: blur(2px);
+}
+#paint6 {
+    filter: blur(1px);
+}
+#paint7 {
+    filter: blur(0px);
+}

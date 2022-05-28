@@ -1,0 +1,13 @@
+
+offset brush?
+restart game (on resize, too)
+upload
+test on mobile
+
+graphic design
+
+
+effects/styles for brush / reveal:
+- rectangular pixel version
+- reveal radially, starting at click point
+- svg-based, with colored shapes appearing as you roll over (by layer)
