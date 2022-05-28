@@ -1,18 +1,20 @@
-const clueEl = document.getElementById('clue');
-const game = document.getElementById('game');
-const timerLabel = document.getElementById('timer-label');
+
+const $timerLabel = $("#timer-label");
+
+const $clue = $("#clue");
+const $game = $("#game");
+const gameWidth = $game.width();
 
 const canvasDimensions = 1000;
-const gameRect = game.getBoundingClientRect();
-
-console.log(gameRect);
-const gameTop = gameRect.x;
-const gameLeft = gameRect.y;
-
-let hasWon = false;
-let loopInterval;
 const gameLoopIncrement = 10;
+let loopInterval;
+let xPos=0;
+let yPos=0;
+let prevX = -1;
+let prevY = -1;
 let velocity = 0;
+let isInGameArea=false;
+let hasWon = false;
 
 const doWin =()=>{
     hasWon = true;
@@ -37,15 +39,16 @@ const doWin =()=>{
 
 const doPenalty =()=>{
     timePassed +=10;
-    timerLabel.style.backgroundColor = "#FF0000";
+    $timerLabel.css("background-color", "#FF0000");
     setTimeout( ()=>{
-        timerLabel.style.backgroundColor = "#000000";
+        $timerLabel.css("backgroundColor", "#000000");
     },500);
 }
 
 const onClick = () => {
     if (hasWon) return;
-    const p = hitContext.getImageData(mouseX*canvasDimensions/actualGameWidth, mouseY*canvasDimensions/actualGameWidth, 1, 1).data;
+
+    const p = hitContext.getImageData(xPos, yPos, 1, 1).data;
     const hex = rgbToHex(p[0], p[1], p[2]);
     const hitSuccess = (hex==0);
     if (hitSuccess){
@@ -64,21 +67,27 @@ const updateTimer = () => {
     timePassed = timePassed + gameLoopIncrement/1000;
     const w = Math.min(timePassed*100/60, 100);
     timerWidth = (timerWidth*3+w)/4; //animate
-    timerLabel.style.width = timerWidth+"%";
-    timerLabel.textContent = Math.floor(timePassed);
+    $timerLabel.width(timerWidth+"%");
+    $timerLabel.text( Math.floor(timePassed) );
 }
 
-
-let mouseX = -1;
-let mouseY = -1;
 const gameLoop = () => {
     if (hasWon) return;
     
-    const {x, y} = pageCoordinatesToCanvasCoordinates(mouseX, mouseY);
-    const inArea = (x>=0 && y >=0);
-    if (inArea){
+    if (isInGameArea){
         hasStarted = true;
-        doPaint(x, y);
+        if (prevX>=0 && prevY>=0){
+            let newV = Math.sqrt( (prevX-xPos)*(prevX-xPos) + (prevY-yPos)*(prevY-yPos) );
+            let v = (velocity*2+newV)/3;
+            velocity = Math.min(40, v);
+            doPaint();
+        }
+        prevX=xPos;
+        prevY=yPos;
+    }
+    else {
+        prevX=-1;
+        prevY=-1;
     }
     
     if (hasStarted) {
@@ -87,60 +96,36 @@ const gameLoop = () => {
 
 }
 
-const actualGameWidth = pic.offsetWidth;
-const maxX = pic.offsetWidth;
-const maxY = pic.offsetHeight;
-const pageCoordinatesToCanvasCoordinates = (mx, my) => {
-
-    //subtract the top/left margin. then multiply by dimensions/visualWidth
-    const x=mx;
-    const y = my;
-    console.log(x+","+y);
-    return {x, y};
-}
-
-
-let prevX = -1;
-let prevY = -1;
-const doPaint = (x, y) => {
-
-    if (prevX>=0 && prevY>=0){
-            
-        let newV = Math.sqrt( (prevX-mouseX)*(prevX-mouseX) + (prevY-mouseY)*(prevY-mouseY) );
-        let v = (velocity*2+newV)/3;
-        velocity =v;
-        if (v>40) v=40;
-        for (let i=0; i<20; i++){
-            const paintX = mouseX + (Math.random()-.5)*v*2;
-            const paintY = mouseY + (Math.random()-.5)*v*2;
-            paint(paintX*canvasDimensions/actualGameWidth, paintY*canvasDimensions/actualGameWidth, v*(Math.random()*1+.75));
-        }
-        
-        prevX=mouseX;
-        prevY=mouseY;
+const doPaint = () => {
+    for (let i=0; i<20; i++){
+        const paintX = xPos + (Math.random()-.5)*velocity*2;
+        const paintY = yPos + (Math.random()-.5)*velocity*2;
+        paint(paintX, paintY, velocity*(Math.random()*1+.75));
     }
-    else {
-        prevX=-1;
-        prevY=-1;
-    }
-
 }
-
-
 
 const startGame = (data) => {
 
     const challenge = Math.floor( Math.random()*data.length );
-    clueEl.textContent = data[challenge].clue;
+    $clue.html(data[challenge].clue);
     setUpCanvases( data[challenge].name, canvasDimensions );
 
-    document.addEventListener('mousemove', e => {
-        //console.log(e.pageX+","+e.pageY);
-        mouseX = e.pageX;
-        mouseY = e.pageY;
+    $game.mousemove(e => {
+        var rect = e.target.getBoundingClientRect();
+        xPos = (e.clientX - rect.left) * canvasDimensions/gameWidth;
+        yPos = (e.clientY - rect.top) * canvasDimensions/gameWidth;
     });
     
-    game.addEventListener('mouseup', onClick);
+    $game.mouseenter(e => {
+        isInGameArea=true;
+    });
+
+    $game.mouseleave(e => {
+        isInGameArea=false;
+    });
+
+    $game.click(onClick);
+
     loopInterval = setInterval( gameLoop, gameLoopIncrement );
 }
 
