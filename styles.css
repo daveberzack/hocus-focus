@@ -117,9 +117,8 @@ x {
     width:600px;
     margin:30px auto;
     position: relative;
-    background-color: #FFFFFF;
-    border: 2px solid #FFFFFF;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 #game >canvas{

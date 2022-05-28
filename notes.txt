@@ -1,9 +1,9 @@
-
-offset brush?
+get offset, finish refactor
 restart game (on resize, too)
+
+migrate to react (painter component)
 upload
 test on mobile
-
 graphic design
 
 
