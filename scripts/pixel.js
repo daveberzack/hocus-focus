@@ -40,9 +40,9 @@ function rgbToHex(r, g, b) {
 }
 
 
-const stamp = (x,y,r) => {
+const stamp = (x,y,r,layer) => {
         const d = picContext.getImageData(x-r, y-r, 2*r+1, 2*r+1);
-        if (d) layers[7].putImageData(d, x-r, y-r);
+        if (d) layers[layer].putImageData(d, x-r, y-r);
 }
 
 const pixel = (x,y,res,layerIndex) => {
@@ -58,38 +58,40 @@ const pixel = (x,y,res,layerIndex) => {
     ctx.fill();
 }
 
-const getLayerIndex = (v)=>{
-    if      (v<3)  return 6;
-    else if (v<4)  return 5;
-    else if (v<10) return 4;
-    else if (v<15) return 3;
-    else if (v<20) return 2;
-    else if (v<25) return 1;
-    else return 0;
+const sprayPixels = (x,y,res,layerIndex, n) => {
+    pixel(x, y, res, layerIndex);
+    for (let i=0; i<n-1; i++){
+        let px = Math.max(0, x + (Math.random()-.5) *res*3 );
+        let py = Math.max(0, y + (Math.random()-.5) *res*3 );
+        pixel(px, py, res, layerIndex);
+    }
 }
 
+const getLayerIndex = (v)=>{
+    if      (v<3)  return 6;
+    else if (v<6)  return 5;
+    else if (v<10) return 4;
+    else if (v<15) return 3;
+    else if (v<25) return 2;
+    else if (v<35) return 1;
+    else return 0;
+}
 
 
 const doPaint = (x, y, v) => {
 
     if (v<.1) return;
-    else if (v<2){
-        for (let i=0; i<4; i++){
+    else if (v<3){
+        for (let i=0; i<3; i++){
             let px = x + (Math.random()-.5)*10;
             let py = y + (Math.random()-.5)*10;
-            stamp(px,py,1);
+            stamp(px,py,1,7);
         }
     }
     else {
         let layerIndex= getLayerIndex(v);
-        const res = layerResolutions[layerIndex];
-
-        pixel(x, y, res, layerIndex);
-        for (let i=0; i<4; i++){
-            let px = Math.max(0, x + (Math.random()-.5) *res*3 );
-            let py = Math.max(0, y + (Math.random()-.5) *res*3 );
-            pixel(px, py, res, layerIndex);
-        }
+        sprayPixels(x,y,layerResolutions[layerIndex],layerIndex, 2);
+        if(layerIndex>0) sprayPixels(x,y,layerResolutions[layerIndex-1],layerIndex-1, 1);
     }
 
 }

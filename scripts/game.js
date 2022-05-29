@@ -80,10 +80,11 @@ const gameLoop = () => {
 let challenge;
 const startGame = () => {
     hidePic();
+    hasWon=false;
     timePassed = 0;
     timerWidth = 0;
     hasStarted = false;
-    document.addEventListener("touchmove", (e)=> {e.preventDefault();}, {passive: false});
+    //document.addEventListener("touchmove", (e)=> {e.preventDefault();}, {passive: false});
     $clue.html(challenge.clue);
     setUpCanvases( challenge.name, canvasDimensions );
     clearInterval(loopInterval);
