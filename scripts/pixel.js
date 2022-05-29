@@ -87,8 +87,8 @@ const doPaint = (x, y, v) => {
             let py = y + (Math.random()-.5)*12;
             stamp(px,py,1,7);
         }
-        sprayPixels(x,y,layerResolutions[6],layerIndex, 1);
-        sprayPixels(x,y,layerResolutions[5],layerIndex, 1);
+        sprayPixels(x,y,layerResolutions[6],6, 1);
+        sprayPixels(x,y,layerResolutions[5],5, 1);
     }
     else {
         let layerIndex= getLayerIndex(v);

@@ -29,7 +29,7 @@ const doPenalty =()=>{
     },500);
 }
 
-const onClick = (e) => {
+const handleGuess = (e) => {
     if (hasWon) return;
 
     const p = hitContext.getImageData(xPos, yPos, 1, 1).data;
@@ -91,10 +91,15 @@ const startGame = () => {
     loopInterval = setInterval( gameLoop, gameLoopIncrement );
 }
 
+const updateMousePosition = (x, y)=> {
+    var rect = $game.offset();
+    xPos  = (x - rect.left) * canvasDimensions/gameWidth;
+    yPos = (y - rect.top) * canvasDimensions/gameWidth;
+    console.log("update   "+xPos+","+yPos,  rect);
+}
+
 $game.mousemove(e => {
-    var rect = e.target.getBoundingClientRect();
-    xPos = (e.clientX - rect.left) * canvasDimensions/gameWidth;
-    yPos = (e.clientY - rect.top) * canvasDimensions/gameWidth;
+    updateMousePosition(e.clientX, e.clientY);
 });
 
 $game.mouseenter(e => {
@@ -105,9 +110,23 @@ $game.mouseleave(e => {
     isInGameArea=false;
 });
 
-$game.click(onClick);
+
+$('body').on('touchstart', function(e){
+    isInGameArea=true;
+});
+
+$('body').on('touchend', function(e){
+    isInGameArea=false;
+});
+$('body').on('touchmove', e => {
+    updateMousePosition(e.touches[0].clientX, e.touches[0].clientY);
+});
+
+
+$game.click(handleGuess);
 
 $reset.click(startGame);
+
 
 fetch("data.json")
   .then(response => response.json())

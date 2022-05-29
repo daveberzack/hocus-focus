@@ -51,6 +51,11 @@ table {
 body {
     background-color: #000000;
     font-family: 'VT323', monospace;
+    position: relative;
+}
+
+html, body {
+    overflow-x: hidden;
 }
 
 header {
