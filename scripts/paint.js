@@ -64,18 +64,65 @@ const drawRect = (x,y,r,hex,layerIndex) => {
     let w;
     let h;
     if (Math.random()>.5) {
-        w = r*Math.random()*4;
-        h = r*Math.random();
+        w = r*Math.random()*2;
+        h = r*Math.random()/2;
     }
     else {
-        h = r*Math.random()*3;
-        w = r*Math.random();
+        h = r*Math.random()*2;
+        w = r*Math.random()/2;
     }
     const ctx = layers[layerIndex];
     ctx.fillStyle = hex;
     ctx.beginPath();
     ctx.rect( x-r, y-r, w, h);
     ctx.fill();
+}
+
+
+const doPaint = (x, y, v) => {
+
+    if (v<10){
+        for (let i=0; i<3; i++){
+            const paintX = x + (Math.random()-.5)*v*2;
+            const paintY = y + (Math.random()-.5)*v*2;
+            paint(paintX, paintY, v*(Math.random()*2)+1);
+
+            const stampX = x + (Math.random()-.5)*v*2;
+            const stampY = y + (Math.random()-.5)*v*2;
+            stamp(stampX,stampY,50/v,50/v,7);
+        }
+    }
+    else if (v<20){
+        for (let i=0; i<3; i++){
+            const paintX = x + (Math.random()-.5)*v*2;
+            const paintY = y + (Math.random()-.5)*v*2;
+            paint(paintX, paintY, v*(Math.random()*2)+1);
+
+            const stampX = x + (Math.random()-.5)*v*2;
+            const stampY = y + (Math.random()-.5)*v*2;
+            stamp(stampX,stampY,50/v,50/v,5);
+        }
+    }
+    else if (v<30){
+        for (let i=0; i<2; i++){
+            const paintX = x + (Math.random()-.5)*v*2;
+            const paintY = y + (Math.random()-.5)*v*2;
+            paint(paintX, paintY, v*(Math.random()*2)+1);
+
+            const stampX = x + (Math.random()-.5)*v*2;
+            const stampY = y + (Math.random()-.5)*v*2;
+            stamp(stampX,stampY,50/v,50/v,3);
+        }
+    }
+    else {
+        const numDots = Math.min(60, 40/Math.sqrt(v));
+        for (let i=0; i<numDots; i++){
+            const paintX = x + (Math.random()-.5)*v*2;
+            const paintY = y + (Math.random()-.5)*v*2;
+            paint(paintX, paintY, v*(Math.random()*1+.75));
+        }
+    }
+    
 }
 
 //draw circle based on position and color. size and which layer based on velocity
@@ -86,15 +133,27 @@ const paint = (x,y,v) => {
 
     if (v>30) layerIndex=0;
     else if (v>20) layerIndex=1;
-    else if (v>12) layerIndex=2;
-    else if (v>8) layerIndex=3;
-    else if (v>4) layerIndex=4;
-    else if (v>2) layerIndex=5;
+    else if (v>15) layerIndex=2;
+    else if (v>10) layerIndex=3;
+    else if (v>6) layerIndex=4;
+    else if (v>3) layerIndex=5;
     else if (v>1) layerIndex=6;
     else layerIndex=7;
     const r = v;
-    if (Math.random()>1) drawRect(x,y,r,hex,layerIndex);
+    if (Math.random()>.7) drawRect(x,y,r,hex,layerIndex);
     else drawCircle(x,y,r,hex,layerIndex);
+}
+
+const stamp = (x, y, w, h, l) => {
+    const x1 = x-Math.floor(w/2);
+    const y1 = y-Math.floor(w/2);
+
+    const data = picContext.getImageData(x1, y1, w, h);
+    console.log("?", data)
+    if (data){
+        layers[l].putImageData(data, x1, y1);
+    }
+    
 }
 
 const revealAll = (clickX, clickY, dimension)=> {
@@ -108,18 +167,17 @@ const revealAll = (clickX, clickY, dimension)=> {
     let appearInterval = setInterval(()=>{
         appearCounter++;
 
-        let opacity = Math.pow(appearCounter/appearFrames, 2);
-        pic.style.opacity = opacity ;
+        let opacity = Math.pow(appearCounter/appearFrames, 2)+.1;
+        pic.style.opacity = opacity;
 
         vFactor = minV + (maxV-minV)* (1-appearCounter/appearFrames);
         for (let i=0; i<50; i++){
             const v = Math.random()*vFactor*3*appearCounter/appearFrames;
-            const d = (Math.random()-.5)*2 * dimension * appearCounter/appearFrames +v*5;
+            const d = (Math.random()+1) * dimension * appearCounter/appearFrames +v*10;
             const a = Math.random()*Math.PI*2;
             const {x, y} = getNewCoordinates(clickX, clickY, a, d);
             if (x>-margin && y>-margin && x<dimension+margin && y<dimension+margin){
                 paint(x, y, v);
-                //paint(Math.random()*dimension, Math.random()*dimension, Math.random()*vFactor);
             }
             
         }

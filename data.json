@@ -35,6 +35,6 @@
     {"name": "snake", "clue": "Poke the eye."},
     {"name": "stolen", "clue": "Find the stolen goods."},
     {"name": "sunset", "clue": "Watch the bird."},
-    {"name": "tunnel", "clue": "Where does this lead?"},
+    {"name": "tunnel", "clue": "Where does this go?"},
     {"name": "yawn", "clue": "Nudge the sleepyhead."}
 ]

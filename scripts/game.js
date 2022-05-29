@@ -59,13 +59,14 @@ const updateTimer = () => {
 const gameLoop = () => {
     if (hasWon) return;
     
+    let newV = Math.sqrt( (prevX-xPos)*(prevX-xPos) + (prevY-yPos)*(prevY-yPos) );
+    let v = (velocity+newV)/2;
+    velocity = Math.min(40, newV);
+
     if (isInGameArea){
         hasStarted = true;
         if (prevX>=0 && prevY>=0){
-            let newV = Math.sqrt( (prevX-xPos)*(prevX-xPos) + (prevY-yPos)*(prevY-yPos) );
-            let v = (velocity*2+newV)/3;
-            velocity = Math.min(40, v);
-            doPaint();
+            doPaint(xPos, yPos, velocity);
         }
         prevX=xPos;
         prevY=yPos;
@@ -81,13 +82,6 @@ const gameLoop = () => {
 
 }
 
-const doPaint = () => {
-    for (let i=0; i<20; i++){
-        const paintX = xPos + (Math.random()-.5)*velocity*2;
-        const paintY = yPos + (Math.random()-.5)*velocity*2;
-        paint(paintX, paintY, velocity*(Math.random()*1+.75));
-    }
-}
 
 const startGame = (data) => {
 
