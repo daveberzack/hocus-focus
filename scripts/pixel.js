@@ -3,7 +3,7 @@ let picContext;
 const hit = document.getElementById('hit');
 let hitContext;
 let layers;
-
+const layerResolutions = [256,128,64,32,16,8,4];
 
 const setUpCanvases = (imageName, d)=>{
 
@@ -22,7 +22,7 @@ const setUpCanvases = (imageName, d)=>{
     hitImage.src = './img/'+imageName+'_hit.jpg';
 
     layers = [];
-    for (let i=0; i<5; i++){
+    for (let i=0; i<8; i++){
         const l = document.getElementById('paint'+i);
         layers[i] = l.getContext('2d');
         layers[i].clearRect(0, 0, d, d);
@@ -35,96 +35,73 @@ const setUpCanvases = (imageName, d)=>{
 
 }
 
-
 function rgbToHex(r, g, b) {
     return ((r << 16) | (g << 8) | b).toString(16);
 }
 
-const drawCircle = (x,y,r,hex,layerIndex) => {
+
+const stamp = (x,y,r) => {
+        const d = picContext.getImageData(x-r, y-r, 2*r+1, 2*r+1);
+        if (d) layers[7].putImageData(d, x-r, y-r);
+}
+
+const pixel = (x,y,res,layerIndex) => {
+    const p = picContext.getImageData(x, y, 1, 1).data;
+    const hex = "#" + ("000000" + rgbToHex(p[0], p[1], p[2])).slice(-6);
+    const paintX = Math.floor(x/res)*res;
+    const paintY = Math.floor(y/res)*res;
+
     const ctx = layers[layerIndex];
     ctx.fillStyle = hex;
     ctx.beginPath();
-    ctx.arc(x, y, r, 0, 360, false);
+    ctx.rect(paintX, paintY, res, res);
     ctx.fill();
 }
 
-const drawRect = (x,y,r,hex,layerIndex) => {
-    let w;
-    let h;
-    if (Math.random()>.5) {
-        w = r*Math.random()*2;
-        h = r*Math.random();
-    }
-    else {
-        h = r*Math.random()*2;
-        w = r*Math.random();
-    }
-    const ctx = layers[layerIndex];
-    ctx.fillStyle = hex;
-    ctx.beginPath();
-    ctx.rect( x-r, y-r, w, h);
-    ctx.fill();
+const getLayerIndex = (v)=>{
+    if      (v<3)  return 6;
+    else if (v<4)  return 5;
+    else if (v<10) return 4;
+    else if (v<15) return 3;
+    else if (v<20) return 2;
+    else if (v<25) return 1;
+    else return 0;
 }
 
-const drawSquare = (x,y,r,hex,layerIndex) => {
-    const ctx = layers[layerIndex];
-    ctx.fillStyle = hex;
-    ctx.beginPath();
-    ctx.rect( x-r, y-r, r*2, r*2);
-    ctx.fill();
-}
+
 
 const doPaint = (x, y, v) => {
 
     if (v<.1) return;
-    if (v<1) v=1;
-    
-    for (let i=0; i<4; i++){
-        const stampX = x + (Math.random()-.5)*v*5;
-        const stampY = y + (Math.random()-.5)*v*5;
-        const stampW = 15/v;
-        if (v<3) stamp(stampX,stampY,stampW,stampW,4);
+    else if (v<2){
+        for (let i=0; i<4; i++){
+            let px = x + (Math.random()-.5)*10;
+            let py = y + (Math.random()-.5)*10;
+            stamp(px,py,1);
+        }
+    }
+    else {
+        let layerIndex= getLayerIndex(v);
+        const res = layerResolutions[layerIndex];
+
+        pixel(x, y, res, layerIndex);
+        for (let i=0; i<4; i++){
+            let px = Math.max(0, x + (Math.random()-.5) *res*3 );
+            let py = Math.max(0, y + (Math.random()-.5) *res*3 );
+            pixel(px, py, res, layerIndex);
+        }
     }
 
-    for (let i=0; i<15; i++){
-        const paintX = x + (Math.random()-.5)*v*4;
-        const paintY = y + (Math.random()-.5)*v*4;
-        paint(paintX, paintY, v*(Math.random()/2+1));
-    }
-    
 }
 
-//draw circle based on position and color. size and which layer based on velocity
-const paint = (x,y,v) => {
-    
-    const p = picContext.getImageData(x, y, 1, 1).data;
-    const hex = "#" + ("000000" + rgbToHex(p[0], p[1], p[2])).slice(-6);
-
-    if (v>30) layerIndex=0;
-    else if (v>20) layerIndex=1;
-    else if (v>10) layerIndex=2;
-    else layerIndex=3;
-    //drawRect(x,y,v,hex,layerIndex);
-    //drawCircle(x,y,v,hex,layerIndex);
-    drawSquare(x,y,v,hex,layerIndex);
-}
-
-const stamp = (x, y, w, h, l) => {
-
-    const x1 = x-Math.floor(w/2);
-    const y1 = y-Math.floor(w/2);
-
-    const data = picContext.getImageData(x1, y1, w, h);
-    if (data){
-        layers[l].putImageData(data, x1, y1);
-    }
-    
+const hidePic = ()=> {
+    pic.style.opacity = 0;
 }
 
 const revealAll = (clickX, clickY, dimension)=> {
     
-    const minV = 5;
-    const maxV = 60;
+    const minV = 1;
+    const maxV = 20;
     const appearFrames = 300;
     let appearCounter=0;
     const margin=50;
@@ -141,8 +118,10 @@ const revealAll = (clickX, clickY, dimension)=> {
             const d = (Math.random()+.25) * dimension * appearCounter/appearFrames +v*10;
             const a = Math.random()*Math.PI*2;
             const {x, y} = getNewCoordinates(clickX, clickY, a, d);
+            const layerIndex = getLayerIndex(v);
+            const res = layerResolutions[layerIndex];
             if (x>-margin && y>-margin && x<dimension+margin && y<dimension+margin){
-                paint(x, y, v);
+                pixel(x, y, res, layerIndex);
             }
             
         }

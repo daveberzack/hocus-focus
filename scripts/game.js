@@ -4,7 +4,7 @@ const $game = $("#game");
 const $reset = $("#reset");
 const gameWidth = $game.width();
 
-const canvasDimensions = 1000;
+const canvasDimensions = 512;
 const gameLoopIncrement = 10;
 let loopInterval;
 let xPos=0;
@@ -79,6 +79,7 @@ const gameLoop = () => {
 
 let challenge;
 const startGame = () => {
+    hidePic();
     timePassed = 0;
     timerWidth = 0;
     hasStarted = false;
