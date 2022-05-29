@@ -1,8 +1,7 @@
-
 const $timerLabel = $("#timer-label");
-
 const $clue = $("#clue");
 const $game = $("#game");
+const $reset = $("#reset");
 const gameWidth = $game.width();
 
 const canvasDimensions = 1000;
@@ -26,7 +25,7 @@ const doPenalty =()=>{
     timePassed +=10;
     $timerLabel.css("background-color", "#FF0000");
     setTimeout( ()=>{
-        $timerLabel.css("backgroundColor", "#000000");
+        $timerLabel.css("backgroundColor", "#FFFFFF");
     },500);
 }
 
@@ -60,20 +59,16 @@ const gameLoop = () => {
     if (hasWon) return;
     
     let newV = Math.sqrt( (prevX-xPos)*(prevX-xPos) + (prevY-yPos)*(prevY-yPos) );
-    let v = (velocity+newV)/2;
-    velocity = Math.min(40, newV);
+    let v = (velocity*8+newV)/9;
+    velocity = Math.min(40, v);
+    if (velocity<.1) velocity=0;
 
     if (isInGameArea){
         hasStarted = true;
-        if (prevX>=0 && prevY>=0){
-            doPaint(xPos, yPos, velocity);
-        }
+        
+        doPaint(xPos, yPos, velocity);
         prevX=xPos;
         prevY=yPos;
-    }
-    else {
-        prevX=-1;
-        prevY=-1;
     }
     
     if (hasStarted) {
@@ -82,34 +77,40 @@ const gameLoop = () => {
 
 }
 
-
-const startGame = (data) => {
-
+let challenge;
+const startGame = () => {
+    timePassed = 0;
+    timerWidth = 0;
+    hasStarted = false;
     document.addEventListener("touchmove", (e)=> {e.preventDefault();}, {passive: false});
-
-    const challenge = Math.floor( Math.random()*data.length );
-    $clue.html(data[challenge].clue);
-    setUpCanvases( data[challenge].name, canvasDimensions );
-
-    $game.mousemove(e => {
-        var rect = e.target.getBoundingClientRect();
-        xPos = (e.clientX - rect.left) * canvasDimensions/gameWidth;
-        yPos = (e.clientY - rect.top) * canvasDimensions/gameWidth;
-    });
-    
-    $game.mouseenter(e => {
-        isInGameArea=true;
-    });
-
-    $game.mouseleave(e => {
-        isInGameArea=false;
-    });
-
-    $game.click(onClick);
-
+    $clue.html(challenge.clue);
+    setUpCanvases( challenge.name, canvasDimensions );
+    clearInterval(loopInterval);
     loopInterval = setInterval( gameLoop, gameLoopIncrement );
 }
 
+$game.mousemove(e => {
+    var rect = e.target.getBoundingClientRect();
+    xPos = (e.clientX - rect.left) * canvasDimensions/gameWidth;
+    yPos = (e.clientY - rect.top) * canvasDimensions/gameWidth;
+});
+
+$game.mouseenter(e => {
+    isInGameArea=true;
+});
+
+$game.mouseleave(e => {
+    isInGameArea=false;
+});
+
+$game.click(onClick);
+
+$reset.click(startGame);
+
 fetch("data.json")
   .then(response => response.json())
-  .then(json => startGame(json));
+  .then(json => {
+      challengeIndex = Math.floor( Math.random()*json.length );
+      challenge = json[challengeIndex];
+      startGame();
+  });

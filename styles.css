@@ -44,13 +44,13 @@ table {
 
 
 * {
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'VT323', monospace;
     font-weight: 500;
 }
 
 body {
     background-color: #000000;
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'VT323', monospace;
 }
 
 header {
@@ -64,7 +64,7 @@ header {
 }
 #help-link {
     display: block;
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'VT323', monospace;
     position: absolute;
     top:10px;
     right: 10px;
@@ -91,10 +91,8 @@ header {
     width: 400px;
     height: 30px;
     overflow: hidden;
-    border-radius:90px;
 }
 #timer-label {
-    border-radius:90px;
     background: #FFFFFF;
     color: #000000;
     font-weight: 700;
@@ -105,8 +103,6 @@ header {
     height: 26px;
     padding: 2px;
     text-align: center;
-
-    transition: box-shadow 500ms linear;
     transition: background-color 500ms linear;
 }
 #reset {
@@ -122,7 +118,6 @@ header {
     margin:30px auto;
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
 }
 
 #game >canvas{
@@ -144,27 +139,18 @@ header {
 }
 
 
-#paint0 {
-    filter: blur(6px);
-}
-#paint1 {
-    filter: blur(5px);
-}
-#paint2 {
-    filter: blur(4px);
-}
-#paint3 {
+/* #paint0 {
     filter: blur(3px);
 }
+#paint1 {
+    filter: blur(2px);
+}
+#paint2 {
+    filter: blur(2px);
+}
+#paint3 {
+    filter: blur(2px);
+}
 #paint4 {
-    filter: blur(2px);
-}
-#paint5 {
-    filter: blur(2px);
-}
-#paint6 {
-    filter: blur(1px);
-}
-#paint7 {
-    filter: blur(1px);
-}
+    filter: blur(0px);
+} */
