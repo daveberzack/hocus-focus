@@ -82,12 +82,13 @@ const doPaint = (x, y, v) => {
 
     if (v<.1) return;
     else if (v<3){
-        for (let i=0; i<3; i++){
-            let px = x + (Math.random()-.5)*10;
-            let py = y + (Math.random()-.5)*10;
+        for (let i=0; i<5; i++){
+            let px = x + (Math.random()-.5)*12;
+            let py = y + (Math.random()-.5)*12;
             stamp(px,py,1,7);
-            sprayPixels(x,y,layerResolutions[5],layerIndex, 1);
         }
+        sprayPixels(x,y,layerResolutions[6],layerIndex, 1);
+        sprayPixels(x,y,layerResolutions[5],layerIndex, 1);
     }
     else {
         let layerIndex= getLayerIndex(v);
