@@ -86,6 +86,7 @@ const doPaint = (x, y, v) => {
             let px = x + (Math.random()-.5)*10;
             let py = y + (Math.random()-.5)*10;
             stamp(px,py,1,7);
+            sprayPixels(x,y,layerResolutions[5],layerIndex, 1);
         }
     }
     else {
