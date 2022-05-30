@@ -2,7 +2,10 @@ const $timerLabel = $("#timer-label");
 const $clue = $("#clue");
 const $game = $("#game");
 const $reset = $("#reset");
-const gameWidth = $game.width();
+
+const gameWidth = Math.min( $(document).width()-20, $(document).height()-450, 1024 );
+$game.width(gameWidth);
+$game.height(gameWidth);
 
 const canvasDimensions = 512;
 const gameLoopIncrement = 10;
