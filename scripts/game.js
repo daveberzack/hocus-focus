@@ -12,8 +12,11 @@ let yPos=0;
 let prevX = -1;
 let prevY = -1;
 let velocity = 0;
-let isInGameArea=false;
+let isInGameArea=true;
 let hasWon = false;
+const isTouchDevice = (('ontouchstart' in window) ||
+    (navigator.maxTouchPoints > 0) ||
+    (navigator.msMaxTouchPoints > 0));
 
 const doWin =()=>{
     hasWon = true;
@@ -95,32 +98,37 @@ const updateMousePosition = (x, y)=> {
     var rect = $game.offset();
     xPos  = (x - rect.left) * canvasDimensions/gameWidth;
     yPos = (y - rect.top) * canvasDimensions/gameWidth;
-    console.log("update   "+xPos+","+yPos,  rect);
 }
 
-$game.mousemove(e => {
-    updateMousePosition(e.clientX, e.clientY);
-});
+if (!isTouchDevice){
+    $game.mousemove(e => {
+        updateMousePosition(e.clientX, e.clientY);
+     });
+}
+else {
+    $('body').on('touchmove', e => {
+        updateMousePosition(e.touches[0].clientX, e.touches[0].clientY-80);
+    });
+}
 
-$game.mouseenter(e => {
-    isInGameArea=true;
-});
-
-$game.mouseleave(e => {
-    isInGameArea=false;
-});
 
 
-$('body').on('touchstart', function(e){
-    isInGameArea=true;
-});
+// $game.mouseenter(e => {
+//     isInGameArea=true;
+// });
 
-$('body').on('touchend', function(e){
-    isInGameArea=false;
-});
-$('body').on('touchmove', e => {
-    updateMousePosition(e.touches[0].clientX, e.touches[0].clientY);
-});
+// $game.mouseleave(e => {
+//     isInGameArea=false;
+// });
+
+
+// $('body').on('touchstart', function(e){
+//     isInGameArea=true;
+// });
+
+// $('body').on('touchend', function(e){
+//     isInGameArea=false;
+// });
 
 
 $game.click(handleGuess);
