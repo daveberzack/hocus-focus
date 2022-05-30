@@ -12,7 +12,6 @@ let yPos=0;
 let prevX = -1;
 let prevY = -1;
 let velocity = 0;
-let isInGameArea=true;
 let hasWon = false;
 const isTouchDevice = (('ontouchstart' in window) ||
     (navigator.maxTouchPoints > 0) ||
@@ -66,13 +65,11 @@ const gameLoop = () => {
     velocity = Math.min(40, v);
     if (velocity<.1) velocity=0;
 
-    if (isInGameArea){
         hasStarted = true;
         
         doPaint(xPos, yPos, velocity);
         prevX=xPos;
         prevY=yPos;
-    }
     
     if (hasStarted) {
         updateTimer();
@@ -100,36 +97,13 @@ const updateMousePosition = (x, y)=> {
     yPos = (y - rect.top) * canvasDimensions/gameWidth;
 }
 
-if (!isTouchDevice){
-    $game.mousemove(e => {
-        updateMousePosition(e.clientX, e.clientY);
-     });
-}
-else {
-    $('body').on('touchmove', e => {
-        updateMousePosition(e.touches[0].clientX, e.touches[0].clientY-80);
+$game.mousemove(e => {
+    updateMousePosition(e.clientX, e.clientY);
     });
-}
 
-
-
-// $game.mouseenter(e => {
-//     isInGameArea=true;
-// });
-
-// $game.mouseleave(e => {
-//     isInGameArea=false;
-// });
-
-
-// $('body').on('touchstart', function(e){
-//     isInGameArea=true;
-// });
-
-// $('body').on('touchend', function(e){
-//     isInGameArea=false;
-// });
-
+$('body').on('touchmove', e => {
+    updateMousePosition(e.touches[0].clientX, e.touches[0].clientY-80);
+});
 
 $game.click(handleGuess);
 
