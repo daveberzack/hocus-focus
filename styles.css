@@ -46,12 +46,11 @@ table {
 * {
     font-family: 'VT323', monospace;
     font-weight: 500;
+    color: #FFFFFF;
+    font-size: 26px;
 }
 
 body {
-    position: fixed;
-    width: 100%;
-    height: 100%;
     overflow: hidden;
     background-color: #000000;
     font-family: 'VT323', monospace;
@@ -66,39 +65,37 @@ header {
     padding: 10px;
 }
 #logo {
-    font-weight: 700;
-    font-size:40px;
-    color: #000000;
-}
-#help-link {
-    display: block;
-    font-family: 'VT323', monospace;
-    position: absolute;
-    top:10px;
-    right: 10px;
-    width: 30px;
-    height: 30px;
+    font-size:90px;
+    margin: 40px 0px;
     text-align: center;
-    font-size: 30px;
-    background-color: #000000;
-    padding: 5px;
-    border-radius: 99px;
-    text-decoration: none;
-    color: #FFFFFF;
+}
+h2 {
+    font-size:90px;
+    margin: 40px 0px;
+    text-align: center;
+}
+p {
+    margin: 10px auto;
+    width:400px;
+    font-size: 26px;
+}
+.center {
+    text-align: center;
 }
 
 #clue {
     color: #FFFFFF;
     text-align: center;
     font-size: 40px;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 #timer {
-    margin: 30px auto;
-    width: 400px;
+    margin: 10px auto;
+    width: 100%;
     height: 30px;
     overflow: hidden;
+    background-color: #666666;
 }
 #timer-label {
     background: #FFFFFF;
@@ -113,32 +110,38 @@ header {
     text-align: center;
     transition: background-color 500ms linear;
 }
-#reset {
+.button {
     margin: 10px auto;
     background-color: #FFFFFF;
     padding: 5px 10px;
     color: #000000;
     display: block;
-    width: 70px;
+    width: 100%;
     font-size: 26px;
     text-align: center;
     text-decoration: none;
 }
-#game {
-    width:400px;
-    margin:30px auto;
+
+.view {
+    width: 90%;
+    max-width: 800px;
+    margin: 0px auto;
+}
+#board {
+    width:100%;
+    margin:30px auto 10px auto;
     position: relative;
     overflow: hidden;
 }
 
-#game >canvas{
+#board >canvas{
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
 }
 
-#game #paint0 {
+#board #paint0 {
     position: static;
 }
 
@@ -149,6 +152,12 @@ header {
     opacity: 0;
 }
 
+.view {
+    display: none;
+}
+.view.shown {
+    display: block;
+}
 
 /* #paint0 {
     filter: blur(3px);

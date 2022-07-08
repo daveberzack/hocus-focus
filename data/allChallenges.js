@@ -1,4 +1,4 @@
-[
+export default [
     {"name": "adirondacks", "clue": "Jump in the lake."},
     {"name": "anarchist", "clue": "Identify the rebel."},
     {"name": "astronaut", "clue": "Click on the human."},

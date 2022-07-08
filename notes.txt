@@ -1,13 +1,12 @@
-get offset, finish refactor
-restart game (on resize, too)
+intro screen
+practice mode
+instructions screen
 
-migrate to react (painter component)
-upload
 test on mobile
-graphic design
+ui & graphic design (canvas x2 size?)
 
 
-effects/styles for brush / reveal:
-- rectangular pixel version
-- reveal radially, starting at click point
-- svg-based, with colored shapes appearing as you roll over (by layer)
+
+reference an online image and your own clue (db integration)
+cropping tool to specify area of image
+specify win area
