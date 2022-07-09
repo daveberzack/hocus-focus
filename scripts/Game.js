@@ -63,7 +63,7 @@ class Game {
     }
 
     handleCursorClick = ()=>{
-        if ( this.isPlaying && isInCanvas(this.cursor.x, this.cursor.y, this.canvas.pic.$element) ){
+        if ( this.isPlaying && this.timePassed>1 && isInCanvas(this.cursor.x, this.cursor.y, this.canvas.pic.$element) ){
             const isGuessCorrect = this.canvas.checkGuess(this.cursor.x, this.cursor.y);
             if (isGuessCorrect) this.handleWin();
             else this.handlePenalty();
