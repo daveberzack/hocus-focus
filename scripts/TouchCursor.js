@@ -9,16 +9,13 @@ class TouchCursor extends Cursor {
     addMouseListeners(){
         const area = document.querySelector('#board');
 
-        area.addEventListener('touchmove', (evt) =>{
-            evt.preventDefault();
-
-            const touch = evt.changedTouches[0];
+        area.addEventListener('touchmove', e =>{
+            e.preventDefault();
+            const touch = e.changedTouches[0];
             this.handleMove(touch.pageX, touch.pageY);
-            
         }, { passive: false })
 
-        area.click(e => {
-
+        area.addEventListener('click', e => {
             this.handleMove(e.pageX, e.pageY);
             this.handleCursorClick();
         });
