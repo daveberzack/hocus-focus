@@ -1,9 +1,9 @@
-intro screen
-practice mode
-instructions screen
+iterative version:
 
-test on mobile
-ui & graphic design (canvas x2 size?)
+paint initial blocks
+paint detail canvas
+
+logo, cursor, ui & graphic design (canvas x2 size?)
 
 
 

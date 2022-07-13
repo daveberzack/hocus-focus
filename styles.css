@@ -124,7 +124,7 @@ p {
 
 .view {
     width: 90%;
-    max-width: 800px;
+    max-width: 400px;
     margin: 0px auto;
 }
 #board {
@@ -157,6 +157,10 @@ p {
 }
 .view.shown {
     display: block;
+}
+
+#detail {
+    top: 500px !important;
 }
 
 /* #paint0 {

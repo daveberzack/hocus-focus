@@ -1,7 +1,6 @@
 import Canvas from './Canvas.js';
 import DirectCursor from './DirectCursor.js';
-import TouchCursor from './TouchCursor.js';
-import PixelPainter from './PixelPainter.js';
+import IterativePainter from './IterativePainter.js';
 import { isInCanvas } from './utils.js';
 
 const GAME_LOOP_INCREMENT = 10;
@@ -13,13 +12,24 @@ class Game {
         this.$clue = $("#clue");
         this.hasWon = false;
         this.isPlaying = false;
-        this.cursor = new TouchCursor($("#pic"), this.handleCursorClick);
+        this.addMouseListeners();
+    }
+    
+    addMouseListeners(){
+        $('body').mousemove(e => {
+            if (this.isPlaying) this.cursor.handleMove(e.clientX,e.clientY);
+        });
+
+        $('body').mousedown(e => {
+            if (this.isPlaying) this.handleCursorClick();
+        });
     }
 
-    startGame = (challenge)=>{
+    startGame(challenge) {
         this.painter?.stopReveal();
         this.canvas = new Canvas(challenge);
-        this.painter = new PixelPainter(this.canvas, this.cursor);
+        this.cursor = new DirectCursor($("#pic"));
+        this.painter = new IterativePainter(this.canvas, this.cursor);
 
         this.isPlaying=true;
         this.timePassed = 0;
@@ -32,13 +42,13 @@ class Game {
         $("#game-buttons").hide();
     }
     
-    doGameLoop = ()=>{
+    doGameLoop(){
         if (!this.isPlaying) return;
         this.painter.paint();
         this.updateTimer();
     }
     
-    updateTimer = ()=>{
+    updateTimer(){
         this.timePassed = this.timePassed + GAME_LOOP_INCREMENT/1000;
         const w = Math.min(this.timePassed*100/60, 100);
         this.timerWidth = (this.timerWidth*3+w)/4; //animate
@@ -46,7 +56,7 @@ class Game {
         this.$timerLabel.text( Math.floor(this.timePassed) );
     }
     
-    handlePenalty = ()=>{
+    handlePenalty(){
         this.timePassed +=10;
         this.$timerLabel.css("background-color", "#FF0000");
         setTimeout( ()=>{
@@ -54,7 +64,7 @@ class Game {
         },500);
     }
 
-    handleWin = ()=>{
+    handleWin(){
         this.hasWon = true;
         this.isPlaying = false;
         clearInterval(this.loopInterval);
@@ -62,8 +72,8 @@ class Game {
         $("#game-buttons").show();
     }
 
-    handleCursorClick = ()=>{
-        if ( this.isPlaying && this.timePassed>1 && isInCanvas(this.cursor.x, this.cursor.y, this.canvas.pic.$element) ){
+    handleCursorClick(){
+        if ( isInCanvas(this.cursor.x, this.cursor.y, this.canvas.pic.$element) ){
             const isGuessCorrect = this.canvas.checkGuess(this.cursor.x, this.cursor.y);
             if (isGuessCorrect) this.handleWin();
             else this.handlePenalty();

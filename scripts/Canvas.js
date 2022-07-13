@@ -37,15 +37,29 @@ class Canvas {
                 context: $layerElement[0].getContext('2d')
             }
         }
+
+        const $detailElement = $('#detail');
+        const detailContext = $detailElement[0].getContext('2d');
+        this.detail = {
+            $element: $detailElement,
+            context: detailContext
+        }
+        detailContext.globalCompositeOperation = 'lighten';
+
+        console.log("new",this.resetLayers);
         this.resetLayers();
 
     }
 
     resetLayers(){
+        console.log("reset",this.detail);
         for (let i=0; i<8; i++){
             this.clearLayer(this.layers[i])
         }
         this.fillLayer(this.layers[0], "#FFFFFF");
+        
+        this.clearLayer(this.detail);
+        this.fillLayer(this.detail, "#000000");
         this.pic.$element.css("opacity",0);
     }
     

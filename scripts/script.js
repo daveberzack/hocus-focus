@@ -73,3 +73,5 @@ if (challengeIndexSelected) {
     showView("game");
     $("#game-buttons").hide();
 }
+
+//$("#play-button").click();
