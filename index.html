@@ -1,74 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link type="text/css" rel="stylesheet" href="styles.css" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <link type="text/css" rel="stylesheet" href="styles.css" />
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&family=Merriweather:ital,wght@0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <body>
+    <header>
+      <h1 id="logo"><img src="img/hocus.png" />Hocus Focus</h1>
+    </header>
 
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;500;700&display=swap" rel="stylesheet">
-
-</head>
-
-<body>
-
-
-  <div id="intro" class="view shown">
-    <h1 id="logo">Hocus Focus</h1>
-    <a id="play-button" class="button" href="#">Play Today's Challenge</a>
-    <a id="practice-button" class="button" href="#">Practice Challenges</a>
-    <a id="instructions-button" class="button" href="#">How To Play</a>
-  </div>
-
-
-  
-  <div id="instructions" class="view">
-    <h2>How to play</h2>
-        <p>Each daily quest gives a clue to find something in a hidden image as quickly as you can.</p>
-        <p>Swipe over the canvas to reveal the image with pixels of color. Move slower to paint finer details in a smaller area.</p>
-        <p>Try to find the answer as quickly as possible, then click on it to complete the quest. But if you're wrong, you get a 10-second penalty.</p>
-        <p class='center'>Good hunting!</p>
-        <br/>
-        <a id="intro-button" class="button" href="#">Back to Menu</a>
-  </div>
-
-
-  <div id="game" class="view">
-    <div id="board">
-      <canvas width="512" height="512" id="paint0"></canvas>
-      <canvas width="512" height="512" id="paint1"></canvas>
-      <canvas width="512" height="512" id="paint2"></canvas>
-      <canvas width="512" height="512" id="paint3"></canvas>
-      <canvas width="512" height="512" id="paint4"></canvas>
-      <canvas width="512" height="512" id="paint5"></canvas>
-      <canvas width="512" height="512" id="paint6"></canvas>
-      <canvas width="512" height="512" id="paint7"></canvas>
-      <canvas width="512" height="512" id="pic"></canvas>
-      <canvas width="512" height="512" id="hit"></canvas>
-      <canvas width="512" height="512" id="detail"></canvas>
+    <div id="instructions" class="view">
+      <h2>How to play</h2>
+      <p>
+        Each daily quest gives a clue to find something in a hidden image as
+        quickly as you can.
+      </p>
+      <p>
+        Swipe paint the canvas to reveal the image. Paint over areas again to
+        reveal finer details.
+      </p>
+      <p>
+        Try to find the answer as quickly as possible, then click on it to
+        complete the quest. But if you're wrong, you get a 10-second penalty.
+      </p>
+      <p class="center">Good hunting!</p>
+      <br />
+      <a id="intro-button" class="button" href="#">Back to Menu</a>
     </div>
 
-    <div id="timer">
-      <div id="timer-label">0</div>
+    <div id="game" class="view shown">
+      <div id="board">
+        <canvas width="512" height="512" id="paint0"></canvas>
+        <canvas width="512" height="512" id="paint1"></canvas>
+        <canvas width="512" height="512" id="paint2"></canvas>
+        <canvas width="512" height="512" id="paint3"></canvas>
+        <canvas width="512" height="512" id="paint4"></canvas>
+        <canvas width="512" height="512" id="paint5"></canvas>
+        <canvas width="512" height="512" id="paint6"></canvas>
+        <canvas width="512" height="512" id="paint7"></canvas>
+        <canvas width="512" height="512" id="pic"></canvas>
+        <canvas width="512" height="512" id="hit"></canvas>
+        <canvas width="512" height="512" id="detail"></canvas>
+        <div id="intro">
+          <button id="start-button">Begin</button>
+        </div>
+      </div>
+
+      <div id="timer">
+        <div id="timer-label">0</div>
+      </div>
+      <h2 id="clue"></h2>
     </div>
-    <h2 id="clue"> </h2>
 
-    <div id="game-buttons">
-      <a id="reset-button" class="button" href="#">Reset</a>
-      <a id="next-button" class="button" href="#">Next</a>
-    </div>
-  </div>
-
-
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script type="module" src="scripts/script.js"></script>
-
-</body>
-
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="scripts/script.js"></script>
+  </body>
 </html>

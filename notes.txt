@@ -1,12 +1,28 @@
-iterative version:
+add help page
+default to help page first time
+win message
 
-paint initial blocks
-paint detail canvas
+sizing, mobile
 
-logo, cursor, ui & graphic design (canvas x2 size?)
+offset/mobile cursor?
+settings page?
+
+paint brush version
 
 
 
+
+
+
+cron based uploading so future images not available
+send score to db. send average score with challenge.
 reference an online image and your own clue (db integration)
 cropping tool to specify area of image
 specify win area
+
+
+
+run server to avoid cors issues:
+http-server -c-1
+
+http://192.168.86.29:8080
