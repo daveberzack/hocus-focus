@@ -1,6 +1,7 @@
 import Canvas from "./Canvas.js";
 import DirectCursor from "./DirectCursor.js";
 import PixelPainter from "./PixelPainter.js";
+import DotPainter from "./DotPainter.js";
 import { isInCanvas } from "./utils.js";
 
 const GAME_LOOP_INCREMENT = 10;
@@ -18,15 +19,38 @@ class Game {
       if (this.isPlaying) this.cursor.handleMove(e.clientX, e.clientY);
     });
 
-    $("body").mousedown((e) => {
-      if (this.isPlaying) this.handleCursorClick();
+    // $("body").mousedown((e) => {
+    //   if (this.isPlaying) this.handleCursorClick();
+    // });
+
+    $("body").on({
+      mousemove: function (e) {
+        console.log("moveM");
+        if (this.isPlaying) this.cursor.handleMove(e.clientX, e.clientY);
+      },
+
+      touchmove: function (e) {
+        console.log("moveT");
+        if (this.isPlaying) this.cursor.handleMove(e.clientX, e.clientY);
+      },
+
+      click: function (e) {
+        console.log("click");
+        if (this.isPlaying) this.handleCursorClick();
+      },
     });
   }
 
   startGame(challenge) {
     this.canvas = new Canvas(challenge);
     this.cursor = new DirectCursor($("#pic"));
-    this.painter = new PixelPainter(this.canvas, this.cursor);
+
+    if (Math.random() > 0.5) {
+      this.painter = new PixelPainter(this.canvas, this.cursor);
+    } else {
+      this.painter = new DotPainter(this.canvas, this.cursor);
+      $("#board").addClass("dot");
+    }
 
     this.isPlaying = true;
     this.timePassed = 0;
@@ -47,7 +71,7 @@ class Game {
 
   updateTimer() {
     this.timePassed = this.timePassed + GAME_LOOP_INCREMENT / 1000;
-    const w = Math.min((this.timePassed * 100) / 60, 100);
+    const w = Math.min((this.timePassed * 100) / 100, 100);
     this.timerWidth = (this.timerWidth * 3 + w) / 4; //animate
     this.$timerLabel.width(this.timerWidth + "%");
     this.$timerLabel.text(Math.floor(this.timePassed));

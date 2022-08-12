@@ -1,3 +1,5 @@
+make it work on mobile
+
 add help page
 default to help page first time
 win message
@@ -26,3 +28,140 @@ run server to avoid cors issues:
 http-server -c-1
 
 http://192.168.86.29:8080
+
+
+<a href="https://www.freepik.com/photos/car">Car photo created by fxquadro - www.freepik.com</a>
+
+
+
+Catch the fish
+https://pixabay.com/photos/healthy-food-food-power-dietetic-1348430/
+FotoshopTofs
+
+Locate the specimen
+https://pixabay.com/photos/scientist-pathologist-1332343/
+FotoshopTofs
+
+Look at that baby
+https://pixabay.com/photos/female-koala-and-her-baby-1332217/
+FotoshopTofs
+
+Have a cookie
+https://pixabay.com/photos/breads-cereals-oats-barley-wheat-1417868/
+FotoshopTofs
+
+Grab a hot dog
+https://pixabay.com/photos/high-fat-foods-pastries-cheeses-1487599/
+FotoshopTofs
+
+Get the ball!
+https://pixabay.com/photos/football-football-game-sport-team-1493071/
+FotoshopTofs
+
+Look at the birdie
+https://pixabay.com/photos/young-woman-and-chick-chick-duckling-1250755/
+FotoshopTofs
+
+Touch her dinner
+https://pixabay.com/photos/lioness-female-lion-mammal-1332163/
+FotoshopTofs
+
+Munch a carrot
+https://pixabay.com/photos/healthy-eating-fruits-and-vegetables-1417812/
+FotoshopTofs
+
+Look at that creek
+https://pixabay.com/photos/alps-mountains-flowers-hiking-7365231/
+xiSerge
+
+Hail the boat
+https://pixabay.com/photos/ocean-rangiroa-sea-clouds-water-7335499/
+xiSerge
+
+Find the top
+https://pixabay.com/photos/matterhorn-switzerland-mountain-7269337/
+xiSerge
+
+Hit the buzzer
+https://pixabay.com/photos/bee-insect-flower-petals-pollen-5485529/
+xiSerge
+
+Pick up some garlic
+https://pixabay.com/photos/still-life-vintage-pot-3721652/
+ELG21
+
+Catch a ride
+https://pixabay.com/photos/lake-sunset-boats-landscape-clouds-7377942/
+ELG21
+
+Nice hat
+https://pixabay.com/photos/sea-woman-boats-wind-clouds-7315959/
+ELG21
+
+Go in the front door
+https://pixabay.com/photos/new-zealand-hobbit-hobbiton-tourism-4661427/
+hunt-er
+
+look at that face
+https://pixabay.com/photos/colors-bike-bicycle-colorful-color-4912634/
+hunt-er
+
+hold the phone
+https://pixabay.com/photos/typewriter-old-vintage-retro-4643317/
+hunt-er
+
+kiss a frog
+https://pixabay.com/photos/frog-pond-amphibian-leaves-foliage-1893225/
+Couleur
+
+look at that face
+https://pixabay.com/photos/berlin-cathedral-sculpture-3408348/
+Couleur
+
+Check the oil
+https://pixabay.com/photos/olive-oil-oil-olives-carafe-fruits-1596639/
+Couleur
+
+Touch her neck
+https://pixabay.com/photos/guitar-musical-instrument-2276181/
+Couleur
+
+Look into the pit
+https://pixabay.com/photos/peach-fruit-red-ripe-yummy-cute-2527208/
+Couleur
+
+get your bearings
+https://pixabay.com/photos/inline-skates-roller-skating-3591101/
+Couleur
+
+go to church
+https://pixabay.com/photos/mountain-church-kaiserstuhl-3544742/
+Couleur
+
+Nice hat
+https://pixabay.com/photos/snowman-snow-winter-cold-wintry-2975730/
+Couleur
+
+Pet the kitty
+https://pixabay.com/photos/tree-cat-silhouette-moon-full-moon-736877/
+Bessi
+
+Take a seat
+https://pixabay.com/photos/sunset-tree-silhouette-dusk-lonely-3156176/
+pixel2013
+
+Find a wheelbarrow
+https://pixabay.com/photos/afghanistan-town-city-people-79492/
+12019
+
+See the turtle
+https://pixabay.com/photos/sea-ocean-underwater-turtle-2470908/
+12019
+
+Look at that mug
+https://pixabay.com/photos/bread-croissant-food-breakfast-cup-18987/
+PublicDomainPictures
+
+Look into the hole
+https://pixabay.com/photos/bullet-hole-frosted-glass-window-1744860/
+kiwikong

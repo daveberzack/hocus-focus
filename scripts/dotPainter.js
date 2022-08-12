@@ -1,41 +1,44 @@
 import { rgbToHex, getNewCoordinates, getCanvasCoordinates } from "./utils.js";
 import Painter from "./Painter.js";
 
-class PixelPainter extends Painter {
+class DotPainter extends Painter {
   constructor(canvas, cursor) {
     super(canvas, cursor);
-    this.layerResolutions = [256, 128, 64, 32, 16, 8, 4];
+    this.layerRadii = [150, 100, 50, 25, 12, 6, 3];
     this.detailStack = [];
     this.detailFactor = 25;
   }
 
   _doPaint(x, y) {
-    const xOffset = (Math.random() - 0.5) * 2 * 15;
-    const yOffset = (Math.random() - 0.5) * 2 * 15;
-    this._doPaint2(x + xOffset, y + yOffset);
+    const xOffset2 = (Math.random() - 0.5) * 30;
+    const yOffset2 = (Math.random() - 0.5) * 30;
+    this._doPaint2(x + xOffset2, y + yOffset2);
+    this._doPaint2(x + yOffset2, y + xOffset2);
+
     this._doPaint2(x, y);
   }
 
-  _doPaint2(x, y) {
+  _doPaint2(x, y, hex2) {
     //get the detail level from the detail canvas
     const detailLevel = this._getDetailLevel(x, y) + 1;
 
     const c = detailLevel * this.detailFactor;
     const hex = "#" + ("000000" + rgbToHex(c, c, c)).slice(-6);
-    const w = this.layerResolutions[detailLevel];
+    const w = this.layerRadii[detailLevel];
     const ctx = this.canvas.detail.context;
     this.detailStack.push({ x, y, w, hex, ctx });
 
-    if (this.detailStack.length > 3) {
+    if (this.detailStack.length > 20) {
       const d = this.detailStack.shift();
-      this._pixel(d.x, d.y, d.w, d.hex, d.ctx);
+      this._dot(d.x, d.y, d.w, d.hex, d.ctx);
     }
 
     if (detailLevel < 7) {
       const p = this.canvas.pic.context.getImageData(x, y, 1, 1).data;
       const hex2 = "#" + ("000000" + rgbToHex(p[0], p[1], p[2])).slice(-6);
       const ctx2 = this.canvas.layers[detailLevel].context;
-      this._pixel(x, y, this.layerResolutions[detailLevel], hex2, ctx2);
+      this._dot(x, y, this.layerRadii[detailLevel], hex2, ctx2);
+      this._dot(x, y, this.layerRadii[detailLevel], hex2, ctx2);
     } else {
       this._stamp(x, y, 8, this.canvas.layers[detailLevel].context);
     }
@@ -78,21 +81,19 @@ class PixelPainter extends Painter {
       }
 
       if (appearCounter > appearFrames) clearInterval(this.appearInterval);
-    }, 10);
+    }, 5);
   }
 
   stopReveal() {
     if (this.appearInterval) clearInterval(this.appearInterval);
   }
 
-  _pixel(x, y, w, color, ctx) {
-    const paintX = Math.floor(x / w) * w;
-    const paintY = Math.floor(y / w) * w;
+  _dot(x, y, r, color, ctx) {
     ctx.fillStyle = color;
     ctx.beginPath();
-    ctx.rect(paintX, paintY, w, w);
+    ctx.arc(x, y, r, 0, 2 * Math.PI);
     ctx.fill();
   }
 }
 
-export default PixelPainter;
+export default DotPainter;

@@ -6,12 +6,16 @@ const showView = (name) => {
   $("#" + name).addClass("shown");
 };
 
+const formatClue = (input) => {
+  return input.replace("[", '<span class="bold">').replace("]", "</span>");
+};
+
 const todayChallenge =
   allChallenges[Math.floor(Math.random() * allChallenges.length)];
 
 const game = new Game();
 
-$("#clue").html(todayChallenge.clue);
+$("#clue").html(formatClue(todayChallenge.clue));
 
 $("#instructions-button").click(() => {
   showView("instructions");
