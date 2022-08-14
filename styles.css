@@ -187,9 +187,8 @@ p {
 
 #timer {
   margin: 40px auto;
-  width: 100%;
   overflow: hidden;
-  background-color: #666666;
+  border: 4px solid #ffffff;
 }
 #timer-label {
   background: #ffffff;
@@ -218,14 +217,14 @@ p {
 
 .view {
   width: 90%;
-  max-width: 400px;
   margin: 0px auto;
 }
 #board {
-  width: 100%;
   margin: 40px auto 40px auto;
   position: relative;
   overflow: hidden;
+  border: 4px solid #ffffff;
+  background-color: #ffffff;
 }
 #intro {
   position: absolute;
@@ -274,24 +273,18 @@ p {
 }
 
 #detail {
-  top: 500px !important;
+  display: none;
 }
 
 .dot #paint0 {
-  filter: blur(30px);
-}
-.dot #paint1 {
-  filter: blur(20px);
-}
-.dot #paint2 {
   filter: blur(10px);
 }
+.dot #paint1 {
+  filter: blur(5px);
+}
+.dot #paint2 {
+  filter: blur(2px);
+}
 .dot #paint3 {
-  filter: blur(6px);
-}
-.dot #paint4 {
-  filter: blur(4px);
-}
-.dot #paint5 {
   filter: blur(1px);
 }

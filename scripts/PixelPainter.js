@@ -17,25 +17,15 @@ class PixelPainter extends Painter {
   }
 
   _doPaint2(x, y) {
-    //get the detail level from the detail canvas
     const detailLevel = this._getDetailLevel(x, y) + 1;
-
-    const c = detailLevel * this.detailFactor;
-    const hex = "#" + ("000000" + rgbToHex(c, c, c)).slice(-6);
-    const w = this.layerResolutions[detailLevel];
-    const ctx = this.canvas.detail.context;
-    this.detailStack.push({ x, y, w, hex, ctx });
-
-    if (this.detailStack.length > 3) {
-      const d = this.detailStack.shift();
-      this._pixel(d.x, d.y, d.w, d.hex, d.ctx);
-    }
 
     if (detailLevel < 7) {
       const p = this.canvas.pic.context.getImageData(x, y, 1, 1).data;
-      const hex2 = "#" + ("000000" + rgbToHex(p[0], p[1], p[2])).slice(-6);
-      const ctx2 = this.canvas.layers[detailLevel].context;
-      this._pixel(x, y, this.layerResolutions[detailLevel], hex2, ctx2);
+      const color = "#" + ("000000" + rgbToHex(p[0], p[1], p[2])).slice(-6);
+      const ctx = this.canvas.layers[detailLevel].context;
+      let w = this.layerResolutions[detailLevel];
+      this._pixel({ x, y, w, color, ctx });
+      this._drawToDetailLevel(detailLevel, this._pixel, { x, y, w }, 4);
     } else {
       this._stamp(x, y, 8, this.canvas.layers[detailLevel].context);
     }
@@ -62,17 +52,10 @@ class PixelPainter extends Painter {
       const vFactor = minV + (maxV - minV) * (1 - appearCounter / appearFrames);
       for (let i = 0; i < 100; i++) {
         const v = (Math.random() * vFactor * 3 * appearCounter) / appearFrames;
-        const d =
-          ((Math.random() + 0.25) * dimension * appearCounter) / appearFrames +
-          v * 10;
+        const d = ((Math.random() + 0.25) * dimension * appearCounter) / appearFrames + v * 10;
         const a = Math.random() * Math.PI * 2;
         const { x: x1, y: y1 } = getNewCoordinates(x, y, a, d);
-        if (
-          x1 > -margin &&
-          y1 > -margin &&
-          x1 < dimension + margin &&
-          y1 < dimension + margin
-        ) {
+        if (x1 > -margin && y1 > -margin && x1 < dimension + margin && y1 < dimension + margin) {
           this._doPaint(x1, y1);
         }
       }
@@ -85,7 +68,7 @@ class PixelPainter extends Painter {
     if (this.appearInterval) clearInterval(this.appearInterval);
   }
 
-  _pixel(x, y, w, color, ctx) {
+  _pixel({ x, y, w, color, ctx }) {
     const paintX = Math.floor(x / w) * w;
     const paintY = Math.floor(y / w) * w;
     ctx.fillStyle = color;

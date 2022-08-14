@@ -4,44 +4,41 @@ import Painter from "./Painter.js";
 class DotPainter extends Painter {
   constructor(canvas, cursor) {
     super(canvas, cursor);
-    this.layerRadii = [150, 100, 50, 25, 12, 6, 3];
+    this.layerRadii = [50, 20, 10, 5];
     this.detailStack = [];
-    this.detailFactor = 25;
   }
 
   _doPaint(x, y) {
-    const xOffset2 = (Math.random() - 0.5) * 30;
-    const yOffset2 = (Math.random() - 0.5) * 30;
-    this._doPaint2(x + xOffset2, y + yOffset2);
-    this._doPaint2(x + yOffset2, y + xOffset2);
-
-    this._doPaint2(x, y);
-  }
-
-  _doPaint2(x, y, hex2) {
     //get the detail level from the detail canvas
     const detailLevel = this._getDetailLevel(x, y) + 1;
+    const r = this.layerRadii[detailLevel];
+    const scatter = r * (detailLevel + 3);
 
-    const c = detailLevel * this.detailFactor;
-    const hex = "#" + ("000000" + rgbToHex(c, c, c)).slice(-6);
-    const w = this.layerRadii[detailLevel];
-    const ctx = this.canvas.detail.context;
-    this.detailStack.push({ x, y, w, hex, ctx });
+    if (detailLevel < 4) {
+      const ctx = this.canvas.layers[detailLevel].context;
 
-    if (this.detailStack.length > 20) {
-      const d = this.detailStack.shift();
-      this._dot(d.x, d.y, d.w, d.hex, d.ctx);
-    }
-
-    if (detailLevel < 7) {
-      const p = this.canvas.pic.context.getImageData(x, y, 1, 1).data;
-      const hex2 = "#" + ("000000" + rgbToHex(p[0], p[1], p[2])).slice(-6);
-      const ctx2 = this.canvas.layers[detailLevel].context;
-      this._dot(x, y, this.layerRadii[detailLevel], hex2, ctx2);
-      this._dot(x, y, this.layerRadii[detailLevel], hex2, ctx2);
+      for (let k = 0; k < 5; k++) {
+        const x2 = x + (Math.random() - 0.5) * scatter;
+        const y2 = y + (Math.random() - 0.5) * scatter;
+        const p = this.canvas.pic.context.getImageData(x2, y2, 1, 1).data;
+        const color = rgbToHex(p[0], p[1], p[2]);
+        this._dot({ x: x2, y: y2, r, color, ctx });
+        this._drawToDetailLevel(detailLevel, this._dot, { x: x2, y: y2, r }, 60);
+      }
     } else {
-      this._stamp(x, y, 8, this.canvas.layers[detailLevel].context);
+      for (let k = 0; k < 4; k++) {
+        const x2 = x + (Math.random() - 0.5) * 8;
+        const y2 = y + (Math.random() - 0.5) * 8;
+        this._stamp(x2, y2, 4, this.canvas.layers[7].context);
+      }
     }
+  }
+
+  _dot({ x, y, r, color, ctx }) {
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.arc(x, y, r, 0, 2 * Math.PI);
+    ctx.fill();
   }
 
   revealAll(clickX, clickY) {
@@ -65,17 +62,10 @@ class DotPainter extends Painter {
       const vFactor = minV + (maxV - minV) * (1 - appearCounter / appearFrames);
       for (let i = 0; i < 100; i++) {
         const v = (Math.random() * vFactor * 3 * appearCounter) / appearFrames;
-        const d =
-          ((Math.random() + 0.25) * dimension * appearCounter) / appearFrames +
-          v * 10;
+        const d = ((Math.random() + 0.25) * dimension * appearCounter) / appearFrames + v * 10;
         const a = Math.random() * Math.PI * 2;
         const { x: x1, y: y1 } = getNewCoordinates(x, y, a, d);
-        if (
-          x1 > -margin &&
-          y1 > -margin &&
-          x1 < dimension + margin &&
-          y1 < dimension + margin
-        ) {
+        if (x1 > -margin && y1 > -margin && x1 < dimension + margin && y1 < dimension + margin) {
           this._doPaint(x1, y1);
         }
       }
@@ -86,13 +76,6 @@ class DotPainter extends Painter {
 
   stopReveal() {
     if (this.appearInterval) clearInterval(this.appearInterval);
-  }
-
-  _dot(x, y, r, color, ctx) {
-    ctx.fillStyle = color;
-    ctx.beginPath();
-    ctx.arc(x, y, r, 0, 2 * Math.PI);
-    ctx.fill();
   }
 }
 

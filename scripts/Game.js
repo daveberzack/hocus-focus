@@ -12,6 +12,7 @@ class Game {
     this.hasWon = false;
     this.isPlaying = false;
     this.addMouseListeners();
+    this.goalTime = 100;
   }
 
   addMouseListeners() {
@@ -19,23 +20,16 @@ class Game {
       if (this.isPlaying) this.cursor.handleMove(e.clientX, e.clientY);
     });
 
-    // $("body").mousedown((e) => {
-    //   if (this.isPlaying) this.handleCursorClick();
-    // });
-
     $("body").on({
-      mousemove: function (e) {
-        console.log("moveM");
+      mousemove: (e) => {
         if (this.isPlaying) this.cursor.handleMove(e.clientX, e.clientY);
       },
 
-      touchmove: function (e) {
-        console.log("moveT");
-        if (this.isPlaying) this.cursor.handleMove(e.clientX, e.clientY);
+      touchmove: (e) => {
+        if (this.isPlaying) this.cursor.handleMove(e.touches[0].clientX, e.touches[0].clientY);
       },
 
-      click: function (e) {
-        console.log("click");
+      click: (e) => {
         if (this.isPlaying) this.handleCursorClick();
       },
     });
@@ -45,7 +39,7 @@ class Game {
     this.canvas = new Canvas(challenge);
     this.cursor = new DirectCursor($("#pic"));
 
-    if (Math.random() > 0.5) {
+    if (challenge.type == "pixel") {
       this.painter = new PixelPainter(this.canvas, this.cursor);
     } else {
       this.painter = new DotPainter(this.canvas, this.cursor);
@@ -71,7 +65,7 @@ class Game {
 
   updateTimer() {
     this.timePassed = this.timePassed + GAME_LOOP_INCREMENT / 1000;
-    const w = Math.min((this.timePassed * 100) / 100, 100);
+    const w = Math.min((this.timePassed / this.goalTime) * 100, 100);
     this.timerWidth = (this.timerWidth * 3 + w) / 4; //animate
     this.$timerLabel.width(this.timerWidth + "%");
     this.$timerLabel.text(Math.floor(this.timePassed));
@@ -94,10 +88,7 @@ class Game {
 
   handleCursorClick() {
     if (isInCanvas(this.cursor.x, this.cursor.y, this.canvas.pic.$element)) {
-      const isGuessCorrect = this.canvas.checkGuess(
-        this.cursor.x,
-        this.cursor.y
-      );
+      const isGuessCorrect = this.canvas.checkGuess(this.cursor.x, this.cursor.y);
       if (isGuessCorrect) this.handleWin();
       else this.handlePenalty();
     }

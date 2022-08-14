@@ -3,17 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <link type="text/css" rel="stylesheet" href="styles.css" />
-    <meta
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-      name="viewport"
-    />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet" />
+
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="https://www.5minute.games/img/icons/ducky.ico?v=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.5minute.games/img/icons/180.png?v=1" />
+    <link rel="shortcut icon" href="https://www.5minute.games/img/icons/ducky.ico?v=1" />
+    <link href="https://www.5minute.games/img/icons/32.png?v=1" rel="icon shortcut" sizes="3232" />
+    <link href="https://www.5minute.games/img/icons/192.png?v=1" rel="apple-touch-icon" />
+    <meta name="apple-mobile-web-app-title" content="5 Min Games" />
+    <meta name="application-name" content="5 Min Games" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="theme-color" content="#FFFFFF" />
+    <meta property="description" content="All your favorite daily games and puzzles, in one place." />
+    <meta property="og:title" content="5Minute.Games - Play Now" />
+    <meta property="og:url" content="https://www.5minute.games" />
+    <meta property="og:description" content="All your favorite daily games and puzzles, in one place." />
+    <meta property="og:image" content="https://www.5minute.games/img/icons/1200fb.png?v=1" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="5minute.games" />
   </head>
 
   <body>
@@ -24,18 +36,9 @@
 
     <div id="instructions" class="view">
       <h2>How to play</h2>
-      <p>
-        Each daily quest gives a clue to find something in a hidden image as
-        quickly as you can.
-      </p>
-      <p>
-        Swipe paint the canvas to reveal the image. Paint over areas again to
-        reveal finer details.
-      </p>
-      <p>
-        Try to find the answer as quickly as possible, then click on it to
-        complete the quest. But if you're wrong, you get a 10-second penalty.
-      </p>
+      <p>Each daily quest gives a clue to find something in a hidden image as quickly as you can.</p>
+      <p>Swipe paint the canvas to reveal the image. Paint over areas again to reveal finer details.</p>
+      <p>Try to find the answer as quickly as possible, then click on it to complete the quest. But if you're wrong, you get a 10-second penalty.</p>
       <p class="center">Good hunting!</p>
       <br />
       <a id="intro-button" class="button" href="#">Back to Menu</a>
@@ -65,11 +68,7 @@
       <h2 id="clue"></h2>
     </div>
 
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="module" src="scripts/script.js"></script>
   </body>
 </html>

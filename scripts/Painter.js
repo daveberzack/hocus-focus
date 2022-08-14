@@ -1,7 +1,9 @@
+import { rgbToHex } from "./utils.js";
 class Painter {
   constructor(canvas, cursor) {
     this.canvas = canvas;
     this.cursor = cursor;
+    this.detailFactor = 25;
   }
 
   paint() {
@@ -13,21 +15,22 @@ class Painter {
     const x = ((this.cursor.x - rect.left) * graphicWidth) / elementWidth;
     const y = ((this.cursor.y - rect.top) * graphicWidth) / elementWidth;
 
-    if (
-      x >= 0 &&
-      y >= 0 &&
-      x <= this.canvas.graphicWidth &&
-      y <= this.canvas.graphicWidth
-    ) {
+    if (x >= 0 && y >= 0 && x <= this.canvas.graphicWidth && y <= this.canvas.graphicWidth) {
       this._doPaint(x, y);
     }
   }
 
-  _doPaint() {}
+  _drawToDetailLevel(detailLevel, drawFunction, drawParameters, delay) {
+    const c = detailLevel * this.detailFactor;
+    drawParameters.color = rgbToHex(c, c, c);
+    drawParameters.ctx = this.canvas.detail.context;
+    this.detailStack.push(drawParameters);
 
-  revealAll() {}
-
-  stopReveal() {}
+    if (this.detailStack.length > delay) {
+      const d = this.detailStack.shift();
+      drawFunction(d);
+    }
+  }
 
   _getDetailLevel(x, y) {
     const p = this.canvas.detail.context.getImageData(x, y, 1, 1).data;
@@ -38,6 +41,12 @@ class Painter {
     const d = this.canvas.pic.context.getImageData(x - w / 2, y - w / 2, w, w);
     if (d) ctx.putImageData(d, x - w / 2, y - w / 2);
   }
+
+  _doPaint() {}
+
+  revealAll() {}
+
+  stopReveal() {}
 }
 
 export default Painter;
