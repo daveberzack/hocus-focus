@@ -34,4 +34,21 @@ function getNewCoordinates(x0, y0, radians, distance) {
   return { x: x0 + dx, y: y0 + dy };
 }
 
-export { getCanvasCoordinates, isInCanvas, rgbToHex, getNewCoordinates };
+const _padTo2Digits = function (num) {
+  return num.toString().padStart(2, "0");
+};
+
+const getTodayString = function () {
+  const date = new Date();
+  return [date.getFullYear(), _padTo2Digits(date.getMonth() + 1), _padTo2Digits(date.getDate())].join("");
+};
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+const formatClue = (input) => {
+  return input.replace("[", '<span class="bold">').replace("]", "</span>");
+};
+
+export { getCanvasCoordinates, isInCanvas, rgbToHex, getNewCoordinates, getTodayString, sleep, formatClue };

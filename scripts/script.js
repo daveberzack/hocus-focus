@@ -1,27 +1,38 @@
 import Game from "./Game.js";
-import allChallenges from "../data/allChallenges.js";
+import { getTodayString } from "./utils.js";
 
 const showView = (name) => {
   $(".view").removeClass("shown");
   $("#" + name).addClass("shown");
 };
 
-const formatClue = (input) => {
-  return input.replace("[", '<span class="bold">').replace("]", "</span>");
+const init = async () => {
+  const todayString = getTodayString();
+  const response = await fetch(`./challenges/${todayString}/data.json`);
+  let todayChallenge = await response.json();
+  todayChallenge.imgFile = `./challenges/${todayString}/img.jpg`;
+  todayChallenge.hitFile = `./challenges/${todayString}/hit.jpg`;
+  const game = new Game(todayChallenge);
+
+  $("#instructions-button").click(() => {
+    showView("instructions");
+  });
+
+  $("#start-button").click(() => {
+    game.startGame();
+    $("#intro").hide();
+  });
 };
 
-const todayChallenge =
-  allChallenges[Math.floor(Math.random() * allChallenges.length)];
+function onResize() {
+  const winW = $(window).width();
+  const winH = $(window).height();
+  const w = Math.min(winW - 20, winH - 350);
+  $(".view").width(w);
+  $("#board").width(w - 8);
+  $("#board").height(w - 8);
+}
 
-const game = new Game();
-
-$("#clue").html(formatClue(todayChallenge.clue));
-
-$("#instructions-button").click(() => {
-  showView("instructions");
-});
-
-$("#start-button").click(() => {
-  game.startGame(todayChallenge);
-  $("#intro").hide();
-});
+onResize();
+$(window).resize(onResize);
+init();

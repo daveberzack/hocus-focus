@@ -15,7 +15,7 @@ class Canvas {
     picImage.onload = function () {
       self.drawImageToLayer(self.pic, picImage);
     };
-    picImage.src = "./img/" + name + ".jpg";
+    picImage.src = challenge.imgFile;
 
     const $hitElement = $("#hit");
     this.hit = {
@@ -26,7 +26,7 @@ class Canvas {
     hitImage.onload = function () {
       self.drawImageToLayer(self.hit, hitImage);
     };
-    hitImage.src = "./img/" + name + "_hit.jpg";
+    hitImage.src = challenge.hitFile;
 
     this.layers = [];
     for (let i = 0; i < 8; i++) {
@@ -45,12 +45,10 @@ class Canvas {
     };
     detailContext.globalCompositeOperation = "lighten";
 
-    console.log("new", this.resetLayers);
     this.resetLayers();
   }
 
   resetLayers() {
-    console.log("reset", this.detail);
     for (let i = 0; i < 8; i++) {
       this.clearLayer(this.layers[i]);
     }

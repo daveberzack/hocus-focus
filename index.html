@@ -10,20 +10,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet" />
 
     <link rel="manifest" href="manifest.json" />
-    <link rel="icon" href="https://www.5minute.games/img/icons/ducky.ico?v=1" />
-    <link rel="apple-touch-icon" sizes="180x180" href="https://www.5minute.games/img/icons/180.png?v=1" />
-    <link rel="shortcut icon" href="https://www.5minute.games/img/icons/ducky.ico?v=1" />
-    <link href="https://www.5minute.games/img/icons/32.png?v=1" rel="icon shortcut" sizes="3232" />
-    <link href="https://www.5minute.games/img/icons/192.png?v=1" rel="apple-touch-icon" />
-    <meta name="apple-mobile-web-app-title" content="5 Min Games" />
-    <meta name="application-name" content="5 Min Games" />
+    <link rel="icon" href="https://www.5minute.games/hocus-focus/img/icons/favicon.ico?v=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.5minute.games/hocus-focus/img/icons/180.png?v=1" />
+    <link rel="shortcut icon" href="https://www.5minute.games/hocus-focus/img/icons/favicon.ico?v=1" />
+    <link href="https://www.5minute.games/hocus-focus/img/icons/32.png?v=1" rel="icon shortcut" sizes="3232" />
+    <link href="https://www.5minute.games/hocus-focus/img/icons/192.png?v=1" rel="apple-touch-icon" />
+    <meta name="apple-mobile-web-app-title" content="Hocus Focus" />
+    <meta name="application-name" content="Hocus Focus" />
     <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="theme-color" content="#FFFFFF" />
-    <meta property="description" content="All your favorite daily games and puzzles, in one place." />
-    <meta property="og:title" content="5Minute.Games - Play Now" />
-    <meta property="og:url" content="https://www.5minute.games" />
-    <meta property="og:description" content="All your favorite daily games and puzzles, in one place." />
-    <meta property="og:image" content="https://www.5minute.games/img/icons/1200fb.png?v=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta property="description" content="Paint a picture to find the goal." />
+    <meta property="og:title" content="Hocus Focus - Paint & Find" />
+    <meta property="og:url" content="https://www.5minute.games/hocus-focus" />
+    <meta property="og:description" content="Paint a picture to find the goal." />
+    <meta property="og:image" content="https://www.5minute.games/hocus-focus/img/icons/1200fb.png?v=1" />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:domain" content="5minute.games" />
   </head>
@@ -63,12 +63,23 @@
       </div>
 
       <div id="timer">
-        <div id="timer-label">0</div>
+        <div class="timer-goal" id="timer-goal0"><h3></h3></div>
+        <div class="timer-goal" id="timer-goal1"><h3></h3></div>
+        <div class="timer-goal" id="timer-goal2"><h3></h3></div>
+        <div class="timer-goal" id="timer-goal3"><h3></h3></div>
+        <div class="timer-goal" id="timer-goal4"><h3></h3></div>
+        <div class="timer-bar" id="timer-bar"></div>
+        <div class="timer-bar" id="timer-swipe1"></div>
+        <div class="timer-bar" id="timer-swipe2"></div>
       </div>
       <h2 id="clue"></h2>
+      <div id="stars"></div>
+      <h2 id="win-message"></h2>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
     <script type="module" src="scripts/script.js"></script>
   </body>
 </html>

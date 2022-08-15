@@ -1,14 +1,12 @@
-
-sizing: maximum that fits game info, snap to multiple if close
-even border around board
-update icons and social metadata
-
-add help page, default to help page first time
 timer graphics, win message, stars
 
+update icons and social metadata
 
+optimize pixel/reveal
+cleaner pixels on resize
 
-
+add help page, default to help page first time
+add copyright and attribution footer 
 
 
 offset/mobile cursor?
