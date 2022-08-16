@@ -7,11 +7,12 @@ const showView = (name) => {
 };
 
 const init = async () => {
-  const todayString = getTodayString();
+  const todayString = "20220817"; //getTodayString();
   const response = await fetch(`./challenges/${todayString}/data.json`);
   let todayChallenge = await response.json();
   todayChallenge.imgFile = `./challenges/${todayString}/img.jpg`;
   todayChallenge.hitFile = `./challenges/${todayString}/hit.jpg`;
+  $("#credit").text(todayChallenge.credit).attr("href", todayChallenge.url);
   const game = new Game(todayChallenge);
 
   $("#instructions-button").click(() => {
@@ -31,6 +32,8 @@ function onResize() {
   $(".view").width(w);
   $("#board").width(w - 8);
   $("#board").height(w - 8);
+
+  $("footer p").width(w);
 }
 
 onResize();

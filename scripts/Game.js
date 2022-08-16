@@ -79,10 +79,6 @@ class Game {
 
   handlePenalty() {
     this.timePassed += 10;
-    this.$timerBar.css("background-color", "#FF0000");
-    setTimeout(() => {
-      this.$timerBar.css("backgroundColor", "#FFFFFF");
-    }, 500);
   }
 
   async handleWin() {
@@ -93,26 +89,19 @@ class Game {
     this.$clue.fadeOut(1000);
     await sleep(3000);
 
-    const NUM_FRAMES = 300;
+    const NUM_FRAMES = 200;
     let winCounter = 0;
     const passedPercent = this.timePassed / this.lastGoal;
 
-    let goals2 = [...this.goals];
-    this.$timerSwipe2.css({ left: passedPercent * 100 + "%" });
+    let goalsMet = this.goals.filter((g) => g > this.timePassed);
+
     const winInterval = setInterval(() => {
       winCounter++;
-      const percent = winCounter / NUM_FRAMES;
+      const percent = passedPercent + ((1 - passedPercent) * winCounter) / NUM_FRAMES;
 
-      this.$timerSwipe1.width(percent * 100 + "%");
+      this.$timerBar.width(percent * 100 + "%");
 
-      // if (percent < passedPercent) {
-      //   this.$timerSwipe1.width(percent * 100 + "%");
-      // } else {
-      //   this.$timerSwipe1.width(passedPercent * 100 + "%");
-      //   this.$timerSwipe2.width((percent - passedPercent) * 100 + "%");
-      // }
-
-      if (percent > goals2[0] / this.lastGoal) {
+      if (percent > goalsMet[0] / this.lastGoal) {
         if (percent > passedPercent) {
           const $newStar = $(
             '<svg class="star" x="0px" y="0px" width="98px" height="94px" viewBox="-0.5 -0.75 98 94"><polygon fill="#FFFFFF" points="0,35.75 33.5,30.25 48.75,0 63.25,30 96.75,35.5 73,59.25 78.5,92.75 48.5,77.25 18.25,92.75 24.25,59 "/></svg>'
@@ -123,20 +112,19 @@ class Game {
               height: 40,
               width: 40,
             },
-            200,
+            300,
             "easeOutQuad"
           );
         }
-        goals2.shift();
+        goalsMet.shift();
       }
 
       if (percent >= 1.1) clearInterval(winInterval);
     }, 10);
 
-    await sleep(3500);
+    await sleep(3000);
     this.$winMessage.text("Good Job!");
-    this.$winMessage = $("#win-message");
-    this.$winMessage.fadeIn(1000);
+    this.$winMessage.fadeIn(300);
   }
 
   handleCursorClick() {

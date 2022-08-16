@@ -1,7 +1,7 @@
 {
   "clue": "Click on the [human].",
   "type": "pixel",
-  "photographer": "Mr. Mister",
+  "credit": "Mr. Mister",
   "url": "http://www.google.com",
   "goals": [10, 20, 30, 45, 60]
 }
