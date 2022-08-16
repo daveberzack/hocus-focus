@@ -10,9 +10,10 @@ class PixelPainter extends Painter {
   }
 
   _doPaint(x, y) {
-    const xOffset = (Math.random() - 0.5) * 2 * 15;
-    const yOffset = (Math.random() - 0.5) * 2 * 15;
+    const xOffset = (Math.random() - 0.5) * 2 * 25;
+    const yOffset = (Math.random() - 0.5) * 2 * 25;
     this._doPaint2(x + xOffset, y + yOffset);
+    this._doPaint2(x + yOffset, y + xOffset);
     this._doPaint2(x, y);
   }
 
@@ -25,7 +26,7 @@ class PixelPainter extends Painter {
       const ctx = this.canvas.layers[detailLevel].context;
       let w = this.layerResolutions[detailLevel];
       this._pixel({ x, y, w, color, ctx });
-      this._drawToDetailLevel(detailLevel, this._pixel, { x, y, w }, 4);
+      this._drawToDetailLevel(detailLevel, this._pixel, { x, y, w }, 3);
     } else {
       this._stamp(x, y, 8, this.canvas.layers[detailLevel].context);
     }

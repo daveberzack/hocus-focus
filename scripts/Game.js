@@ -102,12 +102,15 @@ class Game {
     const winInterval = setInterval(() => {
       winCounter++;
       const percent = winCounter / NUM_FRAMES;
-      if (percent < passedPercent) {
-        this.$timerSwipe1.width(percent * 100 + "%");
-      } else {
-        this.$timerSwipe1.width(passedPercent * 100 + "%");
-        this.$timerSwipe2.width((percent - passedPercent) * 100 + "%");
-      }
+
+      this.$timerSwipe1.width(percent * 100 + "%");
+
+      // if (percent < passedPercent) {
+      //   this.$timerSwipe1.width(percent * 100 + "%");
+      // } else {
+      //   this.$timerSwipe1.width(passedPercent * 100 + "%");
+      //   this.$timerSwipe2.width((percent - passedPercent) * 100 + "%");
+      // }
 
       if (percent > goals2[0] / this.lastGoal) {
         if (percent > passedPercent) {
@@ -117,8 +120,8 @@ class Game {
           $("#stars").append($newStar);
           $newStar.animate(
             {
-              height: 30,
-              width: 30,
+              height: 40,
+              width: 40,
             },
             200,
             "easeOutQuad"
