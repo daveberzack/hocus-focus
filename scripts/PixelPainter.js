@@ -26,7 +26,7 @@ class PixelPainter extends Painter {
       const ctx = this.canvas.layers[detailLevel].context;
       let w = this.layerResolutions[detailLevel];
       this._pixel({ x, y, w, color, ctx });
-      this._drawToDetailLevel(detailLevel, this._pixel, { x, y, w }, 3);
+      this._drawToDetailLevel(detailLevel, this._pixel, { x, y, w }, 20);
     } else {
       this._stamp(x, y, 8, this.canvas.layers[detailLevel].context);
     }

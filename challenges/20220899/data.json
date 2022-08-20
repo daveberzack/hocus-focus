@@ -1,0 +1,7 @@
+{
+  "clue": "Where's the [bottom]?",
+  "type": "pixel",
+  "credit": "Mr. Thing",
+  "url": "http://www.google.com",
+  "goals": [10, 20, 30, 45, 60]
+}

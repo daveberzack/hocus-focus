@@ -32,19 +32,29 @@
     <header>
       <img src="img/hocus.png" id="logo" />
       <h1 id="logotype">Hocus <span class="bold">Focus</span></h1>
+      <img class="instructions-button" src="./img/help.png" />
     </header>
 
-    <div id="instructions" class="view">
+    <div id="instructions" class="view shown">
       <h2>How to play</h2>
-      <p>Each daily quest gives a clue to find something in a hidden image as quickly as you can.</p>
-      <p>Swipe paint the canvas to reveal the image. Paint over areas again to reveal finer details.</p>
-      <p>Try to find the answer as quickly as possible, then click on it to complete the quest. But if you're wrong, you get a 10-second penalty.</p>
-      <p class="center">Good hunting!</p>
-      <br />
-      <a id="intro-button" class="button" href="#">Back to Menu</a>
+      <p>Every day, there's a new clue to find something in a hidden picture. Reveal the picture by painting the canvas. Keep painting to add finer details.</p>
+      <p>Click the objective to win and stop the timer as quickly as you can. But be careful: every wrong click will cost you a 10-second penalty.</p>
+      <p>Good hunting.</p>
+      <p class="center"><a class="button game-button" href="#">Play</a></p>
+
+      <p>If you enjoy this game, please make a small donation.</p>
+      <p>Your patronage lets me work on more cool games and tools, and it's your vote for an internet driven by creativity and love, instead of attention-grubbing commercial toxicity.</p>
+      <p>Thank you so much!</p>
+      <p class="center">
+        <a id="intro-button" class="button" href="https://ko-fi.com/daveberzack" target="support"><img src="./img/heart.png" />Show Love<img src="./img/heart.png" /></a>
+      </p>
     </div>
 
-    <div id="game" class="view shown">
+    <div id="stats" class="view">
+      <h2>Your Stats</h2>
+    </div>
+
+    <div id="game" class="view">
       <div id="board">
         <canvas width="512" height="512" id="paint0"></canvas>
         <canvas width="512" height="512" id="paint1"></canvas>
@@ -58,7 +68,7 @@
         <canvas width="512" height="512" id="hit"></canvas>
         <canvas width="512" height="512" id="detail"></canvas>
         <div id="intro">
-          <button id="start-button">Begin</button>
+          <button id="start-button" class="button">Begin</button>
         </div>
       </div>
 
@@ -70,7 +80,14 @@
         <div class="timer-goal" id="timer-goal4"><h3></h3></div>
         <div class="timer-bar" id="timer-bar"></div>
 
-        <h2 id="win-message"></h2>
+        <div id="win-message"><h2></h2></div>
+        <div id="win-modal"><h2></h2></div>
+        <div id="win-links">
+          <img id="win-replay-link" src="./img/replay20.png" />
+          <img id="win-stats-link" src="./img/stats20.png" />
+          <img id="win-share-link" src="./img/share20.png" />
+          <a id="win-donate-link" href="https://ko-fi.com/daveberzack" target="support"><img src="./img/heart20.png" /></a>
+        </div>
       </div>
       <h2 id="clue"></h2>
       <div id="stars"></div>

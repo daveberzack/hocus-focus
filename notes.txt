@@ -1,16 +1,30 @@
-timer graphics, win message, stars
-
 update icons and social metadata
+refactor win message to new file
+
+default to help page first time
+actual stats/history/score
+
+check on all devices, scrolling
 
 optimize pixel/reveal
 cleaner pixels on resize
-
-add help page, default to help page first time
-add copyright and attribution footer 
+general refactor
 
 
-offset/mobile cursor?
-settings page?
+🔍 Hocus Focus [8-19-2022]
+🧩 - See you in the fall
+🏆 - ⭐⭐⭐⭐⭐ (2.2 Seconds)
+
+Solve the riddle in a hidden picture:
+https://www.5minute.games/hocus-focus
+
+
+
+
+
+
+
+sandbox mode/replay
 
 go back and optimize caching and guard in cloudfront
 
@@ -20,6 +34,8 @@ reference an online image and your own clue (db integration)
 cropping tool to specify area of image
 specify win area
 
+offset/mobile cursor?
+settings page?
 
 
 run server to avoid cors issues:

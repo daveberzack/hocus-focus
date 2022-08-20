@@ -1,13 +1,9 @@
 import Game from "./Game.js";
-import { getTodayString } from "./utils.js";
 
-const showView = (name) => {
-  $(".view").removeClass("shown");
-  $("#" + name).addClass("shown");
-};
+import { showView } from "./utils.js";
 
 const init = async () => {
-  const todayString = "20220817"; //getTodayString();
+  const todayString = "20220814"; //getTodayString();
   const response = await fetch(`./challenges/${todayString}/data.json`);
   let todayChallenge = await response.json();
   todayChallenge.imgFile = `./challenges/${todayString}/img.jpg`;
@@ -15,17 +11,22 @@ const init = async () => {
   $("#credit").text(todayChallenge.credit).attr("href", todayChallenge.url);
   const game = new Game(todayChallenge);
 
-  $("#instructions-button").click(() => {
+  $(".instructions-button").click(() => {
     showView("instructions");
+  });
+  $(".game-button").click(() => {
+    showView("game");
   });
 
   $("#start-button").click(() => {
     game.startGame();
     $("#intro").hide();
   });
+
+  setSize();
 };
 
-function onResize() {
+function setSize() {
   const winW = $(window).width();
   const winH = $(window).height();
   const w = Math.min(winW - 20, winH - 350);
@@ -36,6 +37,4 @@ function onResize() {
   $("footer p").width(w);
 }
 
-onResize();
-$(window).resize(onResize);
 init();
