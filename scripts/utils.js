@@ -20,10 +20,6 @@ function isInCanvas(mouseX, mouseY, $canvas) {
   return x >= 0 && y >= 0 && x <= graphicWidth && y <= graphicWidth;
 }
 
-// function rgbToHex(r, g, b){
-//     return "#" + ((r << 16) | (g << 8) | b).toString(16);
-// }
-
 function componentToHex(c) {
   var hex = c.toString(16);
   return hex.length == 1 ? "0" + hex : hex;
@@ -58,11 +54,11 @@ function sleep(ms) {
 }
 
 const formatClue = (input) => {
-  return input.replace("[", '<span class="bold">').replace("]", "</span>");
+  return input.replace("[", '<span class="bold">').replace("]", "</span>").replace("|", "<br/>");
 };
 
 const unformatClue = (input) => {
-  return input.replace("[", "").replace("]", "");
+  return input.replace("[", "").replace("]", "").replace("|", "");
 };
 
 function copyToClipboard(text, callback) {
@@ -73,4 +69,51 @@ function getRandom(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
-export { showView, getCanvasCoordinates, isInCanvas, rgbToHex, getNewCoordinates, getTodayString, getTodayFormatted, sleep, formatClue, unformatClue, copyToClipboard, getRandom };
+let gameResults = [];
+function saveGameResult(challengeId, timePassed, mistakes, stars) {
+  const existingResult = gameResults.find((g) => g.id == challengeId);
+  if (!existingResult) {
+    gameResults.push({ id: challengeId, timePassed: Math.round(timePassed), mistakes, stars });
+
+    const dataString = gameResults
+      .map((r) => {
+        return `${r.id}~${r.timePassed}~${r.mistakes}~${r.stars}`;
+      })
+      .join("^");
+
+    console.log("save:", dataString);
+    window.localStorage.setItem("gameResults", dataString);
+  }
+}
+
+function getGameResults() {
+  if (gameResults.length > 0) {
+    return gameResults;
+  } else {
+    const data = window.localStorage.getItem("gameResults")?.split("^") || [];
+    console.log("load:", data);
+    gameResults = data.map((r) => {
+      const d = r.split("~");
+      return { id: d[0], timePassed: d[1], mistakes: d[2], stars: d[3] };
+    });
+    console.log("parsed:", gameResults);
+    return gameResults;
+  }
+}
+
+export {
+  showView,
+  getCanvasCoordinates,
+  isInCanvas,
+  rgbToHex,
+  getNewCoordinates,
+  getTodayString,
+  getTodayFormatted,
+  sleep,
+  formatClue,
+  unformatClue,
+  copyToClipboard,
+  getRandom,
+  saveGameResult,
+  getGameResults,
+};

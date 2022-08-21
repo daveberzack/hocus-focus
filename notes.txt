@@ -1,22 +1,17 @@
-update icons and social metadata
-refactor win message to new file
+fix win messages
+show stats in page
+stat page design
 
-default to help page first time
-actual stats/history/score
+get url working: cloudfront directing to different buckets
+update absolute urls in index
 
-check on all devices, scrolling
+check on all devices, disable scrolling
 
 optimize pixel/reveal
 cleaner pixels on resize
 general refactor
 
-
-🔍 Hocus Focus [8-19-2022]
-🧩 - See you in the fall
-🏆 - ⭐⭐⭐⭐⭐ (2.2 Seconds)
-
-Solve the riddle in a hidden picture:
-https://www.5minute.games/hocus-focus
+reset for sandbox mode
 
 
 
@@ -24,7 +19,6 @@ https://www.5minute.games/hocus-focus
 
 
 
-sandbox mode/replay
 
 go back and optimize caching and guard in cloudfront
 

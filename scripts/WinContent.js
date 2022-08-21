@@ -11,20 +11,28 @@ class WinContent {
     $("#win-links").hide();
   }
 
-  async show({ timePassed, challenge }) {
+  async show({ challenge, effectiveTimePassed, goalsMet }) {
+    const timeFormatted = Math.round(effectiveTimePassed);
+
+    this.showStars(effectiveTimePassed, goalsMet, challenge);
+
+    await sleep(3000);
+
+    this.showWinMessage(timeFormatted, goalsMet);
+
+    this.showWinLinks(goalsMet, timeFormatted, challenge);
+  }
+
+  showStars(effectiveTimePassed, goalsMet, challenge) {
+    const passedPercent = effectiveTimePassed / challenge.lastGoal;
     const NUM_FRAMES = 200;
     let winCounter = 0;
-    const passedPercent = timePassed / challenge.lastGoal;
-
-    let goalsMet = challenge.goals.filter((g) => g > timePassed);
-
     let goalsMetIndex = 0;
     const winInterval = setInterval(() => {
       winCounter++;
       const percent = passedPercent + ((1 - passedPercent) * winCounter) / NUM_FRAMES;
 
       this.$timerBar.width(percent * 100 + "%");
-
       if (percent > goalsMet[goalsMetIndex] / challenge.lastGoal) {
         if (percent > passedPercent) {
           const $newStar = $(
@@ -45,16 +53,27 @@ class WinContent {
 
       if (percent >= 1.1) clearInterval(winInterval);
     }, 10);
+  }
 
-    await sleep(3000);
+  showWinMessage(timeFormatted, goalsMet) {
+    const messages = [
+      ["You got there.", "No stars this time.", "Keep at it!", "Got it."],
+      ["Not too shabby.", "Not bad.", "", "Alright!", "Solid effort."],
+      ["Nice.", "Good for you.", "Solid.", "There you go!", "Lovely."],
+      ["Good job!", "Very nice.", "Nice touch.", "Yay!", "Hurrah!"],
+      ["Great job!", "Excellent work!", "Bravo!", "Beautiful.", "Splendid!"],
+      ["Outstanding!", "Masterful.", "Truly virtuosic.", "Brilliant!", "Genius!"],
+    ];
+    let messageSubset = messages[goalsMet.length];
+    if (timeFormatted * 1 < 3) messageSubset = ["Really?", "Crazy luck!", "Huh...", "For real?"];
 
-    const messages = ["Good job!", "Very nice!", "Excellent work!", "Beautiful."];
-    const message = getRandom(messages);
-    const time = Math.round(timePassed * 10) / 10;
-    this.$winMessage.find("h2").html(`<span class="bold">${time} Seconds.</span><span class="comment"> ${message}</span>`);
+    const message = getRandom(messageSubset);
+    this.$winMessage.find("h2").html(`<span class="bold">${timeFormatted} Seconds.</span><span class="comment"> ${message}</span>`);
     this.$winMessage.fadeIn(300);
     this.$winMessage.find(".comment").hide().delay(1000).fadeIn(300);
+  }
 
+  showWinLinks(goalsMet, timeFormatted, challenge) {
     $("#win-links >*").hide();
     $("#win-links").show();
     //$("#win-replay-link").delay(2600).fadeIn(500);
@@ -94,7 +113,7 @@ class WinContent {
 
         const shareText = `🔍 Hocus Focus [${getTodayFormatted()}]
 🧩 - ${unformatClue(challenge.clue)}
-🏆 - ${stars} (${time} Seconds)
+🏆 - ${stars} (${timeFormatted} Seconds)
 
 Solve the riddle in a hidden picture:
 https://www.5minute.games/hocus-focus`;

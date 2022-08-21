@@ -1,15 +1,16 @@
 import Game from "./Game.js";
 
-import { showView } from "./utils.js";
+import { showView, getGameResults } from "./utils.js";
 
 const init = async () => {
-  const todayString = "20220814"; //getTodayString();
-  const response = await fetch(`./challenges/${todayString}/data.json`);
+  const challengeId = "20220816"; //getTodayString();
+  const response = await fetch(`./challenges/${challengeId}/data.json`);
   let todayChallenge = await response.json();
-  todayChallenge.imgFile = `./challenges/${todayString}/img.jpg`;
-  todayChallenge.hitFile = `./challenges/${todayString}/hit.jpg`;
-  $("#credit").text(todayChallenge.credit).attr("href", todayChallenge.url);
-  const game = new Game(todayChallenge);
+  todayChallenge.imgFile = `./challenges/${challengeId}/img.jpg`;
+  todayChallenge.hitFile = `./challenges/${challengeId}/hit.jpg`;
+  todayChallenge.id = challengeId;
+  const game = new Game();
+  game.init(todayChallenge);
 
   $(".instructions-button").click(() => {
     showView("instructions");
@@ -22,6 +23,12 @@ const init = async () => {
     game.startGame();
     $("#intro").hide();
   });
+
+  if (getGameResults().length > 0) {
+    showView("game");
+  } else {
+    showView("instructions");
+  }
 
   setSize();
 };

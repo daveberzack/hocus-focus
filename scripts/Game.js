@@ -1,24 +1,28 @@
 import Canvas from "./Canvas.js";
 import Cursor from "./Cursor.js";
 import PixelPainter from "./PixelPainter.js";
-import { isInCanvas, sleep, formatClue } from "./utils.js";
+import { isInCanvas, sleep, formatClue, saveGameResult } from "./utils.js";
 import WinContent from "./WinContent.js";
 
 const GAME_LOOP_INCREMENT = 10;
 
 class Game {
-  constructor(challenge) {
+  constructor() {
     this.$timerBar = $("#timer-bar");
     this.$timerSwipe1 = $("#timer-swipe1");
     this.$timerSwipe2 = $("#timer-swipe2");
     this.$clue = $("#clue");
-
-    this.timerWidth = 0;
-    this.timePassed = 0;
     this.addMouseListeners();
+    this.winContent = new WinContent();
+  }
+
+  init(challenge) {
     this.canvas = new Canvas(challenge);
     this.cursor = new Cursor($("#pic"));
     this.painter = new PixelPainter(this.canvas, this.cursor);
+    this.timerWidth = 0;
+    this.timePassed = 0;
+    this.mistakes = 0;
 
     this.$clue.html(formatClue(challenge.clue));
     this.goals = challenge.goals;
@@ -30,8 +34,6 @@ class Game {
       $(`#timer-goal${i}`).width(w);
       $(`#timer-goal${i} h3`).html(g);
     });
-
-    this.winContent = new WinContent();
   }
 
   addMouseListeners() {
@@ -72,24 +74,32 @@ class Game {
 
   updateTimer() {
     this.timePassed = this.timePassed + GAME_LOOP_INCREMENT / 1000;
-    const percent = Math.min((this.timePassed / this.challenge.lastGoal) * 100, 100);
+    const effectiveTimePassed = this.timePassed + this.mistakes * 10;
+    const percent = Math.min((effectiveTimePassed / this.challenge.lastGoal) * 100, 100);
     this.timerWidth = (this.timerWidth * 3 + percent) / 4; //animate
     this.$timerBar.width(this.timerWidth + "%");
   }
 
   handlePenalty() {
-    this.timePassed += 10;
+    this.mistakes++;
   }
 
   async handleWin() {
+    const effectiveTimePassed = this.timePassed + this.mistakes * 10;
+    const goalsMet = this.challenge.goals.filter((g) => g > effectiveTimePassed);
+
+    saveGameResult(this.challenge.id, this.timePassed, this.mistakes, goalsMet.length);
+    this.isPlaying = false;
     clearInterval(this.loopInterval);
     this.painter.revealAll(this.cursor.x, this.cursor.y);
     this.$clue.fadeOut(1000);
+
     await sleep(3000);
 
     this.winContent.show({
-      timePassed: this.timePassed,
       challenge: this.challenge,
+      effectiveTimePassed,
+      goalsMet,
     });
   }
 
