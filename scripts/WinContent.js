@@ -1,4 +1,5 @@
-import { sleep, getRandom, formatClue, unformatClue, getTodayFormatted, showView, copyToClipboard } from "./utils.js";
+import Stats from "./Stats.js";
+import { sleep, getRandom, formatClue, unformatClue, getTodayFormatted, showView, copyToClipboard, getGameResults } from "./utils.js";
 
 class WinContent {
   constructor() {
@@ -7,6 +8,7 @@ class WinContent {
     this.$timerBar = $("#timer-bar");
     this.$winMessage.hide();
     this.$winModal.hide();
+    this.stats = new Stats();
 
     $("#win-links").hide();
   }
@@ -88,8 +90,10 @@ class WinContent {
       .mouseout(() => {
         this.hideWinModal(300);
       })
-      .click(() => {
+      .click(async () => {
         showView("stats");
+        const results = await getGameResults();
+        this.stats.show(results);
       });
 
     $("#win-donate-link")

@@ -1,24 +1,18 @@
-fix win messages
-show stats in page
-stat page design
 
 get url working: cloudfront directing to different buckets
 update absolute urls in index
-
-check on all devices, disable scrolling
 
 optimize pixel/reveal
 cleaner pixels on resize
 general refactor
 
-reset for sandbox mode
+confirm mobile, social stuff
 
 
 
 
 
-
-
+reset for sandbox mode?
 
 go back and optimize caching and guard in cloudfront
 

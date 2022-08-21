@@ -24,6 +24,7 @@ class Game {
     this.timePassed = 0;
     this.mistakes = 0;
 
+    $("#credit").html(challenge.credit);
     this.$clue.html(formatClue(challenge.clue));
     this.goals = challenge.goals;
     challenge.lastGoal = challenge.goals[challenge.goals.length - 1];

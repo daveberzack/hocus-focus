@@ -24,7 +24,8 @@ const init = async () => {
     $("#intro").hide();
   });
 
-  if (getGameResults().length > 0) {
+  const results = await getGameResults();
+  if (results.length > 0) {
     showView("game");
   } else {
     showView("instructions");
@@ -38,8 +39,17 @@ function setSize() {
   const winH = $(window).height();
   const w = Math.min(winW - 20, winH - 350);
   $(".view").width(w);
-  $("#board").width(w - 8);
-  $("#board").height(w - 8);
+  $("#board")
+    .width(w - 8)
+    .height(w - 8);
+
+  const statsH = Math.max(400, w);
+  $("#board, #stats-graph-block")
+    .width(w - 8)
+    .height(statsH - 8);
+  $("#stats-graph")
+    .width(w - 120)
+    .height(statsH - 90);
 
   $("footer p").width(w);
 }
