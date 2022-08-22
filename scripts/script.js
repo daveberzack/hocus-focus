@@ -3,14 +3,13 @@ import Game from "./Game.js";
 import { showView, getGameResults } from "./utils.js";
 
 const init = async () => {
-  const challengeId = "20220816"; //getTodayString();
+  const challengeId = "20220815"; //getTodayString();
   const response = await fetch(`./challenges/${challengeId}/data.json`);
   let todayChallenge = await response.json();
   todayChallenge.imgFile = `./challenges/${challengeId}/img.jpg`;
   todayChallenge.hitFile = `./challenges/${challengeId}/hit.jpg`;
   todayChallenge.id = challengeId;
   const game = new Game();
-  game.init(todayChallenge);
 
   $(".instructions-button").click(() => {
     showView("instructions");
@@ -31,7 +30,8 @@ const init = async () => {
     showView("instructions");
   }
 
-  setSize();
+  const canvasWidth = setSize();
+  game.init(todayChallenge, 512);
 };
 
 function setSize() {
@@ -44,7 +44,7 @@ function setSize() {
     .height(w - 8);
 
   const statsH = Math.max(400, w);
-  $("#board, #stats-graph-block")
+  $("#stats-graph-block")
     .width(w - 8)
     .height(statsH - 8);
   $("#stats-graph")
@@ -52,6 +52,8 @@ function setSize() {
     .height(statsH - 90);
 
   $("footer p").width(w);
+
+  return w - 8;
 }
 
 init();

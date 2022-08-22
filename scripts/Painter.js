@@ -7,13 +7,16 @@ class Painter {
   }
 
   paint() {
-    const $elem = this.canvas.pic.$element;
+    const $elem = this.canvas.source.$element;
     const rect = $elem.offset();
     const elementWidth = $elem.width();
     const graphicWidth = $elem.attr("width");
 
-    const x = ((this.cursor.x - rect.left) * graphicWidth) / elementWidth;
-    const y = ((this.cursor.y - rect.top) * graphicWidth) / elementWidth;
+    //const x = ((this.cursor.x - rect.left) * graphicWidth) / elementWidth;
+    //const y = ((this.cursor.y - rect.top) * graphicWidth) / elementWidth;
+
+    const x = this.cursor.x - rect.left;
+    const y = this.cursor.y - rect.top;
 
     if (x >= 0 && y >= 0 && x <= this.canvas.graphicWidth && y <= this.canvas.graphicWidth) {
       this._doPaint(x, y);
@@ -37,9 +40,9 @@ class Painter {
     return Math.floor(p[0] / this.detailFactor);
   }
 
-  _stamp(x, y, w, ctx) {
-    const d = this.canvas.pic.context.getImageData(x - w / 2, y - w / 2, w, w);
-    if (d) ctx.putImageData(d, x - w / 2, y - w / 2);
+  _stamp(x, y, w) {
+    const d = this.canvas.source.context.getImageData(x - w / 2, y - w / 2, w, w);
+    if (d) this.canvas.target.context.putImageData(d, x - w / 2, y - w / 2);
   }
 
   _doPaint() {}

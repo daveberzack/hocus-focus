@@ -2,20 +2,19 @@ import { getCanvasCoordinates, rgbToHex } from "./utils.js";
 
 class Canvas {
   constructor(challenge) {
-    const { name } = challenge;
-    const $picElement = $("#pic");
-    this.graphicWidth = $picElement.attr("width");
+    const $sourceElement = $("#source");
+    this.graphicWidth = $sourceElement.attr("width");
 
     const self = this;
-    this.pic = {
-      $element: $picElement,
-      context: $picElement[0].getContext("2d"),
+    this.source = {
+      $element: $sourceElement,
+      context: $sourceElement[0].getContext("2d"),
     };
-    const picImage = new Image();
-    picImage.onload = function () {
-      self.drawImageToLayer(self.pic, picImage);
+    const sourceImage = new Image();
+    sourceImage.onload = function () {
+      self.drawImageToLayer(self.source, sourceImage);
     };
-    picImage.src = challenge.imgFile;
+    sourceImage.src = challenge.imgFile;
 
     const $hitElement = $("#hit");
     this.hit = {
@@ -28,39 +27,22 @@ class Canvas {
     };
     hitImage.src = challenge.hitFile;
 
-    this.layers = [];
-    for (let i = 0; i < 8; i++) {
-      const $layerElement = $("#paint" + i);
-      this.layers[i] = {
-        $element: $layerElement,
-        context: $layerElement[0].getContext("2d"),
-      };
-    }
-
-    const $detailElement = $("#detail");
-    const detailContext = $detailElement[0].getContext("2d");
-    this.detail = {
-      $element: $detailElement,
-      context: detailContext,
+    const $targetElement = $("#target");
+    this.target = {
+      $element: $targetElement,
+      context: $targetElement[0].getContext("2d"),
     };
-    detailContext.globalCompositeOperation = "lighten";
 
     this.resetLayers();
   }
 
   resetLayers() {
-    for (let i = 0; i < 8; i++) {
-      this.clearLayer(this.layers[i]);
-    }
-    this.fillLayer(this.layers[0], "#FFFFFF");
-
-    this.clearLayer(this.detail);
-    this.fillLayer(this.detail, "#000000");
-    this.pic.$element.css("opacity", 0);
+    this.fillLayer(this.target, "#FFFFFF");
+    this.source.$element.css("opacity", 0);
   }
 
   checkGuess(mouseX, mouseY) {
-    const { x, y } = getCanvasCoordinates(mouseX, mouseY, this.pic.$element);
+    const { x, y } = getCanvasCoordinates(mouseX, mouseY, this.hit.$element);
     const p = this.hit.context.getImageData(x, y, 1, 1).data;
     const hitSuccess = p[0] == 0 && p[1] == 0 && p[2] == 0;
     return hitSuccess;
@@ -80,6 +62,20 @@ class Canvas {
 
   drawImageToLayer(layer, image) {
     layer.context.drawImage(image, 0, 0, this.graphicWidth, this.graphicWidth);
+  }
+
+  drawRect(x, y, w, h, color) {
+    const ctx = this.target.context;
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.rect(x, y, w, h);
+    ctx.fill();
+  }
+
+  getColorAtCoordinates(x, y) {
+    const p = this.source.context.getImageData(x, y, 1, 1).data;
+    const color = "#" + ("000000" + rgbToHex(p[0], p[1], p[2])).slice(-6);
+    return color;
   }
 }
 

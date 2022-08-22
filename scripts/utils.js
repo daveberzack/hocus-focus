@@ -81,7 +81,6 @@ function saveGameResult(challengeId, timePassed, mistakes, stars) {
       })
       .join("^");
 
-    console.log("save:", dataString);
     window.localStorage.setItem("gameResults", dataString);
   }
 }
@@ -91,12 +90,10 @@ function getGameResults() {
     return gameResults;
   } else {
     const data = window.localStorage.getItem("gameResults")?.split("^") || [];
-    console.log("load:", data);
     gameResults = data.map((r) => {
       const d = r.split("~");
       return { id: d[0], timePassed: d[1], mistakes: d[2], stars: d[3] };
     });
-    console.log("parsed:", gameResults);
     return gameResults;
   }
 }

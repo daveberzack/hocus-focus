@@ -13,7 +13,7 @@ confirm mobile, social stuff
 
 
 reset for sandbox mode?
-
+line graph stats
 go back and optimize caching and guard in cloudfront
 
 cron based uploading so future images not available

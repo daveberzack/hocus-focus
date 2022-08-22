@@ -4,7 +4,7 @@ import PixelPainter from "./PixelPainter.js";
 import { isInCanvas, sleep, formatClue, saveGameResult } from "./utils.js";
 import WinContent from "./WinContent.js";
 
-const GAME_LOOP_INCREMENT = 10;
+const GAME_LOOP_INCREMENT = 5;
 
 class Game {
   constructor() {
@@ -16,10 +16,10 @@ class Game {
     this.winContent = new WinContent();
   }
 
-  init(challenge) {
+  init(challenge, canvasWidth) {
     this.canvas = new Canvas(challenge);
     this.cursor = new Cursor($("#pic"));
-    this.painter = new PixelPainter(this.canvas, this.cursor);
+    this.painter = new PixelPainter(this.canvas, this.cursor, canvasWidth);
     this.timerWidth = 0;
     this.timePassed = 0;
     this.mistakes = 0;
@@ -105,7 +105,7 @@ class Game {
   }
 
   handleCursorClick() {
-    if (isInCanvas(this.cursor.x, this.cursor.y, this.canvas.pic.$element)) {
+    if (isInCanvas(this.cursor.x, this.cursor.y, this.canvas.source.$element)) {
       const isGuessCorrect = this.canvas.checkGuess(this.cursor.x, this.cursor.y);
       if (isGuessCorrect) this.handleWin();
       else this.handlePenalty();
