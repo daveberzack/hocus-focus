@@ -4,7 +4,7 @@ import PixelPainter from "./PixelPainter.js";
 import { isInCanvas, sleep, formatClue, saveGameResult } from "./utils.js";
 import WinContent from "./WinContent.js";
 
-const GAME_LOOP_INCREMENT = 5;
+const GAME_LOOP_INCREMENT = 20;
 
 class Game {
   constructor() {
@@ -17,6 +17,7 @@ class Game {
   }
 
   init(challenge, canvasWidth) {
+    console.log("w:" + canvasWidth);
     this.canvas = new Canvas(challenge);
     this.cursor = new Cursor($("#pic"));
     this.painter = new PixelPainter(this.canvas, this.cursor, canvasWidth);

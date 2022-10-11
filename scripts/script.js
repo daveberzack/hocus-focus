@@ -3,7 +3,7 @@ import Game from "./Game.js";
 import { showView, getGameResults } from "./utils.js";
 
 const init = async () => {
-  const challengeId = "20220815"; //getTodayString();
+  const challengeId = "20220814"; //getTodayString();
   const response = await fetch(`./challenges/${challengeId}/data.json`);
   let todayChallenge = await response.json();
   todayChallenge.imgFile = `./challenges/${challengeId}/img.jpg`;
@@ -31,7 +31,7 @@ const init = async () => {
   }
 
   const canvasWidth = setSize();
-  game.init(todayChallenge, 512);
+  game.init(todayChallenge, canvasWidth);
 };
 
 function setSize() {

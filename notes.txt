@@ -1,11 +1,10 @@
 
-get url working: cloudfront directing to different buckets
 update absolute urls in index
+cursor offset issue
+get a working example
 
 optimize pixel/reveal
-cleaner pixels on resize
 general refactor
-
 confirm mobile, social stuff
 
 

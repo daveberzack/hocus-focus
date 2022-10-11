@@ -195,6 +195,10 @@ p {
   text-align: center;
 }
 
+#start-button {
+  padding: 10px 25px;
+}
+
 #clue {
   color: #ffffff;
   text-align: center;
@@ -288,7 +292,7 @@ p {
   color: #ffffff;
   background-color: #000000;
   border: 0px solid #000000;
-  padding: 10px 25px;
+  padding: 10px 5px;
   font-size: 40px;
   font-weight: 700;
   text-decoration: none;

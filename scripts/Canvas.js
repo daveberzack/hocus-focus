@@ -33,6 +33,12 @@ class Canvas {
       context: $targetElement[0].getContext("2d"),
     };
 
+    const $effectElement = $("#effect");
+    this.effect = {
+      $element: $effectElement,
+      context: $effectElement[0].getContext("2d"),
+    };
+
     this.resetLayers();
   }
 
@@ -70,6 +76,14 @@ class Canvas {
     ctx.beginPath();
     ctx.rect(x, y, w, h);
     ctx.fill();
+  }
+
+  drawTestRect(x, y, w, h, color) {
+    const ctx = this.effect.context;
+    ctx.strokeStyle = color;
+    ctx.beginPath();
+    ctx.rect(x, y, w, h);
+    ctx.stroke();
   }
 
   getColorAtCoordinates(x, y) {
