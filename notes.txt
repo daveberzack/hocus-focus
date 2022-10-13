@@ -1,14 +1,13 @@
-
 update absolute urls in index
-cursor offset issue
-get a working example
-
-optimize pixel/reveal
-general refactor
-confirm mobile, social stuff
+reveal
+add challenges, with indexes
+pwa stuff
 
 
 
+
+
+confirm mobile, social stuff, images
 
 
 reset for sandbox mode?

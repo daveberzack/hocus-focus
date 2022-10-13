@@ -70,6 +70,11 @@ class Canvas {
     layer.context.drawImage(image, 0, 0, this.graphicWidth, this.graphicWidth);
   }
 
+  stamp(x, y, w, h) {
+    const d = this.source.context.getImageData(x, y, w, h);
+    if (d) this.target.context.putImageData(d, x, y);
+  }
+
   drawRect(x, y, w, h, color) {
     const ctx = this.target.context;
     ctx.fillStyle = color;
@@ -87,7 +92,8 @@ class Canvas {
   }
 
   getColorAtCoordinates(x, y) {
-    const p = this.source.context.getImageData(x, y, 1, 1).data;
+    const p = this.source.context?.getImageData(x, y, 1, 1)?.data;
+    if (!p) return null;
     const color = "#" + ("000000" + rgbToHex(p[0], p[1], p[2])).slice(-6);
     return color;
   }

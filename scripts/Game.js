@@ -17,7 +17,6 @@ class Game {
   }
 
   init(challenge, canvasWidth) {
-    console.log("w:" + canvasWidth);
     this.canvas = new Canvas(challenge);
     this.cursor = new Cursor($("#pic"));
     this.painter = new PixelPainter(this.canvas, this.cursor, canvasWidth);

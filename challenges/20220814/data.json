@@ -1,7 +1,6 @@
 {
   "clue": "See you in the [fall]",
-  "type": "dot",
-  "credit": "Mr. Guy",
+  "credit": "John Doe",
   "url": "http://www.google.com",
-  "goals": [10, 20, 30, 45, 60]
+  "goals": [20, 30, 40, 60, 90]
 }

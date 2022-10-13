@@ -1,7 +1,6 @@
 {
   "clue": "Click on the [human].",
-  "type": "pixel",
-  "credit": "Mr. Mister",
+  "credit": "John Doe",
   "url": "http://www.google.com",
   "goals": [10, 20, 30, 45, 60]
 }

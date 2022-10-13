@@ -35,6 +35,15 @@ function getNewCoordinates(x0, y0, radians, distance) {
   return { x: x0 + dx, y: y0 + dy };
 }
 
+function getCoordinatesRelativeToCanvas(x0, y0, $canvas) {
+  console.log($canvas);
+  const rect = $canvas.offset();
+
+  const x = x0 - rect.left;
+  const y = y0 - rect.top;
+  return { x, y };
+}
+
 const _padTo2Digits = function (num) {
   return num.toString().padStart(2, "0");
 };
@@ -110,6 +119,7 @@ export {
   formatClue,
   unformatClue,
   copyToClipboard,
+  getCoordinatesRelativeToCanvas,
   getRandom,
   saveGameResult,
   getGameResults,
