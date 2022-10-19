@@ -23,7 +23,6 @@ class PixelPainter {
       const line = Math.floor((width * i) / this.numOfGridLines);
       this.gridLines.push(line);
     }
-    console.log(this.gridLines);
   }
 
   paint() {
@@ -91,9 +90,8 @@ class PixelPainter {
         for (let i = 0; i < 150; i++) {
           const radians = Math.random() * Math.PI * 2;
           //const distance = Math.max(5, (counter / 300 - Math.random()) * 30 * this.graphicWidth);
-          const distance = (counter / 350) * this.graphicWidth * (Math.random() + 0.3);
+          const distance = (counter / 500) * this.graphicWidth * (Math.random() + 0.3);
           const { x: x1, y: y1 } = getNewCoordinates(x, y, radians, distance);
-          console.log("paint " + x1 + "," + y1);
           this._doPaint(x1, y1, 3, false);
         }
       }

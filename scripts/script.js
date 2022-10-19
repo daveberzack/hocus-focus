@@ -1,13 +1,24 @@
 import Game from "./Game.js";
 
-import { showView, getGameResults } from "./utils.js";
+import { showView, getGameResults, getTodayString } from "./utils.js";
 
 const init = async () => {
-  const queryString = window.location.search;
-  const rand = Math.floor(Math.random() * 7);
-  const chId = queryString.substring(1) || rand;
-  const challengeIds = ["20220814", "20220815", "20220816", "20220817", "20220818", "20220819", "20220820"];
-  const challengeId = challengeIds[chId]; //getTodayString();
+  const results = await getGameResults();
+
+  let challengeId = getTodayString();
+
+  const testing = true;
+  if (testing) {
+    const newChallenges = ["001", "002", "003", "004", "005", "006", "007", "008", "009", "010", "011", "012", "013"];
+    let newIndex = 0;
+    let alreadyPlayed = false;
+    do {
+      challengeId = "new/" + newChallenges[newIndex];
+      alreadyPlayed = results.find((r) => r.id == challengeId);
+      newIndex++;
+    } while (alreadyPlayed);
+  }
+
   const response = await fetch(`./challenges/${challengeId}/data.json`);
   let todayChallenge = await response.json();
   todayChallenge.imgFile = `./challenges/${challengeId}/img.jpg`;
@@ -27,7 +38,6 @@ const init = async () => {
     $("#intro").hide();
   });
 
-  const results = await getGameResults();
   if (results.length > 0) {
     showView("game");
   } else {

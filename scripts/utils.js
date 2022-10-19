@@ -36,7 +36,6 @@ function getNewCoordinates(x0, y0, radians, distance) {
 }
 
 function getCoordinatesRelativeToCanvas(x0, y0, $canvas) {
-  console.log($canvas);
   const rect = $canvas.offset();
 
   const x = x0 - rect.left;

@@ -4,7 +4,7 @@ import PixelPainter from "./PixelPainter.js";
 import { isInCanvas, sleep, formatClue, saveGameResult } from "./utils.js";
 import WinContent from "./WinContent.js";
 
-const GAME_LOOP_INCREMENT = 20;
+const GAME_LOOP_INCREMENT = 35;
 
 class Game {
   constructor() {
