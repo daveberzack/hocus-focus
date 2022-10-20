@@ -1,10 +1,10 @@
 import Canvas from "./Canvas.js";
 import Cursor from "./Cursor.js";
 import PixelPainter from "./PixelPainter.js";
-import { isInCanvas, sleep, formatClue, saveGameResult } from "./utils.js";
+import { isInCanvas, sleep, formatClue, saveGameResult, sendAnalytics } from "./utils.js";
 import WinContent from "./WinContent.js";
 
-const GAME_LOOP_INCREMENT = 35;
+const GAME_LOOP_INCREMENT = 50;
 
 class Game {
   constructor() {
@@ -12,6 +12,7 @@ class Game {
     this.$timerSwipe1 = $("#timer-swipe1");
     this.$timerSwipe2 = $("#timer-swipe2");
     this.$clue = $("#clue");
+    this.$introClue = $("#intro-clue");
     this.addMouseListeners();
     this.winContent = new WinContent();
   }
@@ -25,7 +26,10 @@ class Game {
     this.mistakes = 0;
 
     $("#credit").html(challenge.credit);
-    this.$clue.html(formatClue(challenge.clue));
+    $("#credit").attr("href", challenge.url);
+    const clue = formatClue(challenge.clue);
+    this.$clue.hide().html(clue);
+    this.$introClue.html(clue);
     this.goals = challenge.goals;
     challenge.lastGoal = challenge.goals[challenge.goals.length - 1];
     this.challenge = challenge;
@@ -60,6 +64,7 @@ class Game {
   startGame() {
     this.isPlaying = true;
 
+    this.$clue.fadeIn();
     let self = this;
     clearInterval(this.loopInterval);
     this.loopInterval = setInterval(() => {
@@ -90,6 +95,8 @@ class Game {
     const goalsMet = this.challenge.goals.filter((g) => g > effectiveTimePassed);
 
     saveGameResult(this.challenge.id, this.timePassed, this.mistakes, goalsMet.length);
+    sendAnalytics("solve", { challengeId: this.challenge.id, timePassed: this.timePassed, mistakes: this.mistakes, stars: goalsMet.length });
+
     this.isPlaying = false;
     clearInterval(this.loopInterval);
     this.painter.revealAll(this.cursor.x, this.cursor.y);

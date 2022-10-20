@@ -73,9 +73,13 @@ class PixelPainter {
         if (scatter) {
           const xOffset = Math.random() > 0.5 ? w : -w;
           const yOffset = Math.random() > 0.5 ? h : -h;
-
           this._doPaint(x + xOffset, y + yOffset, startDetailLevel, true);
           if (d > 3) this._doPaint(x + yOffset * 2, y + xOffset * 2, startDetailLevel, false);
+          if (d > 4) {
+            this._doPaint(x + yOffset, y + xOffset, startDetailLevel, true);
+            this._doPaint(x - xOffset * 2, y - yOffset * 2, startDetailLevel, false);
+            this._doPaint(x - yOffset * 2, y - xOffset * 2, startDetailLevel, false);
+          }
         }
         break; //we've drawn at this detail level. Stop checking for higher detail
       }

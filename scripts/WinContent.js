@@ -11,10 +11,13 @@ class WinContent {
     this.stats = new Stats();
 
     $("#win-links").hide();
+    $("#credit-block").hide();
   }
 
   async show({ challenge, effectiveTimePassed, goalsMet }) {
     const timeFormatted = Math.round(effectiveTimePassed);
+
+    $("#credit-block").show();
 
     this.showStars(effectiveTimePassed, goalsMet, challenge);
 
@@ -120,7 +123,7 @@ class WinContent {
 🏆 - ${stars} (${timeFormatted} Seconds)
 
 Solve the riddle in a hidden picture:
-https://www.5minute.games/hocus-focus`;
+https://www.hocusfocus.fun`;
 
         copyToClipboard(shareText, () => {});
         this.showHideWinModal(formatClue("[Copied] to clipboard"), 500, 2000, 500);

@@ -1,13 +1,12 @@
-update absolute urls in index
-reveal
-add challenges, with indexes
 pwa stuff
+disable drag refresh
 
+events in analytics
+tester feedback form
 
-
-
-
-confirm mobile, social stuff, images
+update sw to actually cache and serve cached files
+get domain? update .fun with .com in manifest.
+replace localstorage with idb
 
 
 reset for sandbox mode?

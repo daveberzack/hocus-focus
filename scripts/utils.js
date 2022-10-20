@@ -1,3 +1,12 @@
+import { openDB } from "https://cdn.jsdelivr.net/npm/idb@7/+esm";
+
+const VERSION = 1;
+const dbPromise = openDB("data", VERSION, {
+  upgrade(db) {
+    db.createObjectStore("results", { keyPath: "key", autoIncrement: true });
+  },
+});
+
 function getCanvasCoordinates(mouseX, mouseY, $canvas) {
   const rect = $canvas.offset();
   const elementWidth = $canvas.width();
@@ -77,33 +86,17 @@ function getRandom(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
-let gameResults = [];
-function saveGameResult(challengeId, timePassed, mistakes, stars) {
-  const existingResult = gameResults.find((g) => g.id == challengeId);
-  if (!existingResult) {
-    gameResults.push({ id: challengeId, timePassed: Math.round(timePassed), mistakes, stars });
-
-    const dataString = gameResults
-      .map((r) => {
-        return `${r.id}~${r.timePassed}~${r.mistakes}~${r.stars}`;
-      })
-      .join("^");
-
-    window.localStorage.setItem("gameResults", dataString);
-  }
+async function saveGameResult(challengeId, timePassed, mistakes, stars) {
+  (await dbPromise).put("results", { id: challengeId, timePassed: Math.round(timePassed), mistakes, stars });
 }
 
-function getGameResults() {
-  if (gameResults.length > 0) {
-    return gameResults;
-  } else {
-    const data = window.localStorage.getItem("gameResults")?.split("^") || [];
-    gameResults = data.map((r) => {
-      const d = r.split("~");
-      return { id: d[0], timePassed: d[1], mistakes: d[2], stars: d[3] };
-    });
-    return gameResults;
-  }
+function sendAnalytics(type, data) {
+  gtag("event", type, data);
+}
+
+async function getGameResults() {
+  const results = await (await dbPromise).getAll("results");
+  return results;
 }
 
 export {
@@ -122,4 +115,5 @@ export {
   getRandom,
   saveGameResult,
   getGameResults,
+  sendAnalytics,
 };

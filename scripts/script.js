@@ -3,17 +3,21 @@ import Game from "./Game.js";
 import { showView, getGameResults, getTodayString } from "./utils.js";
 
 const init = async () => {
+  if (navigator && navigator.serviceWorker) {
+    navigator.serviceWorker.register("../sw.js");
+  }
+
   const results = await getGameResults();
 
   let challengeId = getTodayString();
 
   const testing = true;
   if (testing) {
-    const newChallenges = ["001", "002", "003", "004", "005", "006", "007", "008", "009", "010", "011", "012", "013"];
+    const newChallenges = ["001", "002", "003", "004", "005", "006", "007", "008", "009", "010", "011", "012", "013", "014", "015", "016"];
     let newIndex = 0;
     let alreadyPlayed = false;
     do {
-      challengeId = "new/" + newChallenges[newIndex];
+      challengeId = newChallenges[newIndex];
       alreadyPlayed = results.find((r) => r.id == challengeId);
       newIndex++;
     } while (alreadyPlayed);
