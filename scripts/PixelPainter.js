@@ -27,6 +27,7 @@ class PixelPainter {
 
   paint() {
     const { x, y } = getCoordinatesRelativeToCanvas(this.cursor.x, this.cursor.y, this.canvas.target.$element);
+    console.log(x, y);
     this._doPaint(x, y, 0, true);
   }
 
@@ -50,40 +51,64 @@ class PixelPainter {
       const gx = Math.floor((xPercent * this.numOfGridLines) / gb) * gb; //index of top gridline of pixel
       const gy = Math.floor((yPercent * this.numOfGridLines) / gb) * gb; //index of left gridline of pixel
       const detailLevel = this.detailLevels[gx][gy]; //get the detaillevel stored for this pixel
-      if (detailLevel == -1 || detailLevel == 9) {
-        // this has been stamped with max detail, or...
+
+      const { x: x2, y: y2, w, h } = this.getGridRectangle(gx, gy, gb);
+
+      if (detailLevel == -1) {
         // this has been set, but is queued up to delay increasing resolution immediately
       } else if (this.detailLevels[gx][gy] < d + 1) {
-        const x2 = this.gridLines[gx];
-        const y2 = this.gridLines[gy];
-
-        const w = this.gridLines[gx + gb] - this.gridLines[gx];
-        const h = this.gridLines[gy + gb] - this.gridLines[gy];
-
         if (detailLevel < this.gridblocksAtDetailLevel.length - 1) {
           this.canvas.drawRect(x2, y2, w, h, color);
           //this.canvas.drawTestRect(x2, y2, w, h, "red");
           this.addDetailLevel(gx, gy, d + 1);
         } else {
-          this.canvas.stamp(x2, y2, w * 2, h * 2); //Why *2? I don't know...
-          this.addDetailLevel(gx, gy, 9);
-        }
-
-        //draw some scatter to speed up and improve painting (but don't recurse!)
-        if (scatter) {
-          const xOffset = Math.random() > 0.5 ? w : -w;
-          const yOffset = Math.random() > 0.5 ? h : -h;
-          this._doPaint(x + xOffset, y + yOffset, startDetailLevel, true);
-          if (d > 3) this._doPaint(x + yOffset * 2, y + xOffset * 2, startDetailLevel, false);
-          if (d > 4) {
-            this._doPaint(x + yOffset, y + xOffset, startDetailLevel, true);
-            this._doPaint(x - xOffset * 2, y - yOffset * 2, startDetailLevel, false);
-            this._doPaint(x - yOffset * 2, y - xOffset * 2, startDetailLevel, false);
+          if (detailLevel == 9) {
+            //already at max detail. fill in some area around it.
+            const { x: x3, y: y3, w: w3, h: h3 } = this.getGridRectangle(x2 - w, y2 - w, gb * 4);
+            this.canvas.stamp(x3, y3, w3, h3);
+          } else {
+            this.canvas.stamp(x2, y2, w * 2, h * 2); //Why *2? I don't know...
+            this.addDetailLevel(gx, gy, 9);
           }
         }
         break; //we've drawn at this detail level. Stop checking for higher detail
       }
+
+      //draw some scatter to speed up and improve painting (but don't recurse!)
+      if (scatter) {
+        const xOffset = Math.random() > 0.5 ? w : -w;
+        const yOffset = Math.random() > 0.5 ? h : -h;
+        if (d > 2) this._doPaint(x + xOffset / 2, y + yOffset / 2, startDetailLevel, false);
+        if (d > 3) {
+          this._doPaint(x + yOffset, y + xOffset, startDetailLevel, false);
+          this._doPaint(x - yOffset, y + xOffset, startDetailLevel, false);
+        }
+        if (d > 4) {
+          const xOffset2 = Math.random() > 0.5 ? w : -w;
+          const yOffset2 = Math.random() > 0.5 ? h : -h;
+          this._doPaint(x + xOffset2, y + yOffset2, startDetailLevel, false);
+          this._doPaint(x + yOffset, y - xOffset, startDetailLevel, false);
+        }
+      }
     }
+  }
+
+  addDetailLevel(x, y, d) {
+    this.detailLevels[x][y] = -1;
+    this.detailQueue.push({ x, y, d });
+
+    if (this.detailQueue.length > 10) {
+      const q = this.detailQueue.shift();
+      this.detailLevels[q.x][q.y] = Math.max(this.detailLevels[q.x][q.y], q.d);
+    }
+  }
+
+  getGridRectangle(xIndex, yIndex, size) {
+    const x = this.gridLines[xIndex];
+    const y = this.gridLines[yIndex];
+    const w = this.gridLines[xIndex + size] - this.gridLines[xIndex];
+    const h = this.gridLines[yIndex + size] - this.gridLines[yIndex];
+    return { x, y, w, h };
   }
 
   revealAll(clickX, clickY) {
@@ -107,16 +132,6 @@ class PixelPainter {
       counter++;
       if (counter > 600) clearInterval(revealInterval);
     }, 10);
-  }
-
-  addDetailLevel(x, y, d) {
-    this.detailLevels[x][y] = -1;
-    this.detailQueue.push({ x, y, d });
-
-    if (this.detailQueue.length > 30) {
-      const q = this.detailQueue.shift();
-      this.detailLevels[q.x][q.y] = q.d;
-    }
   }
 
   stopReveal() {
