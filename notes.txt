@@ -1,8 +1,9 @@
-pwa stuff
-disable drag refresh
 
+enable scrolling
+submit form
+
+pwa stuff
 events in analytics
-tester feedback form
 
 update sw to actually cache and serve cached files
 get domain? update .fun with .com in manifest.

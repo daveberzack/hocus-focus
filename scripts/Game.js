@@ -13,17 +13,20 @@ class Game {
     this.$timerSwipe2 = $("#timer-swipe2");
     this.$clue = $("#clue");
     this.$introClue = $("#intro-clue");
+    this.$testerForm = $("#tester-form");
+    this.$testerForm.hide();
     this.addMouseListeners();
     this.winContent = new WinContent();
   }
 
-  init(challenge, canvasWidth) {
+  init(challenge, canvasWidth, testerId) {
     this.canvas = new Canvas(challenge);
     this.cursor = new Cursor($("#pic"));
     this.painter = new PixelPainter(this.canvas, this.cursor, canvasWidth);
     this.timerWidth = 0;
     this.timePassed = 0;
     this.mistakes = 0;
+    this.testerId = testerId;
 
     $("#credit").html(challenge.credit);
     $("#credit").attr("href", challenge.url);
@@ -109,6 +112,11 @@ class Game {
       effectiveTimePassed,
       goalsMet,
     });
+
+    if (this.testerId) {
+      await sleep(3000);
+      this.$testerForm.show();
+    }
   }
 
   handleCursorClick() {
