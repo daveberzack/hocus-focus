@@ -1,17 +1,29 @@
+create tutorial mode
 
-enable scrolling
-submit form
+pwa stuff, update sw to actually cache and serve cached files
 
-pwa stuff
-events in analytics
-
-update sw to actually cache and serve cached files
+check analytics: pageview, solve, feeback
 get domain? update .fun with .com in manifest.
-replace localstorage with idb
+
+
+
+Read the clue about a goal you're searching for.
+Swipe the canvas to reveal finer and finer details in the image.
+When you find the goal, click on it.
+
+You earn up to 5 stars for beating the checkpoints in the timer.
+But every wrong click will cost a 10-second penalty. 
+
+There's a new puzzle every day.
+Some are tricky and will take longer. 
+You can share your score to play against friends.
+
+
+
+
 
 
 reset for sandbox mode?
-line graph stats
 go back and optimize caching and guard in cloudfront
 
 cron based uploading so future images not available

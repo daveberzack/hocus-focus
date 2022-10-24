@@ -7,7 +7,6 @@ class Stats {
       scores[r.stars]++;
     });
     const maxScore = Math.max(...scores);
-    console.log(maxScore, scores);
     let html = "";
     for (let i = 5; i >= 0; i--) {
       const w = Math.round((scores[i] * 100) / maxScore);

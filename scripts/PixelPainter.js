@@ -27,7 +27,6 @@ class PixelPainter {
 
   paint() {
     const { x, y } = getCoordinatesRelativeToCanvas(this.cursor.x, this.cursor.y, this.canvas.target.$element);
-    console.log(x, y);
     this._doPaint(x, y, 0, true);
   }
 

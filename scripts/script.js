@@ -1,6 +1,6 @@
 import Game from "./Game.js";
 
-import { showView, getGameResults, getTodayString, getParameter } from "./utils.js";
+import { showView, getGameResults, getTodayString, getParameter, sendAnalytics } from "./utils.js";
 
 const init = async () => {
   if (navigator && navigator.serviceWorker) {
@@ -10,7 +10,6 @@ const init = async () => {
   const results = await getGameResults();
 
   let challengeId = getTodayString();
-  challengeId = "20221022";
 
   //if tester param provided, then set id to the next unplayed challenge from the specified set
   const testerId = getParameter("tester");
@@ -38,7 +37,6 @@ const init = async () => {
       goals: [],
     };
   }
-  console.log(todayChallenge);
 
   todayChallenge.imgFile = `./challenges/${challengeId}/img.jpg`;
   todayChallenge.hitFile = `./challenges/${challengeId}/hit.jpg`;
@@ -58,11 +56,31 @@ const init = async () => {
     $("#intro").hide();
   });
 
+  $("#form-button").click(() => {
+    const data = {
+      challengeId,
+      tester: testerId,
+      fun: $("input:radio[name ='fun']:checked").val(),
+      fair: $("input:radio[name ='fair']:checked").val(),
+      publish: $("input:radio[name ='publish']:checked").val(),
+    };
+    sendAnalytics("feedback", data);
+    $("#tester-form").hide();
+  });
+
   if (results.length > 0) {
     showView("game");
   } else {
     showView("instructions");
   }
+
+  let hasPlayed = false;
+  results.forEach((r) => {
+    if (r.id == challengeId) hasPlayed = true;
+  });
+
+  if (hasPlayed) $("#intro, #timer").hide();
+  else $("#played").hide();
 
   const canvasWidth = setSize();
   game.init(todayChallenge, canvasWidth, testerId);
