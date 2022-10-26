@@ -1,27 +1,39 @@
-create tutorial mode
 
-pwa stuff, update sw to actually cache and serve cached files
+create tutorial mode: before and after message, buttons
 
-check analytics: pageview, solve, feeback
-get domain? update .fun with .com in manifest.
+analytics.... content_id or challengeId? get solve and feedback metrics working
+
+get domain.
+update .fun with .com in manifest.
 
 
 
-Read the clue about a goal you're searching for.
-Swipe the canvas to reveal finer and finer details in the image.
-When you find the goal, click on it.
+
+
+
+How to play: 
+Swipe around the canvas to reveal finer and finer details.
+When you find the goal from the clue, click on it.
 
 You earn up to 5 stars for beating the checkpoints in the timer.
 But every wrong click will cost a 10-second penalty. 
 
 There's a new puzzle every day.
-Some are tricky and will take longer. 
+Some are tricky. You'll get more time to solve those. 
 You can share your score to play against friends.
 
 
+click on the bullseye.
 
+boop the nose.
 
+are you mad?
 
+30 - 5
+50 - 4
+70 - 3
+80 - 2
+90 - 1
 
 reset for sandbox mode?
 go back and optimize caching and guard in cloudfront

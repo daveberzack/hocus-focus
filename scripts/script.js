@@ -1,29 +1,85 @@
 import Game from "./Game.js";
 
-import { showView, getGameResults, getTodayString, getParameter, sendAnalytics } from "./utils.js";
+import { showView, getGameResults, getTodayString, getParameter, sendAnalytics, getTestChallenge } from "./utils.js";
+
+if (navigator && navigator.serviceWorker) {
+  navigator.serviceWorker.register("../sw.js");
+}
+
+const game = new Game();
+let testerId = null;
+let challengeId = "error";
+let hasPlayedToday = false;
+let hasPlayedAtAll = false;
 
 const init = async () => {
-  if (navigator && navigator.serviceWorker) {
-    navigator.serviceWorker.register("../sw.js");
-  }
-
+  challengeId = getTodayString();
   const results = await getGameResults();
 
-  let challengeId = getTodayString();
+  $(".instructions-button").click(() => {
+    showView("instructions");
+  });
+  $(".game-button").click(() => {
+    showView("game");
+  });
+
+  $("#start-button").click(() => {
+    game.startGame();
+    $("#intro").hide();
+  });
+
+  $("#reset").click(() => {
+    reset(challengeId);
+  });
+
+  $("#before-button").click(() => {
+    $("#before-message").hide();
+    $("#intro").css("display", "flex");
+  });
+  $("#after-button").click(function () {
+    $("#after-message").hide();
+    reset($(this).attr("data-next"));
+  });
+
+  $("#form-button").click(async () => {
+    const data = {
+      content_id: challengeId,
+      tester: testerId,
+      fun: $("input:radio[name ='fun']:checked").val(),
+      fair: $("input:radio[name ='fair']:checked").val(),
+      publish: $("input:radio[name ='publish']:checked").val(),
+    };
+    sendAnalytics("feedback", data);
+    $("#tester-form").hide();
+    const ch = (await getTestChallenge()) || getTodayString();
+    reset(ch);
+  });
 
   //if tester param provided, then set id to the next unplayed challenge from the specified set
-  const testerId = getParameter("tester");
+  testerId = getParameter("tester");
   if (testerId) {
-    const newChallenges = ["001", "002", "003", "004", "005", "006", "007", "008", "009", "010", "011", "012", "013", "014", "015", "016", "017"];
-    let newIndex = 0;
-    let alreadyPlayed = false;
-    do {
-      challengeId = newChallenges[newIndex];
-      alreadyPlayed = results.find((r) => r.id == challengeId);
-      newIndex++;
-    } while (alreadyPlayed);
+    challengeId = (await getTestChallenge()) || challengeId;
   }
 
+  if (results.length >= 3) hasPlayedAtAll = true;
+  if (!hasPlayedAtAll) {
+    challengeId = "tutorial0";
+  }
+
+  results.forEach((r) => {
+    if (r.id == challengeId) hasPlayedToday = true;
+  });
+
+  reset(challengeId);
+  showView("game");
+};
+
+const reset = async (challengeId) => {
+  if (challengeId == "TODAY") {
+    hasPlayedAtAll = true;
+    hasPlayedToday = false;
+    challengeId = getTodayString();
+  }
   let todayChallenge;
   try {
     const response = await fetch(`./challenges/${challengeId}/data.json`);
@@ -42,49 +98,32 @@ const init = async () => {
   todayChallenge.hitFile = `./challenges/${challengeId}/hit.jpg`;
   todayChallenge.id = challengeId;
 
-  const game = new Game();
-
-  $(".instructions-button").click(() => {
-    showView("instructions");
-  });
-  $(".game-button").click(() => {
-    showView("game");
-  });
-
-  $("#start-button").click(() => {
-    game.startGame();
-    $("#intro").hide();
-  });
-
-  $("#form-button").click(() => {
-    const data = {
-      challengeId,
-      tester: testerId,
-      fun: $("input:radio[name ='fun']:checked").val(),
-      fair: $("input:radio[name ='fair']:checked").val(),
-      publish: $("input:radio[name ='publish']:checked").val(),
-    };
-    sendAnalytics("feedback", data);
-    $("#tester-form").hide();
-  });
-
-  if (results.length > 0) {
-    showView("game");
-  } else {
-    showView("instructions");
-  }
-
-  let hasPlayed = false;
-  results.forEach((r) => {
-    if (r.id == challengeId) hasPlayed = true;
-  });
-
-  if (hasPlayed) $("#intro, #timer").hide();
-  else $("#played").hide();
-
   const canvasWidth = setSize();
+
+  if (!hasPlayedAtAll) {
+    showBeforeMessage(todayChallenge);
+  } else if (hasPlayedToday) {
+    $("#played").css("display", "flex");
+  } else {
+    $("#intro").css("display", "flex");
+  }
+  $("#stars").hide();
+
   game.init(todayChallenge, canvasWidth, testerId);
 };
+
+function showBeforeMessage(challenge) {
+  $("#before-message .title")
+    .toggle(challenge.beforeTitle?.length > 0)
+    .text(challenge.beforeTitle);
+  $("#before-message .content")
+    .toggle(challenge.beforeMessage?.length > 0)
+    .html(challenge.beforeMessage);
+  $("#before-button")
+    .toggle(challenge.beforeButton?.length > 0)
+    .text(challenge.beforeButton);
+  $("#before-message").css("display", "flex");
+}
 
 function setSize() {
   const winW = $(window).width();

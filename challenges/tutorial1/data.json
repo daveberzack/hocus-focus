@@ -1,0 +1,13 @@
+{
+  "clue": "Boop the [nose].",
+  "credit": "Pixabay",
+  "url": "https://www.pexels.com/photo/adorable-animal-canine-cute-220938/",
+  "goals": [5, 15, 30, 45, 60],
+  "beforeTitle": "How To Play",
+  "beforeMessage": "<p>You earn up to 5 stars for beating the checkpoints in the timer below.</p><p>But every wrong click will cost a 10-second penalty.</p>",
+  "beforeButton": "Play",
+  "afterTitle": "How To Play",
+  "afterMessage": "Excellent. Let's do one more warm-up!",
+  "afterButton": "Play",
+  "nextChallenge": "tutorial2"
+}

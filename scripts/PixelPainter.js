@@ -33,7 +33,7 @@ class PixelPainter {
   _doPaint(x, y, startDetailLevel, scatter) {
     const xPercent = x / this.elementWidth;
     const yPercent = y / this.elementWidth;
-    if (x < 0 || y < 0 || xPercent > 1 || yPercent > 1) {
+    if (isNaN(x) || isNaN(y) || x < 0 || y < 0 || xPercent > 1 || yPercent > 1) {
       return;
     }
 

@@ -6,12 +6,19 @@ class WinContent {
     this.$winMessage = $("#win-message");
     this.$winModal = $("#win-modal");
     this.$timerBar = $("#timer-bar");
+    this.$stars = $("#stars");
+    this.stats = new Stats();
+    this.winInterval = 0;
+    this.reset();
+  }
+
+  reset() {
+    this.$stars.hide();
     this.$winMessage.hide();
     this.$winModal.hide();
-    this.stats = new Stats();
-
     $("#win-links").hide();
     $("#credit-block").hide();
+    clearInterval(this.winInterval);
   }
 
   async show({ challenge, effectiveTimePassed, goalsMet }) {
@@ -26,14 +33,37 @@ class WinContent {
     this.showWinMessage(timeFormatted, goalsMet);
 
     this.showWinLinks(goalsMet, timeFormatted, challenge);
+
+    await sleep(1000);
+
+    this.showAfterMessage(challenge);
+  }
+
+  showAfterMessage(challenge) {
+    if (!challenge.afterMessage) return;
+
+    $("#after-message .content");
+    $("#after-message .title")
+      .toggle(challenge.afterTitle?.length > 0)
+      .text(challenge.afterTitle);
+    $("#after-message .content")
+      .toggle(challenge.afterMessage?.length > 0)
+      .html(challenge.afterMessage);
+    $("#after-button")
+      .toggle(challenge.afterButton?.length > 0)
+      .text(challenge.afterButton)
+      .attr("data-next", challenge.nextChallenge);
+    $("#after-message").css("display", "flex");
   }
 
   showStars(effectiveTimePassed, goalsMet, challenge) {
+    this.$stars.show();
+    this.$stars.empty();
     const passedPercent = effectiveTimePassed / challenge.lastGoal;
     const NUM_FRAMES = 200;
     let winCounter = 0;
     let goalsMetIndex = 0;
-    const winInterval = setInterval(() => {
+    this.winInterval = setInterval(() => {
       winCounter++;
       const percent = passedPercent + ((1 - passedPercent) * winCounter) / NUM_FRAMES;
 
@@ -43,7 +73,7 @@ class WinContent {
           const $newStar = $(
             '<svg class="star" x="0px" y="0px" width="98px" height="94px" viewBox="-0.5 -0.75 98 94"><polygon fill="#FFFFFF" points="0,35.75 33.5,30.25 48.75,0 63.25,30 96.75,35.5 73,59.25 78.5,92.75 48.5,77.25 18.25,92.75 24.25,59 "/></svg>'
           );
-          $("#stars").append($newStar);
+          this.$stars.append($newStar);
           $newStar.animate(
             {
               height: 40,
@@ -56,7 +86,7 @@ class WinContent {
         goalsMetIndex++;
       }
 
-      if (percent >= 1.1) clearInterval(winInterval);
+      if (percent >= 1.1) clearInterval(this.winInterval);
     }, 10);
   }
 

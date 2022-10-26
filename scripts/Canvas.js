@@ -8,7 +8,9 @@ class Canvas {
     const self = this;
     this.source = {
       $element: $sourceElement,
-      context: $sourceElement[0].getContext("2d"),
+      context: $sourceElement[0].getContext("2d", {
+        willReadFrequently: true,
+      }),
     };
     const sourceImage = new Image();
     sourceImage.onload = function () {
@@ -19,7 +21,9 @@ class Canvas {
     const $hitElement = $("#hit");
     this.hit = {
       $element: $hitElement,
-      context: $hitElement[0].getContext("2d"),
+      context: $hitElement[0].getContext("2d", {
+        willReadFrequently: true,
+      }),
     };
     const hitImage = new Image();
     hitImage.onload = function () {
@@ -30,7 +34,9 @@ class Canvas {
     const $targetElement = $("#target");
     this.target = {
       $element: $targetElement,
-      context: $targetElement[0].getContext("2d"),
+      context: $targetElement[0].getContext("2d", {
+        alpha: false,
+      }),
     };
 
     const $effectElement = $("#effect");
@@ -92,6 +98,9 @@ class Canvas {
   }
 
   getColorAtCoordinates(x, y) {
+    // if (isNaN(x) || isNaN(y) || x < 0 || y < 0 || x > this.graphicWidth || y > this.graphicWidth) {
+    //   return "#000000";
+    // }
     const p = this.source.context?.getImageData(x, y, 1, 1)?.data;
     if (!p) return null;
     const color = "#" + ("000000" + rgbToHex(p[0], p[1], p[2])).slice(-6);

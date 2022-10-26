@@ -112,6 +112,20 @@ function getParameter(parameterName) {
   return result;
 }
 
+async function getTestChallenge() {
+  const results = await getGameResults();
+  let challengeId = null;
+  const testChallenges = ["001", "002", "003", "004", "005"];
+  for (let i = 0; i < testChallenges.length; i++) {
+    const testChallenge = testChallenges[i];
+    if (!results.find((r) => r.id == testChallenge)) {
+      challengeId = testChallenge;
+      break;
+    }
+  }
+  return challengeId;
+}
+
 export {
   showView,
   getCanvasCoordinates,
@@ -130,4 +144,5 @@ export {
   getGameResults,
   sendAnalytics,
   getParameter,
+  getTestChallenge,
 };

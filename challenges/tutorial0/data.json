@@ -1,0 +1,11 @@
+{
+  "clue": "Click the [bullseye].",
+  "goals": [5, 10, 20, 40, 60],
+  "beforeTitle": "How To Play",
+  "beforeMessage": "<p>Welcome to a unique, new puzzle game.</p><p>Each challenge gives a clue to find something in a hidden picture.</p><p>Paint the canvas to reveal details.</p><p>When you see the goal, click on it.</p>",
+  "beforeButton": "Play",
+  "afterTitle": "How To Play",
+  "afterMessage": "Good Job! Now let's try a harder one.",
+  "afterButton": "Play",
+  "nextChallenge": "tutorial1"
+}

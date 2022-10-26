@@ -128,27 +128,10 @@ table {
 }
 
 body {
-  /* overflow: hidden;
-  position: fixed;
-  top: 0px;
-  width: 100%; */
   background-color: #000000;
   font-family: "Poppins", sans-serif;
   overscroll-behavior: contain;
 }
-
-/* 
-html,
-body {
-  overflow-x: hidden;
-} */
-
-/* #all {
-  overflow: hidden;
-  position: fixed;
-  top: 0px;
-  width: 100%;
-} */
 
 .bold {
   font-weight: 800;
@@ -197,7 +180,8 @@ p {
   text-align: center;
 }
 
-#start-button {
+.message-board button {
+  margin: 20px;
   padding: 10px 25px;
 }
 
@@ -313,8 +297,8 @@ p {
   border: 4px solid #ffffff;
   background-color: #ffffff;
 }
-#intro,
-#played {
+
+.message-board {
   position: absolute;
   top: 0;
   left: 0;
@@ -325,16 +309,14 @@ p {
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
+  display: none;
 }
-#intro p {
-  margin: 50px 0;
-}
-#played p {
+.message-board p {
   margin: 10px 20px;
   text-align: center;
   line-height: 1.25;
 }
-#played h3 {
+.message-board h3 {
   font-weight: bold;
   margin: 10px 20px;
   font-size: 26px;
@@ -342,8 +324,30 @@ p {
   line-height: 1.25;
 }
 
-#intro .button {
+.message-board .button {
   position: relative;
+}
+
+.message-board .title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  margin: 0px;
+  padding: 5px 0px;
+}
+
+.message-board .content p {
+  margin: 10px 20px;
+  text-align: center;
+  line-height: 1.25;
+  font-size: 18px;
+}
+
+#intro p {
+  margin: 50px 0;
 }
 
 #board > canvas {

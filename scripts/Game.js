@@ -23,17 +23,19 @@ class Game {
     this.canvas = new Canvas(challenge);
     this.cursor = new Cursor($("#pic"));
     this.painter = new PixelPainter(this.canvas, this.cursor, canvasWidth);
-    this.timerWidth = 0;
     this.timePassed = 0;
     this.mistakes = 0;
     this.testerId = testerId;
-
+    this.isPlaying = false;
+    this.resetTimer();
+    clearInterval(this.loopInterval);
     $("#credit").html(challenge.credit);
     $("#credit").attr("href", challenge.url);
     const clue = formatClue(challenge.clue);
     this.$clue.hide().html(clue);
     this.$introClue.html(clue);
     this.goals = challenge.goals;
+
     challenge.lastGoal = challenge.goals[challenge.goals.length - 1];
     this.challenge = challenge;
 
@@ -42,6 +44,8 @@ class Game {
       $(`#timer-goal${i}`).width(w);
       $(`#timer-goal${i} h3`).html(g);
     });
+
+    this.winContent.reset();
   }
 
   addMouseListeners() {
@@ -88,6 +92,10 @@ class Game {
     this.timerWidth = (this.timerWidth * 3 + percent) / 4; //animate
     this.$timerBar.width(this.timerWidth + "%");
   }
+  resetTimer() {
+    this.timerWidth = 0;
+    this.$timerBar.width("0%");
+  }
 
   handlePenalty() {
     this.mistakes++;
@@ -98,7 +106,7 @@ class Game {
     const goalsMet = this.challenge.goals.filter((g) => g > effectiveTimePassed);
 
     saveGameResult(this.challenge.id, this.timePassed, this.mistakes, goalsMet.length);
-    sendAnalytics("solve", { challengeId: this.challenge.id, timePassed: this.timePassed, mistakes: this.mistakes, stars: goalsMet.length });
+    sendAnalytics("solve", { content_id: this.challenge.id, timePassed: this.timePassed, mistakes: this.mistakes, stars: goalsMet.length });
 
     this.isPlaying = false;
     clearInterval(this.loopInterval);
