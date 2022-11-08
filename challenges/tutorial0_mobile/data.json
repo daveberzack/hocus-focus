@@ -2,7 +2,7 @@
   "clue": "Click the [bullseye].",
   "goals": [15, 30, 45, 60, 90],
   "beforeTitle": "How To Play",
-  "beforeMessage": "<p>Read the clue to find something in a hidden picture.</p><p>Move the mouse around this canvas to paint blocks of color. Paint over an area to reveal finer details.</p><p>When you see the goal, click on it to solve the puzzle.</p>",
+  "beforeMessage": "<p>Read the clue to find something in a hidden picture.</p><p>Swipe your finger around this canvas to paint blocks of color. Paint over an area to reveal finer details.</p><p>When you see the goal, click on it to solve the puzzle.</p>",
   "beforeButton": "Play",
   "afterTitle": "How To Play",
   "afterMessage": "<p>Good Job! Now let's try a harder one.</p>",

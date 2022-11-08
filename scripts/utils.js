@@ -90,8 +90,18 @@ async function saveGameResult(challengeId, timePassed, mistakes, stars) {
   (await dbPromise).put("results", { id: challengeId, timePassed: Math.round(timePassed), mistakes, stars });
 }
 
-function sendAnalytics(type, data) {
-  gtag("event", type, data);
+async function sendAnalytics(type, data) {
+  console.log("analytics", data);
+  const url = `https://dave-simplecrud.herokuapp.com/${type}`;
+  const response = await fetch(url, {
+    method: "POST",
+    mode: "cors",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+  console.log("...", response);
 }
 
 async function getGameResults() {
@@ -126,6 +136,11 @@ async function getTestChallenge() {
   return challengeId;
 }
 
+function isTouchDevice() {
+  const isTouch = window.ontouchstart !== undefined;
+  return isTouch;
+}
+
 export {
   showView,
   getCanvasCoordinates,
@@ -145,4 +160,5 @@ export {
   sendAnalytics,
   getParameter,
   getTestChallenge,
+  isTouchDevice,
 };

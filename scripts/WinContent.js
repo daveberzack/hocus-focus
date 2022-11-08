@@ -34,7 +34,7 @@ class WinContent {
 
     this.showWinLinks(goalsMet, timeFormatted, challenge);
 
-    await sleep(1000);
+    await sleep(3000);
 
     this.showAfterMessage(challenge);
   }

@@ -131,6 +131,23 @@ body {
   background-color: #000000;
   font-family: "Poppins", sans-serif;
   overscroll-behavior: contain;
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+}
+
+#all {
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  width: 100%;
 }
 
 .bold {
@@ -147,7 +164,6 @@ header .instructions-button {
   position: absolute;
   top: 10px;
   right: 10px;
-  width: 40px;
   height: 40px;
 }
 #logotype {
@@ -166,6 +182,21 @@ header .instructions-button {
   position: absolute;
   top: 10px;
   left: 10px;
+}
+
+header.small #logotype {
+  font-size: 25px;
+  margin-left: 40px;
+}
+header.small #logo {
+  height: 30px;
+  top: 5px;
+  left: 5px;
+}
+header.small .instructions-button {
+  height: 30px;
+  top: 5px;
+  right: 5px;
 }
 h2 {
   font-size: 90px;
@@ -245,14 +276,13 @@ p {
   top: 0px;
   left: 0px;
   height: 25px;
-  border-right: 4px solid #333333;
+  border-right: 4px solid #ffffff;
 }
 .timer-goal h3 {
   text-align: right;
   padding: 5px;
   font-size: 15px;
-  color: #333333;
-  font-weight: 800;
+  color: #ffffff;
 }
 
 #stars {
@@ -339,15 +369,35 @@ p {
   padding: 5px 0px;
 }
 
+.message-board .content {
+  padding-top: 50px;
+}
+
 .message-board .content p {
-  margin: 10px 20px;
+  margin: 10px 30px;
   text-align: center;
-  line-height: 1.25;
-  font-size: 18px;
+  line-height: 1.2;
+  font-size: 20px;
 }
 
 #intro p {
-  margin: 50px 0;
+  margin: 25px 0;
+}
+
+.message-board.small .content p {
+  margin: 10px 4px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.message-board.small .title {
+  display: none !important;
+}
+
+#after-button,
+#before-button {
+  padding: 5px 10px;
+  font-size: 1em;
 }
 
 #board > canvas {

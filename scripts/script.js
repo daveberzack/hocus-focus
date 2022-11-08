@@ -1,6 +1,6 @@
 import Game from "./Game.js";
 
-import { showView, getGameResults, getTodayString, getParameter, sendAnalytics, getTestChallenge } from "./utils.js";
+import { showView, getGameResults, getTodayString, getParameter, sendAnalytics, getTestChallenge, isTouchDevice } from "./utils.js";
 
 if (navigator && navigator.serviceWorker) {
   navigator.serviceWorker.register("../sw.js");
@@ -28,10 +28,6 @@ const init = async () => {
     $("#intro").hide();
   });
 
-  $("#reset").click(() => {
-    reset(challengeId);
-  });
-
   $("#before-button").click(() => {
     $("#before-message").hide();
     $("#intro").css("display", "flex");
@@ -43,13 +39,14 @@ const init = async () => {
 
   $("#form-button").click(async () => {
     const data = {
-      content_id: challengeId,
-      tester: testerId,
-      fun: $("input:radio[name ='fun']:checked").val(),
-      fair: $("input:radio[name ='fair']:checked").val(),
-      publish: $("input:radio[name ='publish']:checked").val(),
+      challengeId: challengeId,
+      name: testerId,
+      isFun: $("input:radio[name ='fun']:checked").val(),
+      isFair: $("input:radio[name ='fair']:checked").val(),
+      shouldPublish: $("input:radio[name ='publish']:checked").val(),
     };
-    sendAnalytics("feedback", data);
+
+    sendAnalytics("hocusfeedback", data);
     $("#tester-form").hide();
     const ch = (await getTestChallenge()) || getTodayString();
     reset(ch);
@@ -63,7 +60,8 @@ const init = async () => {
 
   if (results.length >= 3) hasPlayedAtAll = true;
   if (!hasPlayedAtAll) {
-    challengeId = "tutorial0";
+    if (isTouchDevice()) challengeId = "tutorial0_mobile";
+    else challengeId = "tutorial0";
   }
 
   results.forEach((r) => {
@@ -149,6 +147,7 @@ function setSize() {
 
   $("footer p").width(w);
 
+  if (w < 360) $(".message-board, header").addClass("small");
   return w - 8;
 }
 
