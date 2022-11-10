@@ -139,7 +139,7 @@ body {
 
 html,
 body {
-  overflow-x: hidden;
+  overflow: hidden;
   overscroll-behavior: contain;
 }
 
@@ -149,6 +149,7 @@ body {
   top: 0px;
   width: 100%;
 }
+
 
 .bold {
   font-weight: 800;
