@@ -125,6 +125,7 @@ class Game {
 
     if (this.testerId) {
       await sleep(3000);
+      $("#tester-form input:radio").prop("checked", false);
       this.$testerForm.show();
     }
   }
