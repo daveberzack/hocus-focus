@@ -107,8 +107,7 @@ class Game {
     const goalsMet = this.challenge.goals.filter((g) => g > effectiveTimePassed);
 
     saveGameResult(this.challenge.id, this.timePassed, this.mistakes, goalsMet.length);
-    console.log("solve", this.challenge);
-    sendAnalytics("hocussolve", { challengeId: this.challenge.id, timePassed: Math.round(this.timePassed), mistakes: this.mistakes, stars: goalsMet.length });
+    sendAnalytics("hocussolve", { tester: this.testerId, challengeId: this.challenge.id, timePassed: Math.round(this.timePassed), mistakes: this.mistakes, stars: goalsMet.length });
 
     this.isPlaying = false;
     clearInterval(this.loopInterval);

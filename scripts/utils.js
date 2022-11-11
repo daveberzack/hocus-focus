@@ -141,6 +141,10 @@ function isTouchDevice() {
   return isTouch;
 }
 
+function logPageView() {
+  sendAnalytics("pageview", { page: "hocusfocus", userAgent: navigator.userAgent });
+}
+
 export {
   showView,
   getCanvasCoordinates,
@@ -161,4 +165,5 @@ export {
   getParameter,
   getTestChallenge,
   isTouchDevice,
+  logPageView,
 };

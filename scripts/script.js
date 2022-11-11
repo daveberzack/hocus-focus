@@ -1,6 +1,6 @@
 import Game from "./Game.js";
 
-import { showView, getGameResults, getTodayString, getParameter, sendAnalytics, getTestChallenge, isTouchDevice } from "./utils.js";
+import { showView, getGameResults, getTodayString, getParameter, sendAnalytics, getTestChallenge, isTouchDevice, logPageView } from "./utils.js";
 
 if (navigator && navigator.serviceWorker) {
   navigator.serviceWorker.register("../sw.js");
@@ -40,10 +40,10 @@ const init = async () => {
   $("#form-button").click(async () => {
     const data = {
       challengeId: challengeId,
-      name: testerId,
-      isFun: $("input:radio[name ='fun']:checked").val(),
-      isFair: $("input:radio[name ='fair']:checked").val(),
-      shouldPublish: $("input:radio[name ='publish']:checked").val(),
+      tester: testerId,
+      fun: $("input:radio[name ='fun']:checked").val(),
+      difficulty: $("input:radio[name ='difficulty']:checked").val(),
+      feedback: $("#feedback").val(),
     };
 
     sendAnalytics("hocusfeedback", data);
@@ -68,6 +68,7 @@ const init = async () => {
     if (r.id == challengeId) hasPlayedToday = true;
   });
 
+  logPageView();
   reset(challengeId);
   showView("game");
 };

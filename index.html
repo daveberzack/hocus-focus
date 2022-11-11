@@ -110,41 +110,40 @@
       <div id="stars"></div>
 
       <div id="tester-form">
-        <h2>About this challenge...</h2>
+        <h2>About this puzzle</h2>
 
-        <p>Was the riddle fair?</p>
+        <p>Was it fun, interesting or clever?</p>
         <div>
           <div class="option">
-            <input type="radio" id="fair1" name="fair" value="1">
-            <label for="fair1">Yes</label>
+            <input type="radio" id="fun1" name="fun" value="3">
+            <label for="fair1">Yes!</label>
           </div>
           <div class="option">
-            <input type="radio" id="fair0" name="fair" value="0">
-            <label for="fair0">No</label>
+            <input type="radio" id="fun2" name="fun" value="2">
+            <label for="fair0">Eh.</label>
           </div>
-        </div>
-        <p>Was it fun to play?</p>
-        <div>
           <div class="option">
             <input type="radio" id="fun1" name="fun" value="1">
-            <label for="fun1">Yes</label>
-          </div>
-          <div class="option">
-            <input type="radio" id="fun0" name="fun" value="0">
-            <label for="fun0">No</label>
+            <label for="fair0">No.</label>
           </div>
         </div>
-        <p>Should I publish it?</p>
+        <p>Was it challenging?</p>
         <div>
           <div class="option">
-            <input type="radio" id="publish1" name="publish" value="1">
-            <label for="publish1">Yes</label>
+            <input type="radio" id="difficulty1" name="difficulty" value="1">
+            <label for="fun1">Too easy</label>
           </div>
           <div class="option">
-            <input type="radio" id="publish0" name="publish" value="0">
-            <label for="publish0">No</label>
+            <input type="radio" id="difficulty2" name="difficulty" value="2">
+            <label for="fun1">About right</label>
+          </div>
+          <div class="option">
+            <input type="radio" id="difficulty3" name="difficulty" value="3">
+            <label for="fun1">Too hard</label>
           </div>
         </div>
+        <p>Any technical problems, confusion, or other comments?</p>
+            <textarea id="feedback"></textarea>
         <p><a id="form-button" class="button" href="#">Submit</a></p>
 
 
@@ -162,16 +161,5 @@
 
   <script type="module" src="scripts/script.js"></script>
 
-
-
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MPKPN1T6EZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-MPKPN1T6EZ');
-</script>
   </body>
 </html>

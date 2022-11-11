@@ -526,37 +526,45 @@ footer a {
 
 #tester-form {
   position: fixed;
-  top: 100px;
-  left: 12%;
-  width: 70%;
+  top: 90px;
+  left: 5%;
+  width: 90%;
   border: 5px solid black;
   border-radius: 10px;
-  text-align: center;
   background: #aaaaaa;
-  padding-bottom: 20px;
+  padding: 20px;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 #tester-form h2 {
   font-size: 25px;
   font-weight: bold;
-  margin: 20px 10px;
+  margin: 0px 10px;
 }
 
 #tester-form p {
   font-size: 16px;
-  margin: 10px 10px;
+  margin: 20px 0px;
 }
 
 #tester-form .option {
   font-size: 20px;
   font-weight: bold;
   margin: 10px 10px;
-  display: inline-block;
+  padding-left: 20px;
+}
+
+#tester-form textarea {
+  font-size: 20px;
+  width: 100%;
+  height: 70px;
 }
 
 #tester-form .button {
   position: relative;
   max-width: 230px;
   margin: 0px auto;
+  text-align: center;
+  padding: 10px;
 }
