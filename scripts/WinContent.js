@@ -4,7 +4,6 @@ import { sleep, getRandom, formatClue, unformatClue, getTodayFormatted, showView
 class WinContent {
   constructor() {
     this.$winMessage = $("#win-message");
-    //this.$winModal = $("#win-modal");
     this.$timerBar = $("#timer-bar");
     this.$stars = $("#stars");
     this.stats = new Stats();
@@ -23,7 +22,7 @@ class WinContent {
     clearInterval(this.winInterval);
   }
 
-  async show({ challenge, effectiveTimePassed, goalsMet }) {
+  async show({ challenge, effectiveTimePassed, goalsMet, testerId }) {
     $("#win-content").show();
     const timeFormatted = Math.round(effectiveTimePassed);
 
@@ -39,6 +38,13 @@ class WinContent {
     await sleep(1000);
     if (challenge.nextChallenge) {
       $("#after-button").fadeIn().attr("data-next", challenge.nextChallenge);
+    }
+
+    if (testerId) {
+      await sleep(5000);
+      $("#tester-form input:radio").prop("checked", false);
+      $("#tester-form textarea").val("");
+      this.$testerForm.show();
     }
   }
 
@@ -126,8 +132,6 @@ Solve the riddle in a hidden picture:
 https://www.hocusfocus.fun`;
 
       copyToClipboard(shareText, () => {});
-      console.log($("#clipboard-message"));
-      //$("#clipboard-message").css({ height: 0 }).show().animate({ height: 25 }).delay(2000).animate({ height: 0 }).hide();
       $("#clipboard-message").show();
     });
 

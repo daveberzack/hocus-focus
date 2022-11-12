@@ -10,12 +10,40 @@ const game = new Game();
 let testerId = null;
 let challengeId = "error";
 let hasPlayedToday = false;
-let hasPlayedAtAll = false;
+let hasCompletedTutorials = false;
 
 const init = async () => {
   challengeId = getTodayString();
   const results = await getGameResults();
 
+  initUI();
+
+  //if tester param provided, then set id to the next unplayed challenge from the specified set
+  testerId = getParameter("tester");
+  if (testerId) {
+    challengeId = (await getTestChallenge()) || challengeId;
+  }
+
+  let tutorialsCompleted = 0;
+  results.forEach((r) => {
+    if (r.id.indexOf("tutorial") >= 0) tutorialsCompleted++;
+  });
+  if (tutorialsCompleted >= 3) hasCompletedTutorials = true;
+  if (!hasCompletedTutorials) {
+    if (isTouchDevice()) challengeId = "tutorial0_mobile";
+    else challengeId = "tutorial0";
+  }
+
+  results.forEach((r) => {
+    if (r.id == challengeId) hasPlayedToday = true;
+  });
+
+  showView("game");
+  logPageView();
+  reset(challengeId);
+};
+
+const initUI = () => {
   $("#version").click(resetData);
 
   $(".instructions-button").click(() => {
@@ -32,7 +60,6 @@ const init = async () => {
 
   $("#before-button").click(() => {
     showView("game");
-    //$("#intro").css("display", "flex");
   });
   $("#after-button").click(function () {
     $("#after-message").hide();
@@ -53,36 +80,11 @@ const init = async () => {
     const ch = (await getTestChallenge()) || getTodayString();
     reset(ch);
   });
-
-  //if tester param provided, then set id to the next unplayed challenge from the specified set
-  testerId = getParameter("tester");
-  if (testerId) {
-    challengeId = (await getTestChallenge()) || challengeId;
-  }
-
-  console.log(results);
-  let tutorialsCompleted = 0;
-  results.forEach((r) => {
-    if (r.id.indexOf("tutorial") >= 0) tutorialsCompleted++;
-  });
-  if (tutorialsCompleted >= 3) hasPlayedAtAll = true;
-  if (!hasPlayedAtAll) {
-    if (isTouchDevice()) challengeId = "tutorial0_mobile";
-    else challengeId = "tutorial0";
-  }
-
-  results.forEach((r) => {
-    if (r.id == challengeId) hasPlayedToday = true;
-  });
-
-  showView("game");
-  logPageView();
-  reset(challengeId);
 };
 
 const reset = async (challengeId) => {
   if (challengeId == "TODAY") {
-    hasPlayedAtAll = true;
+    hasCompletedTutorials = true;
     hasPlayedToday = false;
     challengeId = getTodayString();
   }
@@ -105,8 +107,7 @@ const reset = async (challengeId) => {
   todayChallenge.id = challengeId;
 
   const canvasWidth = setSize();
-
-  if (!hasPlayedAtAll & todayChallenge.beforeTitle && todayChallenge.beforeMessage) {
+  if (!hasCompletedTutorials && todayChallenge.beforeTitle && todayChallenge.beforeMessage) {
     showBeforeMessage(todayChallenge);
     $("#intro").css("display", "flex");
   } else if (hasPlayedToday) {
@@ -120,7 +121,6 @@ const reset = async (challengeId) => {
 };
 
 function showBeforeMessage(challenge) {
-  console.log("before" + challenge.beforeTitle, challenge);
   $("#before-message .title").show().html(challenge.beforeTitle);
   $("#before-message .content").show().html(challenge.beforeMessage);
   showView("before-message");
@@ -129,7 +129,7 @@ function showBeforeMessage(challenge) {
 function setSize() {
   const winW = $(window).width();
   const winH = $(window).height();
-  const w = Math.min(winW - 20, winH - 350);
+  const w = Math.min(winW - 20, winH - 240);
   $(".view").width(w);
   $("#board")
     .width(w - 8)

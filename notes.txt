@@ -1,6 +1,3 @@
-refactor
-
-test responsiveness
 screen size in analytics
 
 

@@ -96,6 +96,14 @@ class Game {
     this.$timerBar.width("0%");
   }
 
+  handleCursorClick() {
+    if (isInCanvas(this.cursor.x, this.cursor.y, this.canvas.source.$element)) {
+      const isGuessCorrect = this.canvas.checkGuess(this.cursor.x, this.cursor.y);
+      if (isGuessCorrect) this.handleWin();
+      else this.handlePenalty();
+    }
+  }
+
   handlePenalty() {
     this.mistakes++;
   }
@@ -118,22 +126,8 @@ class Game {
       challenge: this.challenge,
       effectiveTimePassed,
       goalsMet,
+      testerId: this.testerId,
     });
-
-    if (this.testerId) {
-      await sleep(5000);
-      $("#tester-form input:radio").prop("checked", false);
-      $("#tester-form textarea").val("");
-      this.$testerForm.show();
-    }
-  }
-
-  handleCursorClick() {
-    if (isInCanvas(this.cursor.x, this.cursor.y, this.canvas.source.$element)) {
-      const isGuessCorrect = this.canvas.checkGuess(this.cursor.x, this.cursor.y);
-      if (isGuessCorrect) this.handleWin();
-      else this.handlePenalty();
-    }
   }
 }
 
