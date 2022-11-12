@@ -4,7 +4,7 @@ import { sleep, getRandom, formatClue, unformatClue, getTodayFormatted, showView
 class WinContent {
   constructor() {
     this.$winMessage = $("#win-message");
-    this.$winModal = $("#win-modal");
+    //this.$winModal = $("#win-modal");
     this.$timerBar = $("#timer-bar");
     this.$stars = $("#stars");
     this.stats = new Stats();
@@ -15,28 +15,31 @@ class WinContent {
   reset() {
     this.$stars.hide();
     this.$winMessage.hide();
-    this.$winModal.hide();
-    $("#win-links").hide();
+    $("#win-content").hide();
+    $("#after-button").hide();
     $("#credit-block").hide();
+    $("#win-links").hide();
+    $("#clipboard-message").hide();
     clearInterval(this.winInterval);
   }
 
   async show({ challenge, effectiveTimePassed, goalsMet }) {
+    $("#win-content").show();
     const timeFormatted = Math.round(effectiveTimePassed);
-
-    $("#credit-block").show();
 
     this.showStars(effectiveTimePassed, goalsMet, challenge);
 
-    await sleep(3000);
+    await sleep(2000);
 
     this.showWinMessage(timeFormatted, goalsMet);
 
+    await sleep(2000);
     this.showWinLinks(goalsMet, timeFormatted, challenge);
 
-    await sleep(3000);
-
-    this.showAfterMessage(challenge);
+    await sleep(1000);
+    if (challenge.nextChallenge) {
+      $("#after-button").fadeIn().attr("data-next", challenge.nextChallenge);
+    }
   }
 
   showAfterMessage(challenge) {
@@ -49,11 +52,6 @@ class WinContent {
     $("#after-message .content")
       .toggle(challenge.afterMessage?.length > 0)
       .html(challenge.afterMessage);
-    $("#after-button")
-      .toggle(challenge.afterButton?.length > 0)
-      .text(challenge.afterButton)
-      .attr("data-next", challenge.nextChallenge);
-    $("#after-message").css("display", "flex");
   }
 
   showStars(effectiveTimePassed, goalsMet, challenge) {
@@ -70,9 +68,7 @@ class WinContent {
       this.$timerBar.width(percent * 100 + "%");
       if (percent > goalsMet[goalsMetIndex] / challenge.lastGoal) {
         if (percent > passedPercent) {
-          const $newStar = $(
-            '<svg class="star" x="0px" y="0px" width="98px" height="94px" viewBox="-0.5 -0.75 98 94"><polygon fill="#FFFFFF" points="0,35.75 33.5,30.25 48.75,0 63.25,30 96.75,35.5 73,59.25 78.5,92.75 48.5,77.25 18.25,92.75 24.25,59 "/></svg>'
-          );
+          const $newStar = $('<svg class="star" x="0px" y="0px" width="98px" height="94px" viewBox="-0.5 -0.75 98 94"><polygon fill="#FFFFFF" points="0,35.75 33.5,30.25 48.75,0 63.25,30 96.75,35.5 73,59.25 78.5,92.75 48.5,77.25 18.25,92.75 24.25,59 "/></svg>');
           this.$stars.append($newStar);
           $newStar.animate(
             {
@@ -109,69 +105,37 @@ class WinContent {
   }
 
   showWinLinks(goalsMet, timeFormatted, challenge) {
-    $("#win-links >*").hide();
-    $("#win-links").show();
-    //$("#win-replay-link").delay(2600).fadeIn(500);
-    $("#win-stats-link").delay(2400).fadeIn(500);
-    $("#win-share-link").delay(2200).fadeIn(500);
-    $("#win-donate-link").delay(2000).fadeIn(500);
+    $("#win-links").css({ bottom: -100 }).show().animate({ bottom: 0 }, 500);
+    $("#win-stats-link").click(async () => {
+      showView("stats");
+      const results = await getGameResults();
+      this.stats.show(results);
+    });
 
-    $("#win-stats-link")
-      .mouseover(() => {
-        this.showWinModal(formatClue("View your [stats]"), 300);
-      })
-      .mouseout(() => {
-        this.hideWinModal(300);
-      })
-      .click(async () => {
-        showView("stats");
-        const results = await getGameResults();
-        this.stats.show(results);
-      });
+    $("#win-donate-link");
 
-    $("#win-donate-link")
-      .mouseover(() => {
-        this.showWinModal(formatClue("[Support] the developer"), 300);
-      })
-      .mouseout(() => {
-        this.hideWinModal(300);
-      });
+    $("#win-share-link").click(() => {
+      let stars = "";
+      goalsMet.forEach((s) => (stars += "⭐"));
 
-    $("#win-share-link")
-      .mouseover(() => {
-        this.showWinModal(formatClue("[Share] your Results"), 300);
-      })
-      .mouseout(() => {
-        this.hideWinModal(300);
-      })
-      .click(() => {
-        let stars = "";
-        goalsMet.forEach((s) => (stars += "⭐"));
-
-        const shareText = `🔍 Hocus Focus [${getTodayFormatted()}]
+      const shareText = `🔍 Hocus Focus [${getTodayFormatted()}]
 🧩 - ${unformatClue(challenge.clue)}
 🏆 - ${stars} (${timeFormatted} Seconds)
 
 Solve the riddle in a hidden picture:
 https://www.hocusfocus.fun`;
 
-        copyToClipboard(shareText, () => {});
-        this.showHideWinModal(formatClue("[Copied] to clipboard"), 500, 2000, 500);
-      });
-  }
+      copyToClipboard(shareText, () => {});
+      console.log($("#clipboard-message"));
+      //$("#clipboard-message").css({ height: 0 }).show().animate({ height: 25 }).delay(2000).animate({ height: 0 }).hide();
+      $("#clipboard-message").show();
+    });
 
-  showHideWinModal(msg, fadeIn, duration, fadeOut) {
-    this.$winModal.find("h2").html(msg);
-    this.$winModal.hide().fadeIn(fadeIn).delay(duration).fadeOut(fadeOut);
-  }
-
-  showWinModal(msg, fadeIn) {
-    this.$winModal.find("h2").html(msg);
-    this.$winModal.hide().fadeIn(fadeIn);
-  }
-
-  hideWinModal(fadeOut) {
-    this.$winModal.fadeOut(fadeOut);
+    if (challenge.credit) {
+      $("#credit-block").css({ top: -50 }).show().animate({ top: 0 }, 500);
+      $("#credit").text(challenge.credit);
+      $("#credit").attr("href", challenge.url);
+    }
   }
 }
 

@@ -29,8 +29,6 @@ class Game {
     this.isPlaying = false;
     this.resetTimer();
     clearInterval(this.loopInterval);
-    $("#credit").html(challenge.credit);
-    $("#credit").attr("href", challenge.url);
     const clue = formatClue(challenge.clue);
     this.$clue.hide().html(clue);
     this.$introClue.html(clue);
@@ -123,8 +121,9 @@ class Game {
     });
 
     if (this.testerId) {
-      await sleep(3000);
+      await sleep(5000);
       $("#tester-form input:radio").prop("checked", false);
+      $("#tester-form textarea").val("");
       this.$testerForm.show();
     }
   }

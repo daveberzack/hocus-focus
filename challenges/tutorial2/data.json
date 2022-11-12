@@ -4,10 +4,6 @@
   "url": "https://www.pexels.com/photo/beautiful-country-countryside-daylight-414061/",
   "goals": [30, 60, 90, 120, 150],
   "beforeTitle": "How To Play",
-  "beforeMessage": "<p>Some puzzles are tricky riddles or perplexing images.</p><p>Don't worry. You'll get more time to solve those.</p>",
-  "beforeButton": "Play",
-  "afterTitle": "How To Play",
-  "afterMessage": "<p>There's a new puzzle every day.</p><p>You can share your daily score to play against friends.</p><p>Ready to play today's puzzle?</p>",
-  "afterButton": "Let's go!",
+  "beforeMessage": "<p>Some puzzles have tricky riddles or perplexing images.</p><p>Relax.</p><p>Each challenge is supposed to take up to a minute or two, and you'll get more time to solve the tough ones.</p>",
   "nextChallenge": "TODAY"
 }

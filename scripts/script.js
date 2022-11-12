@@ -1,6 +1,6 @@
 import Game from "./Game.js";
 
-import { showView, getGameResults, getTodayString, getParameter, sendAnalytics, getTestChallenge, isTouchDevice, logPageView } from "./utils.js";
+import { showView, getGameResults, getTodayString, getParameter, sendAnalytics, getTestChallenge, isTouchDevice, logPageView, resetData } from "./utils.js";
 
 if (navigator && navigator.serviceWorker) {
   navigator.serviceWorker.register("../sw.js");
@@ -16,6 +16,8 @@ const init = async () => {
   challengeId = getTodayString();
   const results = await getGameResults();
 
+  $("#version").click(resetData);
+
   $(".instructions-button").click(() => {
     showView("instructions");
   });
@@ -29,8 +31,8 @@ const init = async () => {
   });
 
   $("#before-button").click(() => {
-    $("#before-message").hide();
-    $("#intro").css("display", "flex");
+    showView("game");
+    //$("#intro").css("display", "flex");
   });
   $("#after-button").click(function () {
     $("#after-message").hide();
@@ -58,7 +60,12 @@ const init = async () => {
     challengeId = (await getTestChallenge()) || challengeId;
   }
 
-  if (results.length >= 3) hasPlayedAtAll = true;
+  console.log(results);
+  let tutorialsCompleted = 0;
+  results.forEach((r) => {
+    if (r.id.indexOf("tutorial") >= 0) tutorialsCompleted++;
+  });
+  if (tutorialsCompleted >= 3) hasPlayedAtAll = true;
   if (!hasPlayedAtAll) {
     if (isTouchDevice()) challengeId = "tutorial0_mobile";
     else challengeId = "tutorial0";
@@ -68,9 +75,9 @@ const init = async () => {
     if (r.id == challengeId) hasPlayedToday = true;
   });
 
+  showView("game");
   logPageView();
   reset(challengeId);
-  showView("game");
 };
 
 const reset = async (challengeId) => {
@@ -99,8 +106,9 @@ const reset = async (challengeId) => {
 
   const canvasWidth = setSize();
 
-  if (!hasPlayedAtAll) {
+  if (!hasPlayedAtAll & todayChallenge.beforeTitle && todayChallenge.beforeMessage) {
     showBeforeMessage(todayChallenge);
+    $("#intro").css("display", "flex");
   } else if (hasPlayedToday) {
     $("#played").css("display", "flex");
   } else {
@@ -112,16 +120,10 @@ const reset = async (challengeId) => {
 };
 
 function showBeforeMessage(challenge) {
-  $("#before-message .title")
-    .toggle(challenge.beforeTitle?.length > 0)
-    .text(challenge.beforeTitle);
-  $("#before-message .content")
-    .toggle(challenge.beforeMessage?.length > 0)
-    .html(challenge.beforeMessage);
-  $("#before-button")
-    .toggle(challenge.beforeButton?.length > 0)
-    .text(challenge.beforeButton);
-  $("#before-message").css("display", "flex");
+  console.log("before" + challenge.beforeTitle, challenge);
+  $("#before-message .title").show().html(challenge.beforeTitle);
+  $("#before-message .content").show().html(challenge.beforeMessage);
+  showView("before-message");
 }
 
 function setSize() {
@@ -147,8 +149,10 @@ function setSize() {
     .prop("height", w - 8);
 
   $("footer p").width(w);
+  $("#before-message").css({ "min-height": w - 8, "max-height": winH - 120 });
+  $("#tester-form").css({ "max-height": winH - 110 });
 
-  if (w < 360) $(".message-board, header").addClass("small");
+  if (w < 360) $("body").addClass("small");
   return w - 8;
 }
 

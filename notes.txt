@@ -1,62 +1,51 @@
+refactor
 
-create tutorial mode: before and after message, buttons
+test responsiveness
+screen size in analytics
 
-analytics.... content_id or challengeId? get solve and feedback metrics working
+
+
 
 get domain.
 update .fun with .com in manifest.
-
-
-
-
-
-
-How to play: 
-Swipe around the canvas to reveal finer and finer details.
-When you find the goal from the clue, click on it.
-
-You earn up to 5 stars for beating the checkpoints in the timer.
-But every wrong click will cost a 10-second penalty. 
-
-There's a new puzzle every day.
-Some are tricky. You'll get more time to solve those. 
-You can share your score to play against friends.
-
-
-click on the bullseye.
-
-boop the nose.
-
-are you mad?
-
-30 - 5
-50 - 4
-70 - 3
-80 - 2
-90 - 1
-
-reset for sandbox mode?
 go back and optimize caching and guard in cloudfront
 
-cron based uploading so future images not available
-send score to db. send average score with challenge.
-reference an online image and your own clue (db integration)
-cropping tool to specify area of image
-specify win area
-
-offset/mobile cursor?
-settings page?
+30% get 5
+50% get 4+
+70% get 3+
+80% get 2+
+90% get 1+
 
 
 run server to avoid cors issues:
 http-server -c-1
-
 http://192.168.86.29:8080
 
 
-<a href="https://www.freepik.com/photos/car">Car photo created by fxquadro - www.freepik.com</a>
 
 
+
+Thank you for being willing to help me test some puzzles for my new game, Hocus Focus.
+
+All you need to do is solve a few puzzles and answer three yes/no questions to help me determine the difficulty level and the fun factor. It should only take a few minutes, and it really helps me with this project.
+
+Here is your link, which gives special advance access to these puzzles:
+https://www.hocusfocus.fun/?tester=
+
+If you didn't complete the three tutorial challenges ("Click the bullseye", etc), please visit this link first, so you can learn how to play:
+https://www.hocusfocus.fun
+
+Thanks so much! Enjoy!
+
+Dave
+
+PS: If you know anyone else that might be interested in this game and being involved in indie game development, I could use a few more testers. Please have them contact me.
+
+
+
+
+
+https://www.freepik.com
 
 Catch the fish
 https://pixabay.com/photos/healthy-food-food-power-dietetic-1348430/

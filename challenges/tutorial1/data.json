@@ -4,10 +4,6 @@
   "url": "https://www.pexels.com/photo/adorable-animal-canine-cute-220938/",
   "goals": [20, 30, 50, 80, 100],
   "beforeTitle": "How To Play",
-  "beforeMessage": "<p>Look at the timer below. Each challenge can take a minute or so.</p><p>You earn up to 5 bonus stars for beating the checkpoints.</p><p>But every wrong click will cost a 10-second penalty.</p>",
-  "beforeButton": "Play",
-  "afterTitle": "How To Play",
-  "afterMessage": "<p>Excellent. Let's do one more warm-up!</p>",
-  "afterButton": "Play",
+  "beforeMessage": "<p>Each challenge can take a minute or so. Your time is shown on the meter below the canvas.</p><p>You earn up to 5 bonus stars for beating the checkpoints.</p><p>But every wrong click will cost a 10-second penalty.</p>",
   "nextChallenge": "tutorial2"
 }

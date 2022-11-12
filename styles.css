@@ -127,6 +127,14 @@ table {
   font-family: "Poppins", sans-serif;
 }
 
+a,
+a:active,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: #000000;
+}
+
 body {
   background-color: #000000;
   font-family: "Poppins", sans-serif;
@@ -149,7 +157,6 @@ body {
   top: 0px;
   width: 100%;
 }
-
 
 .bold {
   font-weight: 800;
@@ -185,16 +192,16 @@ header .instructions-button {
   left: 10px;
 }
 
-header.small #logotype {
+.small #logotype {
   font-size: 25px;
   margin-left: 40px;
 }
-header.small #logo {
+.small #logo {
   height: 30px;
   top: 5px;
   left: 5px;
 }
-header.small .instructions-button {
+.small .instructions-button {
   height: 30px;
   top: 5px;
   right: 5px;
@@ -206,7 +213,7 @@ h2 {
 }
 p {
   margin: 10px auto;
-  font-size: 26px;
+  font-size: 2em;
 }
 .center {
   text-align: center;
@@ -227,7 +234,7 @@ p {
 }
 
 #timer {
-  margin: 40px auto;
+  margin: 20px auto;
   overflow: hidden;
   border: 4px solid #ffffff;
   position: relative;
@@ -243,8 +250,13 @@ p {
   height: 35px;
 }
 
-#win-message,
-#win-modal {
+#win-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#win-message {
   margin: 0px;
   position: absolute;
   top: 0;
@@ -253,8 +265,15 @@ p {
   background-color: #ffffff;
   height: 35px;
 }
-#win-message h2,
-#win-modal h2 {
+
+#credit-block {
+  position: relative;
+  padding: 10px;
+  margin: 0px;
+  font-size: 1em;
+  background-color: #ffffff;
+}
+#win-message h2 {
   color: #000000;
   text-align: left;
   font-size: 20px;
@@ -263,13 +282,59 @@ p {
 
 #win-links {
   position: absolute;
-  top: 2px;
-  right: 2px;
+  left: 0px;
+  bottom: -100px;
+  width: 100%;
+  height: 100px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-around;
 }
-#win-links > * {
-  margin: 0;
-  height: 20px;
+.win-link {
+  margin: 10px;
+  flex: 1 1 0;
   cursor: pointer;
+  overflow: hidden;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#win-links img {
+  width: 30px;
+  max-width: 100%;
+  display: inline-block;
+}
+#win-links h4 {
+  text-align: center;
+  font-size: 1em;
+  margin-top: 5px;
+  color: #ffffff;
+}
+.small .win-link h4 {
+  font-size: 0.6em;
+}
+.small .win-link {
+  padding: 5px 2px;
+  margin: 10px 3px;
+}
+#win-links img {
+  display: inline-block;
+}
+#clipboard-message {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  padding: 10px 10px 0px 10px;
+  font-size: 1em;
+  box-sizing: border-box;
+  display: none;
 }
 
 .timer-goal {
@@ -310,7 +375,7 @@ p {
   background-color: #000000;
   border: 0px solid #000000;
   padding: 10px 5px;
-  font-size: 40px;
+  font-size: 2em;
   font-weight: 700;
   text-decoration: none;
   display: block;
@@ -322,11 +387,15 @@ p {
   overflow: hidden;
 }
 #board {
-  margin: 40px auto 40px auto;
+  margin: 20px auto;
   position: relative;
   overflow: hidden;
   border: 4px solid #ffffff;
   background-color: #ffffff;
+}
+
+#intro p {
+  margin: 25px 0;
 }
 
 .message-board {
@@ -342,21 +411,21 @@ p {
   background-color: #ffffff;
   display: none;
 }
+.message-board .button {
+  position: relative;
+}
 .message-board p {
   margin: 10px 20px;
   text-align: center;
   line-height: 1.25;
 }
+
 .message-board h3 {
   font-weight: bold;
   margin: 10px 20px;
   font-size: 26px;
   text-align: center;
   line-height: 1.25;
-}
-
-.message-board .button {
-  position: relative;
 }
 
 .message-board .title {
@@ -378,26 +447,62 @@ p {
   margin: 10px 30px;
   text-align: center;
   line-height: 1.2;
-  font-size: 20px;
+  font-size: 1em;
 }
 
-#intro p {
-  margin: 25px 0;
-}
-
-.message-board.small .content p {
+.small .message-board .content p {
   margin: 10px 4px;
   text-align: center;
   font-size: 1em;
 }
 
-.message-board.small .title {
+.small .message-board .title {
   display: none !important;
 }
 
-#after-button,
+#before-message {
+  margin-top: 10px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #ffffff;
+  border: 4px solid #ffffff;
+  overflow-y: auto;
+}
+#before-message h3 {
+  margin: 20px 10px 20px 10px;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 800;
+}
+#before-message p {
+  font-size: 1em;
+  margin: 10px 20px;
+  line-height: 1.5;
+}
+
 #before-button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 25px;
+  font-size: 2em;
+  margin: 20px 0px;
+}
+#after-button {
+  position: absolute;
+  display: block;
+  top: 30%;
+  left: 20%;
+  width: 60%;
   padding: 5px 10px;
+  font-size: 2em;
+  border: 4px solid #ffffff;
+}
+
+.small #after-button,
+.small #start-button,
+.small #intro-clue,
+.small #clue,
+.small p {
   font-size: 1em;
 }
 
@@ -432,7 +537,7 @@ p {
 footer {
   position: fixed;
   left: 0;
-  bottom: 0;
+  bottom: 5px;
   width: 100%;
 }
 footer p {
@@ -443,7 +548,7 @@ footer p {
   line-height: 1.3;
 }
 footer a {
-  color: #666666;
+  color: #ffffff !important;
   text-decoration: none;
   font-weight: 800;
 }
@@ -530,11 +635,10 @@ footer a {
   top: 90px;
   left: 5%;
   width: 90%;
-  border: 5px solid black;
-  border-radius: 10px;
-  background: #aaaaaa;
+  border: 4px solid black;
+  background: #ffffff;
   padding: 20px;
-  overflow: hidden;
+  overflow: auto;
   box-sizing: border-box;
 }
 
@@ -568,4 +672,5 @@ footer a {
   margin: 0px auto;
   text-align: center;
   padding: 10px;
+  color: #ffffff;
 }

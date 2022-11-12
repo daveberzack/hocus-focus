@@ -2,10 +2,6 @@
   "clue": "Click the [bullseye].",
   "goals": [15, 30, 45, 60, 90],
   "beforeTitle": "How To Play",
-  "beforeMessage": "<p>Read the clue to find something in a hidden picture.</p><p>Move the mouse around this canvas to paint blocks of color. Paint over an area to reveal finer details.</p><p>When you see the goal, click on it to solve the puzzle.</p>",
-  "beforeButton": "Play",
-  "afterTitle": "How To Play",
-  "afterMessage": "<p>Good Job! Now let's try a harder one.</p>",
-  "afterButton": "Play",
+  "beforeMessage": "<p>Each puzzle gives a clue to find something in a hidden picture.</p><p>Move the cursor around the white canvas to paint blocks of color. Paint over blocks to reveal finer details.</p><p>Keep going until you understand the image enough to find the goal, then click it to solve the puzzle.</p>",
   "nextChallenge": "tutorial1"
 }

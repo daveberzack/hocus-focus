@@ -145,6 +145,12 @@ function logPageView() {
   sendAnalytics("pageview", { page: "hocusfocus", userAgent: navigator.userAgent });
 }
 
+async function resetData() {
+  if (confirm("Clear all your game data?")) {
+    (await dbPromise).clear("results");
+  }
+}
+
 export {
   showView,
   getCanvasCoordinates,
@@ -166,4 +172,5 @@ export {
   getTestChallenge,
   isTouchDevice,
   logPageView,
+  resetData,
 };
