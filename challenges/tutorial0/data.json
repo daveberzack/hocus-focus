@@ -1,7 +1,8 @@
 {
   "clue": "Click the [bullseye].",
+  "credit": "Prawny",
+  "url": "https://pixabay.com/illustrations/sport-games-equipment-target-2037681/",
   "goals": [15, 30, 45, 60, 90],
   "beforeTitle": "How To Play",
-  "beforeMessage": "<p>Each puzzle gives a clue to find something in a hidden picture.</p><p>Move the cursor around the white canvas to paint blocks of color. Paint over blocks to reveal finer details.</p><p>Keep going until you understand the image enough to find the goal, then click it to solve the puzzle.</p>",
-  "nextChallenge": "tutorial1"
+  "beforeMessage": "<p>Each daily puzzle gives a clue to find something in a hidden picture.</p><p>Move the cursor around the canvas to paint blocks of color. Paint over those areas to reveal finer details.</p><p>Keep going until you understand the picture enough to find the goal, then click it to solve the puzzle.</p>"
 }

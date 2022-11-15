@@ -7,6 +7,8 @@ const dbPromise = openDB("data", VERSION, {
   },
 });
 
+let cachedResults = [];
+
 function getCanvasCoordinates(mouseX, mouseY, $canvas) {
   const rect = $canvas.offset();
   const elementWidth = $canvas.width();
@@ -58,7 +60,8 @@ const _padTo2Digits = function (num) {
 
 const getTodayString = function () {
   const date = new Date();
-  return [date.getFullYear(), _padTo2Digits(date.getMonth() + 1), _padTo2Digits(date.getDate())].join("");
+  const output = [date.getFullYear(), _padTo2Digits(date.getMonth() + 1), _padTo2Digits(date.getDate())].join("");
+  return output;
 };
 
 const getTodayFormatted = function () {
@@ -87,13 +90,15 @@ function getRandom(arr) {
 }
 
 async function saveGameResult(challengeId, timePassed, mistakes, stars) {
-  (await dbPromise).put("results", { id: challengeId, timePassed: Math.round(timePassed), mistakes, stars });
+  const newResult = { id: challengeId, timePassed: Math.round(timePassed), mistakes, stars };
+  cachedResults.push(newResult);
+  (await dbPromise).put("results", newResult);
 }
 
 async function sendAnalytics(type, data) {
-  console.log("analytics", data);
+  //console.log("analytics", data);
   const url = `https://dave-simplecrud.herokuapp.com/${type}`;
-  const response = await fetch(url, {
+  await fetch(url, {
     method: "POST",
     mode: "cors",
     headers: {
@@ -101,11 +106,13 @@ async function sendAnalytics(type, data) {
     },
     body: JSON.stringify(data),
   });
-  console.log("...", response);
 }
 
 async function getGameResults() {
-  const results = await (await dbPromise).getAll("results");
+  let results = await (await dbPromise).getAll("results");
+  console.log("/ ", results);
+  if (results == []) results = cachedResults;
+  console.log(results);
   return results;
 }
 
@@ -142,7 +149,7 @@ function isTouchDevice() {
 }
 
 function logPageView() {
-  sendAnalytics("pageview", { page: "hocusfocus", userAgent: navigator.userAgent });
+  sendAnalytics("pageview", { page: "hocusfocus", userAgent: navigator.userAgent, width: $(window).width(), height: $(window).height(), touch: isTouchDevice(), user: getParameter("tester") });
 }
 
 async function resetData() {

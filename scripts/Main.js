@@ -9,38 +9,18 @@ if (navigator && navigator.serviceWorker) {
 const game = new Game();
 let testerId = null;
 let challengeId = "error";
-let hasPlayedToday = false;
-let hasCompletedTutorials = false;
 
 const init = async () => {
-  challengeId = getTodayString();
-  const results = await getGameResults();
+  //challengeId = getTodayString();
 
   initUI();
 
   //if tester param provided, then set id to the next unplayed challenge from the specified set
   testerId = getParameter("tester");
-  if (testerId) {
-    challengeId = (await getTestChallenge()) || challengeId;
-  }
-
-  let tutorialsCompleted = 0;
-  results.forEach((r) => {
-    if (r.id.indexOf("tutorial") >= 0) tutorialsCompleted++;
-  });
-  if (tutorialsCompleted >= 3) hasCompletedTutorials = true;
-  if (!hasCompletedTutorials) {
-    if (isTouchDevice()) challengeId = "tutorial0_mobile";
-    else challengeId = "tutorial0";
-  }
-
-  results.forEach((r) => {
-    if (r.id == challengeId) hasPlayedToday = true;
-  });
 
   showView("game");
   logPageView();
-  reset(challengeId);
+  reset();
 };
 
 const initUI = () => {
@@ -63,7 +43,7 @@ const initUI = () => {
   });
   $("#after-button").click(function () {
     $("#after-message").hide();
-    reset($(this).attr("data-next"));
+    reset();
   });
 
   $("#form-button").click(async () => {
@@ -77,24 +57,64 @@ const initUI = () => {
 
     sendAnalytics("hocusfeedback", data);
     $("#tester-form").hide();
-    const ch = (await getTestChallenge()) || getTodayString();
-    reset(ch);
   });
 };
 
-const reset = async (challengeId) => {
-  if (challengeId == "TODAY") {
-    hasCompletedTutorials = true;
-    hasPlayedToday = false;
-    challengeId = getTodayString();
+const reset = async () => {
+  challengeId = await getNextChallengeId();
+
+  const canvasWidth = setSize();
+
+  $("#stars").hide();
+  if (challengeId == "played") {
+    $("#played").css("display", "flex");
+    $("#timer").hide();
+  } else {
+    const challenge = await getChallengeById(challengeId);
+    if (challenge.beforeTitle && challenge.beforeMessage) {
+      showBeforeMessage(challenge);
+    }
+    $("#intro").css("display", "flex");
+    game.init(challenge, canvasWidth, testerId);
+    if (challenge.id == "error") $("#timer").hide();
   }
-  let todayChallenge;
+};
+
+const getNextChallengeId = async () => {
+  const r = await getGameResults();
+
+  //return the first uncompleted tutorial
+  const foundTutorial = r.find((e) => e.id == "tutorial2") || r.find((e) => e.id == "tutorial1") || r.find((e) => e.id.includes("tutorial0"));
+  if (!foundTutorial) {
+    console.log("not found", r);
+    if (isTouchDevice()) return "tutorial0_mobile";
+    else return "tutorial0";
+  } else if (foundTutorial.id == "tutorial1") return "tutorial2";
+  else if (foundTutorial.id.includes("tutorial0")) return "tutorial1";
+
+  //if tester, return the first uncompleted test
+  if (testerId) {
+    const testChallenge = await getTestChallenge();
+    if (testChallenge) return testChallenge;
+    else testerId = null;
+  }
+  //else return today's challenge or "played" if already played
+  const todayString = getTodayString();
+  const foundToday = r.find((e) => e.id == todayString);
+  if (!foundToday) return todayString;
+  else return "played";
+};
+
+const getChallengeById = async (challengeId) => {
+  if (challengeId == "played") return null;
+  let challenge = {};
   try {
     const response = await fetch(`./challenges/${challengeId}/data.json`);
-    todayChallenge = await response.json();
+    challenge = await response.json();
   } catch {
     challengeId = "error";
-    todayChallenge = {
+    challenge = {
+      id: challengeId,
       clue: "Error loading",
       credit: "",
       url: "#",
@@ -102,22 +122,11 @@ const reset = async (challengeId) => {
     };
   }
 
-  todayChallenge.imgFile = `./challenges/${challengeId}/img.jpg`;
-  todayChallenge.hitFile = `./challenges/${challengeId}/hit.jpg`;
-  todayChallenge.id = challengeId;
-
-  const canvasWidth = setSize();
-  if (!hasCompletedTutorials && todayChallenge.beforeTitle && todayChallenge.beforeMessage) {
-    showBeforeMessage(todayChallenge);
-    $("#intro").css("display", "flex");
-  } else if (hasPlayedToday) {
-    $("#played").css("display", "flex");
-  } else {
-    $("#intro").css("display", "flex");
-  }
-  $("#stars").hide();
-
-  game.init(todayChallenge, canvasWidth, testerId);
+  challenge.nextChallenge = challengeId.includes("tutorial") || !!testerId;
+  challenge.imgFile = `./challenges/${challengeId}/img.jpg`;
+  challenge.hitFile = `./challenges/${challengeId}/hit.jpg`;
+  challenge.id = challengeId;
+  return challenge;
 };
 
 function showBeforeMessage(challenge) {
@@ -136,12 +145,11 @@ function setSize() {
     .height(w - 8);
 
   const statsH = Math.max(400, w);
-  $("#stats-graph-block")
-    .width(w - 8)
-    .height(statsH - 8);
   $("#stats-graph")
     .width(w - 120)
     .height(statsH - 90);
+  $("#stats-graph-block button").width(w - 120);
+
   $("#board canvas")
     .width(w - 8)
     .height(w - 8)
@@ -151,6 +159,7 @@ function setSize() {
   $("footer p").width(w);
   $("#before-message").css({ "min-height": w - 8, "max-height": winH - 120 });
   $("#tester-form").css({ "max-height": winH - 110 });
+  $("#instructions-block").css({ "max-height": winH - 130 });
 
   if (w < 360) $("body").addClass("small");
   return w - 8;

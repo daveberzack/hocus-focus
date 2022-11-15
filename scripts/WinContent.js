@@ -1,11 +1,12 @@
 import Stats from "./Stats.js";
-import { sleep, getRandom, formatClue, unformatClue, getTodayFormatted, showView, copyToClipboard, getGameResults } from "./utils.js";
+import { sleep, getRandom, unformatClue, getTodayFormatted, showView, copyToClipboard, getGameResults } from "./utils.js";
 
 class WinContent {
   constructor() {
     this.$winMessage = $("#win-message");
     this.$timerBar = $("#timer-bar");
     this.$stars = $("#stars");
+    this.$testerForm = $("#tester-form");
     this.stats = new Stats();
     this.winInterval = 0;
     this.reset();
@@ -37,27 +38,13 @@ class WinContent {
 
     await sleep(1000);
     if (challenge.nextChallenge) {
-      $("#after-button").fadeIn().attr("data-next", challenge.nextChallenge);
+      $("#after-button").fadeIn();
     }
-
     if (testerId) {
-      await sleep(5000);
       $("#tester-form input:radio").prop("checked", false);
       $("#tester-form textarea").val("");
       this.$testerForm.show();
     }
-  }
-
-  showAfterMessage(challenge) {
-    if (!challenge.afterMessage) return;
-
-    $("#after-message .content");
-    $("#after-message .title")
-      .toggle(challenge.afterTitle?.length > 0)
-      .text(challenge.afterTitle);
-    $("#after-message .content")
-      .toggle(challenge.afterMessage?.length > 0)
-      .html(challenge.afterMessage);
   }
 
   showStars(effectiveTimePassed, goalsMet, challenge) {

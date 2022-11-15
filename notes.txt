@@ -1,7 +1,4 @@
-screen size in analytics
-
-
-
+give up button?
 
 get domain.
 update .fun with .com in manifest.
@@ -13,6 +10,7 @@ go back and optimize caching and guard in cloudfront
 80% get 2+
 90% get 1+
 
+puzzle editor
 
 run server to avoid cors issues:
 http-server -c-1
