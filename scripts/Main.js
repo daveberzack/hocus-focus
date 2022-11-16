@@ -115,7 +115,9 @@ const getChallengeById = async (challengeId) => {
     challengeId = "error";
     challenge = {
       id: challengeId,
-      clue: "Error loading",
+      clue: "[No Puzzle Today]",
+      subtitle: "Please check back tomorrow.",
+      hideButton: true,
       credit: "",
       url: "#",
       goals: [],

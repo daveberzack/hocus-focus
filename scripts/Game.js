@@ -29,7 +29,10 @@ class Game {
     this.isPlaying = false;
     this.resetTimer();
     clearInterval(this.loopInterval);
-    const clue = formatClue(challenge.clue);
+    let clue = formatClue(challenge.clue);
+    const subtitle = formatClue(challenge.subtitle);
+    if (subtitle) clue = clue + '<span id="subtitle">' + subtitle + "</span>";
+    if (challenge.hideButton) $("#start-button").hide();
     this.$clue.hide().html(clue);
     this.$introClue.html(clue);
     this.goals = challenge.goals;
