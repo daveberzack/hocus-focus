@@ -30,7 +30,7 @@ class Game {
     this.resetTimer();
     clearInterval(this.loopInterval);
     let clue = formatClue(challenge.clue);
-    const subtitle = formatClue(challenge.subtitle);
+    const subtitle = formatClue(challenge.subtitle || "");
     if (subtitle) clue = clue + '<span id="subtitle">' + subtitle + "</span>";
     if (challenge.hideButton) $("#start-button").hide();
     this.$clue.hide().html(clue);
