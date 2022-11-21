@@ -249,6 +249,12 @@ p {
   width: 0%;
   height: 35px;
 }
+#timer-bar img {
+  width: 20px;
+  margin: 7px 0 0 8px;
+  background: #000000;
+  border-radius: 999px;
+}
 
 #win-content {
   position: absolute;
@@ -707,4 +713,15 @@ footer a {
   text-align: center;
   padding: 10px;
   color: #ffffff;
+}
+
+.error-marker {
+  display: none;
+  border-radius: 999px;
+  background-color: #000000;
+  border: 4px solid #ffffff;
+  position: absolute;
+}
+.error-marker img {
+  width: 100%;
 }

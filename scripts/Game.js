@@ -1,7 +1,7 @@
 import Canvas from "./Canvas.js";
 import Cursor from "./Cursor.js";
 import PixelPainter from "./PixelPainter.js";
-import { isInCanvas, sleep, formatClue, saveGameResult, sendAnalytics } from "./utils.js";
+import { isInCanvas, sleep, formatClue, saveGameResult, sendAnalytics, getCanvasCoordinates } from "./utils.js";
 import WinContent from "./WinContent.js";
 
 const GAME_LOOP_INCREMENT = 10;
@@ -102,13 +102,42 @@ class Game {
   handleCursorClick() {
     if (isInCanvas(this.cursor.x, this.cursor.y, this.canvas.source.$element)) {
       const isGuessCorrect = this.canvas.checkGuess(this.cursor.x, this.cursor.y);
+      const { x, y } = getCanvasCoordinates(this.cursor.x, this.cursor.y, this.canvas.source.$element);
       if (isGuessCorrect) this.handleWin();
-      else this.handlePenalty();
+      else this.handlePenalty(x, y);
     }
   }
 
-  handlePenalty() {
+  handlePenalty(x, y) {
     this.mistakes++;
+
+    const $errorMarker = $('<img src="./img/x.png" class="error-marker"/>');
+    $("#board").append($errorMarker);
+    let errorTimer = 0;
+    let errorInfo = { x, y, w: 1 };
+    const errorInterval = setInterval(() => {
+      errorTimer++;
+      if (errorTimer > 80) {
+        $errorMarker.remove();
+        clearInterval(errorInterval);
+
+        let xImages = "";
+        for (let i = 0; i < this.mistakes; i++) {
+          xImages += '<img src="./img/x.png"/>';
+        }
+        this.$timerBar.html(xImages);
+      } else if (errorTimer > 60) {
+        errorInfo.x++;
+        errorInfo.y++;
+        errorInfo.w -= 2;
+        $errorMarker.css({ left: errorInfo.x, top: errorInfo.y, width: errorInfo.w, height: errorInfo.w });
+      } else if (errorTimer < 20) {
+        errorInfo.x--;
+        errorInfo.y--;
+        errorInfo.w += 2;
+        $errorMarker.css({ display: "block", left: errorInfo.x, top: errorInfo.y, width: errorInfo.w, height: errorInfo.w });
+      }
+    }, 10);
   }
 
   async handleWin() {
