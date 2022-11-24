@@ -38,7 +38,7 @@ class WinContent {
     this.showWinLinks(goalsMet, timeFormatted, challenge);
 
     await sleep(1000);
-    if (challenge.nextChallenge) {
+    if (challenge.isTest || challenge.isTutorial) {
       $("#after-button").fadeIn();
     }
     if (testerId) {
@@ -128,7 +128,7 @@ https://www.hocusfocus.fun`;
     if (challenge.credit) {
       $("#credit-block").css({ top: -50 }).show().animate({ top: 0 }, 500);
       $("#credit").text(challenge.credit);
-      $("#credit").attr("href", challenge.url);
+      $("#credit").attr("href", challenge.creditUrl);
     }
   }
 }

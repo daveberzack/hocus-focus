@@ -1,4 +1,3 @@
-give up button?
 
 get domain.
 update .fun with .com in manifest.

@@ -1,5 +1,6 @@
 import { openDB } from "https://cdn.jsdelivr.net/npm/idb@7/+esm";
 import { getTodayString, isTouchDevice, testerId } from "./utils.js";
+import { tutorial0, tutorial0_mobile, tutorial1, tutorial2 } from "./tutorials.js";
 
 const VERSION = 1;
 const dbPromise = openDB("data", VERSION, {
@@ -8,8 +9,53 @@ const dbPromise = openDB("data", VERSION, {
   },
 });
 
-let cachedResults = [];
+const getNextChallenge = async () => {
+  const r = await getGameResults();
 
+  const playedToday = false; // <---- check results for actual value
+
+  //return the first uncompleted tutorial
+  const foundTutorial = r.find((e) => e.id == "tutorial2") || r.find((e) => e.id == "tutorial1") || r.find((e) => e.id.includes("tutorial0"));
+  if (!foundTutorial) {
+    if (isTouchDevice()) return tutorial0_mobile;
+    else return tutorial0;
+  } else if (foundTutorial.id == "tutorial1") return tutorial2;
+  else if (foundTutorial.id.includes("tutorial0")) return tutorial1;
+  //otherwise if this is a tester, return the next one to test ...remember to disable sharing!
+  else if (!!testerId) {
+    try {
+      const response = await fetch(`./challenges/001/data.json`);
+      const challenge = await response.json();
+      console.log("test", challenge);
+      if (!r.find((e) => e.id == challenge.id)) return challenge;
+    } catch {
+      //do nothing. if this fails, we'll continue checking cases below
+    }
+  }
+
+  //otherwise return today's riddle or played placeholder
+  if (playedToday) {
+  }
+
+  //otherwise return today's riddle (or an error if not found)
+  else
+    try {
+      const response = await fetch(`./cccc`);
+      const challenge = await response.json();
+      return challenge;
+    } catch {
+      return {
+        id: "error",
+        clue: "[No Puzzle Today]",
+        subtitle: "Please check back tomorrow.",
+        hideButton: true,
+        credit: "",
+        creditUrl: "#",
+        goals: [],
+      };
+    }
+};
+/*
 const getNextChallengeId = async () => {
   const r = await getGameResults();
 
@@ -73,6 +119,9 @@ async function getTestChallenge() {
   }
   return challengeId;
 }
+*/
+
+let cachedResults = [];
 
 async function saveGameResult(challengeId, timePassed, mistakes, stars) {
   const newResult = { id: challengeId, timePassed: Math.round(timePassed), mistakes, stars };
@@ -111,4 +160,4 @@ async function resetData() {
   }
 }
 
-export { getNextChallengeId, getChallengeById, saveGameResult, getGameResults, sendAnalytics, logPageView, resetData };
+export { getNextChallenge, saveGameResult, getGameResults, sendAnalytics, logPageView, resetData };

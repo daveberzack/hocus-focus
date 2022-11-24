@@ -1,7 +1,7 @@
 import Game from "./Game.js";
 
 import { showView, testerId, setTester } from "./utils.js";
-import { getChallengeById, getNextChallengeId, sendAnalytics, logPageView, resetData } from "./data.js";
+import { getNextChallenge, sendAnalytics, logPageView, resetData } from "./data.js";
 if (navigator && navigator.serviceWorker) {
   navigator.serviceWorker.register("../sw.js");
 }
@@ -60,11 +60,25 @@ const initUI = () => {
 };
 
 const reset = async () => {
-  challengeId = await getNextChallengeId();
-
+  $("#stars").hide();
   const canvasWidth = setSize();
 
-  $("#stars").hide();
+  const challenge = await getNextChallenge();
+  console.log("next challenge:", challenge);
+  if (challenge.id == "played") {
+    $("#played").css("display", "flex");
+    $("#timer").hide();
+  } else {
+    if (challenge.beforeTitle && challenge.beforeMessage) {
+      showBeforeMessage(challenge);
+    }
+    $("#intro").css("display", "flex");
+    game.init(challenge, canvasWidth);
+    if (challenge.id == "error") $("#timer").hide();
+  }
+
+  /*
+  challengeId = await getNextChallengeId();
   if (challengeId == "played") {
     $("#played").css("display", "flex");
     $("#timer").hide();
@@ -76,7 +90,7 @@ const reset = async () => {
     $("#intro").css("display", "flex");
     game.init(challenge, canvasWidth, testerId);
     if (challenge.id == "error") $("#timer").hide();
-  }
+  }*/
 };
 
 function showBeforeMessage(challenge) {
