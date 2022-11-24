@@ -23,7 +23,7 @@ class WinContent {
     clearInterval(this.winInterval);
   }
 
-  async show({ challenge, effectiveTimePassed, goalsMet, testerId }) {
+  async show({ challenge, effectiveTimePassed, goalsMet, gaveUp, testerId }) {
     $("#win-content").show();
     const timeFormatted = Math.round(effectiveTimePassed);
 
@@ -31,7 +31,7 @@ class WinContent {
 
     await sleep(2000);
 
-    this.showWinMessage(timeFormatted, goalsMet);
+    this.showWinMessage(timeFormatted, goalsMet, gaveUp);
 
     await sleep(2000);
     this.showWinLinks(goalsMet, timeFormatted, challenge);
@@ -79,9 +79,9 @@ class WinContent {
     }, 10);
   }
 
-  showWinMessage(timeFormatted, goalsMet) {
+  showWinMessage(timeFormatted, goalsMet, gaveUp) {
     const messages = [
-      ["You got there.", "No stars this time.", "Keep at it!", "Got it."],
+      ["You got there.", "No stars this time.", "Good going.", "Got it!"],
       ["Not too shabby.", "Not bad.", "", "Alright!", "Solid effort."],
       ["Nice.", "Good for you.", "Solid.", "There you go!", "Lovely."],
       ["Good job!", "Very nice.", "Nice touch.", "Yay!", "Hurrah!"],
@@ -90,7 +90,9 @@ class WinContent {
     ];
     let messageSubset = messages[goalsMet.length];
     if (timeFormatted * 1 < 3) messageSubset = ["Really?", "Crazy luck!", "Huh...", "For real?"];
+    if (gaveUp) messageSubset = ["Good effort.", "Not this time.", "Keep at it!", "Maybe next time."];
 
+    $(".timer-error").remove();
     const message = getRandom(messageSubset);
     this.$winMessage.find("h2").html(`<span class="bold">${timeFormatted} Seconds.</span><span class="comment"> ${message}</span>`);
     this.$winMessage.fadeIn(300);

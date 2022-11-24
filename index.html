@@ -30,134 +30,146 @@
 
   <body>
     <div id="all">
-    <header>
-      <img src="img/hocus.png" id="logo" />
-      <h1 id="logotype">Hocus <span class="bold">Focus</span></h1>
-      <img class="instructions-button" src="./img/help.png" />
-    </header>
+      <header>
+        <img src="img/hocus.png" id="logo" />
+        <h1 id="logotype">Hocus <span class="bold">Focus</span></h1>
+        <img class="instructions-button" src="./img/help.png" />
+      </header>
 
-    <div id="instructions" class="view">
-      <div id="instructions-block">
-      <h2>How to Play</h2>
-      <p>Every day, there's a new riddle. A sly clue to find something in a hidden picture.</p>
-      <p>When you move around the canvas it will add big squares of color (whatever color is in the image right at your cursor). Paint over an existing block to add smaller blocks, revealing finer and finer details.</p>
-      <p>Once you've identified the objective, click on it to stop the timer. But don't make wild guesses. Every wrong click costs you a 10-second penalty.</p>
-      <p>You'll score up to five stars for beating the checkpoints shown in the timer. Some puzzles are tricky. Don't worry. You'll get more time for the tough ones. And you're supposed to feel a bit confused. After you win, it'll all make sense. You can share your score and paste it into a message or social media to play against friends.</p>
-      <p>Should you spend time getting the general context of a picture, or focus on an interesting area? Which area is worth exploring? What does that riddle mean, anyway? Are you confident enough to wager a guess? I don't know. I'm just the game designer.</p>
-      <p>Good hunting.</p>
-      <p>Love,<br/>Dave</p>
-      <p class="center"><a class="button game-button" href="#">Play</a></p>
+      <div id="instructions" class="view">
+        <div id="instructions-block">
+          <h2>How to Play</h2>
+          <p>Every day, there's a new riddle. A sly clue to find something in a hidden picture.</p>
+          <p>When you move around the canvas it will add big squares of color (whatever color is in the image right at your cursor). Paint over an existing block to add smaller blocks, revealing finer and finer details.</p>
+          <p>Once you've identified the objective, click on it to stop the timer. But don't make wild guesses. Every wrong click costs you a 10-second penalty.</p>
+          <p>
+            You'll score up to five stars for beating the checkpoints shown in the timer. Some puzzles are tricky. Don't worry. You'll get more time for the tough ones. And you're supposed to feel a bit confused. After you win, it'll all make sense. You can share your score and paste it into a
+            message or social media to play against friends.
+          </p>
+          <p>Should you spend time getting the general context of a picture, or focus on an interesting area? Which area is worth exploring? What does that riddle mean, anyway? Are you confident enough to wager a guess? I don't know. I'm just the game designer.</p>
+          <p>Good hunting.</p>
+          <p>Love,<br />Dave</p>
+          <p class="center"><a class="button game-button" href="#">Play</a></p>
+        </div>
+        <footer>
+          <p>ⓒ2022 <a class="bold" href="http://www.daveberzack.com" target="credit">Dave Berzack</a> <span id="version">v0.4</span></p>
+        </footer>
       </div>
-      <footer>
-        <p>ⓒ2022 <a class="bold" href="http://www.daveberzack.com" target="credit">Dave Berzack</a> <span id="version">v0.3</span></p>
-      </footer>
+
+      <div id="before-message" class="view">
+        <h3 class="title"></h3>
+        <div class="content"></div>
+        <button id="before-button" class="button">Play</button>
+      </div>
+
+      <div id="stats" class="view">
+        <div id="stats-graph-block">
+          <h2>Your Stats</h2>
+          <p>The number of puzzles you won with 5 Stars, with 4, etc.</p>
+          <div id="stats-graph"></div>
+          <a class="button game-button" href="#">Back to Game</a>
+        </div>
+      </div>
+
+      <div id="game" class="view">
+        <div id="board">
+          <canvas id="target"></canvas>
+          <canvas id="target2"></canvas>
+          <canvas id="source"></canvas>
+          <canvas id="hit"></canvas>
+          <canvas id="effect"></canvas>
+
+          <div id="intro" class="message-board">
+            <p id="intro-clue"></p>
+            <button id="start-button" class="button">Begin</button>
+          </div>
+
+          <div id="played" class="message-board">
+            <h3>Thank you for playing.</h3>
+            <p>Come back tomorrow for another challenge.</p>
+          </div>
+
+          <div id="win-content">
+            <p id="credit-block">Image by <a id="credit" class="bold" href="#" target="credit"></a></p>
+            <button id="after-button" class="button">Play More</button>
+            <div id="win-links">
+              <div class="win-link" id="win-share-link">
+                <img src="./img/share.png" />
+                <h4>Share</h4>
+              </div>
+              <div class="win-link" id="win-stats-link">
+                <img src="./img/stats.png" />
+                <h4>Stats</h4>
+              </div>
+              <a class="win-link" id="win-donate-link" href="https://ko-fi.com/daveberzack" target="support"
+                ><img src="./img/support.png" />
+                <h4>Support</h4></a
+              >
+              <div id="clipboard-message">Copied to Clipboard</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="timer">
+          <div class="timer-goal" id="timer-goal0"><h3></h3></div>
+          <div class="timer-goal" id="timer-goal1"><h3></h3></div>
+          <div class="timer-goal" id="timer-goal2"><h3></h3></div>
+          <div class="timer-goal" id="timer-goal3"><h3></h3></div>
+          <div class="timer-goal" id="timer-goal4"><h3></h3></div>
+          <div class="timer-bar" id="timer-bar"></div>
+
+          <div id="win-message"><h2></h2></div>
+          <div id="give-up">
+            <img id="give-up-button" src="./img/eye.png" />
+            <h2>Reveal Solution</h2>
+          </div>
+        </div>
+        <h2 id="clue"></h2>
+        <div id="stars"></div>
+
+        <div id="tester-form">
+          <h2>About this puzzle</h2>
+
+          <p>Was it fun, interesting or clever?</p>
+          <div>
+            <div class="option">
+              <input type="radio" id="fun3" name="fun" value="3" />
+              <label for="fun3">Yes</label>
+            </div>
+            <div class="option">
+              <input type="radio" id="fun2" name="fun" value="2" />
+              <label for="fun2">Eh</label>
+            </div>
+            <div class="option">
+              <input type="radio" id="fun1" name="fun" value="1" />
+              <label for="fun1">No</label>
+            </div>
+          </div>
+          <p>Was it challenging?</p>
+          <div>
+            <div class="option">
+              <input type="radio" id="difficulty1" name="difficulty" value="1" />
+              <label for="difficulty1">Too easy</label>
+            </div>
+            <div class="option">
+              <input type="radio" id="difficulty2" name="difficulty" value="2" />
+              <label for="difficulty2">About right</label>
+            </div>
+            <div class="option">
+              <input type="radio" id="difficulty3" name="difficulty" value="3" />
+              <label for="difficulty3">Too hard</label>
+            </div>
+          </div>
+          <p>Any technical problems, confusion, or other comments?</p>
+          <textarea id="feedback"></textarea>
+          <p><a id="form-button" class="button" href="#">Submit</a></p>
+        </div>
+      </div>
     </div>
-      
-    <div id="before-message" class="view">
-      <h3 class="title"></h3>
-      <div class="content"></div>
-      <button id="before-button" class="button">Play</button>
-    </div>
 
-    <div id="stats" class="view">
-      <div id="stats-graph-block">
-        <h2>Your Stats</h2>
-        <p>The number of puzzles you won with 5 Stars, with 4, etc.</p>
-        <div id="stats-graph"></div>
-        <a class="button game-button" href="#">Back to Game</a>
-      </div>
-    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
-    <div id="game" class="view">
-      <div id="board">
-        <canvas id="target"></canvas>
-        <canvas id="source"></canvas>
-        <canvas id="hit"></canvas>
-        <canvas id="effect"></canvas>
-
-        <div id="intro" class="message-board">
-          <p id="intro-clue"></p>
-          <button id="start-button" class="button">Begin</button>
-        </div>
-
-        <div id="played" class="message-board">
-          <h3>Thank you for playing.</h3>
-          <p>Come back tomorrow for another challenge.</p>
-        </div>
-
-        <div id="win-content">
-          <p id="credit-block">Image by <a id="credit" class="bold" href="#" target="credit"></a></p>
-          <button id="after-button" class="button">Play More</button>
-          <div id="win-links">
-            <div class="win-link" id="win-share-link"><img src="./img/share.png" /><h4>Share</h4></div>
-            <div class="win-link" id="win-stats-link"><img src="./img/stats.png" /><h4>Stats</h4></div>
-            <a class="win-link" id="win-donate-link" href="https://ko-fi.com/daveberzack" target="support"><img src="./img/support.png" /><h4>Support</h4></a>
-            <div id="clipboard-message">Copied to Clipboard</div>
-          </div>
-        </div>
-      </div>
-
-      <div id="timer">
-        <div class="timer-goal" id="timer-goal0"><h3></h3></div>
-        <div class="timer-goal" id="timer-goal1"><h3></h3></div>
-        <div class="timer-goal" id="timer-goal2"><h3></h3></div>
-        <div class="timer-goal" id="timer-goal3"><h3></h3></div>
-        <div class="timer-goal" id="timer-goal4"><h3></h3></div>
-        <div class="timer-bar" id="timer-bar"></div>
-
-        <div id="win-message"><h2></h2></div>
-      </div>
-      <h2 id="clue"></h2>
-      <div id="stars"></div>
-
-      <div id="tester-form">
-        <h2>About this puzzle</h2>
-
-        <p>Was it fun, interesting or clever?</p>
-        <div>
-          <div class="option">
-            <input type="radio" id="fun3" name="fun" value="3">
-            <label for="fun3">Yes</label>
-          </div>
-          <div class="option">
-            <input type="radio" id="fun2" name="fun" value="2">
-            <label for="fun2">Eh</label>
-          </div>
-          <div class="option">
-            <input type="radio" id="fun1" name="fun" value="1">
-            <label for="fun1">No</label>
-          </div>
-        </div>
-        <p>Was it challenging?</p>
-        <div>
-          <div class="option">
-            <input type="radio" id="difficulty1" name="difficulty" value="1">
-            <label for="difficulty1">Too easy</label>
-          </div>
-          <div class="option">
-            <input type="radio" id="difficulty2" name="difficulty" value="2">
-            <label for="difficulty2">About right</label>
-          </div>
-          <div class="option">
-            <input type="radio" id="difficulty3" name="difficulty" value="3">
-            <label for="difficulty3">Too hard</label>
-          </div>
-        </div>
-        <p>Any technical problems, confusion, or other comments?</p>
-            <textarea id="feedback"></textarea>
-        <p><a id="form-button" class="button" href="#">Submit</a></p>
-
-
-      </div>
-
-    </div>
-
-  </all>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
-  <script type="module" src="scripts/Main.js"></script>
-
+    <script type="module" src="scripts/Main.js"></script>
   </body>
 </html>

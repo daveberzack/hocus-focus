@@ -25,17 +25,24 @@ class Canvas {
         willReadFrequently: true,
       }),
     };
-    const hitImage = new Image();
-    hitImage.onload = function () {
-      self.drawImageToLayer(self.hit, hitImage);
-    };
-    hitImage.src = challenge.hitFile;
+    this.fillLayer(this.hit, "#000000");
+    challenge.hitAreas?.forEach((h) => {
+      this.drawLineToLayer(this.hit, h.x1, h.y1, h.x2, h.y2, h.w);
+    });
 
     const $targetElement = $("#target");
     this.target = {
       $element: $targetElement,
       context: $targetElement[0].getContext("2d", {
         alpha: false,
+      }),
+    };
+
+    const $target2Element = $("#target2");
+    this.target2 = {
+      $element: $target2Element,
+      context: $target2Element[0].getContext("2d", {
+        alpha: true,
       }),
     };
 
@@ -50,13 +57,15 @@ class Canvas {
 
   resetLayers() {
     this.fillLayer(this.target, "#FFFFFF");
+    this.clearLayer(this.target2);
     this.source.$element.css("opacity", 0);
+    this.hit.$element.css("opacity", 0);
   }
 
   checkGuess(mouseX, mouseY) {
     const { x, y } = getCanvasCoordinates(mouseX, mouseY, this.hit.$element);
     const p = this.hit.context.getImageData(x, y, 1, 1).data;
-    const hitSuccess = p[0] == 0 && p[1] == 0 && p[2] == 0;
+    const hitSuccess = p[0] > 0 || p[1] > 0 || p[2] > 0;
     return hitSuccess;
   }
 
@@ -76,9 +85,21 @@ class Canvas {
     layer.context.drawImage(image, 0, 0, this.graphicWidth, this.graphicWidth);
   }
 
+  drawLineToLayer(layer, x1, y1, x2, y2, width) {
+    const g = this.graphicWidth / 100;
+    const ctx = layer.context;
+    ctx.beginPath();
+    ctx.moveTo(x1 * g, y1 * g);
+    ctx.strokeStyle = "#ffffff";
+    ctx.lineWidth = width * g;
+    ctx.lineCap = "round";
+    ctx.lineTo(x2 * g, y2 * g);
+    ctx.stroke();
+  }
+
   stamp(x, y, w, h) {
     const d = this.source.context.getImageData(x, y, w, h);
-    if (d) this.target.context.putImageData(d, x, y);
+    if (d) this.target2.context.putImageData(d, x, y);
   }
 
   drawRect(x, y, w, h, color) {
@@ -98,9 +119,6 @@ class Canvas {
   }
 
   getColorAtCoordinates(x, y) {
-    // if (isNaN(x) || isNaN(y) || x < 0 || y < 0 || x > this.graphicWidth || y > this.graphicWidth) {
-    //   return "#000000";
-    // }
     const p = this.source.context?.getImageData(x, y, 1, 1)?.data;
     if (!p) return null;
     const color = "#" + ("000000" + rgbToHex(p[0], p[1], p[2])).slice(-6);

@@ -56,6 +56,7 @@ class PixelPainter {
       if (detailLevel == -1) {
         // this has been set, but is queued up to delay increasing resolution immediately
       } else if (this.detailLevels[gx][gy] < d + 1) {
+        console.log(detailLevel);
         if (detailLevel < this.gridblocksAtDetailLevel.length - 1) {
           this.canvas.drawRect(x2, y2, w, h, color);
           //this.canvas.drawTestRect(x2, y2, w, h, "red");
@@ -63,10 +64,11 @@ class PixelPainter {
         } else {
           if (detailLevel == 9) {
             //already at max detail. fill in some area around it.
-            const { x: x3, y: y3, w: w3, h: h3 } = this.getGridRectangle(x2 - w, y2 - w, gb * 4);
+            const { x: x3, y: y3, w: w3, h: h3 } = this.getGridRectangle(gx - 1, gy - 1, gb * 4);
             this.canvas.stamp(x3, y3, w3, h3);
           } else {
-            this.canvas.stamp(x2, y2, w * 2, h * 2); //Why *2? I don't know...
+            const { x: x3, y: y3, w: w3, h: h3 } = this.getGridRectangle(gx, gy, gb * 2);
+            this.canvas.stamp(x3, y3, w3, h3);
             this.addDetailLevel(gx, gy, 9);
           }
         }
