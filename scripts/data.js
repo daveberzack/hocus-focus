@@ -1,4 +1,14 @@
-import { getGameResults, getTodayString, getTestChallenge, isTouchDevice } from "./utils.js";
+import { openDB } from "https://cdn.jsdelivr.net/npm/idb@7/+esm";
+import { getTodayString, isTouchDevice, testerId } from "./utils.js";
+
+const VERSION = 1;
+const dbPromise = openDB("data", VERSION, {
+  upgrade(db) {
+    db.createObjectStore("results", { keyPath: "key", autoIncrement: true });
+  },
+});
+
+let cachedResults = [];
 
 const getNextChallengeId = async () => {
   const r = await getGameResults();
@@ -16,7 +26,6 @@ const getNextChallengeId = async () => {
   if (testerId) {
     const testChallenge = await getTestChallenge();
     if (testChallenge) return testChallenge;
-    else testerId = null;
   }
   //else return today's challenge or "played" if already played
   const todayString = getTodayString();
@@ -51,4 +60,55 @@ const getChallengeById = async (challengeId) => {
   return challenge;
 };
 
-export { getNextChallengeId, getChallengeById };
+async function getTestChallenge() {
+  const results = await getGameResults();
+  let challengeId = null;
+  const testChallenges = ["001", "002", "003", "004", "005"];
+  for (let i = 0; i < testChallenges.length; i++) {
+    const testChallenge = testChallenges[i];
+    if (!results.find((r) => r.id == testChallenge)) {
+      challengeId = testChallenge;
+      break;
+    }
+  }
+  return challengeId;
+}
+
+async function saveGameResult(challengeId, timePassed, mistakes, stars) {
+  const newResult = { id: challengeId, timePassed: Math.round(timePassed), mistakes, stars };
+  cachedResults.push(newResult);
+  (await dbPromise).put("results", newResult);
+}
+
+async function sendAnalytics(type, data) {
+  //console.log("analytics", data);
+  const url = `https://dave-simplecrud.herokuapp.com/${type}`;
+  await fetch(url, {
+    method: "POST",
+    mode: "cors",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+}
+
+async function getGameResults() {
+  let results = await (await dbPromise).getAll("results");
+  console.log("/ ", results);
+  if (results == []) results = cachedResults;
+  console.log(results);
+  return results;
+}
+
+function logPageView() {
+  sendAnalytics("pageview", { page: "hocusfocus", userAgent: navigator.userAgent, width: $(window).width(), height: $(window).height(), touch: isTouchDevice(), user: testerId });
+}
+
+async function resetData() {
+  if (confirm("Clear all your game data?")) {
+    (await dbPromise).clear("results");
+  }
+}
+
+export { getNextChallengeId, getChallengeById, saveGameResult, getGameResults, sendAnalytics, logPageView, resetData };

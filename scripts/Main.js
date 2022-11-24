@@ -1,21 +1,17 @@
 import Game from "./Game.js";
 
-import { showView, getParameter, sendAnalytics, logPageView, resetData } from "./utils.js";
-import { getChallengeById, getNextChallengeId } from "./data.js";
+import { showView, testerId, setTester } from "./utils.js";
+import { getChallengeById, getNextChallengeId, sendAnalytics, logPageView, resetData } from "./data.js";
 if (navigator && navigator.serviceWorker) {
   navigator.serviceWorker.register("../sw.js");
 }
 
 const game = new Game();
-let testerId = null;
 let challengeId = "error";
 
 const init = async () => {
   initUI();
-
-  //if tester param provided, then set id to the next unplayed challenge from the specified set
-  testerId = getParameter("tester");
-
+  setTester();
   showView("game");
   logPageView();
   reset();

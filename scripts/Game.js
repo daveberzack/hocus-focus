@@ -1,7 +1,9 @@
 import Canvas from "./Canvas.js";
 import Cursor from "./Cursor.js";
 import PixelPainter from "./PixelPainter.js";
-import { isInCanvas, sleep, formatClue, saveGameResult, sendAnalytics, getCanvasCoordinates } from "./utils.js";
+import { isInCanvas, sleep, formatClue, getCanvasCoordinates, testerId } from "./utils.js";
+import { saveGameResult, sendAnalytics } from "./data.js";
+
 import WinContent from "./WinContent.js";
 
 const GAME_LOOP_INCREMENT = 10;
@@ -20,14 +22,13 @@ class Game {
     this.winContent = new WinContent();
   }
 
-  init(challenge, canvasWidth, testerId) {
+  init(challenge, canvasWidth) {
     this.canvas = new Canvas(challenge);
     this.cursor = new Cursor($("#pic"));
     this.painter = new PixelPainter(this.canvas, this.cursor, canvasWidth);
     this.timePassed = 0;
     this.mistakes = 0;
     this.gaveUp = false;
-    this.testerId = testerId;
     this.isPlaying = false;
     this.resetTimer();
     clearInterval(this.loopInterval);
@@ -152,7 +153,7 @@ class Game {
 
     this.$giveUp.hide();
     saveGameResult(this.challenge.id, this.timePassed, this.mistakes, goalsMet.length);
-    sendAnalytics("hocussolve", { tester: this.testerId, challengeId: this.challenge.id, timePassed: Math.round(this.timePassed), mistakes: this.mistakes, stars: goalsMet.length, gaveUp: this.gaveUp });
+    sendAnalytics("hocussolve", { tester: testerId, challengeId: this.challenge.id, timePassed: Math.round(this.timePassed), mistakes: this.mistakes, stars: goalsMet.length, gaveUp: this.gaveUp });
 
     this.isPlaying = false;
     clearInterval(this.loopInterval);
@@ -170,7 +171,7 @@ class Game {
       effectiveTimePassed,
       goalsMet,
       gaveUp: this.gaveUp,
-      testerId: this.testerId,
+      testerId,
     });
   }
 }

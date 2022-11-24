@@ -1,14 +1,3 @@
-import { openDB } from "https://cdn.jsdelivr.net/npm/idb@7/+esm";
-
-const VERSION = 1;
-const dbPromise = openDB("data", VERSION, {
-  upgrade(db) {
-    db.createObjectStore("results", { keyPath: "key", autoIncrement: true });
-  },
-});
-
-let cachedResults = [];
-
 function getCanvasCoordinates(mouseX, mouseY, $canvas) {
   const rect = $canvas.offset();
   const elementWidth = $canvas.width();
@@ -89,33 +78,6 @@ function getRandom(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
-async function saveGameResult(challengeId, timePassed, mistakes, stars) {
-  const newResult = { id: challengeId, timePassed: Math.round(timePassed), mistakes, stars };
-  cachedResults.push(newResult);
-  (await dbPromise).put("results", newResult);
-}
-
-async function sendAnalytics(type, data) {
-  //console.log("analytics", data);
-  const url = `https://dave-simplecrud.herokuapp.com/${type}`;
-  await fetch(url, {
-    method: "POST",
-    mode: "cors",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  });
-}
-
-async function getGameResults() {
-  let results = await (await dbPromise).getAll("results");
-  console.log("/ ", results);
-  if (results == []) results = cachedResults;
-  console.log(results);
-  return results;
-}
-
 function getParameter(parameterName) {
   var result = null,
     tmp = [];
@@ -129,55 +91,15 @@ function getParameter(parameterName) {
   return result;
 }
 
-async function getTestChallenge() {
-  const results = await getGameResults();
-  let challengeId = null;
-  const testChallenges = ["001", "002", "003", "004", "005"];
-  for (let i = 0; i < testChallenges.length; i++) {
-    const testChallenge = testChallenges[i];
-    if (!results.find((r) => r.id == testChallenge)) {
-      challengeId = testChallenge;
-      break;
-    }
-  }
-  return challengeId;
-}
-
 function isTouchDevice() {
   const isTouch = window.ontouchstart !== undefined;
   return isTouch;
 }
 
-function logPageView() {
-  sendAnalytics("pageview", { page: "hocusfocus", userAgent: navigator.userAgent, width: $(window).width(), height: $(window).height(), touch: isTouchDevice(), user: getParameter("tester") });
-}
-
-async function resetData() {
-  if (confirm("Clear all your game data?")) {
-    (await dbPromise).clear("results");
-  }
-}
-
-export {
-  showView,
-  getCanvasCoordinates,
-  isInCanvas,
-  rgbToHex,
-  getNewCoordinates,
-  getTodayString,
-  getTodayFormatted,
-  sleep,
-  formatClue,
-  unformatClue,
-  copyToClipboard,
-  getCoordinatesRelativeToCanvas,
-  getRandom,
-  saveGameResult,
-  getGameResults,
-  sendAnalytics,
-  getParameter,
-  getTestChallenge,
-  isTouchDevice,
-  logPageView,
-  resetData,
+let testerId;
+const setTester = () => {
+  //if tester param provided, then set id to the next unplayed challenge from the specified set
+  testerId = getParameter("tester");
 };
+
+export { showView, getCanvasCoordinates, isInCanvas, rgbToHex, getNewCoordinates, getTodayString, getTodayFormatted, sleep, formatClue, unformatClue, copyToClipboard, getCoordinatesRelativeToCanvas, getRandom, isTouchDevice, testerId, setTester };

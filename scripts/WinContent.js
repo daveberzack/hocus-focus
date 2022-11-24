@@ -1,5 +1,6 @@
 import Stats from "./Stats.js";
-import { sleep, getRandom, unformatClue, getTodayFormatted, showView, copyToClipboard, getGameResults } from "./utils.js";
+import { sleep, getRandom, unformatClue, getTodayFormatted, showView, copyToClipboard } from "./utils.js";
+import { getGameResults } from "./data.js";
 
 class WinContent {
   constructor() {
