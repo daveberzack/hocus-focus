@@ -1,9 +1,9 @@
 const tutorial0 = {
   isTutorial: true,
-  id: "tutorial0",
+  _id: "tutorial0",
   clue: "Click the [bullseye].",
   credit: "Prawny",
-  imageUrl: "./riddles/dartboard.jpg",
+  imageUrl: "./img/challenges/dartboard.jpg",
   creditUrl: "https://pixabay.com/illustrations/sport-games-equipment-target-2037681/",
   hitAreas: [{ x1: 50, y1: 50, x2: 50, y2: 50, w: 20 }],
   goals: [15, 30, 45, 60, 90],
@@ -13,10 +13,10 @@ const tutorial0 = {
 };
 const tutorial0_mobile = {
   isTutorial: true,
-  id: "tutorial0_mobile",
+  _id: "tutorial0_mobile",
   clue: "Click the [bullseye].",
   credit: "Prawny",
-  imageUrl: "./riddles/dartboard.jpg",
+  imageUrl: "./img/challenges/dartboard.jpg",
   creditUrl: "https://pixabay.com/illustrations/sport-games-equipment-target-2037681/",
   hitAreas: [{ x1: 50, y1: 50, x2: 50, y2: 50, w: 20 }],
   goals: [15, 30, 45, 60, 90],
@@ -27,10 +27,10 @@ const tutorial0_mobile = {
 
 const tutorial1 = {
   isTutorial: true,
-  id: "tutorial1",
+  _id: "tutorial1",
   clue: "Boop the [nose].",
   credit: "Pixabay",
-  imageUrl: "./riddles/cute_puppy.jpg",
+  imageUrl: "./img/challenges/cute_puppy.jpg",
   creditUrl: "https://www.pexels.com/photo/adorable-animal-canine-cute-220938/",
   goals: [15, 30, 50, 80, 100],
   hitAreas: [{ x1: 45, y1: 45, x2: 45, y2: 45, w: 20 }],
@@ -40,10 +40,10 @@ const tutorial1 = {
 
 const tutorial2 = {
   isTutorial: true,
-  id: "tutorial2",
+  _id: "tutorial2",
   clue: "See you in [the fall]",
   credit: "Pixabay",
-  imageUrl: "./riddles/waterfall.jpg",
+  imageUrl: "./img/challenges/waterfall.jpg",
   creditUrl: "https://www.pexels.com/photo/beautiful-country-countryside-daylight-414061/",
   goals: [30, 60, 90, 120, 150],
   hitAreas: [{ x1: 18, y1: 30, x2: 27, y2: 85, w: 25 }],

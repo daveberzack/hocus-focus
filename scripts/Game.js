@@ -152,8 +152,8 @@ class Game {
     const goalsMet = this.challenge.goals.filter((g) => g > effectiveTimePassed);
 
     this.$giveUp.hide();
-    saveGameResult(this.challenge.id, this.timePassed, this.mistakes, goalsMet.length);
-    sendAnalytics("hocussolve", { tester: testerId, challengeId: this.challenge.id, timePassed: Math.round(this.timePassed), mistakes: this.mistakes, stars: goalsMet.length, gaveUp: this.gaveUp });
+    saveGameResult(this.challenge._id, this.timePassed, this.mistakes, goalsMet.length);
+    sendAnalytics("hocussolve", { tester: testerId, challengeId: this.challenge._id, timePassed: Math.round(this.timePassed), mistakes: this.mistakes, stars: goalsMet.length, gaveUp: this.gaveUp });
 
     this.isPlaying = false;
     clearInterval(this.loopInterval);

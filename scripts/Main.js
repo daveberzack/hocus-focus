@@ -65,7 +65,7 @@ const reset = async () => {
 
   const challenge = await getNextChallenge();
   console.log("next challenge:", challenge);
-  if (challenge.id == "played") {
+  if (challenge._id == "played") {
     $("#played").css("display", "flex");
     $("#timer").hide();
   } else {
@@ -74,23 +74,8 @@ const reset = async () => {
     }
     $("#intro").css("display", "flex");
     game.init(challenge, canvasWidth);
-    if (challenge.id == "error") $("#timer").hide();
+    if (challenge._id == "error") $("#timer").hide();
   }
-
-  /*
-  challengeId = await getNextChallengeId();
-  if (challengeId == "played") {
-    $("#played").css("display", "flex");
-    $("#timer").hide();
-  } else {
-    const challenge = await getChallengeById(challengeId);
-    if (challenge.beforeTitle && challenge.beforeMessage) {
-      showBeforeMessage(challenge);
-    }
-    $("#intro").css("display", "flex");
-    game.init(challenge, canvasWidth, testerId);
-    if (challenge.id == "error") $("#timer").hide();
-  }*/
 };
 
 function showBeforeMessage(challenge) {

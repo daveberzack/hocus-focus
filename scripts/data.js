@@ -9,122 +9,66 @@ const dbPromise = openDB("data", VERSION, {
   },
 });
 
+let cachedTestChallenges;
+
 const getNextChallenge = async () => {
   const r = await getGameResults();
 
-  const playedToday = false; // <---- check results for actual value
-
   //return the first uncompleted tutorial
-  const foundTutorial = r.find((e) => e.id == "tutorial2") || r.find((e) => e.id == "tutorial1") || r.find((e) => e.id.includes("tutorial0"));
+  const foundTutorial = r.find((e) => e?._id == "tutorial2") || r.find((e) => e?._id == "tutorial1") || r.find((e) => e?._id.includes("tutorial0"));
   if (!foundTutorial) {
     if (isTouchDevice()) return tutorial0_mobile;
     else return tutorial0;
-  } else if (foundTutorial.id == "tutorial1") return tutorial2;
-  else if (foundTutorial.id.includes("tutorial0")) return tutorial1;
+  } else if (foundTutorial._id == "tutorial1") return tutorial2;
+  else if (foundTutorial._id.includes("tutorial0")) return tutorial1;
+  //
   //otherwise if this is a tester, return the next one to test ...remember to disable sharing!
   else if (!!testerId) {
-    try {
-      const response = await fetch(`./challenges/001/data.json`);
-      const challenge = await response.json();
-      console.log("test", challenge);
-      if (!r.find((e) => e.id == challenge.id)) return challenge;
-    } catch {
-      //do nothing. if this fails, we'll continue checking cases below
+    if (!cachedTestChallenges) {
+      try {
+        const response = await fetch(`https://dave-simplecrud.herokuapp.com/hocustestchallenges`);
+        cachedTestChallenges = await response.json();
+      } catch {
+        //do nothing. it'll just skip testing
+      }
+    }
+
+    for (let i = 0; i < cachedTestChallenges.length; i++) {
+      const id = cachedTestChallenges[i]._id;
+      if (!r.find((e) => e._id == id)) return cachedTestChallenges[i];
     }
   }
+  //otherwise return today's riddle (or played if already played, or an error if not found)
 
-  //otherwise return today's riddle or played placeholder
-  if (playedToday) {
-  }
-
-  //otherwise return today's riddle (or an error if not found)
-  else
-    try {
-      const response = await fetch(`./cccc`);
-      const challenge = await response.json();
-      return challenge;
-    } catch {
-      return {
-        id: "error",
-        clue: "[No Puzzle Today]",
-        subtitle: "Please check back tomorrow.",
-        hideButton: true,
-        credit: "",
-        creditUrl: "#",
-        goals: [],
-      };
-    }
-};
-/*
-const getNextChallengeId = async () => {
-  const r = await getGameResults();
-
-  //return the first uncompleted tutorial
-  const foundTutorial = r.find((e) => e.id == "tutorial2") || r.find((e) => e.id == "tutorial1") || r.find((e) => e.id.includes("tutorial0"));
-  if (!foundTutorial) {
-    console.log("not found", r);
-    if (isTouchDevice()) return "tutorial0_mobile";
-    else return "tutorial0";
-  } else if (foundTutorial.id == "tutorial1") return "tutorial2";
-  else if (foundTutorial.id.includes("tutorial0")) return "tutorial1";
-
-  //if tester, return the first uncompleted test
-  if (testerId) {
-    const testChallenge = await getTestChallenge();
-    if (testChallenge) return testChallenge;
-  }
-  //else return today's challenge or "played" if already played
-  const todayString = getTodayString();
-  const foundToday = r.find((e) => e.id == todayString);
-  if (!foundToday) return todayString;
-  else return "played";
-};
-
-const getChallengeById = async (challengeId) => {
-  if (challengeId == "played") return null;
-  let challenge = {};
   try {
-    const response = await fetch(`./challenges/${challengeId}/data.json`);
-    challenge = await response.json();
+    const response = await fetch(`https://dave-simplecrud.herokuapp.com/hocustodaychallenge`);
+    const challenge = await response.json();
+
+    console.log(challenge);
+    //otherwise return today's challenge or played placeholder
+    const playedToday = !!r.find((e) => e?._id == challenge._id);
+    console.log(playedToday);
+    if (playedToday) {
+      challenge._id = "played";
+    }
+    return challenge;
   } catch {
-    challengeId = "error";
-    challenge = {
-      id: challengeId,
+    return {
+      _id: "error",
       clue: "[No Puzzle Today]",
       subtitle: "Please check back tomorrow.",
       hideButton: true,
       credit: "",
-      url: "#",
+      creditUrl: "#",
       goals: [],
     };
   }
-
-  challenge.nextChallenge = challengeId.includes("tutorial") || !!testerId;
-  challenge.imgFile = `./challenges/${challengeId}/img.jpg`;
-  challenge.hitFile = `./challenges/${challengeId}/hit.jpg`;
-  challenge.id = challengeId;
-  return challenge;
 };
-
-async function getTestChallenge() {
-  const results = await getGameResults();
-  let challengeId = null;
-  const testChallenges = ["001", "002", "003", "004", "005"];
-  for (let i = 0; i < testChallenges.length; i++) {
-    const testChallenge = testChallenges[i];
-    if (!results.find((r) => r.id == testChallenge)) {
-      challengeId = testChallenge;
-      break;
-    }
-  }
-  return challengeId;
-}
-*/
 
 let cachedResults = [];
 
 async function saveGameResult(challengeId, timePassed, mistakes, stars) {
-  const newResult = { id: challengeId, timePassed: Math.round(timePassed), mistakes, stars };
+  const newResult = { _id: challengeId, timePassed: Math.round(timePassed), mistakes, stars };
   cachedResults.push(newResult);
   (await dbPromise).put("results", newResult);
 }
@@ -144,9 +88,7 @@ async function sendAnalytics(type, data) {
 
 async function getGameResults() {
   let results = await (await dbPromise).getAll("results");
-  console.log("/ ", results);
   if (results == []) results = cachedResults;
-  console.log(results);
   return results;
 }
 

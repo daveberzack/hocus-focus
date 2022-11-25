@@ -2,7 +2,7 @@
   "id": "001",
   "isTest": true,
   "clue": "Get to the [bottom] of it",
-  "imageUrl": "./riddles/stairs.jpg",
+  "imageUrl": "./img/challenges/stairs.jpg",
   "creditUrl": "Colin",
   "url": "https://en.wikipedia.org/wiki/Bramante_Staircase#/media/File:Vatican_Museums_Spiral_Staircase_2012.jpg",
   "hitAreas": [{ "x1": 40, "y1": 76, "x2": 40, "y2": 76, "w": 20 }],
