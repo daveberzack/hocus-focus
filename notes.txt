@@ -1,3 +1,9 @@
+create basic form to submit a challenge (stub post, hardcoded image)
+draw area
+actually post new challenge
+upload image
+google auth
+styling, pagination
 
 get domain.
 update .fun with .com in manifest.
