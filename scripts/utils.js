@@ -102,4 +102,4 @@ const setTester = () => {
   testerId = getParameter("tester");
 };
 
-export { showView, getCanvasCoordinates, isInCanvas, rgbToHex, getNewCoordinates, getTodayString, getTodayFormatted, sleep, formatClue, unformatClue, copyToClipboard, getCoordinatesRelativeToCanvas, getRandom, isTouchDevice, testerId, setTester };
+export { showView, getCanvasCoordinates, isInCanvas, rgbToHex, getNewCoordinates, getTodayString, getTodayFormatted, sleep, formatClue, unformatClue, copyToClipboard, getCoordinatesRelativeToCanvas, getRandom, isTouchDevice, testerId, setTester, getParameter };

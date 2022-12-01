@@ -1,5 +1,5 @@
 import { openDB } from "https://cdn.jsdelivr.net/npm/idb@7/+esm";
-import { getTodayString, isTouchDevice, testerId } from "./utils.js";
+import { getParameter, getTodayString, isTouchDevice, testerId } from "./utils.js";
 import { tutorial0, tutorial0_mobile, tutorial1, tutorial2 } from "./tutorials.js";
 
 const VERSION = 1;
@@ -14,7 +14,14 @@ let cachedTestChallenges;
 const getNextChallenge = async () => {
   const r = await getGameResults();
 
+  const specifiedId = getParameter("id");
+  if (specifiedId) {
+    const response = await fetch(`https://dave-simplecrud.herokuapp.com/hocuschallenge/` + specifiedId);
+    const challenge = await response.json();
+    return challenge;
+  }
   //return the first uncompleted tutorial
+  console.log(r);
   const foundTutorial = r.find((e) => e?._id == "tutorial2") || r.find((e) => e?._id == "tutorial1") || r.find((e) => e?._id.includes("tutorial0"));
   if (!foundTutorial) {
     if (isTouchDevice()) return tutorial0_mobile;
@@ -44,7 +51,6 @@ const getNextChallenge = async () => {
     const response = await fetch(`https://dave-simplecrud.herokuapp.com/hocustodaychallenge`);
     const challenge = await response.json();
 
-    console.log(challenge);
     //otherwise return today's challenge or played placeholder
     const playedToday = !!r.find((e) => e?._id == challenge._id);
     console.log(playedToday);

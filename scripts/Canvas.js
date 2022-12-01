@@ -13,6 +13,7 @@ class Canvas {
       }),
     };
     const sourceImage = new Image();
+    sourceImage.crossOrigin = "Anonymous";
     sourceImage.onload = function () {
       self.drawImageToLayer(self.source, sourceImage);
     };

@@ -1,9 +1,13 @@
-create basic form to submit a challenge (stub post, hardcoded image)
-draw area
-actually post new challenge
-upload image
+send image and upload to amazon
+change beforemessage to array, with button text
+styling forms
+
+
 google auth
 styling, pagination
+
+be sure to load image before starting game
+
 
 get domain.
 update .fun with .com in manifest.

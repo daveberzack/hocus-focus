@@ -207,9 +207,10 @@ header .instructions-button {
   right: 5px;
 }
 h2 {
-  font-size: 90px;
+  font-size: 2em;
   margin: 40px 0px;
   text-align: center;
+  color: #ffffff;
 }
 p {
   margin: 10px auto;
@@ -218,7 +219,6 @@ p {
 .center {
   text-align: center;
 }
-
 
 .button {
   position: absolute;
@@ -247,4 +247,34 @@ p {
 
 .widgetFrame {
   margin: 30px auto;
+}
+
+.board {
+  margin: 30px auto;
+  width: 500px;
+  height: 500px;
+  background-color: antiquewhite;
+  position: relative;
+  overflow: hidden;
+}
+
+.board canvas {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+#canvases {
+  opacity: 0.7;
+  mix-blend-mode: darken;
+  filter: blur(4px);
+}
+
+#pic {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }

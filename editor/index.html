@@ -7,58 +7,75 @@
     <title>Hocus Focus Editor</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet" />
     <script src="https://app.simplefileupload.com/buckets/742bf56f298c8d1736d66df22283af7c.js"></script>
-</head>
+  </head>
 
   <body>
     <div id="all">
+
       <header>
         <img src="../img/hocus.png" id="logo" />
         <h1 id="logotype">Hocus <span class="bold">Focus</span></h1>
         <img class="instructions-button" src="../img/help.png" />
       </header>
 
-      <div id="instructions" class="view">
-        <div id="instructions-block">
-          <h2>How to Use This</h2>
-          <p>Every day, there's a new riddle. A sly clue to find something in a hidden picture.</p>
-          <p>When you move around the canvas it will add big squares of color (whatever color is in the image right at your cursor). Paint over an existing block to add smaller blocks, revealing finer and finer details.</p>
-          <p>Once you've identified the objective, click on it to stop the timer. But don't make wild guesses. Every wrong click costs you a 10-second penalty.</p>
-          <p>
-            You'll score up to five stars for beating the checkpoints shown in the timer. Some puzzles are tricky. Don't worry. You'll get more time for the tough ones. And you're supposed to feel a bit confused. After you win, it'll all make sense. You can share your score and paste it into a
-            message or social media to play against friends.
-          </p>
-          <p>Should you spend time getting the general context of a picture, or focus on an interesting area? Which area is worth exploring? What does that riddle mean, anyway? Are you confident enough to wager a guess? I don't know. I'm just the game designer.</p>
-          <p>Good hunting.</p>
-          <p>Love,<br />Dave</p>
-          <p class="center"><a class="button game-button" href="#">Play</a></p>
-        </div>
-        <footer>
-          <p>ⓒ2022 <a class="bold" href="http://www.daveberzack.com" target="credit">Dave Berzack</a> <span id="version">v0.5</span></p>
-        </footer>
-      </div>
+      <form id="form">
 
-      
-      <div id="upload" class="view">
-        <h2>Upload an image</h2>
-        <input type="hidden" name="source_image" id="source_image" class="simple-file-upload" data-resize-width="500" data-resize-height="500" data-resize-method="crop" >
-          
+        <!-- <div id="instructions" class="view">
+          <div id="instructions-block">
+            <h2>How to Use This</h2>
+            <p>Every day, there's a new riddle. A sly clue to find something in a hidden picture.</p>
+            <p class="center"><a class="button game-button" href="#">Play</a></p>
+          </div>
+          <footer>
+            <p>ⓒ2022 <a class="bold" href="http://www.daveberzack.com" target="credit">Dave Berzack</a> <span id="version">v0.5</span></p>
+          </footer>
+        </div> -->
+
+        <div id="upload" class="view">
+          <h2>Upload an image</h2>
+          <input type="hidden" name="source_image" id="source_image" class="simple-file-upload" data-resize-width="500" data-resize-height="500" data-resize-method="crop" />
         </div>
-    </div>
-      
-    <div id="hit" class="view">
-        <h2>Draw the area of the goal</h2>
-        
-        <div class="option">
-            <input id="clue" placeholder="write a clue" />
+
+      <div id="hit" class="view">
+        <h2>Highlight the target area</h2>
+
+        <div class="board">
+          <img id="pic" />
+          <div id="canvases">
+            <canvas id="hit-applied" width="1000" height="1000"></canvas>
+            <canvas id="hit-drawing" width="1000" height="1000"></canvas>
           </div>
         </div>
+
+        <div>Clue:<input type="text" id="clue"></div>
+
+        <button id="small-brush">s</button>
+        <button id="medium-brush">m</button>
+        <button id="large-brush">l</button>
+        <button id="clear-hit">Reset</button>
+        <button id="submit-hit">Next</button>
+      </div>
     </div>
+    <div id="text" class="view">
+      <h2>Enter a personal message</h2>
+      <div>Title:<input type="text" id="title"></div>
+      <div>Message:<textarea id="message"></textarea></div>
+
+      <button id="submit-text">Next</button>
+    </div>
+      </div>
+      <div id="confirm" class="view">
+        <h2>Done</h2>
+      </div>
+      
+    </form>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <script type="module" src="script.js"></script>
+    <script type="module" src="hitArea.js"></script>
   </body>
 </html>
