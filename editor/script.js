@@ -1,48 +1,24 @@
-import { strokes } from "./hitarea.js";
-let imageUrl = "";
-let clue = "";
-let title = "";
-let message = "";
+import { strokes, clearStrokes, setHitActive, startHitInterval, clearHitInterval } from "./hitarea.js";
+let theme = 1;
 
-const showView = (name) => {
-  $(".view").hide();
-  $("#" + name).show();
-};
-showView("upload");
-
-let uploadInterval = setInterval(() => {
-  const newImageUrl = $("#source_image").attr("value");
-  console.log(newImageUrl);
-  if (newImageUrl) {
-    imageUrl = newImageUrl;
-    $("#pic").attr("src", imageUrl);
-    showView("hit");
-    clearInterval(uploadInterval);
-  }
-}, 1000);
-
-$("#submit-hit").click(() => {
-  console.log(strokes);
-  showView("text");
-});
-$("#submit-text").click(async () => {
-  clue = $("#clue").val();
-  title = $("#title").val();
-  message = $("#message").val();
-  console.log(clue);
-  console.log(title);
-  console.log(message);
-  console.log(strokes);
-
+const submit = async () => {
+  const clue = $("#clue-field").val();
+  const title = $("#message-title").text();
+  const message = $("#message-body").text();
+  const canvas = document.getElementById("pic");
+  const image = canvas.toDataURL('image/jpeg', 1.0);
   const data = {
     clue,
-    imageUrl,
+    image,
+    theme,
     beforeMessage: message,
     beforeTitle: title,
     goals: [30, 60, 90, 120, 150],
     hitAreas: strokes,
   };
-  const url = `https://dave-simplecrud.herokuapp.com/hocuschallenge`;
+  console.log(data);
+
+  const url = `https://dave-simplecrud.herokuapp.com/hocuschristmas`;
   const response = await fetch(url, {
     method: "POST",
     mode: "cors",
@@ -51,7 +27,175 @@ $("#submit-text").click(async () => {
     },
     body: JSON.stringify(data),
   });
-  const newChallenge = await response.json();
-  console.log(newChallenge);
-  showView("confirm");
+  const newChallengeId = await response.json();
+  console.log(newChallengeId);
+  showConfirm();
+}; 
+
+const uploadField = document.getElementById("upload-field");
+uploadField.onchange = (evt) => {
+  const [file] = uploadField.files;
+  if (file) {
+    drawUploadToCanvas(file);
+    showClue();
+  } 
+};
+
+$("#change-image").click((e) => {
+  e.preventDefault();
+  clearStrokes();
+  showUpload();
 });
+$("#hide-hit-instructions").click((e) => {
+  e.preventDefault();
+  $("#hit-instructions").hide();
+});
+$("#hide-clue-instructions").click((e) => {
+  e.preventDefault();
+  $("#clue-instructions").hide();
+  $("#clue").show(); 
+});
+$("#hide-message-instructions").click((e) => {
+  e.preventDefault();
+  $("#message-instructions").hide();
+});
+$("#submit-clue").click((e) => {
+  e.preventDefault();
+  showHit();
+});
+$("#submit-hit").click((e) => {
+  e.preventDefault();
+  showMessage();
+});
+
+$("#submit-message").click((e) => {
+  e.preventDefault();
+  submit();
+});
+$("#show-themes-button").click((e) => {
+  e.preventDefault();
+  $("#theme-select").show();
+});
+
+let hasClearedMessageTitle=false;
+$("#message-title").click((e) => {
+  e.preventDefault();
+  if (!hasClearedMessageTitle) $("#message-title").html("&nbsp;");
+  hasClearedMessageTitle = true;
+});
+let hasClearedMessageBody=false;
+$("#message-body").click((e) => {
+  e.preventDefault();
+  if (!hasClearedMessageBody) $("#message-body").html("");
+  hasClearedMessageBody = true;
+});
+
+$("#theme-select img").click((e) => {
+  e.preventDefault();
+  $("#theme-select").hide();
+  setTheme(e.target.getAttribute("data-value"));
+});
+
+const showUpload = ()=>{
+  $("#upload").show(); 
+  $("#hit").hide(); 
+  $("#hit-controls").hide(); 
+  $("#hit-instructions").hide();
+  $("#clue-instructions").show();
+  $("#clue").hide(); 
+  $("#message, #message-controls").hide(); 
+  setHitActive(false);
+  clearHitInterval();
+}
+const showClue = ()=>{
+  $("#canvases").hide(); 
+  $("#upload").hide(); 
+  $("#hit").show();
+  $("#hit-controls").hide(); 
+  $("#hit-instructions").hide();
+  $("#clue-instructions").show();
+  $("#clue").hide(); 
+  $("#message, #message-controls").hide(); 
+  setHitActive(false);
+  clearHitInterval();
+}
+const showHit = ()=>{
+  $("#canvases").show();
+  $("#upload").hide(); 
+  $("#hit").show();
+  $("#hit-controls").show(); 
+  $("#hit-instructions").show();
+  $("#clue-instructions").hide();
+  $("#clue").hide(); 
+  $("#message, #message-controls").hide(); 
+  startHitInterval();
+  setHitActive(true);
+}
+const showMessage = ()=>{
+  $("#upload").hide(); 
+  $("#hit").hide();
+  $("#hit-controls").hide(); 
+  $("#hit-instructions").hide();
+  $("#clue-instructions").hide();
+  $("#clue").hide(); 
+  setHitActive(false);
+  $("#message, #message-controls").show(); 
+  $("#theme-select").hide();
+  clearHitInterval();
+}
+const showConfirm = ()=>{
+  $("#upload").hide(); 
+  $("#hit").hide();
+  $("#hit-controls").hide(); 
+  $("#hit-instructions").hide();
+  $("#clue-instructions").hide();
+  $("#clue").hide(); 
+  setHitActive(false);
+  $("#message, #message-controls").hide(); 
+  clearHitInterval();
+  $("#confirm").show(); 
+}
+
+const setTheme = (themeId) => {
+  theme = themeId;
+  $("#message").css("background-image", "url(img/themes/bgs/" + theme + ".jpg)");
+}
+
+showUpload();
+
+const drawUploadToCanvas = (file)=> {
+  var reader  = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onloadend = function (e) {
+          var image = new Image();
+          image.src = e.target.result;
+          image.onload = function(ev) {
+             var canvas = document.getElementById('pic');
+             var ctx = canvas.getContext('2d');
+             
+             let sx=0;
+             let sy=(image.height-image.width)/2;
+             let sWidth=image.width;
+             let sHeight=image.width;
+             if (image.width>image.height){
+              sx=(image.width-image.height)/2;
+              sy=0;
+              sWidth=image.height;
+              sHeight=image.height;
+             }
+             ctx.drawImage(image, sx, sy, sWidth, sHeight, 0, 0, 1000, 1000);
+         }
+      }
+};
+
+const resize = ()=> {
+  let winW= $(window).width();
+  let winH= $(window).height();
+  let w = Math.min( (winW-20), winH-160);
+  w = Math.min( w, 350);
+  $(".square-block").width(w);
+  $(".square-block").height(w);
+  $(".horizontal-block").height(w);
+  //$("body").addClass("small");
+}
+resize();

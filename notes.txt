@@ -1,10 +1,27 @@
-send image and upload to amazon
-change beforemessage to array, with button text
-styling forms
+ui: 
+clean up UI, check responsiveness
+secure Amazon creds
+get challenge on FE
+
+send data and image to heroku (with beforemessage as array, with button text and bg image)
+upload to S3
+
+in app, change beforemessage to array, with button text
+
+general and upload instructions
+example christmas card. add link to instructions
+
+
+
+
+
+
+
+
+
 
 
 google auth
-styling, pagination
 
 be sure to load image before starting game
 
