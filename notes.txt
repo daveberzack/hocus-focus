@@ -1,25 +1,9 @@
-ui: 
+testing environment
 clean up UI, check responsiveness
-secure Amazon creds
-get challenge on FE
-
-send data and image to heroku (with beforemessage as array, with button text and bg image)
-upload to S3
-
-in app, change beforemessage to array, with button text
-
-general and upload instructions
+compress jpg stored on server
+background image for beforeMessages
 example christmas card. add link to instructions
-
-
-
-
-
-
-
-
-
-
+show streak
 
 google auth
 

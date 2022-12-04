@@ -33,7 +33,13 @@ const initUI = () => {
   });
 
   $("#before-button").click(() => {
-    showView("game");
+    if (nextBeforeMessage < challenge.beforeMessages.length){
+      showBeforeMessage();
+    }
+    else {
+      showView("game");
+    }
+    
   });
   $("#after-button").click(function () {
     $("#after-message").hide();
@@ -59,18 +65,21 @@ const initUI = () => {
   });
 };
 
+let challenge;
+let nextBeforeMessage;
 const reset = async () => {
   $("#stars").hide();
   const canvasWidth = setSize();
 
-  const challenge = await getNextChallenge();
+  challenge = await getNextChallenge();
+  nextBeforeMessage=0;
   console.log("next challenge:", challenge);
   if (challenge._id == "played") {
     $("#played").css("display", "flex");
     $("#timer").hide();
   } else {
-    if (challenge.beforeTitle && challenge.beforeMessage) {
-      showBeforeMessage(challenge);
+    if (challenge.beforeMessages?.length>0) {
+      showBeforeMessage();
     }
     $("#intro").css("display", "flex");
     game.init(challenge, canvasWidth);
@@ -78,10 +87,12 @@ const reset = async () => {
   }
 };
 
-function showBeforeMessage(challenge) {
-  $("#before-message .title").show().html(challenge.beforeTitle);
-  $("#before-message .content").show().html(challenge.beforeMessage);
+function showBeforeMessage() {
+  $("#before-message .title").show().html(challenge.beforeMessages[nextBeforeMessage].title);
+  $("#before-message .content").show().html(challenge.beforeMessages[nextBeforeMessage].body);
+  //$("#before-message .content").show().html(challenge.beforeMessages[nextBeforeMessage].button);
   showView("before-message");
+  nextBeforeMessage++;
 }
 
 function setSize() {

@@ -1,6 +1,5 @@
 import { openDB } from "https://cdn.jsdelivr.net/npm/idb@7/+esm";
-import { getParameter, getTodayString, isTouchDevice, testerId } from "./utils.js";
-import { tutorial0, tutorial0_mobile, tutorial1, tutorial2 } from "./tutorials.js";
+import { getParameter, isTouchDevice, testerId } from "./utils.js";
 
 const VERSION = 1;
 const dbPromise = openDB("data", VERSION, {
@@ -11,24 +10,33 @@ const dbPromise = openDB("data", VERSION, {
 
 let cachedTestChallenges;
 
+const tutorial0 = "638d194448bbfaced84689de";
+const tutorial0_mobile = "638d268c3573b7fa2fb72a89";
+const tutorial1 = "638d199e48bbfaced84689e6";
+const tutorial2 = "638d19ca48bbfaced84689ee";
+
 const getNextChallenge = async () => {
   const r = await getGameResults();
 
+  console.log("results",r);
+
+  //return the specified puzzle or the first uncompleted tutorial
+  let challengeId = null;
+  const foundTutorial = r.find((e) => e?._id == tutorial2) || r.find((e) => e?._id == tutorial1) || r.find((e) => e?._id == tutorial0)  || r.find((e) => e?._id == tutorial0_mobile);
+  if (!foundTutorial) {
+    if (isTouchDevice()) challengeId = tutorial0_mobile; 
+    else challengeId = tutorial0;
+  } else if (foundTutorial._id == tutorial0) challengeId = tutorial1
+  else if (foundTutorial._id == tutorial1) challengeId = tutorial2;
+
   const specifiedId = getParameter("id");
-  if (specifiedId) {
-    const response = await fetch(`https://dave-simplecrud.herokuapp.com/hocuschallenge/` + specifiedId);
+  if (specifiedId) challengeId = specifiedId;
+  if (challengeId) {
+    const response = await fetch(`https://dave-simplecrud.herokuapp.com/hocuschallenge/` + challengeId);
     const challenge = await response.json();
     return challenge;
   }
-  //return the first uncompleted tutorial
-  console.log(r);
-  const foundTutorial = r.find((e) => e?._id == "tutorial2") || r.find((e) => e?._id == "tutorial1") || r.find((e) => e?._id.includes("tutorial0"));
-  if (!foundTutorial) {
-    if (isTouchDevice()) return tutorial0_mobile;
-    else return tutorial0;
-  } else if (foundTutorial._id == "tutorial1") return tutorial2;
-  else if (foundTutorial._id.includes("tutorial0")) return tutorial1;
-  //
+  
   //otherwise if this is a tester, return the next one to test ...remember to disable sharing!
   else if (!!testerId) {
     if (!cachedTestChallenges) {
@@ -45,13 +53,12 @@ const getNextChallenge = async () => {
       if (!r.find((e) => e._id == id)) return cachedTestChallenges[i];
     }
   }
-  //otherwise return today's riddle (or played if already played, or an error if not found)
 
+  //otherwise return today's riddle (or played if already played, or an error if not found)
   try {
     const response = await fetch(`https://dave-simplecrud.herokuapp.com/hocustodaychallenge`);
     const challenge = await response.json();
 
-    //otherwise return today's challenge or played placeholder
     const playedToday = !!r.find((e) => e?._id == challenge._id);
     console.log(playedToday);
     if (playedToday) {

@@ -47,12 +47,6 @@ const _padTo2Digits = function (num) {
   return num.toString().padStart(2, "0");
 };
 
-const getTodayString = function () {
-  const date = new Date();
-  const output = [date.getFullYear(), _padTo2Digits(date.getMonth() + 1), _padTo2Digits(date.getDate())].join("");
-  return output;
-};
-
 const getTodayFormatted = function () {
   const date = new Date();
   return date.getMonth() + 1 + "-" + date.getDate() + "-" + date.getFullYear();
@@ -102,4 +96,4 @@ const setTester = () => {
   testerId = getParameter("tester");
 };
 
-export { showView, getCanvasCoordinates, isInCanvas, rgbToHex, getNewCoordinates, getTodayString, getTodayFormatted, sleep, formatClue, unformatClue, copyToClipboard, getCoordinatesRelativeToCanvas, getRandom, isTouchDevice, testerId, setTester, getParameter };
+export { showView, getCanvasCoordinates, isInCanvas, rgbToHex, getNewCoordinates, getTodayFormatted, sleep, formatClue, unformatClue, copyToClipboard, getCoordinatesRelativeToCanvas, getRandom, isTouchDevice, testerId, setTester, getParameter };

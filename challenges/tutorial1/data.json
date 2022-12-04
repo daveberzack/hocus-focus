@@ -1,9 +1,0 @@
-{
-  "clue": "Boop the [nose].",
-  "credit": "Pixabay",
-  "url": "https://www.pexels.com/photo/adorable-animal-canine-cute-220938/",
-  "goals": [15, 30, 50, 80, 100],
-  "hitAreas": [{ "x1": 45, "y1": 45, "x2": 45, "y2": 45, "w": 20 }],
-  "beforeTitle": "About Time",
-  "beforeMessage": "<p>Each puzzle can take a minute or so. Your time is shown on the meter below the canvas.</p><p>You earn up to 5 bonus stars for beating the checkpoints.</p><p>But don't make wild guesses. Every wrong click costs a 10-second penalty.</p>"
-}
