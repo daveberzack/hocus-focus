@@ -17,7 +17,8 @@ const submit = async () => {
     hitAreas: strokes,
   };
   console.log(data);
-
+  $("#submit-message").text("Sending");
+  
   const url = `https://dave-simplecrud.herokuapp.com/hocuschristmas`;
   const response = await fetch(url, {
     method: "POST",
@@ -27,9 +28,9 @@ const submit = async () => {
     },
     body: JSON.stringify(data),
   });
-  const newChallengeId = await response.json();
-  console.log(newChallengeId);
-  showConfirm();
+  const newChallenge = await response.json();
+  console.log(newChallenge._id);
+  showConfirm(newChallenge._id);
 }; 
 
 const uploadField = document.getElementById("upload-field");
@@ -143,7 +144,7 @@ const showMessage = ()=>{
   $("#theme-select").hide();
   clearHitInterval();
 }
-const showConfirm = ()=>{
+const showConfirm = (id)=>{
   $("#upload").hide(); 
   $("#hit").hide();
   $("#hit-controls").hide(); 
@@ -154,6 +155,9 @@ const showConfirm = ()=>{
   $("#message, #message-controls").hide(); 
   clearHitInterval();
   $("#confirm").show(); 
+  const url = "www.hocusfocus.com?id="+id;
+  console.log("link:"+url, $("#puzzle-link"));
+  $("#puzzle-link").text(url).attr("href", "https://"+url);
 }
 
 const setTheme = (themeId) => {

@@ -424,6 +424,7 @@ p {
 
 #intro-clue {
   margin: 25px 0;
+  font-size: 2em;
 }
 #subtitle {
   display: block;
@@ -748,4 +749,11 @@ footer a {
 }
 .error-marker img {
   width: 100%;
+}
+#puzzle-link {
+  display: block;
+  margin: 25px auto;
+  text-align: center;
+  text-decoration: underline;
+  font-weight: bold;
 }
