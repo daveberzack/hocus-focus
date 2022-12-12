@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url='./editor/index.html'" />
+    <style>
+      body { background-color: black; }
+      a {
+        display: block;
+        margin: 100px auto;
+        text-align: center;
+        color: white;
+
+      }
+    </style>
+  </head>
+  <body>
+    <a href=./editor/index.html">Click here to redirect</a>
+  </body>
+</html>

@@ -56,7 +56,6 @@ class PixelPainter {
       if (detailLevel == -1) {
         // this has been set, but is queued up to delay increasing resolution immediately
       } else if (this.detailLevels[gx][gy] < d + 1) {
-        console.log(detailLevel);
         if (detailLevel < this.gridblocksAtDetailLevel.length - 1) {
           this.canvas.drawRect(x2, y2, w, h, color);
           //this.canvas.drawTestRect(x2, y2, w, h, "red");

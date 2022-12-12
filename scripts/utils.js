@@ -10,8 +10,8 @@ function getCanvasCoordinates(mouseX, mouseY, $canvas) {
 }
 
 const showView = (name) => {
-  $(".view").removeClass("shown");
-  $("#" + name).addClass("shown");
+  $(".view").addClass("hidden");
+  $("#" + name).removeClass("hidden");
 };
 
 function isInCanvas(mouseX, mouseY, $canvas) {

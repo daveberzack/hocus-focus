@@ -17,7 +17,7 @@ class Canvas {
     sourceImage.onload = function () {
       self.drawImageToLayer(self.source, sourceImage);
     };
-    sourceImage.src = challenge.imageUrl;
+    sourceImage.src = "./uploads/"+challenge.imageKey+".jpeg";
 
     const $hitElement = $("#hit");
     this.hit = {

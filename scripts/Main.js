@@ -68,36 +68,52 @@ const initUI = () => {
 let challenge;
 let nextBeforeMessage;
 const reset = async () => {
-  $("#stars").hide();
-  const canvasWidth = setSize();
+  
+  const winW = $(window).width();
+  const winH = $(window).height();
+  const isMobile = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) );
+  const isLandscape = winW>winH;
+  if (isMobile && isLandscape) $("body").addClass("landscape");
+  else $("body").removeClass("landscape");
 
+  $("#stars").hide();
+  const canvasWidth = setSize(winW, winH);
+
+  showView("loading");
   challenge = await getNextChallenge();
   nextBeforeMessage=0;
-  console.log("next challenge:", challenge);
+
   if (challenge._id == "played") {
     $("#played").css("display", "flex");
     $("#timer").hide();
+    showView("game");
+    $("#win-content").hide();
   } else {
     if (challenge.beforeMessages?.length>0) {
       showBeforeMessage();
     }
+    else {
+      showView("game");
+    }
     $("#intro").css("display", "flex");
     game.init(challenge, canvasWidth);
-    if (challenge._id == "error") $("#timer").hide();
+    if (challenge._id == "error") {
+      $("#timer, #start-button").hide();
+    }
   }
 };
 
 function showBeforeMessage() {
   $("#before-message .title").show().html(challenge.beforeMessages[nextBeforeMessage].title);
   $("#before-message .content").show().html(challenge.beforeMessages[nextBeforeMessage].body);
-  //$("#before-message .content").show().html(challenge.beforeMessages[nextBeforeMessage].button);
+  $("#before-message button").show().html(challenge.beforeMessages[nextBeforeMessage].button);
+  const imageUrl = challenge.beforeMessages[nextBeforeMessage]?.backgroundImageUrl;
+  if (imageUrl) $("#before-message").css("background-image", "url(" + imageUrl + ")");
   showView("before-message");
   nextBeforeMessage++;
 }
 
-function setSize() {
-  const winW = $(window).width();
-  const winH = $(window).height();
+function setSize(winW, winH) {
   const w = Math.min(winW - 20, winH - 240);
   $(".view").width(w);
   $("#board")
@@ -126,3 +142,9 @@ function setSize() {
 }
 
 init();
+
+let resizeTimeout;
+$( window ).resize(function() {
+  clearInterval(resizeTimeout);
+  resizeTimeout = setTimeout(reset, 500);
+});

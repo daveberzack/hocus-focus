@@ -10,15 +10,18 @@ const dbPromise = openDB("data", VERSION, {
 
 let cachedTestChallenges;
 
-const tutorial0 = "638d194448bbfaced84689de";
-const tutorial0_mobile = "638d268c3573b7fa2fb72a89";
-const tutorial1 = "638d199e48bbfaced84689e6";
-const tutorial2 = "638d19ca48bbfaced84689ee";
+const errorChallenge = {
+  _id: "error",
+  clue: "[No Puzzle Today]"
+};
+const tutorial0 = "63962b126b3ee2ea3c813c88";
+const tutorial0_mobile = "63963563978afa2b41fc67e5";
+const tutorial1 = "639635b56b3ee2ea3c813c9b";
+const tutorial2 = "639636146b3ee2ea3c813caa";
 
+let hasLoadedSpecifiedChallenge = false;
 const getNextChallenge = async () => {
   const r = await getGameResults();
-
-  console.log("results",r);
 
   //return the specified puzzle or the first uncompleted tutorial
   let challengeId = null;
@@ -30,11 +33,21 @@ const getNextChallenge = async () => {
   else if (foundTutorial._id == tutorial1) challengeId = tutorial2;
 
   const specifiedId = getParameter("id");
-  if (specifiedId) challengeId = specifiedId;
+  if (specifiedId && !hasLoadedSpecifiedChallenge) {
+    challengeId = specifiedId;
+    hasLoadedSpecifiedChallenge = true;
+  }
   if (challengeId) {
-    const response = await fetch(`https://dave-simplecrud.herokuapp.com/hocuschallenge/` + challengeId);
-    const challenge = await response.json();
-    return challenge;
+    try {
+      const response = await fetch(`https://dave-simplecrud.herokuapp.com/hocuschallenge/` + challengeId);
+      const challenge = await response.json();
+      if (!challenge?._id) throw "challenge not found";
+      challenge.isSpecified = true;
+      return challenge;
+    }
+    catch {
+      return errorChallenge;
+    }    
   }
   
   //otherwise if this is a tester, return the next one to test ...remember to disable sharing!
@@ -58,23 +71,17 @@ const getNextChallenge = async () => {
   try {
     const response = await fetch(`https://dave-simplecrud.herokuapp.com/hocustodaychallenge`);
     const challenge = await response.json();
+    console.log("ch",challenge);
+    if (!challenge?._id) throw "challenge not found";
+    console.log("ch2",challenge?._id);
 
     const playedToday = !!r.find((e) => e?._id == challenge._id);
-    console.log(playedToday);
     if (playedToday) {
       challenge._id = "played";
     }
     return challenge;
   } catch {
-    return {
-      _id: "error",
-      clue: "[No Puzzle Today]",
-      subtitle: "Please check back tomorrow.",
-      hideButton: true,
-      credit: "",
-      creditUrl: "#",
-      goals: [],
-    };
+    return errorChallenge;
   }
 };
 
@@ -87,7 +94,6 @@ async function saveGameResult(challengeId, timePassed, mistakes, stars) {
 }
 
 async function sendAnalytics(type, data) {
-  //console.log("analytics", data);
   const url = `https://dave-simplecrud.herokuapp.com/${type}`;
   await fetch(url, {
     method: "POST",

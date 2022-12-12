@@ -38,7 +38,7 @@ class WinContent {
     this.showWinLinks(goalsMet, timeFormatted, challenge);
 
     await sleep(1000);
-    if (challenge.isTest || challenge.isTutorial) {
+    if (challenge.isTest || challenge.isTutorial || challenge.isSpecified) {
       $("#after-button").fadeIn();
     }
     if (testerId) {
@@ -95,7 +95,8 @@ class WinContent {
 
     $(".timer-error").remove();
     const message = getRandom(messageSubset);
-    this.$winMessage.find("h2").html(`<span class="bold">${timeFormatted} Seconds.</span><span class="comment"> ${message}</span>`);
+    const timeUnit = timeFormatted==1 ? "Second" : "Seconds";
+    this.$winMessage.find("h2").html(`<span class="bold">${timeFormatted} ${timeUnit}.</span><span class="comment"> ${message}</span>`);
     this.$winMessage.fadeIn(300);
     this.$winMessage.find(".comment").hide().delay(1000).fadeIn(300);
   }
@@ -114,12 +115,14 @@ class WinContent {
       let stars = "";
       goalsMet.forEach((s) => (stars += "⭐"));
 
-      const shareText = `🔍 Hocus Focus [${getTodayFormatted()}]
+      let shareText = `🔍 Hocus Focus [${getTodayFormatted()}]
 🧩 - ${unformatClue(challenge.clue)}
 🏆 - ${stars} (${timeFormatted} Seconds)
 
 Solve the riddle in a hidden picture:
 https://www.hocusfocus.fun`;
+
+      if (challenge.isSpecified) shareText = "https://www.hocusfocus.fun/?id=639636736b3ee2ea3c813cb2";
 
       copyToClipboard(shareText, () => {});
       $("#clipboard-message").show();

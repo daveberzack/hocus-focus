@@ -13,12 +13,11 @@ const submit = async () => {
     theme,
     beforeMessage: message,
     beforeTitle: title,
-    goals: [30, 60, 90, 120, 150],
     hitAreas: strokes,
   };
-  console.log(data);
+  console.log("submit",data);
   $("#submit-message").text("Sending");
-  
+
   const url = `https://dave-simplecrud.herokuapp.com/hocuschristmas`;
   const response = await fetch(url, {
     method: "POST",
@@ -29,7 +28,7 @@ const submit = async () => {
     body: JSON.stringify(data),
   });
   const newChallenge = await response.json();
-  console.log(newChallenge._id);
+  console.log("new id:"+newChallenge._id);
   showConfirm(newChallenge._id);
 }; 
 
@@ -142,6 +141,7 @@ const showMessage = ()=>{
   setHitActive(false);
   $("#message, #message-controls").show(); 
   $("#theme-select").hide();
+  $("#confirm").hide(); 
   clearHitInterval();
 }
 const showConfirm = (id)=>{
@@ -155,14 +155,13 @@ const showConfirm = (id)=>{
   $("#message, #message-controls").hide(); 
   clearHitInterval();
   $("#confirm").show(); 
-  const url = "www.hocusfocus.com?id="+id;
-  console.log("link:"+url, $("#puzzle-link"));
+  const url = "www.hocusfocus.fun?id="+id;
   $("#puzzle-link").text(url).attr("href", "https://"+url);
 }
 
 const setTheme = (themeId) => {
   theme = themeId;
-  $("#message").css("background-image", "url(img/themes/bgs/" + theme + ".jpg)");
+  $("#message").css("background-image", "url(../img/themes/bgs/" + theme + ".jpg)");
 }
 
 showUpload();
@@ -196,10 +195,11 @@ const resize = ()=> {
   let winW= $(window).width();
   let winH= $(window).height();
   let w = Math.min( (winW-20), winH-160);
-  w = Math.min( w, 350);
   $(".square-block").width(w);
   $(".square-block").height(w);
   $(".horizontal-block").height(w);
-  //$("body").addClass("small");
+  if (w<350) {
+    $("body").addClass("small");
+  }
 }
 resize();

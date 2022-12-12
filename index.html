@@ -36,7 +36,7 @@
         <img class="instructions-button" src="./img/help.png" />
       </header>
 
-      <div id="instructions" class="view">
+      <div id="instructions" class="view hidden">
         <div id="instructions-block">
           <h2>How to Play</h2>
           <p>Every day, there's a new riddle. A sly clue to find something in a hidden picture.</p>
@@ -56,13 +56,13 @@
         </footer>
       </div>
 
-      <div id="before-message" class="view">
+      <div id="before-message" class="view hidden">
         <h3 class="title"></h3>
         <div class="content"></div>
         <button id="before-button" class="button">Play</button>
       </div>
 
-      <div id="stats" class="view">
+      <div id="stats" class="view hidden">
         <div id="stats-graph-block">
           <h2>Your Stats</h2>
           <p>The number of puzzles you won with 5 Stars, with 4, etc.</p>
@@ -71,7 +71,11 @@
         </div>
       </div>
 
-      <div id="game" class="view">
+      <div id="loading" class="view hidden">
+        <h2>Loading...</h2>
+      </div>
+
+      <div id="game" class="view hidden">
         <div id="board">
           <canvas id="target"></canvas>
           <canvas id="target2"></canvas>
@@ -127,7 +131,7 @@
         <h2 id="clue"></h2>
         <div id="stars"></div>
 
-        <div id="tester-form">
+        <!--<div id="tester-form">
           <h2>About this puzzle</h2>
 
           <p>Was it fun, interesting or clever?</p>
@@ -163,8 +167,12 @@
           <p>Any technical problems, confusion, or other comments?</p>
           <textarea id="feedback"></textarea>
           <p><a id="form-button" class="button" href="#">Submit</a></p>
-        </div>
+        </div>-->
+
+        
       </div>
+      
+      <p id="rotate-message"><img src="./img/rotate.png"><br/>Please Rotate your device</p>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

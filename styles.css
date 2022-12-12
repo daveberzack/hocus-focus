@@ -501,6 +501,11 @@ p {
   background-color: #ffffff;
   border: 4px solid #ffffff;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
 }
 #before-message h3 {
   margin: 20px 10px 20px 10px;
@@ -559,11 +564,8 @@ p {
   filter: blur(10px);
 }
 
-.view {
-  display: none;
-}
-.view.shown {
-  display: block;
+.view.hidden {
+  display: none !important;
 }
 
 #detail {
@@ -756,4 +758,27 @@ footer a {
   text-align: center;
   text-decoration: underline;
   font-weight: bold;
+}
+#loading h2 {
+  color: #FFFFFF;
+  font-size: 2em;
+  margin-top: 2em;
+}
+
+#rotate-message {
+  display: none;
+  color: white;
+  margin: 50px 20px;
+  text-align: center;
+}
+#rotate-message img {
+  display: inline-block;
+  height: 5em;
+  margin: 10px;
+}
+.landscape .view {
+  display: none !important;
+}
+.landscape #rotate-message {
+  display: block !important;
 }

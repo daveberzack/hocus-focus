@@ -217,7 +217,7 @@ h2 {
   color: #ffffff;
 }
 p {
-  margin: 8px 8px;
+  margin: 10px 20px;
 }
 .center {
   text-align: center;
@@ -283,7 +283,11 @@ b {
   left: 0px;
   text-align: center;
   background-size: cover;
-  background-image: url("img/themes/bgs/11.jpg");
+  background-image: url("../img/themes/bgs/11.jpg");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #upload h2 {
   color: #000000;
@@ -292,6 +296,7 @@ b {
 #upload p {
   color: #000000;
   line-height: 1.25;
+
 }
 
 #upload a {
@@ -367,7 +372,7 @@ b {
 
 #message {
   background-size: cover;
-  background-image: url("img/themes/bgs/11.jpg");
+  background-image: url("../img/themes/bgs/11.jpg");
   position: absolute;
   top: 0px;
   left: 0px;
@@ -399,6 +404,33 @@ b {
   font-weight: bold;
 }
 
+#confirm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
 #confirm h2 {
   color: #000000;
+  font-size: 2em;
+  margin: 0px 20px;
+}
+
+#confirm p {
+  margin: 20px 40px;
+  text-align: center;
+}
+
+#confirm a {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+}
+
+.small #disclaimer {
+  font-size: .7em;
+}
+.small #logotype {
+  font-size: 30px;
 }

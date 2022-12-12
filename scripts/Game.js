@@ -6,7 +6,7 @@ import { saveGameResult, sendAnalytics } from "./data.js";
 
 import WinContent from "./WinContent.js";
 
-const GAME_LOOP_INCREMENT = 10;
+const GAME_LOOP_INCREMENT = 15;
 
 class Game {
   constructor() {
@@ -39,15 +39,18 @@ class Game {
     this.$clue.hide().html(clue);
     this.$introClue.html(clue);
     this.goals = challenge.goals;
-
-    challenge.lastGoal = challenge.goals[challenge.goals.length - 1];
     this.challenge = challenge;
+    if (challenge.goals){
+      challenge.lastGoal = challenge.goals[challenge.goals.length - 1];
+      this.goals.forEach((g, i) => {
+        const w = (g / this.goals[4]) * 100 + "%";
+        $(`#timer-goal${i}`).width(w);
+        $(`#timer-goal${i} h3`).html(g);
+      });
+    }
+    
 
-    this.goals.forEach((g, i) => {
-      const w = (g / this.goals[4]) * 100 + "%";
-      $(`#timer-goal${i}`).width(w);
-      $(`#timer-goal${i} h3`).html(g);
-    });
+    
     this.painter.stopReveal();
     $("#source").css("opacity", 0);
     this.winContent.reset();
