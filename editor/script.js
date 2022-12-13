@@ -3,10 +3,10 @@ let theme = 1;
 
 const submit = async () => {
   const clue = $("#clue-field").val();
-  const title = $("#message-title").text();
-  const message = $("#message-body").text();
+  const title = $("#message-title").val();
+  const message = $("#message-body").val().replace(/(?:\r\n|\r|\n)/g, '<br>');
   const canvas = document.getElementById("pic");
-  const image = canvas.toDataURL('image/jpeg', 1.0);
+  const image = canvas.toDataURL('image/jpeg', .4);
   const data = {
     clue,
     image,
@@ -50,17 +50,19 @@ $("#hide-hit-instructions").click((e) => {
   e.preventDefault();
   $("#hit-instructions").hide();
 });
-$("#hide-clue-instructions").click((e) => {
-  e.preventDefault();
-  $("#clue-instructions").hide();
-  $("#clue").show(); 
-});
+// $("#hide-clue-instructions").click((e) => {
+//   e.preventDefault();
+//   $("#clue-instructions").hide();
+//   $("#clue").show(); 
+// });
 $("#hide-message-instructions").click((e) => {
   e.preventDefault();
   $("#message-instructions").hide();
 });
 $("#submit-clue").click((e) => {
   e.preventDefault();
+  if ($("#clue-field").val()=="") return;
+  $("#clue-instructions").hide();
   showHit();
 });
 $("#submit-hit").click((e) => {
@@ -198,8 +200,11 @@ const resize = ()=> {
   $(".square-block").width(w);
   $(".square-block").height(w);
   $(".horizontal-block").height(w);
-  if (w<350) {
+  if (w<360) {
     $("body").addClass("small");
+  }
+  if (w<420) {
+    $("body").addClass("medium");
   }
 }
 resize();

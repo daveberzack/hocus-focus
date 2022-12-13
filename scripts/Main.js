@@ -109,6 +109,7 @@ function showBeforeMessage() {
   $("#before-message button").show().html(challenge.beforeMessages[nextBeforeMessage].button);
   const imageUrl = challenge.beforeMessages[nextBeforeMessage]?.backgroundImageUrl;
   if (imageUrl) $("#before-message").css("background-image", "url(" + imageUrl + ")");
+  else $("#before-message").css("background-image", "none");
   showView("before-message");
   nextBeforeMessage++;
 }

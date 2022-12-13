@@ -26,10 +26,12 @@ const getNextChallenge = async () => {
   //return the specified puzzle or the first uncompleted tutorial
   let challengeId = null;
   const foundTutorial = r.find((e) => e?._id == tutorial2) || r.find((e) => e?._id == tutorial1) || r.find((e) => e?._id == tutorial0)  || r.find((e) => e?._id == tutorial0_mobile);
+  
+  console.log("tut:",foundTutorial);
   if (!foundTutorial) {
     if (isTouchDevice()) challengeId = tutorial0_mobile; 
     else challengeId = tutorial0;
-  } else if (foundTutorial._id == tutorial0) challengeId = tutorial1
+  } else if (foundTutorial._id == tutorial0 || foundTutorial._id == tutorial0_mobile) challengeId = tutorial1
   else if (foundTutorial._id == tutorial1) challengeId = tutorial2;
 
   const specifiedId = getParameter("id");

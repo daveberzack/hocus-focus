@@ -344,7 +344,7 @@ p {
   color: #ffffff;
 }
 .small .win-link h4 {
-  font-size: 0.6em;
+  font-size: 0.8em !important;
 }
 .small .win-link {
   padding: 5px 2px;
@@ -506,6 +506,7 @@ p {
   align-items: center;
   justify-content: center;
   background-size: cover;
+  background-position: center center;
 }
 #before-message h3 {
   margin: 20px 10px 20px 10px;
@@ -513,7 +514,7 @@ p {
   font-size: 2em;
   font-weight: 800;
 }
-#before-message p {
+#before-message .content {
   font-size: 1em;
   margin: 10px 20px;
   line-height: 1.5;

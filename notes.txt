@@ -1,19 +1,8 @@
 
-be sure editor includes P tags for formatting
-message text doesn't include line breaks. doesn't wrap.
-
-remove testing form
-
-show play more link after specified challenge
-link to editor tool
-id not found error
-for specified id, share link, not results
-
 aws pw: @pp0nl!ne
 
 2023 has been such a busy and joyful year for us. Bryce started walking, and he's all over the place! Dave left his job and is now an independent game designer. And Marissa is settling into her new teaching job. We feel so blessed, and we wish you all the best over the holidays and for the coming year!
 
-instructions screen for editor?
 https://dave-simplecrud.herokuapp.com/hocusdeleteimpermanentchallenges
 
 

@@ -45,6 +45,7 @@
             <label id="upload-label" for="upload-field">Upload Picture</label>
             
             <p id="disclaimer">PS: No ads or data mining here.<br/>This is a gift from me to y'all.</p>
+            <p id="disclaimer">By using this tool, you agree you won't post anything you're not supposed to, and accept all liability for posting it.</p>
             <input type="file" id="upload-field" accept="image/*">
           </div>
 
@@ -63,20 +64,21 @@
             <div class="instructions-modal" id="clue-instructions">
               <p>In a few words, describe a person or object in the picture that a player has to find.</p>
               <p>For example:<br/><b>Click on Baby Bryce!</b><br/>or<br/><b>Find my favorite toy.</b></p>
-              <button class="button" id="hide-clue-instructions">Got it!</button>
+
+              <input type="text" id="clue-field" placeholder="Type your clue here">
+              <button class="button" id="submit-clue">Next</button>
             </div>
           </div>
 
           <div id="message" class="square-block">
-            <h2 id="message-title" contenteditable="true" >Your title here</h2>
-            <p id="message-body" contenteditable="true">Edit this text to write
+            <input id="message-title"placeholder="Your title here"></input>
+            <textarea id="message-body" placeholder="Edit this text to write
 a short message
-to your loved ones
-            </p>
+to your loved ones"></textarea>
             
             <div class="instructions-modal" id="message-instructions">
-              <p>Now, just  a nice holiday message to your friends and loved ones.</p>
-              <p>If you want, you can change the theme.</p>
+              <p>Now, just add a nice holiday message for your friends and loved ones.</p>
+              <p>If you want, you can change the background theme.</p>
               <button class="button" id="hide-message-instructions">Got it!</button>
             </div>
             <div class="instructions-modal" id="theme-select">
@@ -115,11 +117,6 @@ to your loved ones
           <button class="button" id="submit-hit">Done</button>
         </div>
 
-
-        <div class="controls horizontal-block" id="clue">
-          <input type="text" id="clue-field" placeholder="Type your clue here">
-          <button class="button" id="submit-clue">Next</button>
-        </div>
         
         <div class="controls horizontal-block" id="message-controls">
           <button class="button" id="show-themes-button">Change Theme</button>
@@ -127,6 +124,11 @@ to your loved ones
         </div>
 
 <!-- 
+
+        <div class="controls horizontal-block" id="clue">
+          <input type="text" id="clue-field" placeholder="Type your clue here">
+          <button class="button" id="submit-clue">Next</button>
+        </div>
 
     <div id="text" class="view">
       <h2>Enter a personal message</h2>
