@@ -200,11 +200,10 @@ const resize = ()=> {
   $(".square-block").width(w);
   $(".square-block").height(w);
   $(".horizontal-block").height(w);
-  if (w<360) {
-    $("body").addClass("small");
-  }
-  if (w<420) {
-    $("body").addClass("medium");
-  }
+
+  if (w<340) $("body").addClass("small");
+  else $("body").removeClass("small");
+  if (w<420) $("body").addClass("medium");
+  else $("body").removeClass("medium");
 }
 resize();

@@ -77,11 +77,23 @@ class Game {
   }
 
   startGame() {
+    console.log("Start game. Loaded? "+this.canvas.isSourceLoaded, this.canvas);
+    let self = this;
+    if (!this.canvas.isSourceLoaded){
+      $("#start-button").html("Loading");
+      setTimeout(() => {
+        self.startGame();
+      }, 1000);
+      return;
+    }
+    
+    $("#intro").hide();
+    $("#start-button").html("Start");
+    
     this.isPlaying = true;
     this.gaveUp = false;
 
     this.$clue.fadeIn();
-    let self = this;
     clearInterval(this.loopInterval);
     this.loopInterval = setInterval(() => {
       self.doGameLoop();

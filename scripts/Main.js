@@ -29,7 +29,6 @@ const initUI = () => {
 
   $("#start-button").click(() => {
     game.startGame();
-    $("#intro").hide();
   });
 
   $("#before-button").click(() => {
@@ -139,6 +138,8 @@ function setSize(winW, winH) {
   $("#instructions-block").css({ "max-height": winH - 130 });
 
   if (w < 360) $("body").addClass("small");
+  else $("body").removeClass("small");
+
   return w - 8;
 }
 

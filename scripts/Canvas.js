@@ -1,10 +1,12 @@
 import { getCanvasCoordinates, rgbToHex } from "./utils.js";
 
 class Canvas {
+  
   constructor(challenge) {
     const $sourceElement = $("#source");
     this.graphicWidth = $sourceElement.attr("width");
 
+    this.isSourceLoaded = false;
     const self = this;
     this.source = {
       $element: $sourceElement,
@@ -16,6 +18,7 @@ class Canvas {
     sourceImage.crossOrigin = "Anonymous";
     sourceImage.onload = function () {
       self.drawImageToLayer(self.source, sourceImage);
+      this.isSourceLoaded = true;
     };
     sourceImage.src = "./uploads/"+challenge.imageKey+".jpeg";
 
