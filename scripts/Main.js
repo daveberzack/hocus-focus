@@ -15,7 +15,21 @@ const init = async () => {
   showView("game");
   logPageView();
   reset();
+  initModal();
 };
+
+const initModal = () => {
+  $("#global-modal button").click( ()=> { $("#global-modal").hide(); });
+
+  console.log("init", navigator.userAgent);
+  if (navigator.userAgent.indexOf("Firefox")>=0) {
+    $("#global-modal h2").html("Firefox, huh?");
+    $("#global-modal p").html("Sorry. This game doesn't work reliably in Firefox.<br/>You can give it a shot. If things don't go so well, maybe try another browser.<br/>Sorry.");
+    $("#global-modal button").html("OK.");
+    $("#global-modal").css("display","flex");
+  }
+
+}
 
 const initUI = () => {
   $("#version").click(resetData);

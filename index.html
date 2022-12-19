@@ -23,7 +23,7 @@
     <meta property="og:title" content="Hocus Focus" />
     <meta property="og:url" content="https://www.hocusfocus.fun" />
     <meta property="og:description" content="Solve the Riddle of a Hidden Picture. Paint a pixel art in this daily game." />
-    <meta property="og:image" content="https://www.hocusfocus.fun/img/icons/1200.png?v=1" />
+    <meta property="og:image" content="https://www.hocusfocus.fun/img/icons/social462.png?v=1" />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:domain" content="hocusfocus.fun" />
   </head>
@@ -40,19 +40,20 @@
         <div id="instructions-block">
           <h2>How to Play</h2>
           <p>Every day, there's a new riddle. A sly clue to find something in a hidden picture.</p>
-          <p>When you move around the canvas it will add big squares of color (whatever color is in the image right at your cursor). Paint over an existing block to add smaller blocks, revealing finer and finer details.</p>
-          <p>Once you've identified the objective, click on it to stop the timer. But don't make wild guesses. Every wrong click costs you a 10-second penalty.</p>
-          <p>
-            You'll score up to five stars for beating the checkpoints shown in the timer. Some puzzles are tricky. Don't worry. You'll get more time for the tough ones. And you're supposed to feel a bit confused. After you win, it'll all make sense. You can share your score and paste it into a
-            message or social media to play against friends.
-          </p>
+          <p>When you swipe around the canvas it will add big squares of color (whatever color is in the image right at your cursor). Paint over an existing block to add smaller blocks, revealing finer and finer details.</p>
+          <p>Once you've identified the goal, click it to stop the timer. But don't make wild guesses. Every wrong click costs you a 10-second penalty.</p>
+          <p>You'll score up to five stars for beating the checkpoints shown in the timer. Some puzzles are tricky. Don't worry... you're supposed to feel a bit confused. After you win, it'll all make sense. You can share your score and paste it into a message or social media to play against friends.</p>
           <p>Should you spend time getting the general context of a picture, or focus on an interesting area? Which area is worth exploring? What does that riddle mean, anyway? Are you confident enough to wager a guess? I don't know. I'm just the game designer.</p>
+          
           <p>Good hunting.</p>
           <p>Love,<br />Dave</p>
+
+          <p>PS: If you see a bug or would like to share any comments or suggestions, please email me at <a class="bold" href="mailto:feedback@hocusfocus.fun" target="credit">feedback@hocusfocus.fun</a></p>
+
           <p class="center"><a class="button game-button" href="#">Play</a></p>
         </div>
         <footer>
-          <p>ⓒ2022 <a class="bold" href="http://www.daveberzack.com" target="credit">Dave Berzack</a> <span id="version">v0.5</span></p>
+          <p>ⓒ2022 <a class="bold" href="http://www.daveberzack.com" target="credit">Dave Berzack</a> <span id="version">v0.6</span></p>
         </footer>
       </div>
 
@@ -91,11 +92,20 @@
           <div id="played" class="message-board">
             <h3>Thank you for playing.</h3>
             <p>Come back tomorrow for another challenge.</p>
+            <p><a href="http://holiday.hocusfocus.fun">Create</a> your own Hocus Focus puzzle as a holiday card!</p>
+
+            <p>Check out <a href="https://www.5minute.games">5Minute.Games</a> for more fun little puzzles!</p>
           </div>
 
           <div id="win-content">
             <p id="credit-block">Image by <a id="credit" class="bold" href="#" target="credit"></a></p>
             <button id="after-button" class="button">Play More</button>
+            <div id="after-message">
+              <h2>That's it for today</h2>
+              <p>Come back tomorrow for another challenge.</p>
+              <p><a href="http://holiday.hocusfocus.fun">Create</a> a custom puzzle using your own picture, and share it with friends.</p>
+              <p>Check out <a href="https://www.5minute.games">5Minute.Games</a> for more fun little puzzles!</p>
+            </div>
             <div id="win-links">
               <div class="win-link" id="win-share-link">
                 <img src="./img/share.png" />
@@ -135,48 +145,11 @@
         <h2 id="clue"></h2>
         <div id="stars"></div>
 
-        <!--<div id="tester-form">
-          <h2>About this puzzle</h2>
-
-          <p>Was it fun, interesting or clever?</p>
-          <div>
-            <div class="option">
-              <input type="radio" id="fun3" name="fun" value="3" />
-              <label for="fun3">Yes</label>
-            </div>
-            <div class="option">
-              <input type="radio" id="fun2" name="fun" value="2" />
-              <label for="fun2">Eh</label>
-            </div>
-            <div class="option">
-              <input type="radio" id="fun1" name="fun" value="1" />
-              <label for="fun1">No</label>
-            </div>
-          </div>
-          <p>Was it challenging?</p>
-          <div>
-            <div class="option">
-              <input type="radio" id="difficulty1" name="difficulty" value="1" />
-              <label for="difficulty1">Too easy</label>
-            </div>
-            <div class="option">
-              <input type="radio" id="difficulty2" name="difficulty" value="2" />
-              <label for="difficulty2">About right</label>
-            </div>
-            <div class="option">
-              <input type="radio" id="difficulty3" name="difficulty" value="3" />
-              <label for="difficulty3">Too hard</label>
-            </div>
-          </div>
-          <p>Any technical problems, confusion, or other comments?</p>
-          <textarea id="feedback"></textarea>
-          <p><a id="form-button" class="button" href="#">Submit</a></p>
-        </div>-->
-
-        
       </div>
       
       <p id="rotate-message"><img src="./img/rotate.png"><br/>Please Rotate your device</p>
+
+      <div id="global-modal"><div class="block"><h2></h2><p></p><button class="button"></button></div></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

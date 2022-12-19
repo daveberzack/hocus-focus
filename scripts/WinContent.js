@@ -18,6 +18,7 @@ class WinContent {
     this.$winMessage.hide();
     $("#win-content").hide();
     $("#after-button").hide();
+    $("#after-message").hide();
     $("#credit-block").hide();
     $("#win-links").hide();
     $("#clipboard-message").hide();
@@ -26,6 +27,7 @@ class WinContent {
 
   async show({ challenge, effectiveTimePassed, goalsMet, gaveUp, testerId }) {
     $("#win-content").show();
+    $("#after-message").hide();
     const timeFormatted = Math.round(effectiveTimePassed);
 
     this.showStars(effectiveTimePassed, goalsMet, challenge);
@@ -41,6 +43,10 @@ class WinContent {
     if (challenge.isTest || challenge.isTutorial || challenge.isSpecified) {
       $("#after-button").fadeIn();
     }
+    else {
+      $("#after-message").fadeIn();
+    }
+
     if (testerId) {
       $("#tester-form input:radio").prop("checked", false);
       $("#tester-form textarea").val("");

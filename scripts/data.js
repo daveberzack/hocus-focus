@@ -114,7 +114,7 @@ async function getGameResults() {
 }
 
 function logPageView() {
-  sendAnalytics("pageview", { page: "hocusfocus", userAgent: navigator.userAgent, width: $(window).width(), height: $(window).height(), touch: isTouchDevice(), user: testerId });
+  sendAnalytics("pageview", { page: "hocusfocus", url: window.location.href, userAgent: navigator.userAgent, width: $(window).width(), height: $(window).height(), touch: isTouchDevice(), user: testerId });
 }
 
 async function resetData() {

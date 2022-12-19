@@ -1,53 +1,28 @@
+fix firefox
+disable clicking when viewing help
+getChallengeByDate
+google auth
+go back and optimize caching and guard in cloudfront
+add more puzzles, image credit
 
-aws pw: @pp0nl!ne
+{challengeId: '639751cf1c52957819f4e351'}
 
+Bug report: After finishing one puzzle and clicking "Play More", the effect that keeps revealing areas of a finished puzzle keeps going, revealing areas of the new puzzle around the old puzzle's solution.
+Firefox 107, MacOS 11.6.8.
+
+
+aws pw: g0get!tN0W!
 2023 has been such a busy and joyful year for us. Bryce started walking, and he's all over the place! Dave left his job and is now an independent game designer. And Marissa is settling into her new teaching job. We feel so blessed, and we wish you all the best over the holidays and for the coming year!
-
 https://dave-simplecrud.herokuapp.com/hocusdeleteimpermanentchallenges
 
-
-compress jpg stored on server
-set up testing environment
-google auth
 show streak
-
 
 get domain.
 update .fun with .com in manifest.
-go back and optimize caching and guard in cloudfront
-
-30% get 5
-50% get 4+
-70% get 3+
-80% get 2+
-90% get 1+
-
-puzzle editor
 
 run server to avoid cors issues:
 http-server -c-1
 http://192.168.86.29:8080
-
-
-
-
-
-Thank you for being willing to help me test some puzzles for my new game, Hocus Focus.
-
-All you need to do is solve a few puzzles and answer three yes/no questions to help me determine the difficulty level and the fun factor. It should only take a few minutes, and it really helps me with this project.
-
-Here is your link, which gives special advance access to these puzzles:
-https://www.hocusfocus.fun/?tester=
-
-If you didn't complete the three tutorial challenges ("Click the bullseye", etc), please visit this link first, so you can learn how to play:
-https://www.hocusfocus.fun
-
-Thanks so much! Enjoy!
-
-Dave
-
-PS: If you know anyone else that might be interested in this game and being involved in indie game development, I could use a few more testers. Please have them contact me.
-
 
 
 
