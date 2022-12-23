@@ -1,11 +1,12 @@
-fix firefox
-disable clicking when viewing help
-getChallengeByDate
-google auth
-go back and optimize caching and guard in cloudfront
-add more puzzles, image credit
 
-{challengeId: '639751cf1c52957819f4e351'}
+
+close results message
+add more puzzles, image credit
+google auth (make score comparison only consider logged in users, only available for logged in users)
+go back and optimize caching and guard in cloudfront
+
+
+{challengeId: '639751531c52957819f4e33f'}
 
 Bug report: After finishing one puzzle and clicking "Play More", the effect that keeps revealing areas of a finished puzzle keeps going, revealing areas of the new puzzle around the old puzzle's solution.
 Firefox 107, MacOS 11.6.8.
@@ -25,7 +26,7 @@ http-server -c-1
 http://192.168.86.29:8080
 
 
-
+24, 27, 28, 29, 31, 1....
 
 https://www.freepik.com
 
@@ -39,14 +40,6 @@ FotoshopTofs
 
 Look at that baby
 https://pixabay.com/photos/female-koala-and-her-baby-1332217/
-FotoshopTofs
-
-Have a cookie
-https://pixabay.com/photos/breads-cereals-oats-barley-wheat-1417868/
-FotoshopTofs
-
-Grab a hot dog
-https://pixabay.com/photos/high-fat-foods-pastries-cheeses-1487599/
 FotoshopTofs
 
 Get the ball!
@@ -77,6 +70,10 @@ Find the top
 https://pixabay.com/photos/matterhorn-switzerland-mountain-7269337/
 xiSerge
 
+Nice hat
+https://pixabay.com/photos/sea-woman-boats-wind-clouds-7315959/
+ELG21
+
 Hit the buzzer
 https://pixabay.com/photos/bee-insect-flower-petals-pollen-5485529/
 xiSerge
@@ -85,13 +82,10 @@ Pick up some garlic
 https://pixabay.com/photos/still-life-vintage-pot-3721652/
 ELG21
 
-Catch a ride
-https://pixabay.com/photos/lake-sunset-boats-landscape-clouds-7377942/
-ELG21
 
-Nice hat
-https://pixabay.com/photos/sea-woman-boats-wind-clouds-7315959/
-ELG21
+kiss a frog
+https://pixabay.com/photos/frog-pond-amphibian-leaves-foliage-1893225/
+Couleur
 
 Go in the front door
 https://pixabay.com/photos/new-zealand-hobbit-hobbiton-tourism-4661427/
@@ -105,9 +99,19 @@ hold the phone
 https://pixabay.com/photos/typewriter-old-vintage-retro-4643317/
 hunt-er
 
-kiss a frog
-https://pixabay.com/photos/frog-pond-amphibian-leaves-foliage-1893225/
-Couleur
+Grab a hot dog
+https://pixabay.com/photos/high-fat-foods-pastries-cheeses-1487599/
+FotoshopTofs
+
+Catch a ride
+https://pixabay.com/photos/lake-sunset-boats-landscape-clouds-7377942/
+ELG21
+
+
+
+
+
+
 
 look at that face
 https://pixabay.com/photos/berlin-cathedral-sculpture-3408348/
@@ -160,3 +164,7 @@ PublicDomainPictures
 Look into the hole
 https://pixabay.com/photos/bullet-hole-frosted-glass-window-1744860/
 kiwikong
+
+Have a cookie
+https://pixabay.com/photos/breads-cereals-oats-barley-wheat-1417868/
+FotoshopTofs

@@ -135,6 +135,10 @@ a:hover {
   color: #000000;
 }
 
+b {
+  font-weight: bold;
+}
+
 body {
   background-color: #000000;
   font-family: "Poppins", sans-serif;
@@ -230,7 +234,7 @@ p {
   font-size: 25px;
   margin-top: 10px;
   font-weight: 300;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 #timer {
@@ -480,7 +484,7 @@ p {
 .message-board .content p {
   margin: 10px 30px;
   text-align: center;
-  line-height: 1.2;
+  line-height: 1.25;
   font-size: 1em;
 }
 
@@ -628,7 +632,6 @@ footer a {
   margin: 0px 10px;
 }
 #stats {
-  width: 100% !important;
   box-sizing: border-box;
   padding: 0px 20px;
   overflow: auto;
@@ -643,7 +646,6 @@ footer a {
 #stats h2 {
   color: #000000;
   font-size: 2em;
-  font-weight: 800;
   margin: 20px 0px 0px 0px;
 }
 #stats p {
@@ -651,6 +653,7 @@ footer a {
   font-size: 1em;
   margin: 10px 20px;
   text-align: center;
+  line-height: 1.25;
 }
 
 #stats-graph {
@@ -667,6 +670,7 @@ footer a {
   background-color: #000000;
   position: relative;
   min-width: 40px;
+  margin: 4px 4px;
 }
 
 .stats-bar.zero {

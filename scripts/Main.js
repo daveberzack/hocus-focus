@@ -1,34 +1,49 @@
 import Game from "./Game.js";
 
+import Stats from "./Stats.js";
 import { showView, testerId, setTester } from "./utils.js";
-import { getNextChallenge, sendAnalytics, logPageView, resetData } from "./data.js";
+import { getNextChallenge, sendAnalytics, logPageView, resetData, getGameResults, getYesterdayScores } from "./data.js";
 if (navigator && navigator.serviceWorker) {
   navigator.serviceWorker.register("../sw.js");
 }
 
 const game = new Game();
 let challengeId = "error";
+const stats = new Stats();
 
 const init = async () => {
+  showView("loading");
+  
   initUI();
   setTester();
-  showView("game");
   logPageView();
-  reset();
   initModal();
+  
+  const scores = await getYesterdayScores();
+  const results = await getGameResults();
+
+  let result;
+  results.forEach( r=> {
+    if (r._id == scores.id) result = r;
+  });
+  if (result){
+    showView("stats");
+    stats.showYesterday(scores, result);
+  }
+  else {
+    reset();
+  }
 };
 
 const initModal = () => {
   $("#global-modal button").click( ()=> { $("#global-modal").hide(); });
 
-  console.log("init", navigator.userAgent);
   if (navigator.userAgent.indexOf("Firefox")>=0) {
     $("#global-modal h2").html("Firefox, huh?");
     $("#global-modal p").html("Sorry. This game doesn't work reliably in Firefox.<br/>You can give it a shot. If things don't go so well, maybe try another browser.<br/>Sorry.");
     $("#global-modal button").html("OK.");
     $("#global-modal").css("display","flex");
   }
-
 }
 
 const initUI = () => {
@@ -39,6 +54,10 @@ const initUI = () => {
   });
   $(".game-button").click(() => {
     showView("game");
+  });
+  
+  $(".reset-button").click(() => {
+    reset();
   });
 
   $("#start-button").click(() => {

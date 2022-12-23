@@ -112,7 +112,7 @@ class WinContent {
     $("#win-stats-link").click(async () => {
       showView("stats");
       const results = await getGameResults();
-      this.stats.show(results);
+      this.stats.showRecord(results);
     });
 
     $("#win-donate-link");

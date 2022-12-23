@@ -65,11 +65,12 @@ class Game {
       mousemove: (e) => {
         if (this.isPlaying) this.cursor.handleMove(e.clientX, e.clientY);
       },
-
       touchmove: (e) => {
         if (this.isPlaying) this.cursor.handleMove(e.touches[0].clientX, e.touches[0].clientY);
-      },
+      }
+    });
 
+    $("#board").on({
       click: (e) => {
         if (this.isPlaying) this.handleCursorClick();
       },
@@ -77,7 +78,6 @@ class Game {
   }
 
   startGame() {
-    console.log("Start game. Loaded? "+this.canvas.isSourceLoaded, this.canvas);
     let self = this;
     if (!this.canvas.isSourceLoaded){
       $("#start-button").html("Loading");
@@ -122,7 +122,7 @@ class Game {
   }
 
   handleCursorClick() {
-    if (isInCanvas(this.cursor.x, this.cursor.y, this.canvas.source.$element)) {
+    if (this.isPlaying && isInCanvas(this.cursor.x, this.cursor.y, this.canvas.source.$element)) {
       const isGuessCorrect = this.canvas.checkGuess(this.cursor.x, this.cursor.y);
       const { x, y } = getCanvasCoordinates(this.cursor.x, this.cursor.y, this.canvas.source.$element);
       if (isGuessCorrect) this.handleWin();

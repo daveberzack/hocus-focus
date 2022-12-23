@@ -95,6 +95,20 @@ async function saveGameResult(challengeId, timePassed, mistakes, stars) {
   (await dbPromise).put("results", newResult);
 }
 
+async function getYesterdayScores() {
+  const url = `https://dave-simplecrud.herokuapp.com/hocusyesterdayscores`;
+  const response = await fetch(url, {
+    method: "GET",
+    mode: "cors",
+    headers: {
+      "Content-Type": "application/json",
+    }
+  });
+  const data = await response.json();
+  console.log("DATA",data);
+  return data;
+}
+
 async function sendAnalytics(type, data) {
   const url = `https://dave-simplecrud.herokuapp.com/${type}`;
   await fetch(url, {
@@ -123,4 +137,4 @@ async function resetData() {
   }
 }
 
-export { getNextChallenge, saveGameResult, getGameResults, sendAnalytics, logPageView, resetData };
+export { getNextChallenge, saveGameResult, getGameResults, sendAnalytics, logPageView, resetData, getYesterdayScores };
