@@ -20,6 +20,14 @@ const init = async () => {
   initModal();
   
   const scores = await getYesterdayScores();
+  let scorePercents = [0,0,0,0,0,0];
+  let totalSolves = 0;
+  scores.scores.forEach( s => {
+    totalSolves += s;
+  })
+  for (let i=0; i<=5; i++) {
+    scorePercents[i] = Math.round( 100*scores.scores[i]/totalSolves);
+  }
   const results = await getGameResults();
 
   let result;
@@ -28,7 +36,7 @@ const init = async () => {
   });
   if (result){
     showView("stats");
-    stats.showYesterday(scores, result);
+    stats.showYesterday(scorePercents, scores.clue, result);
   }
   else {
     reset();
