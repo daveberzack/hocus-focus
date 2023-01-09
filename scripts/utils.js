@@ -47,9 +47,28 @@ const _padTo2Digits = function (num) {
   return num.toString().padStart(2, "0");
 };
 
-const getTodayFormatted = function () {
-  const date = new Date();
-  return date.getMonth() + 1 + "-" + date.getDate() + "-" + date.getFullYear();
+const _addDays = function (date, days) {
+  return new Date(date.getTime() + days * 1000*60*60*24); //convert to milliseconds
+};
+
+const getDateFormatted = function (offset, forDisplay) {
+  const date = _addDays(new Date(), -offset);
+
+  if (forDisplay) {
+    return [
+      _padTo2Digits(date.getMonth() + 1),
+      _padTo2Digits(date.getDate()),
+      date.getFullYear()
+    ].join("-");
+  }
+  else {
+    return [
+      date.getFullYear(),
+      _padTo2Digits(date.getMonth() + 1),
+      _padTo2Digits(date.getDate())
+    ].join("");
+  }
+  
 };
 
 function sleep(ms) {
@@ -96,4 +115,4 @@ const setTester = () => {
   testerId = getParameter("tester");
 };
 
-export { showView, getCanvasCoordinates, isInCanvas, rgbToHex, getNewCoordinates, getTodayFormatted, sleep, formatClue, unformatClue, copyToClipboard, getCoordinatesRelativeToCanvas, getRandom, isTouchDevice, testerId, setTester, getParameter };
+export { showView, getCanvasCoordinates, isInCanvas, rgbToHex, getNewCoordinates, getDateFormatted, sleep, formatClue, unformatClue, copyToClipboard, getCoordinatesRelativeToCanvas, getRandom, isTouchDevice, testerId, setTester, getParameter };

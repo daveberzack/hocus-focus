@@ -1,5 +1,5 @@
 import { openDB } from "https://cdn.jsdelivr.net/npm/idb@7/+esm";
-import { getParameter, isTouchDevice, testerId } from "./utils.js";
+import { getParameter, isTouchDevice, testerId, getDateFormatted } from "./utils.js";
 
 const VERSION = 1;
 const dbPromise = openDB("data", VERSION, {
@@ -27,7 +27,6 @@ const getNextChallenge = async () => {
   let challengeId = null;
   const foundTutorial = r.find((e) => e?._id == tutorial2) || r.find((e) => e?._id == tutorial1) || r.find((e) => e?._id == tutorial0)  || r.find((e) => e?._id == tutorial0_mobile);
   
-  console.log("tut:",foundTutorial);
   if (!foundTutorial) {
     if (isTouchDevice()) challengeId = tutorial0_mobile; 
     else challengeId = tutorial0;
@@ -73,9 +72,7 @@ const getNextChallenge = async () => {
   try {
     const response = await fetch(`https://dave-simplecrud.herokuapp.com/hocustodaychallenge`);
     const challenge = await response.json();
-    console.log("ch",challenge);
     if (!challenge?._id) throw "challenge not found";
-    console.log("ch2",challenge?._id);
 
     const playedToday = !!r.find((e) => e?._id == challenge._id);
     if (playedToday) {
@@ -89,8 +86,8 @@ const getNextChallenge = async () => {
 
 let cachedResults = [];
 
-async function saveGameResult(challengeId, timePassed, mistakes, stars) {
-  const newResult = { _id: challengeId, timePassed: Math.round(timePassed), mistakes, stars };
+async function saveGameResult(challengeId, challengeDate, timePassed, mistakes, stars) {
+  const newResult = { _id: challengeId, date: challengeDate, timePassed: Math.round(timePassed), mistakes, stars };
   cachedResults.push(newResult);
   (await dbPromise).put("results", newResult);
 }
@@ -105,8 +102,23 @@ async function getYesterdayScores() {
     }
   });
   const data = await response.json();
-  console.log("DATA",data);
   return data;
+}
+
+async function getStreak() {
+  const results = await getGameResults();
+  let missedADay = false;
+  let streak = 0;
+  while (!missedADay){
+    streak++;
+    const streakDate = getDateFormatted(streak, false);
+    let found = false;
+    results.forEach( r=> {
+      if (r.date == streakDate && r.stars>0) found=true;
+    });
+    if (!found) missedADay=true;
+  }
+  return streak;
 }
 
 async function sendAnalytics(type, data) {
@@ -137,4 +149,4 @@ async function resetData() {
   }
 }
 
-export { getNextChallenge, saveGameResult, getGameResults, sendAnalytics, logPageView, resetData, getYesterdayScores };
+export { getNextChallenge, saveGameResult, getGameResults, sendAnalytics, logPageView, resetData, getYesterdayScores, getStreak };

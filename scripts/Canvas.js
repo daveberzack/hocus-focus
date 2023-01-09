@@ -18,7 +18,6 @@ class Canvas {
     sourceImage.crossOrigin = "Anonymous";
     sourceImage.onload = function () {
       self.drawImageToLayer(self.source, sourceImage);
-      console.log(self.isSourceLoaded);
       self.isSourceLoaded = true;
     };
     sourceImage.src = "./uploads/"+challenge.imageKey+".jpeg";

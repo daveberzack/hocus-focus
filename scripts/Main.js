@@ -18,7 +18,7 @@ const init = async () => {
   setTester();
   logPageView();
   initModal();
-  
+
   const scores = await getYesterdayScores();
   let scorePercents = [0,0,0,0,0,0];
   let totalSolves = 0;
@@ -81,10 +81,10 @@ const initUI = () => {
     }
     
   });
-  $("#after-button").click(function () {
-    $("#after-message").hide();
-    reset();
-  });
+  // $("#after-button").click(function () {
+  //   $("#after-message").hide();
+  //   reset();
+  // });
 
   $("#give-up-button").click(() => {
     game.gaveUp = true;

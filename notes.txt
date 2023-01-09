@@ -1,32 +1,27 @@
 
-
-close results message
+general editor
 add more puzzles, image credit
+
+done:
+results messaging
+play streak
+
+
+
+
 google auth (make score comparison only consider logged in users, only available for logged in users)
 go back and optimize caching and guard in cloudfront
 
-
 {challengeId: '639751531c52957819f4e33f'}
 
-Bug report: After finishing one puzzle and clicking "Play More", the effect that keeps revealing areas of a finished puzzle keeps going, revealing areas of the new puzzle around the old puzzle's solution.
-Firefox 107, MacOS 11.6.8.
-
-
 aws pw: g0get!tN0W!
-2023 has been such a busy and joyful year for us. Bryce started walking, and he's all over the place! Dave left his job and is now an independent game designer. And Marissa is settling into her new teaching job. We feel so blessed, and we wish you all the best over the holidays and for the coming year!
-https://dave-simplecrud.herokuapp.com/hocusdeleteimpermanentchallenges
-
-show streak
-
-get domain.
-update .fun with .com in manifest.
 
 run server to avoid cors issues:
 http-server -c-1
 http://192.168.86.29:8080
 
 
-24, 27, 28, 29, 31, 1....
+
 
 https://www.freepik.com
 

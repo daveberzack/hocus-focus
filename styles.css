@@ -401,6 +401,14 @@ p {
   margin: 0 5px;
 }
 
+#streak {
+  color: #FFFFFF;
+  text-align: center;
+}
+#streak-count {
+  font-weight: bold;
+}
+
 .button {
   position: absolute;
   color: #ffffff;

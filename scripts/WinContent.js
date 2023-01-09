@@ -1,12 +1,13 @@
 import Stats from "./Stats.js";
-import { sleep, getRandom, unformatClue, getTodayFormatted, showView, copyToClipboard } from "./utils.js";
-import { getGameResults } from "./data.js";
+import { sleep, getRandom, unformatClue, getDateFormatted, showView, copyToClipboard } from "./utils.js";
+import { getGameResults, getStreak } from "./data.js";
 
 class WinContent {
   constructor() {
     this.$winMessage = $("#win-message");
     this.$timerBar = $("#timer-bar");
     this.$stars = $("#stars");
+    this.$streak = $("#streak");
     this.$testerForm = $("#tester-form");
     this.stats = new Stats();
     this.winInterval = 0;
@@ -15,10 +16,11 @@ class WinContent {
 
   reset() {
     this.$stars.hide();
+    this.$streak.hide();
     this.$winMessage.hide();
     $("#win-content").hide();
     $("#after-button").hide();
-    $("#after-message").hide();
+    //$("#after-message").hide();
     $("#credit-block").hide();
     $("#win-links").hide();
     $("#clipboard-message").hide();
@@ -27,13 +29,16 @@ class WinContent {
 
   async show({ challenge, effectiveTimePassed, goalsMet, gaveUp, testerId }) {
     $("#win-content").show();
-    $("#after-message").hide();
+    //$("#after-message").hide();
     const timeFormatted = Math.round(effectiveTimePassed);
 
     this.showStars(effectiveTimePassed, goalsMet, challenge);
 
-    await sleep(2000);
+    await sleep(3000);
 
+    console.log("goals",goalsMet.length);
+    await this.showStreak(goalsMet.length>0);
+    await sleep(2000);
     this.showWinMessage(timeFormatted, goalsMet, gaveUp);
 
     await sleep(2000);
@@ -43,15 +48,23 @@ class WinContent {
     if (challenge.isTest || challenge.isTutorial || challenge.isSpecified) {
       $("#after-button").fadeIn();
     }
-    else {
-      $("#after-message").fadeIn();
-    }
+    // else {
+    //   $("#after-message").fadeIn();
+    // }
 
     if (testerId) {
       $("#tester-form input:radio").prop("checked", false);
       $("#tester-form textarea").val("");
       this.$testerForm.show();
     }
+  }
+
+  async showStreak(wonToday) {
+    let streak = await getStreak();
+    if (!wonToday) streak = 0;
+    const label = streak==1?" Day":" Days";
+    $("#streak-count").text(streak+label);
+    this.$streak.fadeIn();
   }
 
   showStars(effectiveTimePassed, goalsMet, challenge) {
@@ -121,7 +134,7 @@ class WinContent {
       let stars = "";
       goalsMet.forEach((s) => (stars += "⭐"));
 
-      let shareText = `🔍 Hocus Focus [${getTodayFormatted()}]
+      let shareText = `🔍 Hocus Focus [${getDateFormatted(0, true)}]
 🧩 - ${unformatClue(challenge.clue)}
 🏆 - ${stars} (${timeFormatted} Seconds)
 
