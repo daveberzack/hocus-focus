@@ -1,4 +1,4 @@
-html,
+reshtml,
 body,
 div,
 span,
@@ -250,6 +250,14 @@ b {
   background-color: #ffffff;
 }
 
+#advanced-options {
+  display: none;
+  margin: 20px 0px;
+}
+.admin #advanced-options {
+  display: block;
+}
+
 .widgetFrame {
   margin: 30px auto;
 }
@@ -284,7 +292,6 @@ b {
   left: 0px;
   text-align: center;
   background-size: cover;
-  background-image: url("../img/themes/bgs/1.jpg");
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -324,7 +331,7 @@ b {
   color: #ffffff;
   background-color: #000000;
   border: 0px solid #000000;
-  padding: 5px;
+  padding: 5px 10px;
   font-weight: 700;
   text-decoration: none;
   display: inline-block;

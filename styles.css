@@ -532,6 +532,11 @@ p {
   line-height: 1.5;
 }
 
+#before-message a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 #before-button {
   position: relative;
   display: inline-block;
@@ -868,4 +873,27 @@ footer a {
   display: inline-block;
   margin: 10px auto;
   min-width: 200px;
+}
+
+.notes {
+  color: #FFFFFF;
+}
+
+.notes a {
+  color: #FFFFFF;
+  text-decoration: underline;
+} 
+
+.notes h3 {
+  margin: 30px auto 10px auto;
+  max-width: 500px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0px 20px;
+}
+.notes p {
+  margin: 10px auto;
+  max-width: 500px;
+  margin: 10px auto;
+  padding: 0px 20px;
 }

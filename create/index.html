@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link type="text/css" rel="stylesheet" href="styles.css" />
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-    <title>Hocus Focus Holiday Card Creator</title>
+    <title>Hocus Focus Puzzle Creator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet" />
@@ -33,19 +33,25 @@
       <header>
         <img src="../img/hocus.png" id="logo" />
         <h1 id="logotype">Hocus <span class="bold">Focus</span></h1>
-        <!--<img class="instructions-button" src="../img/help.png" />-->
       </header>
 
         <div class="board square-block">
 
           <div id="upload" class="board square-block">
-            <h2>Create a holiday card that's also a fun picture search puzzle</h2>
-            <p>Just upload your own photo and pick something in it for your loved ones to find. They'll paint the picture until they can find that goal.</p>
-            <p><a href="http://www.hocusfocus.fun?id=639636736b3ee2ea3c813cb2" target="example">Check out an example</a><br/>then make your own!</p>
+            <p>Create a custom Hocus Focus puzzle in three steps:</p>
+            <p>Upload your picture, select the target area, then write a short clue</p>
+            <div id="advanced-options">
+              <input type="text" id="credit-field" placeholder="Photographer/Artist name">
+              <input type="text" id="credit-url-field" placeholder="URL of source image">
+              <select id="difficulty">
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20" selected>20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+              </select>
+            </div>
             <label id="upload-label" for="upload-field">Upload Picture</label>
-            
-            <p id="disclaimer">PS: No ads or data mining here.<br/>This is a gift from me to y'all.</p>
-            <p id="disclaimer">By using this tool, you agree you won't post anything you're not supposed to, and accept all liability for posting it.</p>
             <input type="file" id="upload-field" accept="image/*">
           </div>
 
@@ -56,53 +62,19 @@
               <canvas class="square-block" id="hit-drawing" width="1000" height="1000"></canvas>
             </div>
             <div class="instructions-modal" id="hit-instructions">
-              <p>Next, draw lines to highlight the area in the image that your clue refers to.</p>
-              <p>Don't get too precise. Include some extra space around the target.</p>
-              
+              <p>Next, highlight the target area that the player should click.</p>
               <button class="button" id="hide-hit-instructions">Got it!</button>
             </div>
             <div class="instructions-modal" id="clue-instructions">
-              <p>In a few words, describe a person or object in the picture that a player has to find.</p>
-              <p>For example:<br/><b>Click on Baby Bryce!</b><br/>or<br/><b>Find my favorite toy.</b></p>
-
-              <input type="text" id="clue-field" placeholder="Type your clue here">
-              <button class="button" id="submit-clue">Next</button>
-            </div>
-          </div>
-
-          <div id="message" class="square-block">
-            <input id="message-title"placeholder="Your title here"></input>
-            <textarea id="message-body" placeholder="Edit this text to write
-a short message
-to your loved ones"></textarea>
-            
-            <div class="instructions-modal" id="message-instructions">
-              <p>Now, just add a nice holiday message for your friends and loved ones.</p>
-              <p>If you want, you can change the background theme.</p>
-              <button class="button" id="hide-message-instructions">Got it!</button>
-            </div>
-            <div class="instructions-modal" id="theme-select">
-              <div>
-                <p>Select a theme:</p>
-                <img src="../img/themes/icons/1.jpg" data-value="1"/>
-                <img src="../img/themes/icons/2.jpg" data-value="2"/>
-                <img src="../img/themes/icons/3.jpg" data-value="3"/>
-                <img src="../img/themes/icons/4.jpg" data-value="4"/>
-                <img src="../img/themes/icons/5.jpg" data-value="5"/>
-                <img src="../img/themes/icons/6.jpg" data-value="6"/>
-                <img src="../img/themes/icons/7.jpg" data-value="7"/>
-                <img src="../img/themes/icons/8.jpg" data-value="8"/>
-                <img src="../img/themes/icons/9.jpg" data-value="9"/>
-                <img src="../img/themes/icons/10.jpg" data-value="10"/>
-                <img src="../img/themes/icons/11.jpg" data-value="11"/>
-                <img src="../img/themes/icons/12.jpg" data-value="12"/>
-              </div>
+              <p>In a few words, describe what the  player has to find.</p>
+              <p>To make part of the clue boldfaced,<br/>put it in <b>[square brackets]</b></p>
+              <button class="button" id="hide-clue-instructions">Got it!</button>
             </div>
           </div>
 
           <div id="confirm" class="square-block">
             <h2>You're all done!</h2>
-            <p>Click on the link below to check it out your custom image search puzzle. Copy this link to share it with your loved ones.</p>
+            <p>Click on the link below to check it out your custom image search puzzle. Copy this link to share it with friends.</p>
             <a id="puzzle-link" href="#" target="puzzle"></a>
           </div>
 
@@ -110,37 +82,15 @@ to your loved ones"></textarea>
 
         <div class="controls horizontal-block" id="hit-controls">
           <button class="button" id="change-image">Change Picture</button>
-          <!-- <button class="button"  id="small-brush">s</button>
-          <button class="button"  id="medium-brush">m</button>
-          <button class="button"  id="large-brush">l</button> -->
           <button class="button"  id="clear-hit">Reset Area</button>
           <button class="button" id="submit-hit">Done</button>
         </div>
 
         
-        <div class="controls horizontal-block" id="message-controls">
-          <button class="button" id="show-themes-button">Change Theme</button>
-          <button class="button" id="submit-message">Done</button>
-        </div>
-
-<!-- 
-
-        <div class="controls horizontal-block" id="clue">
+        <div class="controls horizontal-block" id="clue-controls">
           <input type="text" id="clue-field" placeholder="Type your clue here">
           <button class="button" id="submit-clue">Next</button>
         </div>
-
-    <div id="text" class="view">
-      <h2>Enter a personal message</h2>
-      <div>Title:<input type="text" id="title"></div>
-      <div>Message:<textarea id="message"></textarea></div>
-
-      <button id="submit-text">Next</button>
-    </div>
-      </div>
-      <div id="confirm" class="view">
-        <h2>Done</h2>
-      </div> -->
       
     </div>
 

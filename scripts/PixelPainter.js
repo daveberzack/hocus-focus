@@ -63,8 +63,8 @@ class PixelPainter {
         } else {
           if (detailLevel == 9) {
             //already at max detail. fill in some area around it.
-            const { x: x3, y: y3, w: w3, h: h3 } = this.getGridRectangle(gx - 1, gy - 1, gb * 4);
-            this.canvas.stamp(x3, y3, w3, h3);
+            //const { x: x3, y: y3, w: w3, h: h3 } = this.getGridRectangle(gx - 1, gy - 1, gb * 1);
+            //this.canvas.stamp(x3, y3, w3, h3);
           } else {
             const { x: x3, y: y3, w: w3, h: h3 } = this.getGridRectangle(gx, gy, gb * 2);
             this.canvas.stamp(x3, y3, w3, h3);

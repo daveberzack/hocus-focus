@@ -3,21 +3,22 @@ let theme = 1;
 
 const submit = async () => {
   const clue = $("#clue-field").val();
-  const title = $("#message-title").val();
-  const message = $("#message-body").val().replace(/(?:\r\n|\r|\n)/g, '<br>');
+  const credit = $("#credit-field").val();
+  const creditUrl = $("#credit-url-field").val();
+  const difficulty = $("#difficulty").val();
   const canvas = document.getElementById("pic");
   const image = canvas.toDataURL('image/jpeg', .4);
   const data = {
     clue,
+    credit,
+    creditUrl,
     image,
     theme,
-    beforeMessage: message,
-    beforeTitle: title,
     hitAreas: strokes,
+    difficulty
   };
   $("#submit-message").text("Sending");
-
-  const url = `https://dave-simplecrud.herokuapp.com/hocuschristmas`;
+  const url = `https://dave-simplecrud.herokuapp.com/hocuscreate`;
   const response = await fetch(url, {
     method: "POST",
     mode: "cors",
@@ -48,14 +49,9 @@ $("#hide-hit-instructions").click((e) => {
   e.preventDefault();
   $("#hit-instructions").hide();
 });
-// $("#hide-clue-instructions").click((e) => {
-//   e.preventDefault();
-//   $("#clue-instructions").hide();
-//   $("#clue").show(); 
-// });
-$("#hide-message-instructions").click((e) => {
+$("#hide-clue-instructions").click((e) => {
   e.preventDefault();
-  $("#message-instructions").hide();
+  $("#clue-instructions").hide();
 });
 $("#submit-clue").click((e) => {
   e.preventDefault();
@@ -65,45 +61,22 @@ $("#submit-clue").click((e) => {
 });
 $("#submit-hit").click((e) => {
   e.preventDefault();
-  showMessage();
-});
-
-$("#submit-message").click((e) => {
-  e.preventDefault();
   submit();
-});
-$("#show-themes-button").click((e) => {
-  e.preventDefault();
-  $("#theme-select").show();
-});
-
-let hasClearedMessageTitle=false;
-$("#message-title").click((e) => {
-  e.preventDefault();
-  if (!hasClearedMessageTitle) $("#message-title").html("&nbsp;");
-  hasClearedMessageTitle = true;
-});
-let hasClearedMessageBody=false;
-$("#message-body").click((e) => {
-  e.preventDefault();
-  if (!hasClearedMessageBody) $("#message-body").html("");
-  hasClearedMessageBody = true;
-});
-
-$("#theme-select img").click((e) => {
-  e.preventDefault();
-  $("#theme-select").hide();
-  setTheme(e.target.getAttribute("data-value"));
 });
 
 const showUpload = ()=>{
   $("#upload").show(); 
   $("#hit").hide(); 
   $("#hit-controls").hide(); 
+  $("#clue-controls").hide(); 
   $("#hit-instructions").hide();
   $("#clue-instructions").show();
   $("#clue").hide(); 
   $("#message, #message-controls").hide(); 
+
+  if (window.location.search.indexOf("admin")>=0){
+    $("body").addClass("admin");
+  }
   setHitActive(false);
   clearHitInterval();
 }
@@ -114,6 +87,7 @@ const showClue = ()=>{
   $("#hit-controls").hide(); 
   $("#hit-instructions").hide();
   $("#clue-instructions").show();
+  $("#clue-controls").show(); 
   $("#clue").hide(); 
   $("#message, #message-controls").hide(); 
   setHitActive(false);
@@ -126,24 +100,13 @@ const showHit = ()=>{
   $("#hit-controls").show(); 
   $("#hit-instructions").show();
   $("#clue-instructions").hide();
+  $("#clue-controls").hide(); 
   $("#clue").hide(); 
   $("#message, #message-controls").hide(); 
   startHitInterval();
   setHitActive(true);
 }
-const showMessage = ()=>{
-  $("#upload").hide(); 
-  $("#hit").hide();
-  $("#hit-controls").hide(); 
-  $("#hit-instructions").hide();
-  $("#clue-instructions").hide();
-  $("#clue").hide(); 
-  setHitActive(false);
-  $("#message, #message-controls").show(); 
-  $("#theme-select").hide();
-  $("#confirm").hide(); 
-  clearHitInterval();
-}
+
 const showConfirm = (id)=>{
   $("#upload").hide(); 
   $("#hit").hide();
@@ -157,11 +120,6 @@ const showConfirm = (id)=>{
   $("#confirm").show(); 
   const url = "www.hocusfocus.fun?id="+id;
   $("#puzzle-link").text(url).attr("href", "https://"+url);
-}
-
-const setTheme = (themeId) => {
-  theme = themeId;
-  $("#message").css("background-image", "url(../img/themes/bgs/" + theme + ".jpg)");
 }
 
 showUpload();
@@ -194,7 +152,7 @@ const drawUploadToCanvas = (file)=> {
 const resize = ()=> {
   let winW= $(window).width();
   let winH= $(window).height();
-  let w = Math.min( (winW-20), winH-160);
+  let w = Math.min( (winW-20), winH-220);
   $(".square-block").width(w);
   $(".square-block").height(w);
   $(".horizontal-block").height(w);

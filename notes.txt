@@ -1,18 +1,23 @@
 
-general editor
+style editor
 add more puzzles, image credit
 
-done:
-results messaging
-play streak
+
+update: 
+variable goals 
+harder 
+streak
+general editor
 
 
+https://dave-simplecrud.herokuapp.com/hocuschallenge/setdifficulty/63bdcb5820bcfc3d69cbbf76/20
+10, 15, 20, 25, 30
 
 
 google auth (make score comparison only consider logged in users, only available for logged in users)
 go back and optimize caching and guard in cloudfront
 
-{challengeId: '639751531c52957819f4e33f'}
+{challengeId: '63a477369c3639280eb7ed4c'}
 
 aws pw: g0get!tN0W!
 
@@ -21,89 +26,7 @@ http-server -c-1
 http://192.168.86.29:8080
 
 
-
-
 https://www.freepik.com
-
-Catch the fish
-https://pixabay.com/photos/healthy-food-food-power-dietetic-1348430/
-FotoshopTofs
-
-Locate the specimen
-https://pixabay.com/photos/scientist-pathologist-1332343/
-FotoshopTofs
-
-Look at that baby
-https://pixabay.com/photos/female-koala-and-her-baby-1332217/
-FotoshopTofs
-
-Get the ball!
-https://pixabay.com/photos/football-football-game-sport-team-1493071/
-FotoshopTofs
-
-Look at the birdie
-https://pixabay.com/photos/young-woman-and-chick-chick-duckling-1250755/
-FotoshopTofs
-
-Touch her dinner
-https://pixabay.com/photos/lioness-female-lion-mammal-1332163/
-FotoshopTofs
-
-Munch a carrot
-https://pixabay.com/photos/healthy-eating-fruits-and-vegetables-1417812/
-FotoshopTofs
-
-Look at that creek
-https://pixabay.com/photos/alps-mountains-flowers-hiking-7365231/
-xiSerge
-
-Hail the boat
-https://pixabay.com/photos/ocean-rangiroa-sea-clouds-water-7335499/
-xiSerge
-
-Find the top
-https://pixabay.com/photos/matterhorn-switzerland-mountain-7269337/
-xiSerge
-
-Nice hat
-https://pixabay.com/photos/sea-woman-boats-wind-clouds-7315959/
-ELG21
-
-Hit the buzzer
-https://pixabay.com/photos/bee-insect-flower-petals-pollen-5485529/
-xiSerge
-
-Pick up some garlic
-https://pixabay.com/photos/still-life-vintage-pot-3721652/
-ELG21
-
-
-kiss a frog
-https://pixabay.com/photos/frog-pond-amphibian-leaves-foliage-1893225/
-Couleur
-
-Go in the front door
-https://pixabay.com/photos/new-zealand-hobbit-hobbiton-tourism-4661427/
-hunt-er
-
-look at that face
-https://pixabay.com/photos/colors-bike-bicycle-colorful-color-4912634/
-hunt-er
-
-hold the phone
-https://pixabay.com/photos/typewriter-old-vintage-retro-4643317/
-hunt-er
-
-Grab a hot dog
-https://pixabay.com/photos/high-fat-foods-pastries-cheeses-1487599/
-FotoshopTofs
-
-Catch a ride
-https://pixabay.com/photos/lake-sunset-boats-landscape-clouds-7377942/
-ELG21
-
-
-
 
 
 
