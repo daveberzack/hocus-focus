@@ -144,6 +144,7 @@ const drawUploadToCanvas = (file)=> {
               sWidth=image.height;
               sHeight=image.height;
              }
+             ctx.clearRect(0, 0, canvas.width, canvas.height);
              ctx.drawImage(image, sx, sy, sWidth, sHeight, 0, 0, 1000, 1000);
          }
       }
