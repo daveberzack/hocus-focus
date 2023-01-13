@@ -19,6 +19,10 @@ const init = async () => {
   logPageView();
   initModal();
 
+  const winW = $(window).width();
+  const winH = $(window).height();
+  setSize(winW, winH);
+
   const scores = await getYesterdayScores();
   let scorePercents = [0,0,0,0,0,0];
   let totalSolves = 0;
@@ -81,10 +85,11 @@ const initUI = () => {
     }
     
   });
-  // $("#after-button").click(function () {
-  //   $("#after-message").hide();
-  //   reset();
-  // });
+  
+  $("#after-button").click(function () {
+    $("#after-message").hide();
+    reset();
+  });
 
   $("#give-up-button").click(() => {
     game.gaveUp = true;
@@ -156,6 +161,7 @@ function showBeforeMessage() {
 
 function setSize(winW, winH) {
   const w = Math.min(winW - 20, winH - 240);
+  console.log("w",w);
   $(".view").width(w);
   $("#board")
     .width(w - 8)
@@ -184,10 +190,14 @@ function setSize(winW, winH) {
   return w - 8;
 }
 
-init();
-
 let resizeTimeout;
 $( window ).resize(function() {
   clearInterval(resizeTimeout);
   resizeTimeout = setTimeout(reset, 500);
+});
+
+$(document).ready(function(){
+  init();
+  console.log("!");
+  setTimeout(setSize, 500);
 });

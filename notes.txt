@@ -1,18 +1,22 @@
 
-style editor
-add more puzzles, image credit
+png image overlaps previous image
+share doesn't work in testing
 
 
-update: 
-variable goals 
-harder 
-streak
-general editor
+Look at that mug
+https://pixabay.com/photos/bread-croissant-food-breakfast-cup-18987/
+PublicDomainPictures
 
+
+add puzzles
+
+http://hocus-focus-test.s3-website-us-east-1.amazonaws.com/
 
 https://dave-simplecrud.herokuapp.com/hocuschallenge/setdifficulty/63bdcb5820bcfc3d69cbbf76/20
 10, 15, 20, 25, 30
 
+
+update version: update version# in footer, change folder name and references in index.html, notes.html.
 
 google auth (make score comparison only consider logged in users, only available for logged in users)
 go back and optimize caching and guard in cloudfront
@@ -74,10 +78,6 @@ https://pixabay.com/photos/afghanistan-town-city-people-79492/
 See the turtle
 https://pixabay.com/photos/sea-ocean-underwater-turtle-2470908/
 12019
-
-Look at that mug
-https://pixabay.com/photos/bread-croissant-food-breakfast-cup-18987/
-PublicDomainPictures
 
 Look into the hole
 https://pixabay.com/photos/bullet-hole-frosted-glass-window-1744860/

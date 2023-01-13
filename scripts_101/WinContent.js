@@ -29,6 +29,7 @@ class WinContent {
 
   async show({ challenge, effectiveTimePassed, goalsMet, gaveUp, testerId }) {
     $("#win-content").show();
+    this.$streak.hide();
     //$("#after-message").hide();
     const timeFormatted = Math.round(effectiveTimePassed);
 
@@ -36,7 +37,6 @@ class WinContent {
 
     await sleep(3000);
 
-    console.log("goals",goalsMet.length);
     await this.showStreak(goalsMet.length>0);
     await sleep(2000);
     this.showWinMessage(timeFormatted, goalsMet, gaveUp);
