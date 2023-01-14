@@ -38,7 +38,22 @@ const getNextChallenge = async () => {
     challengeId = specifiedId;
     hasLoadedSpecifiedChallenge = true;
   }
-  if (challengeId) {
+
+  const specifiedDateOffset = getParameter("offset");
+  if (specifiedDateOffset) {
+    try {
+      const response = await fetch(`https://dave-simplecrud.herokuapp.com/hocuschallenge/date/` + specifiedDateOffset);
+      const challenge = await response.json();
+      if (!challenge?._id) throw "challenge not found";
+      challenge.isSpecified = true;
+      return challenge;
+    }
+    catch {
+      return errorChallenge;
+    } 
+  }
+
+  else if (challengeId) {
     try {
       const response = await fetch(`https://dave-simplecrud.herokuapp.com/hocuschallenge/` + challengeId);
       const challenge = await response.json();

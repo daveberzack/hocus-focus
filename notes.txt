@@ -1,27 +1,16 @@
-
-png image overlaps previous image
-share doesn't work in testing
-
-
-Look at that mug
-https://pixabay.com/photos/bread-croissant-food-breakfast-cup-18987/
-PublicDomainPictures
-
-
+add with date (and permanent flag)
+find by date (check prepended x)
 add puzzles
 
 http://hocus-focus-test.s3-website-us-east-1.amazonaws.com/
 
 https://dave-simplecrud.herokuapp.com/hocuschallenge/setdifficulty/63bdcb5820bcfc3d69cbbf76/20
-10, 15, 20, 25, 30
 
 
-update version: update version# in footer, change folder name and references in index.html, notes.html.
+how to update version: update version# in footer, change folder name and references in index.html, notes.html.
 
 google auth (make score comparison only consider logged in users, only available for logged in users)
 go back and optimize caching and guard in cloudfront
-
-{challengeId: '63a477369c3639280eb7ed4c'}
 
 aws pw: g0get!tN0W!
 
@@ -33,39 +22,74 @@ http://192.168.86.29:8080
 https://www.freepik.com
 
 
+Have a banana
+https://www.freepik.com/free-photo/multitasking-mother-taking-care-her-small-son-while-working-home_26767047.htm
+Drazen Zigic
 
+Click the Clock
+https://pixabay.com/photos/wall-furniture-design-apartment-416060/
+keresi72
 
-look at that face
-https://pixabay.com/photos/berlin-cathedral-sculpture-3408348/
-Couleur
+Grab the bottle
+https://pixabay.com/photos/girl-piano-grand-piano-woman-music-711087/
+MDphoto
+
+Look at the camera
+https://pixabay.com/photos/drone-flying-camera-remote-control-1866742/
+Pexels
+
+Nice glasses
+https://pixabay.com/photos/beauty-sky-beach-the-scenery-cloud-1485979/
+maya_7966
+
+Touch a star
+https://pixabay.com/photos/rocks-pebbles-starfish-beach-shore-7649961/
+KAMcMillan
+
+Find the woman
+https://pixabay.com/photos/apartment-architecture-armchair-1822409/
+sasint
+
+Where's the fire?
+https://pixabay.com/photos/tea-lights-light-flame-candles-1416745/
+congerdesign 
+
+Enter the arch 
+https://www.freepik.com/free-photo/view-delicate-arch-sunset-usa_11243820.htm
+vwalakte
+
+Pet the pup
+https://www.freepik.com/free-photo/medium-shot-happy-family-nature_15266323.htm
+Freepik
 
 Check the oil
 https://pixabay.com/photos/olive-oil-oil-olives-carafe-fruits-1596639/
 Couleur
 
+Are you horny?
+https://pixabay.com/photos/animal-cow-wolf-down-pasture-graze-193206/
+AnnaER
+
+Turn on the faucet
+https://pixabay.com/photos/garlic-cactus-window-green-house-2556022/
+TheVirtualDenise
+
+See the turtle
+https://pixabay.com/photos/sea-ocean-underwater-turtle-2470908/
+12019
+
 Touch her neck
 https://pixabay.com/photos/guitar-musical-instrument-2276181/
-Couleur
-
-Look into the pit
-https://pixabay.com/photos/peach-fruit-red-ripe-yummy-cute-2527208/
-Couleur
-
-get your bearings
-https://pixabay.com/photos/inline-skates-roller-skating-3591101/
-Couleur
-
-go to church
-https://pixabay.com/photos/mountain-church-kaiserstuhl-3544742/
-Couleur
-
-Nice hat
-https://pixabay.com/photos/snowman-snow-winter-cold-wintry-2975730/
 Couleur
 
 Pet the kitty
 https://pixabay.com/photos/tree-cat-silhouette-moon-full-moon-736877/
 Bessi
+
+Nice hat
+https://pixabay.com/photos/snowman-snow-winter-cold-wintry-2975730/
+Couleur
+
 
 Take a seat
 https://pixabay.com/photos/sunset-tree-silhouette-dusk-lonely-3156176/
@@ -75,14 +99,10 @@ Find a wheelbarrow
 https://pixabay.com/photos/afghanistan-town-city-people-79492/
 12019
 
-See the turtle
-https://pixabay.com/photos/sea-ocean-underwater-turtle-2470908/
-12019
+go to church
+https://pixabay.com/photos/mountain-church-kaiserstuhl-3544742/
+Couleur
 
-Look into the hole
-https://pixabay.com/photos/bullet-hole-frosted-glass-window-1744860/
-kiwikong
-
-Have a cookie
-https://pixabay.com/photos/breads-cereals-oats-barley-wheat-1417868/
-FotoshopTofs
+get your bearings
+https://pixabay.com/photos/inline-skates-roller-skating-3591101/
+Couleur

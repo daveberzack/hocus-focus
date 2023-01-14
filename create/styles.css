@@ -253,6 +253,13 @@ b {
 #advanced-options {
   display: none;
   margin: 20px 0px;
+  width: 80%;
+}
+
+#advanced-options input {
+  width: 100%;
+  margin: 5px 0px;
+  display: block;
 }
 .admin #advanced-options {
   display: block;

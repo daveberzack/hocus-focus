@@ -1,8 +1,8 @@
 import { strokes, clearStrokes, setHitActive, startHitInterval, clearHitInterval } from "./hitarea.js";
-let theme = 1;
 
 const submit = async () => {
   const clue = $("#clue-field").val();
+  const date = $("#date-field").val();
   const credit = $("#credit-field").val();
   const creditUrl = $("#credit-url-field").val();
   const difficulty = $("#difficulty").val();
@@ -13,7 +13,7 @@ const submit = async () => {
     credit,
     creditUrl,
     image,
-    theme,
+    date,
     hitAreas: strokes,
     difficulty
   };

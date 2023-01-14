@@ -6,7 +6,7 @@ import { saveGameResult, sendAnalytics } from "./data.js";
 
 import WinContent from "./WinContent.js";
 
-const GAME_LOOP_INCREMENT = 18;
+const GAME_LOOP_INCREMENT = 10;
 
 class Game {
   constructor() {

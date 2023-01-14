@@ -23,24 +23,29 @@ const init = async () => {
   const winH = $(window).height();
   setSize(winW, winH);
 
-  const scores = await getYesterdayScores();
+  let scores = await getYesterdayScores();
+  if (!scores) scores = {};
   let scorePercents = [0,0,0,0,0,0];
   let totalSolves = 0;
-  scores.scores.forEach( s => {
-    totalSolves += s;
-  })
-  for (let i=0; i<=5; i++) {
-    scorePercents[i] = Math.round( 100*scores.scores[i]/totalSolves);
+  if (scores?.scores) {
+    scores?.scores.forEach( s => {
+      totalSolves += s;
+    })
+    for (let i=0; i<=5; i++) {
+      const thisScore = scores?.scores[i] || 0;
+      scorePercents[i] = Math.round( 100*thisScore/totalSolves);
+    }
   }
+ 
   const results = await getGameResults();
 
   let result;
   results.forEach( r=> {
-    if (r._id == scores.id) result = r;
+    if (r._id == scores?.id) result = r;
   });
   if (result){
     showView("stats");
-    stats.showYesterday(scorePercents, scores.clue, result);
+    stats.showYesterday(scorePercents, scores?.clue||"", result);
   }
   else {
     reset();
@@ -85,7 +90,7 @@ const initUI = () => {
     }
     
   });
-  
+
   $("#after-button").click(function () {
     $("#after-message").hide();
     reset();
@@ -126,6 +131,7 @@ const reset = async () => {
 
   showView("loading");
   challenge = await getNextChallenge();
+  console.log("Challenge",challenge);
   nextBeforeMessage=0;
 
   if (challenge._id == "played") {
@@ -161,7 +167,6 @@ function showBeforeMessage() {
 
 function setSize(winW, winH) {
   const w = Math.min(winW - 20, winH - 240);
-  console.log("w",w);
   $(".view").width(w);
   $("#board")
     .width(w - 8)
@@ -198,6 +203,4 @@ $( window ).resize(function() {
 
 $(document).ready(function(){
   init();
-  console.log("!");
-  setTimeout(setSize, 500);
 });
