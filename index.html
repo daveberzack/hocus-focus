@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link type="text/css" rel="stylesheet" href="styles/styles.css" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <title>Hocus Focus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet" />
+
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="img/icons/favicon.ico?v=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/180.png?v=1" />
+    <link rel="shortcut icon" href="img/icons/favicon.ico?v=1" />
+    <link href="img/icons/32.png?v=1" rel="icon shortcut" sizes="3232" />
+    <link href="img/icons/192.png?v=1" rel="apple-touch-icon" />
+    <meta name="apple-mobile-web-app-title" content="Hocus Focus" />
+    <meta name="application-name" content="Hocus Focus" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="theme-color" content="#000000" />
+    <meta property="description" content="Solve the Riddle of a Hidden Picture." />
+    <meta property="og:title" content="Hocus Focus" />
+    <meta property="og:url" content="https://www.hocusfocus.fun" />
+    <meta property="og:description" content="Solve the Riddle of a Hidden Picture. Paint a pixel art in this daily game." />
+    <meta property="og:image" content="https://www.hocusfocus.fun/img/icons/social462.png?v=1" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="hocusfocus.fun" />
+  </head>
+
+  <body>
+    <div id="all">
+      <header role="banner">
+        <img src="img/hocus.png" id="logo" alt="Hocus Focus Logo" />
+        <h1 id="logotype">Hocus <span class="bold">Focus</span></h1>
+        <button class="instructions-button" aria-label="Show game instructions">
+          <img src="./img/help.png" alt="Help" />
+        </button>
+      </header>
+
+      <section id="instructions" class="view hidden" role="dialog" aria-labelledby="instructions-title" aria-hidden="true">
+        <div id="instructions-block">
+          <h2 id="instructions-title">Enhance your day</h2>
+          <p>Every day, Hocus Focus presents a little riddle. A clue to find something in a hidden picture.</p>
+          <p>When you swipe around the canvas it will paint the picture with blocks of color. Swipe around quickly to paint big blocks that cover a wide area. Swipe slowly to reveal more details in a smaller area</p>
+          <p>Once you've identified the goal, click it to stop the timer. But don't make wild guesses. Every wrong click costs you a 10-second penalty.</p>
+          <p>You'll score up to five stars for beating the checkpoints shown in the timer. Some puzzles are tricky. Don't worry... you're supposed to feel a bit confused. After you win, it'll all make sense. You can share your score and paste it into a message or social media to play against friends.</p>
+          <p>Should you spend time getting the general context of a picture, or focus on an interesting area? Which region is worth exploring? What does that riddle mean, anyway? Are you confident enough to wager a guess? I don't know. I'm just the game designer.</p>
+          
+          <p>Good hunting.</p>
+          <p>Love,<br />Dave</p>
+
+          <p class="center"><a class="button game-button" href="#" role="button">Play</a></p>
+        </div>
+        <footer role="contentinfo">
+          <p>ⓒ2022 <a class="bold" href="http://www.daveberzack.com" target="credit">Dave Berzack</a> <span id="version">v104</span></p>
+        </footer>
+      </section>
+
+      <section id="before-message" class="view hidden" role="dialog" aria-labelledby="before-message-title" aria-hidden="true">
+        <h3 class="title" id="before-message-title"></h3>
+        <div class="content"></div>
+        <button id="before-button" class="button">Play</button>
+      </section>
+
+      <section id="stats" class="view hidden" role="dialog" aria-labelledby="stats-title" aria-hidden="true">
+        <div id="stats-graph-block">
+          <h2 id="stats-title"></h2>
+          <p id="stats-copy"></p>
+          <div id="stats-graph" role="img" aria-label="Statistics graph"></div>
+          <a id="stats-record-button" class="button game-button" href="#" role="button">Close</a>
+          <a id="stats-yesterday-button" class="button reset-button" href="#" role="button">Continue</a>
+        </div>
+      </section>
+
+      <section id="loading" class="view hidden" role="status" aria-live="polite">
+        <h2>Loading...</h2>
+      </section>
+
+      <main id="game" class="view hidden" role="main">
+        <section id="board" role="application" aria-label="Game canvas">
+          <canvas id="target" aria-label="Game target canvas"></canvas>
+          <canvas id="target2" aria-label="Game target canvas 2"></canvas>
+          <canvas id="source" aria-label="Game source canvas"></canvas>
+          <canvas id="hit" aria-label="Game hit detection canvas"></canvas>
+          <canvas id="effect" aria-label="Game effects canvas"></canvas>
+
+          <div id="intro" class="message-board" role="dialog" aria-labelledby="intro-clue">
+            <p id="intro-archive-message"></p>
+            <p id="intro-clue"></p>
+            <button id="start-button" class="button" aria-label="Begin game">Begin</button>
+          </div>
+
+          <div id="played" class="message-board" role="dialog">
+            <h3>Thank you for playing.</h3>
+            <p>Come back tomorrow for another challenge.</p>
+            <p><a href="./create/index.html">Create</a> your own Hocus Focus puzzle</p>
+
+            <p>Check out <a href="https://www.5minute.games">5Minute.Games</a> for more fun little puzzles!</p>
+          </div>
+
+          <div id="win-content">
+            <p id="credit-block">Image by <a id="credit" class="bold" href="#" target="credit"></a></p>
+            <button id="after-button" class="button">Play More</button>
+            <!--<div id="after-message">
+              <h2>That's it for today</h2>
+              <p>Come back tomorrow for another challenge.</p>
+              <p><a href="http://holiday.hocusfocus.fun">Create</a> a custom puzzle using your own picture, and share it with friends.</p>
+              <p>Check out <a href="https://www.5minute.games">5Minute.Games</a> for more fun little puzzles!</p>
+            </div>-->
+            <nav id="win-links" aria-label="Post-game actions">
+              <a class="win-link" id="win-share-link" aria-label="Share your score">
+                <img src="./img/share.png" alt="" />
+                <h4><b>Share</b> your score with friends</h4>
+              </a>
+              <a class="win-link" id="win-archive-link" aria-label="Play archived puzzles">
+                <img src="./img/play.png" alt="" />
+                <h4><b>Play</b> a puzzle from the archive</h4>
+              </a>
+              <a class="win-link" id="win-create-link" href="./create/index.html" target="create" aria-label="Create your own puzzle">
+                <img src="./img/edit.png" alt="" />
+                <h4><b>Create</b> your own custom puzzle</h4>
+              </a>
+              <a class="win-link" id="win-stats-link" aria-label="View your statistics">
+                <img src="./img/stats.png" alt="" />
+                <h4><b>Stats</b> on how you've done</h4>
+              </a>
+              <a class="win-link" id="win-games-link" href="https://www.5minute.games" target="games" aria-label="Discover more games">
+                <img src="./img/discover.png" alt="" />
+                <h4><b>Discover</b> more great games</h4>
+              </a>
+              <a class="win-link" id="win-donate-link" href="https://ko-fi.com/daveberzack" target="support" aria-label="Support the developer">
+                <img src="./img/support.png" alt="" />
+                <h4><b>Support</b> indie web development</h4>
+              </a>
+              <div id="clipboard-message" role="status" aria-live="polite">Copied to Clipboard</div>
+            </nav>
+          </div>
+        </section>
+
+        <section id="timer" role="timer" aria-label="Game timer and goals">
+          <div class="timer-goal" id="timer-goal0" aria-label="Goal 1"><h3></h3></div>
+          <div class="timer-goal" id="timer-goal1" aria-label="Goal 2"><h3></h3></div>
+          <div class="timer-goal" id="timer-goal2" aria-label="Goal 3"><h3></h3></div>
+          <div class="timer-goal" id="timer-goal3" aria-label="Goal 4"><h3></h3></div>
+          <div class="timer-goal" id="timer-goal4" aria-label="Goal 5"><h3></h3></div>
+          <div class="timer-bar" id="timer-bar" role="progressbar" aria-label="Time progress"></div>
+
+          <div id="win-message" role="status" aria-live="polite"><h2></h2></div>
+          <button id="give-up" aria-label="Reveal solution">
+            <img id="give-up-button" src="./img/eye.png" alt="" />
+            <h2>Reveal Solution</h2>
+          </button>
+        </section>
+        <h2 id="clue" aria-live="polite"></h2>
+        <div id="stars" role="img" aria-label="Stars earned"></div>
+        <div id="streak" role="status"><p>Win Streak: <span id="streak-count">1 Day</span></p></div>
+
+      </main>
+      
+      <aside id="rotate-message" role="alert" aria-live="assertive">
+        <img src="./img/rotate.png" alt="Rotate device icon">
+        <br/>Please Rotate your device
+      </aside>
+
+      <div id="global-modal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="block">
+          <h2></h2>
+          <p></p>
+          <button class="button"></button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+    <script type="module" src="scripts/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "Hocus Focus",
+  "short_name": "Hocus Focus",
+  "icons": [
+    {
+      "src": "./img/icons/192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./img/icons/512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "./img/icons/maskable512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./img/icons/40.png",
+      "type": "image/png",
+      "sizes": "40x40"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "display": "fullscreen",
+  "scope": "/",
+  "background_color": "#FFFFFF",
+  "theme_color": "#000000",
+  "description": "Solve the Riddle of a Hidden Picture"
+}

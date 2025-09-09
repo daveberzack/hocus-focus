@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link type="text/css" rel="stylesheet" href="styles.css" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <title>Hocus Focus Puzzle Creator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet" />
+
+    <link rel="icon" href="../img/icons/favicon.ico?v=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/icons/180.png?v=1" />
+    <link rel="shortcut icon" href="../img/icons/favicon.ico?v=1" />
+    <link href="../img/icons/32.png?v=1" rel="icon shortcut" sizes="3232" />
+    <link href="../img/icons/192.png?v=1" rel="apple-touch-icon" />
+    <meta name="apple-mobile-web-app-title" content="Hocus Focus" />
+    <meta name="application-name" content="Hocus Focus" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="theme-color" content="#000000" />
+    <meta property="description" content="Create an Interactive Holiday Card" />
+    <meta property="og:title" content="Hocus Focus Holiday Card Creator" />
+    <meta property="og:url" content="http://holiday.hocusfocus.fun" />
+    <meta property="og:description" content="Solve the Riddle of a Hidden Picture. Paint a pixel art in this daily game." />
+    <meta property="og:image" content="https://www.hocusfocus.fun/img/icons/1200.png?v=1" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="hocusfocus.fun" />
+  </head>
+
+  <body>
+    <div id="all">
+
+      <header>
+        <img src="../img/hocus.png" id="logo" />
+        <h1 id="logotype">Hocus <span class="bold">Focus</span></h1>
+      </header>
+
+        <div class="board square-block">
+
+          <div id="upload" class="board square-block">
+            <p>Create a custom Hocus Focus puzzle in three steps:</p>
+            <p>Upload your picture, select the target area, then write a short clue</p>
+            <div id="advanced-options">
+              <input type="text" id="credit-url-field" placeholder="URL of source">
+              <input type="text" id="credit-field" placeholder="Photographer">
+              <input type="text" id="date-field" placeholder="date">
+              Seconds for 5 Stars: <select id="difficulty">
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20" selected>20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+                <option value="35">35</option>
+                <option value="40">40</option>
+              </select>
+            </div>
+            <label id="upload-label" for="upload-field">Upload Picture</label>
+            <input type="file" id="upload-field" accept="image/*">
+          </div>
+
+          <div id="hit" class="square-block">
+            <canvas class="square-block" id="pic" width="1000" height="1000"></canvas>
+            <div id="canvases">
+              <canvas class="square-block" id="hit-applied" width="1000" height="1000"></canvas>
+              <canvas class="square-block" id="hit-drawing" width="1000" height="1000"></canvas>
+            </div>
+            <div class="instructions-modal" id="hit-instructions">
+              <p>Next, highlight the target area that the player should click.</p>
+              <button class="button" id="hide-hit-instructions">Got it!</button>
+            </div>
+            <div class="instructions-modal" id="clue-instructions">
+              <p>In a few words, describe what the  player has to find.</p>
+              <p>To make part of the clue boldfaced,<br/>put it in <b>[square brackets]</b></p>
+              <button class="button" id="hide-clue-instructions">Got it!</button>
+            </div>
+          </div>
+
+          <div id="confirm" class="square-block">
+            <h2>You're all done!</h2>
+            <p>Click on the link below to check it out your custom image search puzzle. Copy this link to share it with friends.</p>
+            <a id="puzzle-link" href="#" target="puzzle"></a>
+          </div>
+
+        </div>
+
+        <div class="controls horizontal-block" id="hit-controls">
+          <button class="button" id="change-image">Change Picture</button>
+          <button class="button"  id="clear-hit">Reset Area</button>
+          <button class="button" id="submit-hit">Done</button>
+        </div>
+
+        
+        <div class="controls horizontal-block" id="clue-controls">
+          <input type="text" id="clue-field" placeholder="Type your clue here">
+          <button class="button" id="submit-clue">Next</button>
+        </div>
+      
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script type="module" src="script.js"></script>
+    <script type="module" src="hitArea.js"></script>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link type="text/css" rel="stylesheet" href="styles.css" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <title>Hocus Focus Holiday Card Creator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet" />
+
+    <link rel="icon" href="../img/icons/favicon.ico?v=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/icons/180.png?v=1" />
+    <link rel="shortcut icon" href="../img/icons/favicon.ico?v=1" />
+    <link href="../img/icons/32.png?v=1" rel="icon shortcut" sizes="3232" />
+    <link href="../img/icons/192.png?v=1" rel="apple-touch-icon" />
+    <meta name="apple-mobile-web-app-title" content="Hocus Focus" />
+    <meta name="application-name" content="Hocus Focus" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="theme-color" content="#000000" />
+    <meta property="description" content="Create an Interactive Holiday Card" />
+    <meta property="og:title" content="Hocus Focus Holiday Card Creator" />
+    <meta property="og:url" content="http://holiday.hocusfocus.fun" />
+    <meta property="og:description" content="Solve the Riddle of a Hidden Picture. Paint a pixel art in this daily game." />
+    <meta property="og:image" content="https://www.hocusfocus.fun/img/icons/1200.png?v=1" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="hocusfocus.fun" />
+  </head>
+
+  <body>
+    <div id="all">
+
+      <header>
+        <img src="../img/hocus.png" id="logo" />
+        <h1 id="logotype">Hocus <span class="bold">Focus</span></h1>
+        <!--<img class="instructions-button" src="../img/help.png" />-->
+      </header>
+
+        <div class="board square-block">
+
+          <div id="upload" class="board square-block">
+            <h2>Create a holiday card that's also a fun picture search puzzle</h2>
+            <p>Just upload your own photo and pick something in it for your loved ones to find. They'll paint the picture until they can find that goal.</p>
+            <p><a href="http://www.hocusfocus.fun?id=639636736b3ee2ea3c813cb2" target="example">Check out an example</a><br/>then make your own!</p>
+            <p id="disclaimer">PS: No ads or data mining here.<br/>This is a gift from me to y'all.</p>
+
+            <label id="upload-label" for="upload-field">Upload Picture</label>
+            
+            <input type="file" id="upload-field" accept="image/*">
+          </div>
+
+          <div id="hit" class="square-block">
+            <canvas class="square-block" id="pic" width="1000" height="1000"></canvas>
+            <div id="canvases">
+              <canvas class="square-block" id="hit-applied" width="1000" height="1000"></canvas>
+              <canvas class="square-block" id="hit-drawing" width="1000" height="1000"></canvas>
+            </div>
+            <div class="instructions-modal" id="hit-instructions">
+              <p>Next, draw lines to highlight the area in the image that your clue refers to.</p>
+              <p>Don't get too precise. Include some extra space around the target.</p>
+              
+              <button class="button" id="hide-hit-instructions">Got it!</button>
+            </div>
+            <div class="instructions-modal" id="clue-instructions">
+              <p>In a few words, describe a person or object in the picture that a player has to find.</p>
+              <p>For example:<br/><b>Click on Baby Bryce!</b><br/>or<br/><b>Find my favorite toy.</b></p>
+
+              <input type="text" id="clue-field" placeholder="Type your clue here">
+              <button class="button" id="submit-clue">Next</button>
+            </div>
+          </div>
+
+          <div id="message" class="square-block">
+            <input id="message-title"placeholder="Your title here"></input>
+            <textarea id="message-body" placeholder="Edit this text to write
+a short message
+to your loved ones"></textarea>
+            
+            <div class="instructions-modal" id="message-instructions">
+              <p>Now, just add a nice holiday message for your friends and loved ones.</p>
+              <p>If you want, you can change the background theme.</p>
+              <button class="button" id="hide-message-instructions">Got it!</button>
+            </div>
+            <div class="instructions-modal" id="theme-select">
+              <div>
+                <p>Select a theme:</p>
+                <img src="../img/themes/icons/1.jpg" data-value="1"/>
+                <img src="../img/themes/icons/2.jpg" data-value="2"/>
+                <img src="../img/themes/icons/3.jpg" data-value="3"/>
+                <img src="../img/themes/icons/4.jpg" data-value="4"/>
+                <img src="../img/themes/icons/5.jpg" data-value="5"/>
+                <img src="../img/themes/icons/6.jpg" data-value="6"/>
+                <img src="../img/themes/icons/7.jpg" data-value="7"/>
+                <img src="../img/themes/icons/8.jpg" data-value="8"/>
+                <img src="../img/themes/icons/9.jpg" data-value="9"/>
+                <img src="../img/themes/icons/10.jpg" data-value="10"/>
+                <img src="../img/themes/icons/11.jpg" data-value="11"/>
+                <img src="../img/themes/icons/12.jpg" data-value="12"/>
+              </div>
+            </div>
+          </div>
+
+          <div id="confirm" class="square-block">
+            <h2>You're all done!</h2>
+            <p>Click on the link below to check it out your custom image search puzzle. Copy this link to share it with your loved ones.</p>
+            <a id="puzzle-link" href="#" target="puzzle"></a>
+          </div>
+
+        </div>
+
+        <div class="controls horizontal-block" id="hit-controls">
+          <button class="button" id="change-image">Change Picture</button>
+          <!-- <button class="button"  id="small-brush">s</button>
+          <button class="button"  id="medium-brush">m</button>
+          <button class="button"  id="large-brush">l</button> -->
+          <button class="button"  id="clear-hit">Reset Area</button>
+          <button class="button" id="submit-hit">Done</button>
+        </div>
+
+        
+        <div class="controls horizontal-block" id="message-controls">
+          <button class="button" id="show-themes-button">Change Theme</button>
+          <button class="button" id="submit-message">Done</button>
+        </div>
+
+<!-- 
+
+        <div class="controls horizontal-block" id="clue">
+          <input type="text" id="clue-field" placeholder="Type your clue here">
+          <button class="button" id="submit-clue">Next</button>
+        </div>
+
+    <div id="text" class="view">
+      <h2>Enter a personal message</h2>
+      <div>Title:<input type="text" id="title"></div>
+      <div>Message:<textarea id="message"></textarea></div>
+
+      <button id="submit-text">Next</button>
+    </div>
+      </div>
+      <div id="confirm" class="view">
+        <h2>Done</h2>
+      </div> -->
+      
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script type="module" src="script.js"></script>
+    <script type="module" src="hitArea.js"></script>
+  </body>
+</html>

@@ -1,0 +1,2918 @@
+[
+  {
+    "clue": "Are you [mad]?",
+    "imageKey": "EIFhdaiiKv",
+    "hitAreas": [{ "x1": 77.12, "y1": 28.88, "x2": 82.69, "y2": 79.32, "w": 12 }, { "x1": 89, "y1": 80.79, "x2": 92.37, "y2": 28.59, "w": 12 }, { "x1": 84.6, "y1": 53.95, "x2": 84.16, "y2": 27.56, "w": 12 }, { "x1": 76.39, "y1": 25.51, "x2": 93.54, "y2": 27.27, "w": 12 }],
+    "goals": [15, 30, 45, 60, 90],
+    "date": "250904",
+    "credit": "Antonio Guillem",
+    "creditUrl": "https://knowyourmeme.com/memes/distracted-boyfriend"
+  },
+  {
+    "clue": "Get to [the bottom] of it.",
+    "imageKey": "sxttJqXszX",
+    "hitAreas": [{ "x1": 33.87, "y1": 68.91, "x2": 43.1, "y2": 68.03, "w": 12 }, { "x1": 45.01, "y1": 68.32, "x2": 49.56, "y2": 76.83, "w": 12 }, { "x1": 49.7, "y1": 77.27, "x2": 41.49, "y2": 81.81, "w": 12 }, { "x1": 40.76, "y1": 82.11, "x2": 33.43, "y2": 78.88, "w": 12 }, { "x1": 33.43, "y1": 78.88, "x2": 34.01, "y2": 69.2, "w": 12 }, { "x1": 36.07, "y1": 74.48, "x2": 43.4, "y2": 75.21, "w": 12 }],
+    "goals": [15, 30, 45, 60, 90],
+    "date": "250905",
+    "credit": "Colin",
+    "creditUrl": "https://en.wikipedia.org/wiki/Bramante_Staircase#/media/File:Vatican_Museums_Spiral_Staircase_2012.jpg"
+  },
+  {
+    "clue": "Find the [dog].",
+    "imageKey": "NxZvGoaslC",
+    "hitAreas": [{ "x1": 1.68, "y1": 44.72, "x2": 19.4, "y2": 33.75, "w": 12 }, { "x1": 19.4, "y1": 33.75, "x2": 30.8, "y2": 47.46, "w": 12 }, { "x1": 30.8, "y1": 47.46, "x2": 28.05, "y2": 68.98, "w": 12 }, { "x1": 28.05, "y1": 68.98, "x2": 4, "y2": 63.92, "w": 12 }, { "x1": 4, "y1": 63.92, "x2": 3.16, "y2": 44.72, "w": 12 }, { "x1": 7.38, "y1": 49.78, "x2": 23.41, "y2": 44.51, "w": 12 }, { "x1": 25.73, "y1": 51.89, "x2": 8.64, "y2": 58.43, "w": 12 }, { "x1": 10.97, "y1": 60.54, "x2": 23.83, "y2": 60.33, "w": 12 }],
+    "goals": [15, 30, 45, 60, 90],
+    "date": "250906",
+    "credit": "LegioSeven",
+    "creditUrl": "https://www.pexels.com/photo/shepherd-dog-with-flock-of-sheep-5384726/"
+  },
+  {
+    "clue": "[Where] does this go?",
+    "imageKey": "sNNQ3hPuRX",
+    "hitAreas": [{ "x1": 44.51, "y1": 75.94, "x2": 48.31, "y2": 69.19, "w": 12 }, { "x1": 48.31, "y1": 68.77, "x2": 54.85, "y2": 75.1, "w": 12 }, { "x1": 55.27, "y1": 79.11, "x2": 45.14, "y2": 78.48, "w": 12 }],
+    "goals": [15, 30, 45, 60, 90],
+    "date": "250907",
+    "credit": "Engin_Akyurt",
+    "creditUrl": "https://pixabay.com/photos/tunnel-asphalt-light-ribbon-2325753/"
+  },
+  {
+    "clue": "[Who] am I?",
+    "imageKey": "fVEkB5Fxat",
+    "hitAreas": [{ "x1": 13.5, "y1": 21.3, "x2": 8.22, "y2": 66.24, "w": 12 }, { "x1": 8.22, "y1": 66.24, "x2": 16.24, "y2": 92.61, "w": 12 }, { "x1": 16.24, "y1": 93.67, "x2": 36.07, "y2": 67.51, "w": 12 }, { "x1": 36.28, "y1": 65.82, "x2": 40.92, "y2": 39.45, "w": 12 }, { "x1": 41.35, "y1": 36.7, "x2": 31.85, "y2": 19.19, "w": 12 }, { "x1": 31.85, "y1": 19.19, "x2": 13.5, "y2": 21.72, "w": 12 }, { "x1": 22.36, "y1": 22.99, "x2": 16.24, "y2": 82.06, "w": 12 }, { "x1": 24.47, "y1": 78.05, "x2": 28.9, "y2": 25.73, "w": 12 }, { "x1": 35.65, "y1": 31.85, "x2": 30.8, "y2": 69.83, "w": 12 }],
+    "goals": [15, 30, 45, 60, 90],
+    "date": "250908",
+    "credit": "Kevinsphotos",
+    "creditUrl": "https://pixabay.com/photos/owl-camouflage-wildlife-1576572/"
+  },
+  {
+    "clue": "Where's my [water]?",
+    "imageKey": "yTfsJemsrt",
+    "hitAreas": [{ "x1": 32.27, "y1": 31.64, "x2": 32.27, "y2": 38.18, "w": 12 }],
+    "goals": [15, 30, 45, 60, 90],
+    "date": "250909",
+    "credit": "Jopwell",
+    "creditUrl": "https://www.pexels.com/photo/group-of-people-near-wall-2422290/"
+  },
+  {
+    "clue": "Pick the [lock].",
+    "imageKey": "1vaibdqXPi",
+    "hitAreas": [{ "x1": 45.14, "y1": 71.3, "x2": 49.15, "y2": 71.09, "w": 12 }],
+    "goals": [15, 30, 45, 60, 90],
+    "date": "250910",
+    "credit": "Ann Perkas",
+    "creditUrl": "https://www.pexels.com/photo/blue-wooden-double-doors-with-padlock-12988986/"
+  },
+  {
+    "clue": "There's a [good boy].",
+    "imageKey": "MyAn1O4AZn",
+    "hitAreas": [{ "x1": 64.34, "y1": 53.16, "x2": 66.87, "y2": 92.61, "w": 12 }, { "x1": 69.62, "y1": 54.21, "x2": 79.53, "y2": 88.81, "w": 12 }, { "x1": 78.48, "y1": 91.56, "x2": 67.51, "y2": 92.4, "w": 12 }],
+    "goals": [15, 30, 45, 60, 90],
+    "date": "250911",
+    "credit": "David Henry",
+    "creditUrl": "https://www.pexels.com/photo/dog-sitting-at-table-in-cafe-5812085/"
+  },
+  {
+    "clue": "[Bear] with me.",
+    "imageKey": "Io3qlujewA",
+    "hitAreas": [{ "x1": 53.16, "y1": 10.97, "x2": 53.58, "y2": 25.94, "w": 12 }, { "x1": 58.01, "y1": 8.43, "x2": 61.18, "y2": 25.52, "w": 12 }],
+    "goals": [15, 30, 45, 60, 90],
+    "date": "250912",
+    "credit": "Jeffrey Czum",
+    "creditUrl": "https://www.pexels.com/photo/people-gathered-watching-a-panda-mascot-2346289/"
+  },
+  {
+    "clue": "Grab the [fork].",
+    "imageKey": "bCn7ws8wly",
+    "hitAreas": [{ "x1": 87.55, "y1": 64.55, "x2": 89.24, "y2": 81.22, "w": 12 }],
+    "goals": [15, 30, 45, 60, 90],
+    "date": "250913",
+    "credit": "Ioana Motoc",
+    "creditUrl": "https://www.pexels.com/photo/burger-on-white-ceramic-plate-beside-sliced-fruits-on-white-ceramic-plate-12815067/"
+  },
+  {
+    "clue": "Touch a [toad].",
+    "imageKey": "tNLhkcCMzw",
+    "hitAreas": [{ "x1": 7.59, "y1": 48.94, "x2": 31.85, "y2": 25.52, "w": 12 }, { "x1": 32.06, "y1": 23.62, "x2": 82.48, "y2": 25.1, "w": 12 }, { "x1": 82.48, "y1": 25.1, "x2": 91.98, "y2": 33.75, "w": 12 }, { "x1": 91.98, "y1": 33.75, "x2": 74.05, "y2": 65.82, "w": 12 }, { "x1": 74.05, "y1": 65.82, "x2": 36.07, "y2": 82.7, "w": 12 }, { "x1": 36.07, "y1": 82.7, "x2": 6.96, "y2": 77.84, "w": 12 }, { "x1": 6.96, "y1": 77.84, "x2": 7.17, "y2": 50.84, "w": 12 }, { "x1": 12.02, "y1": 66.66, "x2": 46.62, "y2": 72.78, "w": 12 }, { "x1": 12.02, "y1": 56.32, "x2": 58.64, "y2": 65.61, "w": 12 }, { "x1": 13.71, "y1": 46.41, "x2": 70.04, "y2": 60.75, "w": 12 }, { "x1": 22.15, "y1": 37.13, "x2": 78.48, "y2": 52.1, "w": 12 }, { "x1": 31.85, "y1": 28.9, "x2": 78.27, "y2": 41.98, "w": 12 }, { "x1": 58.43, "y1": 28.48, "x2": 86.91, "y2": 35.44, "w": 12 }],
+    "goals": [15, 30, 45, 60, 90],
+    "date": "250914",
+    "credit": "Anon",
+    "creditUrl": "https://pixabay.com/photos/european-toad-macro-close-up-93745/"
+  },
+  {
+    "clue": "Take a [seat].",
+    "imageKey": "lcsByVWFxW",
+    "hitAreas": [{ "x1": 41.13, "y1": 67.51, "x2": 51.47, "y2": 63.08, "w": 12 }, { "x1": 51.47, "y1": 63.08, "x2": 68.98, "y2": 64.55, "w": 12 }, { "x1": 68.98, "y1": 64.55, "x2": 74.47, "y2": 43.45, "w": 12 }, { "x1": 74.47, "y1": 42.61, "x2": 79.11, "y2": 42.19, "w": 12 }, { "x1": 79.11, "y1": 41.98, "x2": 72.99, "y2": 90.71, "w": 12 }, { "x1": 72.99, "y1": 90.71, "x2": 39.87, "y2": 93.67, "w": 12 }, { "x1": 39.87, "y1": 93.67, "x2": 40.71, "y2": 68.35, "w": 12 }, { "x1": 41.56, "y1": 69.4, "x2": 70.04, "y2": 72.36, "w": 12 }, { "x1": 70.46, "y1": 80.16, "x2": 45.14, "y2": 80.16, "w": 12 }, { "x1": 44.93, "y1": 83.96, "x2": 69.62, "y2": 87.34, "w": 12 }],
+    "goals": [15, 30, 45, 60, 90],
+    "credit": "Laurentiu Robu",
+    "creditUrl": "https://www.pexels.com/photo/grayscale-photography-of-armchair-near-window-2375042/",
+    "date": "250915"
+  },
+  {
+    "clue": "Locate the [specimen].",
+    "imageKey": "5JSBCGm0cB",
+    "hitAreas": [{ "x1": 39.37, "y1": 68.03, "x2": 44.09, "y2": 62.67, "w": 12 }, { "x1": 43.77, "y1": 70.23, "x2": 49.6, "y2": 62.99, "w": 12 }],
+    "goals": [20, 40, 60, 90, 120],
+    "credit": "FotoshopTofs",
+    "creditUrl": "https://pixabay.com/photos/scientist-pathologist-1332343/",
+    "date": "250916"
+  },
+  {
+    "clue": "Catch the [fish].",
+    "imageKey": "0ZN7ziuyWw",
+    "hitAreas": [{ "x1": 51.02, "y1": 56.69, "x2": 83.62, "y2": 51.18, "w": 12 }, { "x1": 83.46, "y1": 51.18, "x2": 100.15, "y2": 55.43, "w": 12 }, { "x1": 51.18, "y1": 57.16, "x2": 105.66, "y2": 64.4, "w": 12 }],
+    "goals": [20, 40, 60, 90, 120],
+    "credit": "FotoshopTofs",
+    "creditUrl": "https://pixabay.com/photos/healthy-food-food-power-dietetic-1348430/",
+    "date": "250917"
+  },
+  {
+    "clue": "Look at that [baby].",
+    "imageKey": "XAV5eiiMJZ",
+    "hitAreas": [{ "x1": 58.42, "y1": 28.18, "x2": 67.87, "y2": 69.44, "w": 12 }, { "x1": 57.95, "y1": 26.14, "x2": 76.69, "y2": 20.47, "w": 12 }, { "x1": 76.85, "y1": 20.47, "x2": 96.37, "y2": 35.43, "w": 12 }, { "x1": 96.37, "y1": 35.43, "x2": 99.68, "y2": 83.46, "w": 12 }, { "x1": 97.95, "y1": 84.56, "x2": 85.98, "y2": 68.66, "w": 12 }, { "x1": 85.98, "y1": 70.55, "x2": 68.34, "y2": 70.07, "w": 12 }, { "x1": 76.85, "y1": 67.55, "x2": 65.98, "y2": 28.81, "w": 12 }, { "x1": 74.01, "y1": 25.82, "x2": 83.62, "y2": 64.09, "w": 12 }, { "x1": 84.25, "y1": 31.49, "x2": 94.48, "y2": 45.66, "w": 12 }, { "x1": 84.72, "y1": 40.62, "x2": 93.7, "y2": 67.4, "w": 12 }],
+    "goals": [20, 40, 60, 90, 120],
+    "credit": "FotoshopTofs",
+    "creditUrl": "https://pixabay.com/photos/female-koala-and-her-baby-1332217/",
+    "date": "250918"
+  },
+  {
+    "clue": "Get the [ball].",
+    "imageKey": "6OMc4SI4rS",
+    "hitAreas": [{ "x1": 70.23, "y1": 25.35, "x2": 67.71, "y2": 36.22, "w": 12 }, { "x1": 76.37, "y1": 24.56, "x2": 72.59, "y2": 37.63, "w": 12 }],
+    "goals": [20, 40, 60, 90, 120],
+    "credit": "FotoshopTofs",
+    "creditUrl": "https://pixabay.com/photos/football-football-game-sport-team-1493071/",
+    "date": "250919"
+  },
+  {
+    "clue": "Look at the [birdie].",
+    "imageKey": "PagNqsOke2",
+    "hitAreas": [{ "x1": 57.32, "y1": 95.43, "x2": 68.5, "y2": 67.24, "w": 12 }, { "x1": 73.07, "y1": 67.55, "x2": 73.85, "y2": 58.11, "w": 12 }, { "x1": 74.96, "y1": 57.32, "x2": 80.62, "y2": 61.41, "w": 12 }, { "x1": 80.94, "y1": 61.57, "x2": 67.55, "y2": 96.85, "w": 12 }],
+    "goals": [20, 40, 60, 90, 120],
+    "credit": "FotoshopTofs",
+    "creditUrl": "https://pixabay.com/photos/young-woman-and-chick-chick-duckling-1250755/",
+    "date": "250920"
+  },
+  {
+    "clue": "Nab her [dinner].",
+    "imageKey": "rnctrKlyJY",
+    "hitAreas": [{ "x1": 38.58, "y1": 83.62, "x2": 54.01, "y2": 76.53, "w": 12 }, { "x1": 56.37, "y1": 76.85, "x2": 73.85, "y2": 83.77, "w": 12 }, { "x1": 74.01, "y1": 84.09, "x2": 65.35, "y2": 91.49, "w": 12 }, { "x1": 66.29, "y1": 90.23, "x2": 43.3, "y2": 84.88, "w": 12 }],
+    "goals": [20, 40, 60, 90, 120],
+    "credit": "FotoshopTofs",
+    "creditUrl": "https://pixabay.com/photos/lioness-female-lion-mammal-1332163/",
+    "date": "250921"
+  },
+  {
+    "clue": "Munch a [carrot].",
+    "imageKey": "Pq90viKtxO",
+    "hitAreas": [{ "x1": 12.28, "y1": 66.14, "x2": 38.11, "y2": 48.03, "w": 12 }, { "x1": 40.31, "y1": 48.03, "x2": 48.5, "y2": 53.07, "w": 12 }, { "x1": 46.45, "y1": 53.85, "x2": 15.11, "y2": 69.13, "w": 12 }],
+    "goals": [20, 40, 60, 90, 120],
+    "credit": "FotoshopTofs",
+    "creditUrl": "https://pixabay.com/photos/healthy-eating-fruits-and-vegetables-1417812/",
+    "date": "250922"
+  },
+  {
+    "clue": "Look at that [creek].",
+    "imageKey": "L6FwCoDuVv",
+    "hitAreas": [{ "x1": 44.09, "y1": 34.17, "x2": 57.95, "y2": 48.34, "w": 12 }, { "x1": 57.95, "y1": 48.34, "x2": 55.27, "y2": 53.38, "w": 12 }, { "x1": 55.27, "y1": 53.7, "x2": 61.1, "y2": 59.37, "w": 12 }, { "x1": 61.1, "y1": 59.21, "x2": 60.15, "y2": 68.97, "w": 12 }, { "x1": 60.15, "y1": 70.7, "x2": 80.94, "y2": 76.53, "w": 12 }, { "x1": 83.46, "y1": 76.85, "x2": 99.37, "y2": 78.58, "w": 12 }],
+    "goals": [20, 40, 60, 90, 120],
+    "credit": "xiSerge",
+    "creditUrl": "https://pixabay.com/photos/alps-mountains-flowers-hiking-7365231/",
+    "date": "250923"
+  },
+  {
+    "clue": "Hail the [boat].",
+    "imageKey": "B3tXCREnWG",
+    "hitAreas": [{ "x1": 17.16, "y1": 55.27, "x2": 16.85, "y2": 60.31, "w": 12 }],
+    "goals": [20, 40, 60, 90, 120],
+    "credit": "xiSerge",
+    "creditUrl": "https://pixabay.com/photos/ocean-rangiroa-sea-clouds-water-7335499/",
+    "date": "250924"
+  },
+  {
+    "clue": "I'm a [top].",
+    "imageKey": "qpN19xjDVe",
+    "hitAreas": [{ "x1": 70.86, "y1": 12.59, "x2": 75.43, "y2": 16.69, "w": 12 }, { "x1": 72.44, "y1": 13.22, "x2": 67.87, "y2": 16.53, "w": 12 }],
+    "goals": [20, 40, 60, 90, 120],
+    "credit": "xiSerge",
+    "creditUrl": "https://pixabay.com/photos/matterhorn-switzerland-mountain-7269337/",
+    "date": "250925"
+  },
+  {
+    "clue": "Hit the [buzzer].",
+    "imageKey": "ZkMZyAYsyW",
+    "hitAreas": [{ "x1": 53.85, "y1": 41.25, "x2": 55.59, "y2": 53.54, "w": 12 }, { "x1": 55.59, "y1": 53.38, "x2": 75.11, "y2": 66.29, "w": 12 }, { "x1": 75.43, "y1": 66.45, "x2": 84.09, "y2": 59.52, "w": 12 }, { "x1": 83.77, "y1": 59.52, "x2": 79.68, "y2": 45.19, "w": 12 }, { "x1": 80.15, "y1": 43.3, "x2": 93.22, "y2": 34.96, "w": 12 }, { "x1": 86.14, "y1": 37.16, "x2": 74.96, "y2": 41.57, "w": 12 }, { "x1": 74.48, "y1": 41.57, "x2": 54.64, "y2": 40.62, "w": 12 }, { "x1": 57.79, "y1": 42.83, "x2": 75.43, "y2": 56.37, "w": 12 }],
+    "goals": [20, 40, 60, 90, 120],
+    "credit": "xiSerge",
+    "creditUrl": "https://pixabay.com/photos/bee-insect-flower-petals-pollen-5485529/",
+    "date": "250926"
+  },
+  {
+    "clue": "Pick up some [garlic].",
+    "imageKey": "v9SgOVM6l6",
+    "hitAreas": [{ "x1": 48.34, "y1": 90.55, "x2": 59.84, "y2": 94.48, "w": 12 }, { "x1": 45.82, "y1": 93.85, "x2": 57.63, "y2": 98.74, "w": 12 }],
+    "goals": [20, 40, 60, 90, 120],
+    "date": "250927",
+    "credit": "ELG21",
+    "creditUrl": "https://pixabay.com/photos/still-life-vintage-pot-3721652/"
+  },
+  {
+    "clue": "Nice [hat].",
+    "imageKey": "xae8PteK97",
+    "hitAreas": [{ "x1": 24.72, "y1": 53.22, "x2": 36.22, "y2": 50.39, "w": 12 }, { "x1": 27.08, "y1": 56.53, "x2": 34.48, "y2": 54.8, "w": 12 }],
+    "goals": [20, 40, 60, 90, 120],
+    "credit": "ELG21",
+    "creditUrl": "https://pixabay.com/photos/sea-woman-boats-wind-clouds-7315959/",
+    "date": "250928"
+  },
+  {
+    "clue": "Kiss a [frog].",
+    "imageKey": "McGkZSGg81",
+    "hitAreas": [{ "x1": 39.37, "y1": 54.8, "x2": 57.79, "y2": 47.4, "w": 12 }, { "x1": 58.74, "y1": 47.4, "x2": 81.88, "y2": 53.07, "w": 12 }, { "x1": 82.36, "y1": 53.85, "x2": 86.92, "y2": 58.58, "w": 12 }, { "x1": 87.24, "y1": 58.58, "x2": 60.47, "y2": 64.25, "w": 12 }, { "x1": 60, "y1": 65.19, "x2": 40.94, "y2": 60, "w": 12 }, { "x1": 45.82, "y1": 58.11, "x2": 75.59, "y2": 56.69, "w": 12 }],
+    "goals": [20, 40, 60, 90, 120],
+    "credit": "Couleur",
+    "creditUrl": "https://pixabay.com/photos/frog-pond-amphibian-leaves-foliage-1893225/",
+    "date": "250929"
+  },
+  {
+    "clue": "Go in the [front door].",
+    "imageKey": "xxijYiSJld",
+    "hitAreas": [{ "x1": 66.92, "y1": 42.99, "x2": 65.51, "y2": 67.71, "w": 12 }, { "x1": 73.85, "y1": 41.41, "x2": 72.44, "y2": 66.77, "w": 12 }],
+    "goals": [20, 40, 60, 90, 120],
+    "credit": "hunt-er",
+    "creditUrl": "https://pixabay.com/photos/new-zealand-hobbit-hobbiton-tourism-4661427/",
+    "date": "250930"
+  },
+  {
+    "clue": "Just look at that [face].",
+    "imageKey": "7AUGRW4rfE",
+    "hitAreas": [{ "x1": 18.89, "y1": 81.1, "x2": 18.58, "y2": 88.81, "w": 12 }, { "x1": 22.83, "y1": 80.15, "x2": 21.88, "y2": 89.13, "w": 12 }, { "x1": 27.08, "y1": 81.73, "x2": 26.14, "y2": 87.87, "w": 12 }],
+    "goals": [20, 40, 60, 90, 120],
+    "credit": "hunt-er",
+    "creditUrl": "https://pixabay.com/photos/colors-bike-bicycle-colorful-color-4912634/",
+    "date": "251001",
+    "beforeMessages": [
+      {
+        "body": "<p>There's a new, improved puzzle creator tool. Challenge level is getting amped up. And there's a new win streak tracker.</p><p><a href='./notes.html' target='notes'>Click here for the details</a></p>",
+        "title": "Updates are here!",
+        "button": "Got it!"
+      }
+    ]
+  },
+  {
+    "clue": "Hold the [phone].",
+    "imageKey": "35IRh6q7ms",
+    "hitAreas": [{ "x1": 58.58, "y1": 57.32, "x2": 68.18, "y2": 55.11, "w": 12 }, { "x1": 69.6, "y1": 54.33, "x2": 87.55, "y2": 57.79, "w": 12 }, { "x1": 83.3, "y1": 62.36, "x2": 89.44, "y2": 70.7, "w": 12 }, { "x1": 89.29, "y1": 71.33, "x2": 71.65, "y2": 71.02, "w": 12 }, { "x1": 71.33, "y1": 71.02, "x2": 60.15, "y2": 58.58, "w": 12 }, { "x1": 67.4, "y1": 59.84, "x2": 81.88, "y2": 67.24, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "credit": "hunt-er",
+    "creditUrl": "https://pixabay.com/photos/typewriter-old-vintage-retro-4643317/",
+    "date": "251002"
+  },
+  {
+    "clue": "Grab a [hot dog]",
+    "imageKey": "Js6PfeDA8Z",
+    "hitAreas": [{ "x1": 16.06, "y1": 69.76, "x2": 34.48, "y2": 79.68, "w": 12 }, { "x1": 14.01, "y1": 68.34, "x2": 22.67, "y2": 64.25, "w": 12 }, { "x1": 35.74, "y1": 80, "x2": 44.25, "y2": 75.43, "w": 12 }, { "x1": 45.35, "y1": 75.59, "x2": 23.93, "y2": 63.93, "w": 12 }],
+    "goals": [20, 40, 60, 90, 120],
+    "credit": "FotoshopTofs",
+    "creditUrl": "https://pixabay.com/photos/high-fat-foods-pastries-cheeses-1487599/",
+    "date": "251003"
+  },
+  {
+    "clue": "Catch a [ride].",
+    "imageKey": "UHpSV0pKay",
+    "hitAreas": [{ "x1": 62.67, "y1": 79.21, "x2": 66.61, "y2": 91.81, "w": 12 }, { "x1": 66.77, "y1": 92.59, "x2": 85.19, "y2": 96.37, "w": 12 }, { "x1": 86.29, "y1": 95.74, "x2": 88.97, "y2": 86.45, "w": 12 }, { "x1": 89.13, "y1": 86.45, "x2": 83.77, "y2": 78.74, "w": 12 }, { "x1": 83.62, "y1": 78.74, "x2": 79.84, "y2": 88.03, "w": 12 }, { "x1": 77.63, "y1": 90.55, "x2": 62.67, "y2": 79.37, "w": 12 }],
+    "goals": [20, 40, 60, 90, 120],
+    "credit": "ELG21",
+    "creditUrl": "https://pixabay.com/photos/lake-sunset-boats-landscape-clouds-7377942/",
+    "date": "251004"
+  },
+  {
+    "clue": "[What] is missing?",
+    "credit": "Tayla Brand",
+    "creditUrl": "https://unsplash.com/photos/5YoKUoyPeUw",
+    "imageKey": "3I91p8CtVm",
+    "hitAreas": [{ "x1": 17.79, "y1": 63.65, "x2": 45.85, "y2": 55.82, "w": 12 }, { "x1": 45.85, "y1": 55.98, "x2": 30.82, "y2": 84.04, "w": 12 }, { "x1": 30.82, "y1": 84.04, "x2": 18.86, "y2": 65.33, "w": 12 }, { "x1": 28.37, "y1": 71.01, "x2": 35.88, "y2": 65.33, "w": 12 }],
+    "goals": [20, 40, 60, 90, 120],
+    "beforeMessages": [],
+    "date": "251005"
+  },
+  {
+    "clue": "Spot the [horse].",
+    "credit": "Waldemar Brandt",
+    "creditUrl": "https://unsplash.com/photos/cUV37nNlYVU",
+    "imageKey": "V0GFv2drY2",
+    "hitAreas": [{ "x1": 38.49, "y1": 83.43, "x2": 50.61, "y2": 87.42, "w": 12 }, { "x1": 50.46, "y1": 91.25, "x2": 42.48, "y2": 93.25, "w": 12 }],
+    "goals": [15, 30, 45, 60, 90],
+    "beforeMessages": [],
+    "date": "251006"
+  },
+  {
+    "clue": "Look into the [hole].",
+    "credit": "kiwikong",
+    "creditUrl": "https://pixabay.com/photos/bullet-hole-frosted-glass-window-1744860/",
+    "imageKey": "5Maili4cmW",
+    "hitAreas": [{ "x1": 46.24, "y1": 53.59, "x2": 49.34, "y2": 50.16, "w": 12 }, { "x1": 50.16, "y1": 56.53, "x2": 53.43, "y2": 51.14, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": [],
+    "date": "251007"
+  },
+  {
+    "date": "251008",
+    "clue": "Read the [sign]",
+    "credit": "wirestock",
+    "creditUrl": "https://www.freepik.com/free-photo/low-angle-shot-wall-street-sign-nyc_7814806.htm",
+    "imageKey": "VZkhn0BU8V",
+    "hitAreas": [{ "x1": 42.07, "y1": 52.76, "x2": 54.33, "y2": 53.21, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251009",
+    "clue": "Gaze into the [pit]",
+    "credit": "Couleur",
+    "creditUrl": "https://pixabay.com/photos/peach-fruit-red-ripe-yummy-cute-2527208/",
+    "imageKey": "pteeFzKXEL",
+    "hitAreas": [{ "x1": 61.65, "y1": 43.19, "x2": 70.47, "y2": 38.56, "w": 12 }, { "x1": 71.07, "y1": 38.41, "x2": 80.49, "y2": 42.6, "w": 12 }, { "x1": 82.43, "y1": 44.69, "x2": 73.46, "y2": 49.77, "w": 12 }, { "x1": 73.46, "y1": 49.77, "x2": 63.45, "y2": 44.39, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251010",
+    "clue": "Ring the [bell]",
+    "credit": "clshearin",
+    "creditUrl": "https://www.freeimages.com/photo/the-house-1440997",
+    "imageKey": "zpJ8AvMPO3",
+    "hitAreas": [{ "x1": 65.52, "y1": 79.08, "x2": 71.89, "y2": 65.84, "w": 12 }, { "x1": 72.05, "y1": 65.84, "x2": 76.96, "y2": 78.1, "w": 12 }, { "x1": 76.96, "y1": 79.57, "x2": 66.17, "y2": 79.24, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251011",
+    "clue": "Take a [sip]",
+    "credit": "Vangel_PL",
+    "creditUrl": "https://www.freeimages.com/photo/coffee-1319897",
+    "imageKey": "RsqPlJ8oQO",
+    "hitAreas": [{ "x1": 0.98, "y1": 56.37, "x2": 22.87, "y2": 55.88, "w": 12 }, { "x1": 24.34, "y1": 55.88, "x2": 31.2, "y2": 60.29, "w": 12 }, { "x1": 31.2, "y1": 60.13, "x2": 33.33, "y2": 70.42, "w": 12 }, { "x1": 33.16, "y1": 70.58, "x2": 12.09, "y2": 76.47, "w": 12 }, { "x1": 12.09, "y1": 76.47, "x2": -0.49, "y2": 76.3, "w": 12 }, { "x1": 1.47, "y1": 64.7, "x2": 26.63, "y2": 65.35, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251012",
+    "clue": "Get on the [skateboard]",
+    "credit": "wirestock",
+    "creditUrl": "https://www.freepik.com/free-photo/skater-cruises-thew-middle-road-downtown-crowded-lisboa_14890718.htm",
+    "imageKey": "OWMBiKCFir",
+    "hitAreas": [{ "x1": 50.32, "y1": 83.82, "x2": 50.49, "y2": 76.96, "w": 12 }],
+    "goals": [20, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251013",
+    "clue": "Eat [this]",
+    "credit": "Drazen Zigic",
+    "creditUrl": "https://www.freepik.com/free-photo/multitasking-mother-taking-care-her-small-son-while-working-home_26767047.htm",
+    "imageKey": "FRZnmCqa7i",
+    "hitAreas": [{ "x1": 73.03, "y1": 47.87, "x2": 70.75, "y2": 56.86, "w": 12 }],
+    "goals": [30, 50, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251014",
+    "clue": "Click the [clock]",
+    "credit": "keresi72",
+    "creditUrl": "https://pixabay.com/photos/wall-furniture-design-apartment-416060/",
+    "imageKey": "dKcI7RGORx",
+    "hitAreas": [{ "x1": 71.2, "y1": 58.46, "x2": 71.02, "y2": 58.81, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251015",
+    "clue": "Look at the [camera]",
+    "credit": "Pexels",
+    "creditUrl": "https://pixabay.com/photos/drone-flying-camera-remote-control-1866742/",
+    "imageKey": "MyQTYmm3YG",
+    "hitAreas": [{ "x1": 45.37, "y1": 62.47, "x2": 55.14, "y2": 62.3, "w": 12 }],
+    "goals": [15, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251016",
+    "clue": "Nice [shades]!",
+    "credit": "maya_7966",
+    "creditUrl": "https://pixabay.com/photos/beauty-sky-beach-the-scenery-cloud-1485979/",
+    "imageKey": "T6vprDQQzF",
+    "hitAreas": [{ "x1": 51.65, "y1": 17.8, "x2": 55.14, "y2": 16.4, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251017",
+    "clue": "Touch a [star]",
+    "credit": "KAMcMillan",
+    "creditUrl": "https://pixabay.com/photos/rocks-pebbles-starfish-beach-shore-7649961/",
+    "imageKey": "e342pGDco2",
+    "hitAreas": [{ "x1": 39.44, "y1": 60.73, "x2": 45.54, "y2": 53.75, "w": 12 }, { "x1": 47.81, "y1": 50.61, "x2": 44.85, "y2": 37.52, "w": 12 }, { "x1": 49.91, "y1": 48.86, "x2": 63.35, "y2": 39.61, "w": 12 }, { "x1": 53.57, "y1": 52.87, "x2": 63.52, "y2": 61.08, "w": 12 }, { "x1": 47.99, "y1": 54.79, "x2": 49.04, "y2": 59.68, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251018",
+    "clue": "Grab the [bottle]",
+    "credit": "MDphoto",
+    "creditUrl": "https://pixabay.com/photos/girl-piano-grand-piano-woman-music-711087/",
+    "imageKey": "r9tblfmR2P",
+    "hitAreas": [{ "x1": 28.02, "y1": 33.66, "x2": 27.85, "y2": 45.42, "w": 12 }],
+    "goals": [30, 50, 70, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251019",
+    "clue": "Get [lit]!",
+    "credit": "congerdesign",
+    "creditUrl": "https://pixabay.com/photos/tea-lights-light-flame-candles-1416745/",
+    "imageKey": "WWR1PKT615",
+    "hitAreas": [{ "x1": 50.73, "y1": 40.03, "x2": 49.91, "y2": 50.98, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251020",
+    "clue": "You'll get through [it]",
+    "credit": "vwalakte",
+    "creditUrl": "https://www.freepik.com/free-photo/view-delicate-arch-sunset-usa_11243820.htm",
+    "imageKey": "d0Uq4svl3Y",
+    "hitAreas": [{ "x1": 10.86, "y1": 35.29, "x2": 45.17, "y2": 39.86, "w": 12 }, { "x1": 47.14, "y1": 40.03, "x2": 31.78, "y2": 11.43, "w": 12 }, { "x1": 31.61, "y1": 10.29, "x2": 15.44, "y2": 9.96, "w": 12 }, { "x1": 15.44, "y1": 9.96, "x2": 11.68, "y2": 34.96, "w": 12 }, { "x1": 22.14, "y1": 34.96, "x2": 22.46, "y2": 15.52, "w": 12 }, { "x1": 23.61, "y1": 15.19, "x2": 39.29, "y2": 36.92, "w": 12 }],
+    "goals": [10, 20, 30, 40, 60],
+    "beforeMessages": []
+  },
+  {
+    "date": "251021",
+    "clue": "Pet the [pup]",
+    "credit": "Freepik",
+    "creditUrl": "https://www.freepik.com/free-photo/medium-shot-happy-family-nature_15266323.htm",
+    "imageKey": "dWj8Z0hjr2",
+    "hitAreas": [{ "x1": 5.8, "y1": 66.66, "x2": 19.68, "y2": 52.28, "w": 12 }, { "x1": 20.34, "y1": 51.96, "x2": 33.41, "y2": 58.49, "w": 12 }, { "x1": 33.08, "y1": 59.15, "x2": 22.95, "y2": 89.86, "w": 12 }, { "x1": 22.63, "y1": 90.19, "x2": 8.57, "y2": 90.84, "w": 12 }, { "x1": 7.59, "y1": 91.5, "x2": 5.96, "y2": 68.46, "w": 12 }, { "x1": 13.64, "y1": 85.94, "x2": 14.29, "y2": 63.07, "w": 12 }, { "x1": 26.22, "y1": 56.86, "x2": 20.66, "y2": 80.71, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251022",
+    "clue": "Check the [oil]",
+    "credit": "Coleur",
+    "creditUrl": "https://pixabay.com/photos/olive-oil-oil-olives-carafe-fruits-1596639/",
+    "imageKey": "cwoqktZ6QV",
+    "hitAreas": [{ "x1": 20.17, "y1": 73.85, "x2": 30.47, "y2": 26.14, "w": 12 }, { "x1": 30.47, "y1": 26.14, "x2": 49.1, "y2": 22.38, "w": 12 }, { "x1": 49.1, "y1": 22.22, "x2": 54, "y2": 27.12, "w": 12 }, { "x1": 54.33, "y1": 27.77, "x2": 50.4, "y2": 77.12, "w": 12 }, { "x1": 50.89, "y1": 77.94, "x2": 37.5, "y2": 82.51, "w": 12 }, { "x1": 36.19, "y1": 83.49, "x2": 20.34, "y2": 75.98, "w": 12 }, { "x1": 27.85, "y1": 76.63, "x2": 39.13, "y2": 30.39, "w": 12 }, { "x1": 46.65, "y1": 25.98, "x2": 33.57, "y2": 77.94, "w": 12 }, { "x1": 41.58, "y1": 78.59, "x2": 47.79, "y2": 45.58, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251023",
+    "clue": "Grab the [horn]",
+    "credit": "AnnaER",
+    "creditUrl": "https://pixabay.com/photos/animal-cow-wolf-down-pasture-graze-193206/",
+    "imageKey": "PRuLKvgAz1",
+    "hitAreas": [{ "x1": 3.83, "y1": 54.41, "x2": 6.12, "y2": 53.1, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251024",
+    "clue": "Find a [sitter]",
+    "credit": "sasint",
+    "creditUrl": "https://pixabay.com/photos/apartment-architecture-armchair-1822409/",
+    "imageKey": "UybZWAgNP3",
+    "hitAreas": [{ "x1": 55.83, "y1": 56.29, "x2": 64.85, "y2": 65.62, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251025",
+    "clue": "See the [turtle]",
+    "credit": "12019",
+    "creditUrl": "https://pixabay.com/photos/sea-ocean-underwater-turtle-2470908/",
+    "imageKey": "74jpYJHy73",
+    "hitAreas": [{ "x1": 32.5, "y1": 56.31, "x2": 43.77, "y2": 63.65, "w": 12 }, { "x1": 45.13, "y1": 63.31, "x2": 62.54, "y2": 64.84, "w": 12 }, { "x1": 55.54, "y1": 61.77, "x2": 58.95, "y2": 55.63, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251026",
+    "clue": "Touch her [neck]",
+    "credit": "Couleur",
+    "creditUrl": "https://pixabay.com/photos/guitar-musical-instrument-2276181/",
+    "imageKey": "VAuqMzWQ62",
+    "hitAreas": [{ "x1": 16.63, "y1": 9.38, "x2": 18.17, "y2": 49.48, "w": 12 }, { "x1": 19.02, "y1": 48.97, "x2": 35.4, "y2": 49.14, "w": 12 }, { "x1": 35.92, "y1": 48.97, "x2": 25.68, "y2": 9.55, "w": 12 }, { "x1": 18.34, "y1": 8.19, "x2": 24.65, "y2": 8.87, "w": 12 }, { "x1": 21.75, "y1": 16.55, "x2": 24.65, "y2": 45.9, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251027",
+    "clue": "Pet the [cat]",
+    "credit": "Bessi",
+    "creditUrl": "https://pixabay.com/photos/tree-cat-silhouette-moon-full-moon-736877/",
+    "imageKey": "PETFsuyz4F",
+    "hitAreas": [{ "x1": 70.73, "y1": 39.93, "x2": 71.41, "y2": 51.19, "w": 12 }, { "x1": 71.24, "y1": 39.93, "x2": 80.11, "y2": 51.36, "w": 12 }, { "x1": 70.9, "y1": 52.38, "x2": 88.99, "y2": 53.92, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251028",
+    "clue": "Cool [hat]",
+    "credit": "Couleur",
+    "creditUrl": "https://pixabay.com/photos/snowman-snow-winter-cold-wintry-2975730/",
+    "imageKey": "5ub6UUMYkJ",
+    "hitAreas": [{ "x1": 32.84, "y1": 36.68, "x2": 32.67, "y2": 28.49, "w": 12 }, { "x1": 32.16, "y1": 28.66, "x2": 51.79, "y2": 5.97, "w": 12 }, { "x1": 52.81, "y1": 5.63, "x2": 56.39, "y2": 10.75, "w": 12 }, { "x1": 58.27, "y1": 11.6, "x2": 61.34, "y2": 35.66, "w": 12 }, { "x1": 57.25, "y1": 26.96, "x2": 49.4, "y2": 21.16, "w": 12 }, { "x1": 40.01, "y1": 25.25, "x2": 55.71, "y2": 17.06, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251029",
+    "clue": "Turn on [the faucet]",
+    "credit": "TheVirtualDenise",
+    "creditUrl": "https://pixabay.com/photos/garlic-cactus-window-green-house-2556022/",
+    "imageKey": "fidpuhrCzb",
+    "hitAreas": [{ "x1": 52.13, "y1": 74.23, "x2": 80.97, "y2": 74.57, "w": 12 }, { "x1": 66.46, "y1": 69.28, "x2": 70.22, "y2": 61.09, "w": 12 }, { "x1": 70.22, "y1": 60.58, "x2": 72.78, "y2": 72.18, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251030",
+    "clue": "Grab the [wheelbarrow]",
+    "credit": "12019",
+    "creditUrl": "https://pixabay.com/photos/afghanistan-town-city-people-79492/",
+    "imageKey": "Qi9zkpkkiL",
+    "hitAreas": [{ "x1": 51.55, "y1": 72.19, "x2": 57.42, "y2": 79.62, "w": 12 }, { "x1": 58.11, "y1": 80.65, "x2": 64.33, "y2": 70.81, "w": 12 }, { "x1": 64.68, "y1": 70.12, "x2": 55.87, "y2": 68.04, "w": 12 }],
+    "goals": [30, 50, 70, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251031",
+    "clue": "Take a [seat]",
+    "credit": "NoName_13",
+    "creditUrl": "https://pixabay.com/photos/sunset-tree-silhouette-dusk-lonely-3156176/",
+    "imageKey": "PewEtXSsUL",
+    "hitAreas": [{ "x1": 37.35, "y1": 88.12, "x2": 65.9, "y2": 87.93, "w": 12 }, { "x1": 39.84, "y1": 92.52, "x2": 63.02, "y2": 91.76, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251101",
+    "clue": "Stroke the [moustache]",
+    "credit": "Johann Georg van Caspel",
+    "creditUrl": "https://www.rawpixel.com/image/2907944/free-illustration-image-art-deco-vintage-poster-nouveau",
+    "imageKey": "9QzuEqcZnH",
+    "hitAreas": [{ "x1": 44.35, "y1": 31.85, "x2": 44.35, "y2": 34.28, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251102",
+    "clue": "Take a [snapshot]",
+    "credit": "DariuszSankowski",
+    "creditUrl": "https://pixabay.com/photos/notepad-glasses-travel-planning-1130743/",
+    "imageKey": "Vy4xngIqEd",
+    "hitAreas": [{ "x1": 14.98, "y1": 29.79, "x2": 30.13, "y2": 18.11, "w": 12 }, { "x1": 30.83, "y1": 17.24, "x2": 50.87, "y2": 14.8, "w": 12 }, { "x1": 50.87, "y1": 14.63, "x2": 59.23, "y2": 24.04, "w": 12 }, { "x1": 59.23, "y1": 24.04, "x2": 40.41, "y2": 27.17, "w": 12 }, { "x1": 40.41, "y1": 27.17, "x2": 37.28, "y2": 34.14, "w": 12 }, { "x1": 37.28, "y1": 34.84, "x2": 15.15, "y2": 30.13, "w": 12 }, { "x1": 24.39, "y1": 28.39, "x2": 47.56, "y2": 20.38, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251103",
+    "clue": "Just [watch]",
+    "credit": "DariuszSankowski",
+    "creditUrl": "https://pixabay.com/photos/iphone-6s-plus-apple-white-screen-1032779/",
+    "imageKey": "hGkk2ZX19A",
+    "hitAreas": [{ "x1": 85.36, "y1": 45.64, "x2": 82.57, "y2": 55.05, "w": 12 }, { "x1": 82.57, "y1": 55.92, "x2": 94.94, "y2": 62.89, "w": 12 }, { "x1": 96.34, "y1": 66.2, "x2": 94.77, "y2": 84.14, "w": 12 }, { "x1": 87.28, "y1": 41.98, "x2": 97.56, "y2": 43.55, "w": 12 }, { "x1": 88.85, "y1": 49.3, "x2": 102.96, "y2": 58.36, "w": 12 }, { "x1": 79.79, "y1": 50.87, "x2": 83.79, "y2": 44.25, "w": 12 }, { "x1": 97.03, "y1": 86.06, "x2": 101.04, "y2": 86.06, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251104",
+    "clue": "Go [fish]",
+    "credit": "Pixabay",
+    "creditUrl": "https://pixabay.com/photos/otter-eat-black-and-white-animal-7609666/",
+    "imageKey": "cwjCKIBlou",
+    "hitAreas": [{ "x1": 74.21, "y1": 51.39, "x2": 83.44, "y2": 77.87, "w": 12 }, { "x1": 83.97, "y1": 78.57, "x2": 91.63, "y2": 86.93, "w": 12 }, { "x1": 91.63, "y1": 87.1, "x2": 89.89, "y2": 70.73, "w": 12 }, { "x1": 90.41, "y1": 66.37, "x2": 74.39, "y2": 51.56, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251105",
+    "clue": "Bust a [cap]",
+    "credit": "Bertsz",
+    "creditUrl": "https://pixabay.com/photos/forest-mushroom-fungus-moss-5084061/",
+    "imageKey": "PccaD8VIxo",
+    "hitAreas": [{ "x1": 5.4, "y1": 53.31, "x2": 14.63, "y2": 47.73, "w": 12 }, { "x1": 15.5, "y1": 47.38, "x2": 30.48, "y2": 49.65, "w": 12 }, { "x1": 30.31, "y1": 49.82, "x2": 4.18, "y2": 54.87, "w": 12 }, { "x1": 19.16, "y1": 58.71, "x2": 19.68, "y2": 65.33, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251106",
+    "clue": "Spin the [bottle]",
+    "credit": "Bertsz",
+    "creditUrl": "https://pixabay.com/photos/lost-places-chair-abandoned-old-1533790/",
+    "imageKey": "q8tjiiGbmN",
+    "hitAreas": [{ "x1": 78.57, "y1": 78.57, "x2": 93.03, "y2": 79.79, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251107",
+    "clue": "Here's a [cone]",
+    "credit": "Bertsz",
+    "creditUrl": "https://pixabay.com/photos/tuning-world-car-drifting-gritty-2681098/",
+    "imageKey": "bZRApj6cs3",
+    "hitAreas": [{ "x1": 68.81, "y1": 61.14, "x2": 66.02, "y2": 77.87, "w": 12 }, { "x1": 69.33, "y1": 60.97, "x2": 71.95, "y2": 78.22, "w": 12 }, { "x1": 71.25, "y1": 79.79, "x2": 66.37, "y2": 78.91, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251108",
+    "clue": "Give a [rip]",
+    "credit": "Jayson Hinrichsen",
+    "creditUrl": "https://unsplash.com/photos/0EEQSwE7lQk",
+    "imageKey": "LRX4pCtohb",
+    "hitAreas": [{ "x1": 81.18, "y1": 67.07, "x2": 89.54, "y2": 62.36, "w": 12 }, { "x1": 89.54, "y1": 62.36, "x2": 86.93, "y2": 69.16, "w": 12 }, { "x1": 86.93, "y1": 69.16, "x2": 81.7, "y2": 67.42, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251109",
+    "clue": "Push the [button]",
+    "credit": "Zahra Omer",
+    "creditUrl": "https://unsplash.com/photos/DFbT01F51vY",
+    "imageKey": "IztkpyPUKc",
+    "hitAreas": [{ "x1": 60.97, "y1": 80.13, "x2": 61.14, "y2": 80.83, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251110",
+    "clue": "Hey, [lady]",
+    "credit": "Benjamin Balázs",
+    "creditUrl": "https://unsplash.com/photos/fc_tWL1W3TI",
+    "imageKey": "064j6FZkS1",
+    "hitAreas": [{ "x1": 35.19, "y1": 17.59, "x2": 36.58, "y2": 16.02, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251111",
+    "clue": "I'm a [big fan]",
+    "credit": "Pramod Tiwari",
+    "creditUrl": "https://unsplash.com/photos/GDgCAUWN05s",
+    "imageKey": "DaYdts9Kl9",
+    "hitAreas": [{ "x1": 48.95, "y1": 28.57, "x2": 57.14, "y2": 23.69, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251112",
+    "clue": "Nice [shades]",
+    "credit": "Hello I'm Nik",
+    "creditUrl": "https://unsplash.com/photos/v8pL84kvTTc",
+    "imageKey": "qjAuBY2P6u",
+    "hitAreas": [{ "x1": 13.58, "y1": 45.99, "x2": 19.68, "y2": 31.18, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251113",
+    "clue": "Feeling [peachy]",
+    "credit": "Alexander Schimmeck",
+    "creditUrl": "https://unsplash.com/photos/2zJhA9RSkys",
+    "imageKey": "dTJscImJ68",
+    "hitAreas": [{ "x1": 62.89, "y1": 47.73, "x2": 64.98, "y2": 57.83, "w": 12 }, { "x1": 64.8, "y1": 57.83, "x2": 89.89, "y2": 57.14, "w": 12 }, { "x1": 90.41, "y1": 56.27, "x2": 75.6, "y2": 42.33, "w": 12 }, { "x1": 74.39, "y1": 41.63, "x2": 63.24, "y2": 47.38, "w": 12 }, { "x1": 67.77, "y1": 49.47, "x2": 79.61, "y2": 50.52, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251114",
+    "clue": "Talk [trash]",
+    "credit": "Dim Hou",
+    "creditUrl": "https://unsplash.com/photos/X7P5C1K73qU",
+    "imageKey": "ePTtBZjFOa",
+    "hitAreas": [{ "x1": 9.93, "y1": 62.36, "x2": 9.4, "y2": 81.18, "w": 12 }, { "x1": 14.28, "y1": 83.79, "x2": 14.63, "y2": 63.24, "w": 12 }],
+    "goals": [30, 50, 70, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251115",
+    "clue": "Grab an [umbrella]",
+    "credit": "Ryoji Iwata",
+    "creditUrl": "https://unsplash.com/photos/X53e51WfjlE",
+    "imageKey": "dQA3CWmhir",
+    "hitAreas": [{ "x1": 55.05, "y1": 45.81, "x2": 64.28, "y2": 46.34, "w": 12 }],
+    "goals": [30, 50, 70, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251116",
+    "clue": "Catch a [Pikachu]",
+    "credit": "Vanessa Bucceri",
+    "creditUrl": "https://unsplash.com/photos/X1gTLgWMDKg",
+    "imageKey": "HgQJbip7H4",
+    "hitAreas": [{ "x1": 11.67, "y1": 37.97, "x2": 12.89, "y2": 41.63, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251117",
+    "clue": "Have a [breadstick]",
+    "credit": "mairaali1121",
+    "creditUrl": "https://pixabay.com/photos/family-love-heart-reunion-winter-7727035/",
+    "imageKey": "Fhkd5ryQQt",
+    "hitAreas": [{ "x1": 26.94, "y1": 89.32, "x2": 43.6, "y2": 79.61, "w": 12 }, { "x1": 44.41, "y1": 79.12, "x2": 57.68, "y2": 81.22, "w": 12 }, { "x1": 57.68, "y1": 81.55, "x2": 54.44, "y2": 95.14, "w": 12 }, { "x1": 54.12, "y1": 95.3, "x2": 31.31, "y2": 99.83, "w": 12 }, { "x1": 28.72, "y1": 97.73, "x2": 29.53, "y2": 87.7, "w": 12 }, { "x1": 33.89, "y1": 92.55, "x2": 53.8, "y2": 87.05, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251118",
+    "clue": "Here comes the [bride]",
+    "credit": "Joshua Choate",
+    "creditUrl": "https://pixabay.com/photos/church-catholic-cathedral-aisle-7744547/",
+    "imageKey": "SprjWtX6zW",
+    "hitAreas": [{ "x1": 45.3, "y1": 62.29, "x2": 45.14, "y2": 68.12, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251119",
+    "clue": "Get on [the boat]",
+    "credit": "Michaela",
+    "creditUrl": "https://pixabay.com/photos/ship-curtain-strip-sea-waves-7665653/",
+    "imageKey": "s3VzWsw8yv",
+    "hitAreas": [{ "x1": 6.14, "y1": 73.94, "x2": 28.31, "y2": 72.33, "w": 12 }, { "x1": 28.31, "y1": 72.33, "x2": 19.25, "y2": 79.12, "w": 12 }, { "x1": 18.28, "y1": 80.58, "x2": 9.22, "y2": 76.05, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251120",
+    "clue": "Pick the [rosemary]",
+    "credit": "Joshua Choate",
+    "creditUrl": "https://pixabay.com/photos/parsley-herbs-italian-parsley-5043597/",
+    "imageKey": "hR9mXyRgt0",
+    "hitAreas": [{ "x1": 76.05, "y1": 45.79, "x2": 99.51, "y2": 65.37, "w": 12 }, { "x1": 74.91, "y1": 43.2, "x2": 80.58, "y2": 38.51, "w": 12 }, { "x1": 81.71, "y1": 38.99, "x2": 100.97, "y2": 55.33, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251121",
+    "clue": "Get on the [balcony]",
+    "credit": "Frank Winkler",
+    "creditUrl": "https://pixabay.com/photos/house-home-facade-exterior-540796/",
+    "imageKey": "xTtSvavyUe",
+    "hitAreas": [{ "x1": 49.35, "y1": 48.7, "x2": 65.21, "y2": 50.16, "w": 12 }, { "x1": 51.45, "y1": 42.55, "x2": 62.94, "y2": 44.01, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251122",
+    "clue": "Find [the one]",
+    "credit": "Paco Paco",
+    "creditUrl": "https://pixabay.com/photos/one-calculator-black-number-1758762/",
+    "imageKey": "nXayNQndrO",
+    "hitAreas": [{ "x1": 2.42, "y1": 79.77, "x2": 1.94, "y2": 89.32, "w": 12 }, { "x1": 7.6, "y1": 77.18, "x2": 7.11, "y2": 91.1, "w": 12 }, { "x1": 12.13, "y1": 80.74, "x2": 11.81, "y2": 88.99, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251123",
+    "clue": "Land on [the pad]",
+    "credit": "Nida",
+    "creditUrl": "https://www.pexels.com/photo/picnic-blanket-on-the-green-grass-12509001/",
+    "imageKey": "orBIWlv6xb",
+    "hitAreas": [{ "x1": 44.33, "y1": 40.29, "x2": 48.38, "y2": 25.08, "w": 12 }, { "x1": 57.92, "y1": 27.66, "x2": 54.2, "y2": 42.39, "w": 12 }, { "x1": 49.67, "y1": 42.07, "x2": 53.39, "y2": 25.88, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251124",
+    "clue": "Say [cheese]!",
+    "credit": "Анастасия",
+    "creditUrl": "https://www.pexels.com/photo/food-on-the-picnic-blanket-8365701/",
+    "imageKey": "zlzwUnGldp",
+    "hitAreas": [{ "x1": 38.51, "y1": 48.54, "x2": 54.53, "y2": 49.02, "w": 12 }, { "x1": 55.66, "y1": 49.02, "x2": 63.75, "y2": 55.82, "w": 12 }, { "x1": 63.75, "y1": 55.66, "x2": 57.28, "y2": 61.16, "w": 12 }, { "x1": 57.28, "y1": 61.16, "x2": 38.18, "y2": 52.58, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251125",
+    "clue": "Hold a [candle]",
+    "credit": "Polina Kovaleva",
+    "creditUrl": "https://www.pexels.com/photo/white-flowers-on-gold-vase-5644712/",
+    "imageKey": "bM15wdBGvN",
+    "hitAreas": [{ "x1": 23.78, "y1": 38.99, "x2": 24.43, "y2": 49.51, "w": 12 }, { "x1": 25.88, "y1": 37.37, "x2": 32.36, "y2": 42.23, "w": 12 }, { "x1": 32.84, "y1": 42.07, "x2": 33.98, "y2": 51.45, "w": 12 }, { "x1": 33.65, "y1": 52.1, "x2": 24.91, "y2": 49.51, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251126",
+    "clue": "[String] me along",
+    "credit": "Enrique Hoyos",
+    "creditUrl": "https://www.pexels.com/photo/grayscale-photo-of-books-and-office-materials-14922901/",
+    "imageKey": "XDeKiRV9bW",
+    "hitAreas": [{ "x1": 57.92, "y1": 73.78, "x2": 59.38, "y2": 60.84, "w": 12 }, { "x1": 60.35, "y1": 58.89, "x2": 69.41, "y2": 58.41, "w": 12 }, { "x1": 70.38, "y1": 59.87, "x2": 70.22, "y2": 66.18, "w": 12 }, { "x1": 71.19, "y1": 66.66, "x2": 65.21, "y2": 80.74, "w": 12 }, { "x1": 65.37, "y1": 81.06, "x2": 59.87, "y2": 73.3, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251127",
+    "clue": "Chase my [tail]",
+    "credit": "Tuấn Kiệt Jr.",
+    "creditUrl": "https://www.pexels.com/photo/art-winter-cute-design-15198287/",
+    "imageKey": "6Z6dllakQQ",
+    "hitAreas": [{ "x1": 42.55, "y1": 48.54, "x2": 38.34, "y2": 59.7, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251128",
+    "clue": "[Stay] right here",
+    "credit": "Ricardo Oliveira",
+    "creditUrl": "https://www.pexels.com/photo/grayscale-photo-of-person-standing-near-the-glass-window-13752827/",
+    "imageKey": "lh57KEIASS",
+    "hitAreas": [{ "x1": 61.32, "y1": 4.36, "x2": 78.96, "y2": 5.01, "w": 12 }, { "x1": 61.81, "y1": 9.06, "x2": 78.47, "y2": 8.89, "w": 12 }],
+    "goals": [30, 50, 70, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251129",
+    "clue": "I'm on [a roll]",
+    "credit": "Clay Elliot",
+    "creditUrl": "https://www.pexels.com/photo/interior-design-of-a-bathroom-5524223/",
+    "imageKey": "8YAAJf3S3I",
+    "hitAreas": [{ "x1": 24.27, "y1": 68.93, "x2": 28.31, "y2": 68.28, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251130",
+    "clue": "See [the sign]",
+    "credit": "Céline",
+    "creditUrl": "https://www.pexels.com/photo/city-restaurant-fashion-people-14771169/",
+    "imageKey": "kwUrU8I0En",
+    "hitAreas": [{ "x1": 37.37, "y1": 7.44, "x2": 64.72, "y2": 3.07, "w": 12 }, { "x1": 37.21, "y1": 11.48, "x2": 65.53, "y2": 8.25, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251201",
+    "clue": "Ride a [bike]",
+    "credit": "Larissa Farber",
+    "creditUrl": "https://www.pexels.com/photo/brown-concrete-building-13423144/",
+    "imageKey": "ZpMHQy5ns7",
+    "hitAreas": [{ "x1": 76.69, "y1": 86.89, "x2": 83.98, "y2": 89.15, "w": 12 }, { "x1": 75.08, "y1": 91.9, "x2": 84.78, "y2": 92.23, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251202",
+    "clue": "Behold [the eyes]",
+    "credit": "Ioana Motoc",
+    "creditUrl": "https://www.pexels.com/photo/food-cold-wood-vacation-14953043/",
+    "imageKey": "Q2uyzHThkS",
+    "hitAreas": [{ "x1": 62.62, "y1": 27.34, "x2": 77.02, "y2": 34.78, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251203",
+    "clue": "Where's the [water]?",
+    "credit": "Andres Villamizar",
+    "creditUrl": "https://www.pexels.com/photo/city-cars-road-beach-15014627/",
+    "imageKey": "Nwkr6EFVkb",
+    "hitAreas": [{ "x1": 2.91, "y1": 94.66, "x2": 98.05, "y2": 93.52, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251204",
+    "clue": "Take a [spoon]",
+    "credit": "Merve",
+    "creditUrl": "https://www.pexels.com/photo/croissants-on-round-plate-13457425/",
+    "imageKey": "rPgs3o196r",
+    "hitAreas": [{ "x1": 9.54, "y1": 41.26, "x2": 37.54, "y2": 15.04, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251205",
+    "clue": "Lurk in the [shadow]",
+    "credit": "rüveyda",
+    "creditUrl": "https://www.pexels.com/photo/a-woman-walking-on-the-sidewalk-14634195/",
+    "imageKey": "zKMSTAEP4n",
+    "hitAreas": [{ "x1": 28.96, "y1": 96.76, "x2": 78.15, "y2": 89.15, "w": 12 }, { "x1": 57.11, "y1": 88.34, "x2": 70.87, "y2": 71.35, "w": 12 }, { "x1": 72.49, "y1": 69.9, "x2": 79.28, "y2": 88.99, "w": 12 }, { "x1": 60.03, "y1": 89.8, "x2": 72.16, "y2": 80.74, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251206",
+    "clue": "Ring [the bell]",
+    "credit": "Mitch Lally",
+    "creditUrl": "https://www.pexels.com/photo/photo-of-a-church-on-the-top-of-the-mountain-14894307/",
+    "imageKey": "mA3ChUOhI1",
+    "hitAreas": [{ "x1": 74.75, "y1": 42.39, "x2": 74.75, "y2": 45.79, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251207",
+    "clue": "Admire the [flowers]",
+    "credit": "Maria Orlova",
+    "creditUrl": "https://www.pexels.com/photo/dining-room-with-gray-walls-and-round-table-with-chairs-4946956/",
+    "imageKey": "rbk85h1ik3",
+    "hitAreas": [{ "x1": 26.37, "y1": 31.87, "x2": 33.98, "y2": 28.96, "w": 12 }, { "x1": 24.91, "y1": 34.14, "x2": 28.96, "y2": 36.56, "w": 12 }, { "x1": 33.65, "y1": 37.05, "x2": 34.62, "y2": 29.12, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251208",
+    "clue": "Nice [ride]",
+    "credit": "Leyla Kılıç",
+    "creditUrl": "https://www.pexels.com/photo/a-side-view-of-a-donkey-10011643/",
+    "imageKey": "ccKFYftaBW",
+    "hitAreas": [{ "x1": 29.77, "y1": 66.99, "x2": 42.39, "y2": 61.48, "w": 12 }, { "x1": 43.52, "y1": 61.16, "x2": 55.17, "y2": 64.4, "w": 12 }, { "x1": 55.5, "y1": 64.72, "x2": 68.93, "y2": 92.23, "w": 12 }, { "x1": 68.12, "y1": 93.85, "x2": 66.01, "y2": 97.08, "w": 12 }, { "x1": 66.01, "y1": 97.08, "x2": 55.66, "y2": 94.66, "w": 12 }, { "x1": 55.17, "y1": 94.82, "x2": 55.82, "y2": 81.87, "w": 12 }, { "x1": 55.01, "y1": 82.52, "x2": 36.4, "y2": 78.8, "w": 12 }, { "x1": 36.08, "y1": 78.8, "x2": 29.44, "y2": 92.55, "w": 12 }, { "x1": 29.93, "y1": 88.51, "x2": 29.61, "y2": 68.44, "w": 12 }, { "x1": 36.4, "y1": 70.06, "x2": 50, "y2": 70.55, "w": 12 }, { "x1": 41.74, "y1": 69.09, "x2": 55.33, "y2": 77.83, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251209",
+    "clue": "Find her [notebook]",
+    "credit": "Polina Tankilevitch",
+    "creditUrl": "https://www.pexels.com/photo/women-watching-from-a-laptop-practicing-yoga-outdoors-8539083/",
+    "imageKey": "ce4k4TwXaO",
+    "hitAreas": [{ "x1": 71.68, "y1": 83.81, "x2": 84.95, "y2": 77.02, "w": 12 }, { "x1": 75.72, "y1": 87.37, "x2": 84.46, "y2": 82.52, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251210",
+    "clue": "Hop on the [bridge]",
+    "credit": "Agung Pandit Wiguna",
+    "creditUrl": "https://www.pexels.com/photo/flock-of-geese-on-water-3614318/",
+    "imageKey": "vSVbYHUPNY",
+    "hitAreas": [{ "x1": 62.45, "y1": 57.11, "x2": 102.1, "y2": 61.97, "w": 12 }, { "x1": 61.65, "y1": 61, "x2": 106.14, "y2": 64.23, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251211",
+    "clue": "Got a [light]?",
+    "credit": "Casia Charlie",
+    "creditUrl": "https://www.pexels.com/photo/sea-dawn-landscape-nature-2433467/",
+    "imageKey": "F81RjIY2eb",
+    "hitAreas": [{ "x1": 69.74, "y1": 36.24, "x2": 69.9, "y2": 46.92, "w": 12 }, { "x1": 60.67, "y1": 38.99, "x2": 69.41, "y2": 36.73, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251212",
+    "clue": "Where is the [love]?",
+    "credit": "Wendy Wei",
+    "creditUrl": "https://www.pexels.com/photo/creative-sign-on-brick-wall-14689308/",
+    "imageKey": "sSeGveqLeZ",
+    "hitAreas": [{ "x1": 15.21, "y1": 74.59, "x2": 83, "y2": 74.91, "w": 12 }, { "x1": 83.98, "y1": 75.56, "x2": 83.49, "y2": 93.04, "w": 12 }, { "x1": 83.17, "y1": 93.04, "x2": 13.43, "y2": 93.36, "w": 12 }, { "x1": 13.43, "y1": 93.2, "x2": 15.04, "y2": 74.27, "w": 12 }, { "x1": 19.09, "y1": 82.84, "x2": 79.61, "y2": 83.49, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251213",
+    "clue": "Look into [the light]",
+    "credit": "Consuelo Borroni ",
+    "creditUrl": "pexels.com/photo/black-and-white-france-paris-hotel-14661919/",
+    "imageKey": "TC5YlUyxZq",
+    "hitAreas": [{ "x1": 22.33, "y1": 6.63, "x2": 23.94, "y2": 24.59, "w": 12 }, { "x1": 24.11, "y1": 24.59, "x2": 36.24, "y2": 26.69, "w": 12 }, { "x1": 37.7, "y1": 26.21, "x2": 43.52, "y2": 20.06, "w": 12 }, { "x1": 43.2, "y1": 20.55, "x2": 41.42, "y2": 7.28, "w": 12 }, { "x1": 41.1, "y1": 7.11, "x2": 31.06, "y2": 1.29, "w": 12 }, { "x1": 24.75, "y1": 5.17, "x2": 28.15, "y2": 1.94, "w": 12 }, { "x1": 31.39, "y1": 9.06, "x2": 34.95, "y2": 20.06, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251214",
+    "clue": "Point out the [dome]",
+    "credit": "Merve Safa",
+    "creditUrl": "https://www.pexels.com/photo/houses-on-hill-in-mountains-landscape-14417246/",
+    "imageKey": "j53G6KeYWm",
+    "hitAreas": [{ "x1": 54.2, "y1": 66.5, "x2": 57.44, "y2": 64.07, "w": 12 }, { "x1": 58.09, "y1": 62.94, "x2": 62.29, "y2": 67.15, "w": 12 }, { "x1": 62.78, "y1": 69.74, "x2": 54.85, "y2": 68.77, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251215",
+    "clue": "What's [the point]?",
+    "credit": "Keira Burton",
+    "creditUrl": "https://www.pexels.com/photo/happy-diverse-students-sharing-smartphone-together-and-smiling-6147067/",
+    "imageKey": "MFP6pyJzEY",
+    "hitAreas": [{ "x1": 47.57, "y1": 44.66, "x2": 54.69, "y2": 46.92, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251216",
+    "clue": "Grab your [skates]",
+    "credit": "EKATERINA BOLOVTSOVA",
+    "creditUrl": "https://www.pexels.com/photo/a-christmas-wreath-hanging-on-a-door-of-a-wooden-house-decorated-with-string-of-lights-6607255/",
+    "imageKey": "PPfuLYKtxS",
+    "hitAreas": [{ "x1": 61.48, "y1": 51.61, "x2": 60.19, "y2": 61, "w": 12 }, { "x1": 65.85, "y1": 52.26, "x2": 65.04, "y2": 61.16, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251217",
+    "clue": "Keep on [the sunny side]",
+    "credit": "Valeria Boltneva",
+    "creditUrl": "https://www.pexels.com/photo/tomatoes-with-egg-on-plate-1833337/",
+    "imageKey": "4TDQ5qrbXc",
+    "hitAreas": [{ "x1": 49.67, "y1": 70.38, "x2": 44.33, "y2": 91.42, "w": 12 }, { "x1": 53.23, "y1": 69.09, "x2": 70.22, "y2": 71.68, "w": 12 }, { "x1": 70.22, "y1": 71.68, "x2": 77.5, "y2": 89.32, "w": 12 }, { "x1": 76.86, "y1": 90.29, "x2": 74.11, "y2": 98.05, "w": 12 }, { "x1": 73.94, "y1": 98.05, "x2": 46.76, "y2": 93.68, "w": 12 }, { "x1": 51.13, "y1": 86.24, "x2": 70.38, "y2": 88.83, "w": 12 }, { "x1": 71.03, "y1": 80.42, "x2": 53.39, "y2": 78.15, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251218",
+    "clue": "This is [the way]",
+    "credit": "Vittorio Staffolani",
+    "creditUrl": "https://www.pexels.com/photo/cloud-covered-mountain-top-on-landscape-photography-655679/",
+    "imageKey": "JHh3meeeOg",
+    "hitAreas": [{ "x1": 55.5, "y1": 65.21, "x2": 64.88, "y2": 70.87, "w": 12 }, { "x1": 64.56, "y1": 72.33, "x2": 55.66, "y2": 78.31, "w": 12 }, { "x1": 55.33, "y1": 78.31, "x2": 57.28, "y2": 80.58, "w": 12 }, { "x1": 58.73, "y1": 83.17, "x2": 47.89, "y2": 98.22, "w": 12 }, { "x1": 50.64, "y1": 97.24, "x2": 52.1, "y2": 101.29, "w": 12 }, { "x1": 49.35, "y1": 59.38, "x2": 54.2, "y2": 64.23, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251219",
+    "clue": "[Toe] the line",
+    "credit": "Mahdi Bafande",
+    "creditUrl": "https://www.pexels.com/photo/huddled-shirtless-man-holding-flowers-10039972/",
+    "imageKey": "nPQgNc1dwd",
+    "hitAreas": [{ "x1": 77.83, "y1": 83.98, "x2": 81.71, "y2": 73.78, "w": 12 }, { "x1": 73.3, "y1": 79.61, "x2": 76.21, "y2": 82.84, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251220",
+    "clue": "Spill the [beans]",
+    "credit": "Mikey Dabro",
+    "creditUrl": "https://www.pexels.com/photo/white-ceramic-mug-on-saucer-near-book-1002655/",
+    "imageKey": "qUnzeaDWek",
+    "hitAreas": [{ "x1": 3.23, "y1": 49.35, "x2": 43.85, "y2": 61.16, "w": 12 }, { "x1": 43.36, "y1": 61.16, "x2": 9.7, "y2": 70.87, "w": 12 }, { "x1": 9.7, "y1": 70.87, "x2": 5.33, "y2": 52.75, "w": 12 }, { "x1": 11.97, "y1": 60.51, "x2": 25.88, "y2": 62.45, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251221",
+    "clue": "Study the [model] ",
+    "credit": "cottonbro studio",
+    "creditUrl": "https://www.pexels.com/photo/elderly-woman-sitting-on-black-wooden-chair-3778141/",
+    "imageKey": "mGCyNsOSsJ",
+    "hitAreas": [{ "x1": 38.18, "y1": 54.53, "x2": 36.56, "y2": 41.9, "w": 12 }, { "x1": 36.56, "y1": 41.42, "x2": 40.93, "y2": 27.02, "w": 12 }, { "x1": 41.42, "y1": 23.94, "x2": 44.33, "y2": 41.26, "w": 12 }, { "x1": 45.79, "y1": 44.01, "x2": 38.99, "y2": 54.2, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251222",
+    "clue": "April [Fool]!",
+    "credit": "Keith Gonzalez",
+    "creditUrl": "https://pixabay.com/photos/tarot-cards-tarot-cards-5511610/",
+    "imageKey": "koIuJ5Xk53",
+    "hitAreas": [{ "x1": 54.36, "y1": 97.41, "x2": 69.09, "y2": 61.48, "w": 12 }, { "x1": 68.77, "y1": 61.81, "x2": 82.03, "y2": 62.94, "w": 12 }, { "x1": 82.03, "y1": 63.1, "x2": 95.79, "y2": 70.87, "w": 12 }, { "x1": 95.3, "y1": 70.71, "x2": 93.52, "y2": 83.98, "w": 12 }, { "x1": 93.68, "y1": 83.65, "x2": 75.56, "y2": 99.51, "w": 12 }, { "x1": 75.88, "y1": 98.86, "x2": 59.38, "y2": 98.54, "w": 12 }, { "x1": 61.16, "y1": 96.92, "x2": 76.21, "y2": 66.99, "w": 12 }, { "x1": 81.39, "y1": 68.93, "x2": 72, "y2": 90.77, "w": 12 }, { "x1": 78.31, "y1": 91.74, "x2": 91.74, "y2": 70.55, "w": 12 }],
+    "goals": [35, 60, 75, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251223",
+    "clue": "[Die!!!]",
+    "credit": "Ralf Ruppert",
+    "creditUrl": "https://pixabay.com/photos/gesellschaftsspiel-dice-7720875/",
+    "imageKey": "wUjlZ8uGz0",
+    "hitAreas": [{ "x1": 13.91, "y1": 59.22, "x2": -1.29, "y2": 57.28, "w": 12 }, { "x1": 14.4, "y1": 59.87, "x2": 12.45, "y2": 79.12, "w": 12 }, { "x1": 12.62, "y1": 78.8, "x2": -4.2, "y2": 80.25, "w": 12 }, { "x1": 6.31, "y1": 78.47, "x2": 7.44, "y2": 63.1, "w": 12 }, { "x1": 0.48, "y1": 60.51, "x2": -0.97, "y2": 77.83, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251224",
+    "clue": "What [a sight] to see!",
+    "credit": "Alexa",
+    "creditUrl": "https://pixabay.com/photos/pistol-weapon-goal-crime-fight-2948729/",
+    "imageKey": "dRYn1W76oY",
+    "hitAreas": [{ "x1": 19.09, "y1": 12.13, "x2": 32.03, "y2": 12.62, "w": 12 }, { "x1": 61.16, "y1": 14.88, "x2": 61.16, "y2": 14.88, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251225",
+    "clue": "Look [well]",
+    "credit": "SidLitke",
+    "creditUrl": "https://pixabay.com/photos/smoke-wishing-well-burnt-well-2147831/",
+    "imageKey": "dWIFGknglj",
+    "hitAreas": [{ "x1": 10.19, "y1": 20.55, "x2": 11.32, "y2": 47.24, "w": 12 }, { "x1": 11.48, "y1": 47.24, "x2": 29.61, "y2": 47.41, "w": 12 }, { "x1": 29.61, "y1": 47.24, "x2": 31.22, "y2": 21.68, "w": 12 }, { "x1": 30.74, "y1": 21.68, "x2": 10.51, "y2": 20.71, "w": 12 }, { "x1": 17.79, "y1": 26.53, "x2": 17.47, "y2": 40.77, "w": 12 }, { "x1": 24.43, "y1": 26.37, "x2": 20.38, "y2": 43.85, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251226",
+    "clue": "View a short [clip]",
+    "credit": "Aleksandr Tarlõkov",
+    "creditUrl": "https://pixabay.com/photos/nail-clipping-pet-grooming-dog-6926857/",
+    "imageKey": "HGAoRleiSz",
+    "hitAreas": [{ "x1": 40.93, "y1": 71.52, "x2": 55.5, "y2": 83.33, "w": 12 }, { "x1": 55.82, "y1": 83.17, "x2": 67.96, "y2": 82.84, "w": 12 }, { "x1": 65.53, "y1": 83.17, "x2": 51.29, "y2": 85.11, "w": 12 }, { "x1": 49.19, "y1": 84.62, "x2": 38.51, "y2": 75.4, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251227",
+    "clue": "[See saw]",
+    "credit": "Kat",
+    "creditUrl": "https://pixabay.com/photos/cutting-saw-wood-tool-work-blade-3500398/",
+    "imageKey": "UpQCh6JGOf",
+    "hitAreas": [{ "x1": 69.57, "y1": 55.33, "x2": 80.9, "y2": 43.36, "w": 12 }, { "x1": 74.11, "y1": 59.06, "x2": 82.84, "y2": 45.79, "w": 12 }, { "x1": 47.08, "y1": 94.17, "x2": 53.07, "y2": 86.56, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251228",
+    "clue": "Win her [heart]",
+    "credit": "fiq fitri",
+    "creditUrl": "https://www.pexels.com/photo/woman-with-face-paint-2750890/",
+    "imageKey": "8EuUythAVu",
+    "hitAreas": [{ "x1": 47.57, "y1": 13.1, "x2": 47.57, "y2": 14.72, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "251229",
+    "clue": "Just [Chill]!",
+    "credit": "Max Vakhtbovych",
+    "creditUrl": "https://www.pexels.com/photo/domestic-kitchen-interior-8089257/",
+    "imageKey": "VOPH58RGdU",
+    "hitAreas": [{ "x1": 52.91, "y1": 39.32, "x2": 52.26, "y2": 67.79, "w": 12 }, { "x1": 48.86, "y1": 68.6, "x2": 50.32, "y2": 39.48, "w": 12 }],
+    "goals": [30, 50, 70, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251230",
+    "clue": "Find the [murder weapon]",
+    "credit": "cottonbro studio",
+    "creditUrl": "https://www.pexels.com/photo/photo-of-man-holidng-a-handgun-7266001/",
+    "imageKey": "4mg27qhbvO",
+    "hitAreas": [{ "x1": 45.4, "y1": 73.17, "x2": 54.3, "y2": 72.74, "w": 12 }, { "x1": 49.63, "y1": 79.15, "x2": 52.25, "y2": 78.71, "w": 12 }],
+    "goals": [30, 50, 70, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "251231",
+    "clue": "Go to [town]",
+    "credit": "",
+    "creditUrl": "https://www.pexels.com/photo/structures-beside-rocks-and-cliffs-3264728/",
+    "imageKey": "5PSRZu8KAG",
+    "hitAreas": [{ "x1": 46.42, "y1": 35.93, "x2": 63.27, "y2": 41.01, "w": 12 }, { "x1": 48.33, "y1": 41.81, "x2": 60.73, "y2": 42.76, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260101",
+    "clue": "Take the [lead]",
+    "credit": "Lisa Fotios",
+    "creditUrl": "https://www.pexels.com/photo/yellow-black-pencil-sharpened-above-the-white-paper-in-macro-photography-109255/",
+    "imageKey": "yTEf6ZglJ5",
+    "hitAreas": [{ "x1": 39.94, "y1": 53.79, "x2": 54.66, "y2": 48.1, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260102",
+    "clue": "Give me a [hand]",
+    "credit": "Lisa Fotios",
+    "creditUrl": "https://www.pexels.com/photo/light-people-festival-crowd-13230630/",
+    "imageKey": "er1JtTdGYn",
+    "hitAreas": [{ "x1": 63.99, "y1": 24.63, "x2": 68.65, "y2": 6.85, "w": 12 }, { "x1": 71.57, "y1": 5.1, "x2": 77.69, "y2": 6.41, "w": 12 }, { "x1": 77.69, "y1": 6.41, "x2": 84.69, "y2": 13.55, "w": 12 }, { "x1": 84.69, "y1": 13.55, "x2": 74.34, "y2": 27.84, "w": 12 }, { "x1": 74.34, "y1": 27.84, "x2": 64.28, "y2": 24.19, "w": 12 }, { "x1": 69.97, "y1": 24.78, "x2": 77.69, "y2": 9.32, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260103",
+    "clue": "Look in [the mirror]",
+    "credit": "Rachel Claire",
+    "creditUrl": "https://www.pexels.com/photo/interior-of-modern-spacious-lounge-4846221/",
+    "imageKey": "Vuzzwxc1Wz",
+    "hitAreas": [{ "x1": 73.03, "y1": 54.66, "x2": 74.19, "y2": 26.67, "w": 12 }, { "x1": 74.05, "y1": 26.67, "x2": 81.19, "y2": 20.26, "w": 12 }, { "x1": 82.06, "y1": 19.24, "x2": 87.46, "y2": 19.24, "w": 12 }, { "x1": 87.75, "y1": 19.24, "x2": 95.04, "y2": 23.03, "w": 12 }, { "x1": 95.33, "y1": 24.78, "x2": 95.62, "y2": 55.97, "w": 12 }, { "x1": 96.2, "y1": 56.12, "x2": 75.51, "y2": 54.81, "w": 12 }, { "x1": 80.61, "y1": 55.1, "x2": 81.63, "y2": 24.34, "w": 12 }, { "x1": 88.33, "y1": 24.05, "x2": 89.21, "y2": 53.06, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260104",
+    "clue": "Take a [bow]",
+    "credit": "Pixabay",
+    "creditUrl": "https://www.pexels.com/photo/stacked-blue-colored-gift-boxes-264787/",
+    "imageKey": "fiXKPS8pZi",
+    "hitAreas": [{ "x1": 67.34, "y1": 9.32, "x2": 80.9, "y2": 18.8, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260105",
+    "clue": "Locate the [bat]",
+    "credit": "Ahnaf Piash",
+    "creditUrl": "https://www.pexels.com/photo/a-shirtless-man-holding-a-bat-while-hitting-the-ball-5737931/",
+    "imageKey": "Zee1rU8BvN",
+    "hitAreas": [{ "x1": 48.68, "y1": 48.83, "x2": 45.62, "y2": 77.55, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260106",
+    "clue": "Stay on [track]",
+    "credit": "Ahnaf Piash",
+    "creditUrl": "https://www.pexels.com/photo/light-city-cars-road-12748757/",
+    "imageKey": "xL1vc9H2lC",
+    "hitAreas": [{ "x1": 80.75, "y1": 57.87, "x2": 99.56, "y2": 62.82, "w": 12 }, { "x1": 75.21, "y1": 59.76, "x2": 102.18, "y2": 67.2, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260107",
+    "clue": "[Holy cow!]",
+    "credit": "Saravanan Narayanan",
+    "creditUrl": "https://www.pexels.com/photo/close-up-of-a-nandi-sculpture-9451635/",
+    "imageKey": "4gYH9Qw2Vh",
+    "hitAreas": [{ "x1": 5.39, "y1": 9.18, "x2": 10.49, "y2": 13.11, "w": 12 }, { "x1": 14.57, "y1": 13.84, "x2": 24.63, "y2": 9.03, "w": 12 }, { "x1": 24.34, "y1": 9.03, "x2": 26.53, "y2": 17.2, "w": 12 }, { "x1": 29.15, "y1": 17.78, "x2": 37.46, "y2": 20.4, "w": 12 }, { "x1": 38.04, "y1": 21.13, "x2": 27.11, "y2": 27.69, "w": 12 }, { "x1": 28.13, "y1": 27.84, "x2": 27.4, "y2": 40.81, "w": 12 }, { "x1": 30.46, "y1": 41.39, "x2": 36.44, "y2": 50.58, "w": 12 }, { "x1": 38.33, "y1": 52.18, "x2": 77.55, "y2": 58.01, "w": 12 }, { "x1": 78.71, "y1": 58.3, "x2": 87.9, "y2": 69.97, "w": 12 }, { "x1": 90.08, "y1": 71.72, "x2": 90.96, "y2": 86.44, "w": 12 }, { "x1": 91.25, "y1": 85.56, "x2": 1.45, "y2": 84.11, "w": 12 }, { "x1": 1.45, "y1": 83.23, "x2": 0.29, "y2": 63.11, "w": 12 }, { "x1": 8.6, "y1": 63.41, "x2": 8.45, "y2": 30.17, "w": 12 }, { "x1": 5.24, "y1": 25.65, "x2": 1.31, "y2": 22.44, "w": 12 }, { "x1": 1.31, "y1": 18.22, "x2": 1.89, "y2": 11.07, "w": 12 }, { "x1": 6.85, "y1": 18.51, "x2": 27.4, "y2": 22.88, "w": 12 }, { "x1": 15.74, "y1": 23.03, "x2": 15.59, "y2": 79.59, "w": 12 }, { "x1": 7.87, "y1": 81.04, "x2": 7.87, "y2": 66.61, "w": 12 }, { "x1": 24.19, "y1": 37.6, "x2": 23.46, "y2": 81.19, "w": 12 }, { "x1": 23.17, "y1": 53.79, "x2": 80.17, "y2": 66.32, "w": 12 }, { "x1": 26.53, "y1": 63.84, "x2": 86.88, "y2": 75.8, "w": 12 }, { "x1": 84.25, "y1": 80.17, "x2": 25.21, "y2": 73.76, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260108",
+    "clue": "Click on her [leg]",
+    "credit": "Tim Samuel",
+    "creditUrl": "https://www.pexels.com/photo/cheerful-woman-eating-fried-chicken-at-table-with-lemonade-6697381/",
+    "imageKey": "kqluvIYN3s",
+    "hitAreas": [{ "x1": 56.12, "y1": 64.72, "x2": 67.78, "y2": 81.63, "w": 12 }, { "x1": 68.95, "y1": 83.23, "x2": 52.62, "y2": 67.93, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260109",
+    "clue": "Pick a [pickle]",
+    "credit": "Karolina Grabowska",
+    "creditUrl": "https://www.pexels.com/photo/sliced-fruits-and-cheese-on-wooden-board-6660125/",
+    "imageKey": "mS3nUXHd1Z",
+    "hitAreas": [{ "x1": 32.5, "y1": 47.37, "x2": 25.8, "y2": 29.59, "w": 12 }, { "x1": 25.65, "y1": 29.44, "x2": 43, "y2": 2.33, "w": 12 }, { "x1": 31.19, "y1": 27.84, "x2": 54.66, "y2": 5.24, "w": 12 }, { "x1": 40.67, "y1": 25.36, "x2": 49.12, "y2": 37.17, "w": 12 }, { "x1": 42.71, "y1": 34.25, "x2": 31.77, "y2": 47.95, "w": 12 }, { "x1": 29.44, "y1": 35.71, "x2": 38.19, "y2": 27.98, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260110",
+    "clue": "[Duck!]",
+    "credit": "Pixabay",
+    "creditUrl": "https://www.pexels.com/photo/duck-on-wooden-dock-at-daytime-162130/",
+    "imageKey": "1Erpq4qK2P",
+    "hitAreas": [{ "x1": 26.53, "y1": 47.95, "x2": 38.62, "y2": 39.94, "w": 12 }, { "x1": 33.38, "y1": 49.27, "x2": 32.94, "y2": 49.12, "w": 12 }],
+    "goals": [10, 20, 30, 40, 60],
+    "beforeMessages": []
+  },
+  {
+    "date": "260111",
+    "clue": "Cross the [bridge]",
+    "credit": "Artur Roman",
+    "creditUrl": "https://www.pexels.com/photo/white-concrete-bridge-between-houses-534362/",
+    "imageKey": "aWcStHDrwR",
+    "hitAreas": [{ "x1": 45.33, "y1": 79.59, "x2": 54.95, "y2": 68.65, "w": 12 }, { "x1": 55.97, "y1": 66.61, "x2": 72.15, "y2": 66.9, "w": 12 }, { "x1": 74.19, "y1": 68.36, "x2": 88.33, "y2": 80.17, "w": 12 }, { "x1": 78.13, "y1": 65.59, "x2": 89.5, "y2": 73.17, "w": 12 }, { "x1": 44.31, "y1": 69.24, "x2": 54.51, "y2": 66.32, "w": 12 }, { "x1": 53.79, "y1": 71.86, "x2": 59.18, "y2": 67.63, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260112",
+    "clue": "Grab a [flyer]",
+    "credit": "Kevin Blanzy",
+    "creditUrl": "https://www.pexels.com/photo/brown-bird-flying-towards-birdhouse-1156507/",
+    "imageKey": "9mx4ZZb2Cz",
+    "hitAreas": [{ "x1": 1.74, "y1": 59.18, "x2": 10.64, "y2": 61.95, "w": 12 }, { "x1": 8.74, "y1": 74.34, "x2": 25.8, "y2": 59.62, "w": 12 }, { "x1": 19.82, "y1": 59.62, "x2": 12.82, "y2": 43.44, "w": 12 }, { "x1": 10.93, "y1": 44.6, "x2": 10.2, "y2": 54.08, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260113",
+    "clue": "[Watch] out!",
+    "credit": "RODNAE Productions",
+    "creditUrl": "https://www.pexels.com/photo/a-man-in-blue-suit-jacket-writing-on-white-paper-7841816/",
+    "imageKey": "ZZpfzJBFAG",
+    "hitAreas": [{ "x1": 81.63, "y1": 70.69, "x2": 86, "y2": 72.44, "w": 12 }, { "x1": 86.88, "y1": 74.34, "x2": 86.15, "y2": 78.13, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260114",
+    "clue": "Make yourself at [home]",
+    "credit": "Mohan Reddy",
+    "creditUrl": "https://www.pexels.com/photo/autumnal-landscape-of-a-foggy-forest-14457036/",
+    "imageKey": "uKKEYCm5Pj",
+    "hitAreas": [{ "x1": 45.33, "y1": 65.01, "x2": 54.81, "y2": 64.86, "w": 12 }, { "x1": 46.79, "y1": 60.2, "x2": 51.02, "y2": 60.34, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260115",
+    "clue": "Dont' step on my [toes]",
+    "credit": "Apostolos Vamvouras",
+    "creditUrl": "https://www.pexels.com/photo/person-wearing-white-and-grey-striped-up-pants-2918564/",
+    "imageKey": "2XGYQr3gWo",
+    "hitAreas": [{ "x1": 39.79, "y1": 90.67, "x2": 48.83, "y2": 94.46, "w": 12 }, { "x1": 51.6, "y1": 95.18, "x2": 63.7, "y2": 88.33, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260116",
+    "clue": "[Hammer] the point home.",
+    "credit": "Kübra",
+    "creditUrl": "https://www.pexels.com/photo/man-in-red-and-white-striped-polo-shirt-holding-knife-9388387/",
+    "imageKey": "sdkLCaBFCD",
+    "hitAreas": [{ "x1": 50.58, "y1": 65.01, "x2": 60.2, "y2": 57.58, "w": 12 }, { "x1": 60.2, "y1": 54.22, "x2": 63.55, "y2": 57.87, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260117",
+    "clue": "Got [milk]?",
+    "credit": "cottonbro studio",
+    "creditUrl": "https://www.pexels.com/photo/person-holding-clear-drinking-glass-with-red-liquid-5590971/",
+    "imageKey": "orKuItYhNB",
+    "hitAreas": [{ "x1": 64.86, "y1": 64.72, "x2": 64.28, "y2": 100, "w": 12 }, { "x1": 65.16, "y1": 61.66, "x2": 89.06, "y2": 62.97, "w": 12 }, { "x1": 89.65, "y1": 64.72, "x2": 86.73, "y2": 100.43, "w": 12 }, { "x1": 79.44, "y1": 98.1, "x2": 80.9, "y2": 68.95, "w": 12 }, { "x1": 72.88, "y1": 65.3, "x2": 72.59, "y2": 106.7, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260118",
+    "clue": "Look into my [eye]",
+    "credit": "Harvey Sapir",
+    "creditUrl": "https://www.pexels.com/photo/gray-elephant-1054666/",
+    "imageKey": "eYbbGOMa73",
+    "hitAreas": [{ "x1": 41.98, "y1": 45.77, "x2": 43.73, "y2": 43.58, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260119",
+    "clue": "Look into my [eye].",
+    "credit": "SKYTONER",
+    "creditUrl": "https://www.pexels.com/photo/macro-photo-of-sewing-machine-3763234/",
+    "imageKey": "mFlXwnL6vh",
+    "hitAreas": [{ "x1": 58.45, "y1": 31.19, "x2": 58.01, "y2": 41.83, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260120",
+    "clue": "Take a [sip]",
+    "credit": "SKYTONER",
+    "creditUrl": "https://www.pexels.com/photo/6425980/",
+    "imageKey": "oRqRjhnpNX",
+    "hitAreas": [{ "x1": 36.58, "y1": 72.44, "x2": 44.6, "y2": 91.98, "w": 12 }, { "x1": 44.75, "y1": 91.83, "x2": 65.16, "y2": 74.63, "w": 12 }, { "x1": 65.88, "y1": 73.76, "x2": 61.37, "y2": 66.47, "w": 12 }, { "x1": 59.62, "y1": 64.28, "x2": 48.25, "y2": 63.99, "w": 12 }, { "x1": 46.64, "y1": 63.99, "x2": 37.02, "y2": 71.28, "w": 12 }, { "x1": 44.02, "y1": 72.01, "x2": 48.68, "y2": 80.75, "w": 12 }, { "x1": 49.7, "y1": 67.93, "x2": 59.18, "y2": 74.48, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260121",
+    "clue": "Follow that [car]!",
+    "credit": "Pixabay",
+    "creditUrl": "https://www.pexels.com/photo/boy-in-white-tank-top-playing-blue-coupe-die-cast-near-brown-wooden-bench-chair-during-daytime-163768/",
+    "imageKey": "d5slrPvrHx",
+    "hitAreas": [{ "x1": 35.86, "y1": 91.98, "x2": 57.43, "y2": 91.1, "w": 12 }],
+    "goals": [10, 20, 30, 40, 60],
+    "beforeMessages": []
+  },
+  {
+    "date": "260122",
+    "clue": "Tag the [player]",
+    "credit": "Element5 Digital",
+    "creditUrl": "https://www.pexels.com/photo/woman-standing-in-front-of-x-treme-arcade-machine-1293268/",
+    "imageKey": "OqQiNe8RM2",
+    "hitAreas": [{ "x1": 50.87, "y1": 72.88, "x2": 47.95, "y2": 98.83, "w": 12 }, { "x1": 51.6, "y1": 72.15, "x2": 56.41, "y2": 99.12, "w": 12 }, { "x1": 58.3, "y1": 82.65, "x2": 58.45, "y2": 87.46, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260123",
+    "clue": "Take [control]",
+    "credit": "Ron Lach",
+    "creditUrl": "https://www.pexels.com/photo/men-playing-games-together-7856022/",
+    "imageKey": "cIDZj6VUkO",
+    "hitAreas": [{ "x1": 40.37, "y1": 86.15, "x2": 59.32, "y2": 80.9, "w": 12 }, { "x1": 42.12, "y1": 89.35, "x2": 58.01, "y2": 84.11, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260124",
+    "clue": "Tie the [knot]",
+    "credit": "Monstera",
+    "creditUrl": "https://www.pexels.com/photo/big-piece-of-clay-on-table-5302904/",
+    "imageKey": "E4AeWkZ8zI",
+    "hitAreas": [{ "x1": 42.71, "y1": 72.59, "x2": 56.55, "y2": 78.27, "w": 12 }, { "x1": 55.68, "y1": 81.19, "x2": 33.67, "y2": 83.09, "w": 12 }, { "x1": 56.26, "y1": 83.96, "x2": 57.87, "y2": 78.13, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260125",
+    "clue": "Grab me by the [ear]",
+    "credit": "lil artsy",
+    "creditUrl": "https://www.pexels.com/photo/close-up-photography-of-corn-3040710/",
+    "imageKey": "oBeA18HTBp",
+    "hitAreas": [{ "x1": 19.67, "y1": 80.46, "x2": 26.23, "y2": 48.1, "w": 12 }, { "x1": 26.09, "y1": 47.81, "x2": 40.52, "y2": 35.71, "w": 12 }, { "x1": 41.98, "y1": 36.29, "x2": 40.52, "y2": 63.55, "w": 12 }, { "x1": 40.37, "y1": 63.84, "x2": 18.95, "y2": 83.52, "w": 12 }, { "x1": 22.01, "y1": 80.9, "x2": 35.71, "y2": 47.37, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260126",
+    "clue": "[Tag]. You're it.",
+    "credit": "Yura Forrat",
+    "creditUrl": "https://www.pexels.com/photo/delorean-dmc-with-open-doors-15327262/",
+    "imageKey": "ptBJhfr8eq",
+    "hitAreas": [{ "x1": 38.19, "y1": 83.23, "x2": 53.79, "y2": 85.42, "w": 12 }, { "x1": 54.66, "y1": 90.37, "x2": 38.48, "y2": 88.48, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260127",
+    "clue": "Make a [wish]",
+    "credit": "Birgi",
+    "creditUrl": "https://pixabay.com/photos/chick-chicken-poultry-bird-7711698/",
+    "imageKey": "KstFDBCUIG",
+    "hitAreas": [{ "x1": 8.23, "y1": 24.61, "x2": 20.71, "y2": 21.49, "w": 12 }, { "x1": 12.56, "y1": 28.24, "x2": 18.63, "y2": 26.86, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260128",
+    "clue": "Take the [helmet]",
+    "credit": "Dawid Cedler",
+    "creditUrl": "https://pixabay.com/photos/motorbike-motorcycle-road-7249769/",
+    "imageKey": "s3Q8s0mrGX",
+    "hitAreas": [{ "x1": 14.29, "y1": 11.61, "x2": 22.61, "y2": 10.39, "w": 12 }, { "x1": 10.65, "y1": 18.37, "x2": 25.73, "y2": 15.25, "w": 12 }, { "x1": 13.25, "y1": 22.53, "x2": 24.17, "y2": 18.89, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260129",
+    "clue": "[Shift] your perspective",
+    "credit": "Rolf van de Wal",
+    "creditUrl": "https://pixabay.com/photos/gearstick-car-vehicle-auto-fast-7740670/",
+    "imageKey": "ArrbwVgQad",
+    "hitAreas": [{ "x1": 69.41, "y1": 42.46, "x2": 73.57, "y2": 70.53, "w": 12 }, { "x1": 78.07, "y1": 71.4, "x2": 78.94, "y2": 44.36, "w": 12 }, { "x1": 79.98, "y1": 43.67, "x2": 70.27, "y2": 42.28, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260130",
+    "clue": "Look in the [mirror]",
+    "credit": "Jill Wellington ",
+    "creditUrl": "https://pixabay.com/photos/vintage-1950s-pretty-woman-887272/",
+    "imageKey": "LkBDgDdNdO",
+    "hitAreas": [{ "x1": 82.06, "y1": 36.56, "x2": 98.35, "y2": 36.74, "w": 12 }, { "x1": 81.02, "y1": 39.86, "x2": 100.77, "y2": 40.38, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260131",
+    "clue": "Check out some [books]",
+    "credit": "Vincent Ciro",
+    "creditUrl": "https://pixabay.com/photos/living-room-victorian-historic-581073/",
+    "imageKey": "SM5N1fzJWC",
+    "hitAreas": [{ "x1": 25.38, "y1": 19.06, "x2": 25.38, "y2": 40.03, "w": 12 }, { "x1": 26.08, "y1": 40.9, "x2": 43.76, "y2": 40.55, "w": 12 }, { "x1": 43.93, "y1": 40.38, "x2": 43.93, "y2": 21.31, "w": 12 }, { "x1": 43.93, "y1": 20.62, "x2": 25.73, "y2": 19.06, "w": 12 }, { "x1": 35.26, "y1": 24.78, "x2": 34.57, "y2": 35.52, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260201",
+    "clue": "Who's the [man]?",
+    "credit": "Harut Movsisyan",
+    "creditUrl": "https://pixabay.com/photos/parking-space-man-city-person-1487891/",
+    "imageKey": "T47Go9VS9C",
+    "hitAreas": [{ "x1": 74.26, "y1": 39.34, "x2": 74.09, "y2": 48.87, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260202",
+    "clue": "Pick up an [instrument]",
+    "credit": "JamesDeMers ",
+    "creditUrl": "https://pixabay.com/photos/living-room-family-room-great-room-670237/",
+    "imageKey": "lzF1R89UZg",
+    "hitAreas": [{ "x1": 64.9, "y1": 67.59, "x2": 68.02, "y2": 90.64, "w": 12 }, { "x1": 65.77, "y1": 74, "x2": 65.07, "y2": 91.16, "w": 12 }],
+    "goals": [30, 50, 70, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260203",
+    "clue": "Take a [bow]",
+    "credit": "JamesDeMers",
+    "creditUrl": "https://pixabay.com/photos/front-gate-the-white-house-232822/",
+    "imageKey": "SlbgevKY49",
+    "hitAreas": [{ "x1": 46.36, "y1": 68.97, "x2": 48.26, "y2": 66.55, "w": 12 }, { "x1": 48.26, "y1": 65.85, "x2": 49.48, "y2": 40.72, "w": 12 }, { "x1": 49.65, "y1": 37.6, "x2": 56.41, "y2": 46.96, "w": 12 }, { "x1": 53.98, "y1": 64.64, "x2": 54.15, "y2": 73.83, "w": 12 }, { "x1": 54.15, "y1": 65.33, "x2": 48.44, "y2": 50.43, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260204",
+    "clue": "Have a [seat]",
+    "credit": "JamesDeMers",
+    "creditUrl": "https://pixabay.com/photos/horse-western-saddle-pomel-horn-176990/",
+    "imageKey": "zAhwEWVqHA",
+    "hitAreas": [{ "x1": 2.16, "y1": 32.06, "x2": 16.89, "y2": 25.12, "w": 12 }, { "x1": 16.89, "y1": 24.95, "x2": 27.64, "y2": 41.94, "w": 12 }, { "x1": 27.81, "y1": 41.94, "x2": 25.21, "y2": 56.84, "w": 12 }, { "x1": 25.21, "y1": 56.84, "x2": -1.81, "y2": 48.7, "w": 12 }, { "x1": 2.51, "y1": 41.59, "x2": 19.32, "y2": 47.66, "w": 12 }, { "x1": 20.36, "y1": 42.11, "x2": 6.32, "y2": 34.66, "w": 12 }, { "x1": 11.35, "y1": 34.31, "x2": 17.07, "y2": 32.58, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260205",
+    "clue": "Where's the [fire]?",
+    "credit": "JamesDeMers",
+    "creditUrl": "https://pixabay.com/photos/living-room-great-room-home-397861/",
+    "imageKey": "N4VcjRGcPJ",
+    "hitAreas": [{ "x1": 45.49, "y1": 45.58, "x2": 56.41, "y2": 45.4, "w": 12 }, { "x1": 45.32, "y1": 49.39, "x2": 56.75, "y2": 49.04, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260206",
+    "clue": "Find the [fountain]",
+    "credit": "JamesDeMers",
+    "creditUrl": "https://pixabay.com/photos/knot-garden-formal-garden-flowers-58452/",
+    "imageKey": "2OshB8YAcs",
+    "hitAreas": [{ "x1": 67.85, "y1": 55.28, "x2": 86.56, "y2": 55.11, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260207",
+    "clue": "Nice [vest]",
+    "credit": "JamesDeMers",
+    "creditUrl": "https://pixabay.com/photos/worker-construction-factory-58404/",
+    "imageKey": "D69tNDFUWT",
+    "hitAreas": [{ "x1": 42.37, "y1": 33.27, "x2": 48.61, "y2": 28.94, "w": 12 }, { "x1": 49.3, "y1": 28.24, "x2": 55.54, "y2": 31.88, "w": 12 }, { "x1": 53.46, "y1": 32.23, "x2": 47.92, "y2": 33.96, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260208",
+    "clue": "Are you [cross]?",
+    "credit": "Vincent Ciro",
+    "creditUrl": "https://pixabay.com/photos/church-sanctuary-cross-panorama-588921/",
+    "imageKey": "jfBWdZJdzD",
+    "hitAreas": [{ "x1": 49.82, "y1": 55.97, "x2": 49.48, "y2": 61.17, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260209",
+    "clue": "[:-)]",
+    "credit": "Vincent Ciro",
+    "creditUrl": "https://pixabay.com/photos/snowman-town-urban-321034/",
+    "imageKey": "uTXX7zvC1R",
+    "hitAreas": [{ "x1": 42.2, "y1": 42.98, "x2": 42.37, "y2": 43.32, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260210",
+    "clue": "What a [babe]!",
+    "credit": "NoName_13",
+    "creditUrl": "https://pixabay.com/photos/church-windows-stained-glass-windows-2217785/",
+    "imageKey": "YF3YL7laOT",
+    "hitAreas": [{ "x1": 58.66, "y1": 56.49, "x2": 74.78, "y2": 57.53, "w": 12 }, { "x1": 74.95, "y1": 52.51, "x2": 74.09, "y2": 46.96, "w": 12 }, { "x1": 74.26, "y1": 46.44, "x2": 81.88, "y2": 43.67, "w": 12 }, { "x1": 82.23, "y1": 43.15, "x2": 83.96, "y2": 46.79, "w": 12 }, { "x1": 83.96, "y1": 46.79, "x2": 75.64, "y2": 58.05, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260211",
+    "clue": "Find the [basket]",
+    "credit": "NoName_13",
+    "creditUrl": "https://pixabay.com/photos/fiat-500-automobile-trees-4322521/",
+    "imageKey": "0MTm79bspO",
+    "hitAreas": [{ "x1": 57.97, "y1": 45.23, "x2": 72.53, "y2": 44.71, "w": 12 }, { "x1": 56.41, "y1": 51.29, "x2": 72.01, "y2": 50.77, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260212",
+    "clue": "Find the [hookah]",
+    "credit": "Khusen Rustamov",
+    "creditUrl": "https://pixabay.com/photos/girl-and-hookah-oriental-girl-harem-1390802/",
+    "imageKey": "FXX8PAvbp1",
+    "hitAreas": [{ "x1": 17.93, "y1": 34.48, "x2": 21.23, "y2": 95.32, "w": 12 }, { "x1": 17.24, "y1": 35, "x2": 15.85, "y2": 98.44, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260213",
+    "clue": "Have a [drink]",
+    "credit": "Grégory ROOSE",
+    "creditUrl": "https://pixabay.com/photos/faucet-former-water-fountain-5103532/",
+    "imageKey": "2MnUoG2k6h",
+    "hitAreas": [{ "x1": 73.05, "y1": 64.12, "x2": 82.06, "y2": 103.11, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260214",
+    "clue": "Can you [handle] it?",
+    "credit": "Grégory ROOSE",
+    "creditUrl": "https://pixabay.com/photos/bike-transport-good-looking-love-5107492/",
+    "imageKey": "68mo8wHBTX",
+    "hitAreas": [{ "x1": 56.58, "y1": 25.3, "x2": 86.04, "y2": 16.29, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260215",
+    "clue": "Spot the [boots]",
+    "credit": "Terry",
+    "creditUrl": "https://pixabay.com/photos/boy-dog-street-market-look-joy-2383386/",
+    "imageKey": "jCBLOeIrFD",
+    "hitAreas": [{ "x1": 22.61, "y1": 72.27, "x2": 22.44, "y2": 76.08, "w": 12 }, { "x1": 30.06, "y1": 70.71, "x2": 33.01, "y2": 76.25, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260216",
+    "clue": "Have a [heart]",
+    "credit": "Jason Goh",
+    "creditUrl": "https://pixabay.com/photos/angel-figurine-ornament-564351/",
+    "imageKey": "3sJ43kGoJm",
+    "hitAreas": [{ "x1": 26.77, "y1": 68.28, "x2": 27.81, "y2": 83.7, "w": 12 }, { "x1": 28.68, "y1": 84.74, "x2": 31.8, "y2": 82.84, "w": 12 }, { "x1": 32.84, "y1": 81.97, "x2": 39.25, "y2": 72.44, "w": 12 }, { "x1": 39.42, "y1": 71.23, "x2": 28.33, "y2": 70.88, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260217",
+    "clue": "Locate the [plane]",
+    "credit": "Jason Goh",
+    "creditUrl": "https://pixabay.com/photos/skyscrapers-singapore-city-sky-3184798/",
+    "imageKey": "8bDAjH2cio",
+    "hitAreas": [{ "x1": 35.78, "y1": 49.39, "x2": 38.56, "y2": 47.14, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260218",
+    "clue": "Get a [buzz]",
+    "credit": "Jason Goh",
+    "creditUrl": "https://pixabay.com/photos/insect-entomology-housefly-flower-7407854/",
+    "imageKey": "08dFF6vN1m",
+    "hitAreas": [{ "x1": 42.02, "y1": 42.98, "x2": 56.58, "y2": 39.34, "w": 12 }, { "x1": 42.89, "y1": 45.23, "x2": 42.54, "y2": 46.96, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260219",
+    "clue": "Get the [bill]",
+    "credit": "Jason Goh",
+    "creditUrl": "https://pixabay.com/photos/duck-duckling-plumage-feather-1076074/",
+    "imageKey": "hCsfsX5c4E",
+    "hitAreas": [{ "x1": 26.08, "y1": 28.59, "x2": 30.41, "y2": 24.61, "w": 12 }],
+    "goals": [10, 20, 30, 40, 60],
+    "beforeMessages": []
+  },
+  {
+    "date": "260220",
+    "clue": "Get a [head]",
+    "credit": "martin lyon",
+    "creditUrl": "https://pixabay.com/photos/ball-python-snake-normal-reptile-210054/",
+    "imageKey": "aSdkDNwuGg",
+    "hitAreas": [{ "x1": 70.1, "y1": 39.34, "x2": 93.32, "y2": 43.84, "w": 12 }, { "x1": 93.67, "y1": 45.06, "x2": 65.07, "y2": 46.62, "w": 12 }, { "x1": 61.09, "y1": 46.62, "x2": 67.85, "y2": 38.82, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260221",
+    "clue": "Use the [telescope]",
+    "credit": "Tom",
+    "creditUrl": "https://pixabay.com/photos/outlook-telescope-landscape-4464684/",
+    "imageKey": "WHQSsir5iT",
+    "hitAreas": [{ "x1": 67.67, "y1": 24.43, "x2": 76.68, "y2": 35.7, "w": 12 }, { "x1": 73.39, "y1": 37.95, "x2": 73.22, "y2": 41.42, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260222",
+    "clue": "Try the [lamb]",
+    "credit": "Tom ",
+    "creditUrl": "https://pixabay.com/photos/sheeps-lambs-flock-animals-graze-3437467/",
+    "imageKey": "LFka4gRlxH",
+    "hitAreas": [{ "x1": 63.34, "y1": 75.21, "x2": 63.51, "y2": 85.61, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260223",
+    "clue": "Click the [surfer]",
+    "credit": "Tom",
+    "creditUrl": "https://pixabay.com/photos/surfer-surfboard-sea-water-sports-3836713/",
+    "imageKey": "Ryqkpyy0hN",
+    "hitAreas": [{ "x1": 44.62, "y1": 57.71, "x2": 58.14, "y2": 53.72, "w": 12 }, { "x1": 49.82, "y1": 52.85, "x2": 53.11, "y2": 42.98, "w": 12 }, { "x1": 52.07, "y1": 39.34, "x2": 42.02, "y2": 36.56, "w": 12 }, { "x1": 40.81, "y1": 41.07, "x2": 40.12, "y2": 51.12, "w": 12 }],
+    "goals": [10, 20, 30, 40, 60],
+    "beforeMessages": []
+  },
+  {
+    "date": "260224",
+    "clue": "See the [wheel]",
+    "credit": "Tom",
+    "creditUrl": "https://pixabay.com/photos/architecture-building-mill-3442803/",
+    "imageKey": "vzITgrm8NS",
+    "hitAreas": [{ "x1": 11.87, "y1": 71.75, "x2": 14.99, "y2": 61.17, "w": 12 }, { "x1": 14.99, "y1": 60.83, "x2": 20.71, "y2": 57.36, "w": 12 }, { "x1": 20.71, "y1": 57.36, "x2": 24.87, "y2": 59.09, "w": 12 }, { "x1": 25.21, "y1": 60.13, "x2": 27.29, "y2": 73.31, "w": 12 }, { "x1": 27.29, "y1": 73.31, "x2": 14.81, "y2": 82.49, "w": 12 }, { "x1": 13.6, "y1": 83.18, "x2": 12.04, "y2": 71.4, "w": 12 }, { "x1": 18.63, "y1": 72.61, "x2": 20.36, "y2": 64.64, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260225",
+    "clue": "Get in the [car]",
+    "credit": "Ricardo Esquivel",
+    "creditUrl": "https://www.pexels.com/photo/car-on-road-1738655/",
+    "imageKey": "ofVOsF3Iyx",
+    "hitAreas": [{ "x1": 53.78, "y1": 15.14, "x2": 61.98, "y2": 16.4, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260226",
+    "clue": "Got [milk]?",
+    "credit": "Polina Tankilevitch",
+    "creditUrl": "https://www.pexels.com/photo/photo-of-tofu-soybeans-and-soy-milk-against-white-background-4518585/",
+    "imageKey": "CE8fgigxcp",
+    "hitAreas": [{ "x1": 53.94, "y1": 19.08, "x2": 63.09, "y2": 33.12, "w": 12 }, { "x1": 63.4, "y1": 34.7, "x2": 77.12, "y2": 30.59, "w": 12 }, { "x1": 77.76, "y1": 30.75, "x2": 85.01, "y2": 18.29, "w": 12 }, { "x1": 86.27, "y1": 17.19, "x2": 79.96, "y2": 5.2, "w": 12 }, { "x1": 78.7, "y1": 4.25, "x2": 58.67, "y2": 5.2, "w": 12 }, { "x1": 58.67, "y1": 5.2, "x2": 53.78, "y2": 17.66, "w": 12 }, { "x1": 60.72, "y1": 22.55, "x2": 68.29, "y2": 9.93, "w": 12 }, { "x1": 77.44, "y1": 10.09, "x2": 66.71, "y2": 27.91, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260227",
+    "clue": "Go [solar]",
+    "credit": "Kindel Media",
+    "creditUrl": "https://www.pexels.com/photo/cars-near-trees-in-a-parking-lot-9800035/",
+    "imageKey": "INDhTx4TwT",
+    "hitAreas": [{ "x1": 37.69, "y1": 60.72, "x2": 58.83, "y2": 67.19, "w": 12 }, { "x1": 35.8, "y1": 65.93, "x2": 58.99, "y2": 71.6, "w": 12 }, { "x1": 43.37, "y1": 75.39, "x2": 45.11, "y2": 70.97, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260228",
+    "clue": "Find the [time]",
+    "credit": "Joen Nguyen",
+    "creditUrl": "https://www.pexels.com/photo/low-angle-photography-of-concrete-tower-clock-2299337/",
+    "imageKey": "E23oXj7hk3",
+    "hitAreas": [{ "x1": 41.95, "y1": 49.68, "x2": 46.37, "y2": 43.53, "w": 12 }, { "x1": 47, "y1": 43.05, "x2": 51.41, "y2": 45.58, "w": 12 }, { "x1": 51.89, "y1": 46.52, "x2": 49.52, "y2": 53.31, "w": 12 }, { "x1": 48.89, "y1": 54.1, "x2": 43.53, "y2": 53.31, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260301",
+    "clue": "Push the [button]",
+    "credit": "Sam Lion",
+    "creditUrl": "https://www.pexels.com/photo/yorkshire-terrier-in-yellow-shirt-on-white-background-5733420/",
+    "imageKey": "LzjkwsWCVm",
+    "hitAreas": [{ "x1": 41, "y1": 86.43, "x2": 42.11, "y2": 86.59, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260302",
+    "clue": "Shoot the [moon]",
+    "credit": "Manga Verde",
+    "creditUrl": "https://www.pexels.com/photo/brown-rock-formation-near-body-of-water-during-night-6413633/",
+    "imageKey": "V1BZJsIr8j",
+    "hitAreas": [{ "x1": 48.58, "y1": 45.89, "x2": 39.11, "y2": 39.58, "w": 12 }, { "x1": 38.48, "y1": 38.8, "x2": 39.27, "y2": 27.44, "w": 12 }, { "x1": 38.95, "y1": 25.55, "x2": 47.47, "y2": 21.6, "w": 12 }, { "x1": 48.73, "y1": 21.29, "x2": 60.41, "y2": 24.6, "w": 12 }, { "x1": 59.93, "y1": 26.97, "x2": 61.04, "y2": 37.53, "w": 12 }, { "x1": 59.62, "y1": 38.32, "x2": 48.42, "y2": 44.32, "w": 12 }, { "x1": 50.15, "y1": 40.06, "x2": 48.58, "y2": 30.44, "w": 12 }, { "x1": 39.9, "y1": 27.6, "x2": 58.67, "y2": 35.33, "w": 12 }],
+    "goals": [10, 20, 30, 40, 60],
+    "beforeMessages": []
+  },
+  {
+    "date": "260303",
+    "clue": "Find my [glasses]",
+    "credit": "Elziroy Porter Jr.",
+    "creditUrl": "https://www.pexels.com/photo/photo-of-a-man-wearing-black-fedora-hat-1674666/",
+    "imageKey": "zMT4wb5nFl",
+    "hitAreas": [{ "x1": 25.55, "y1": 32.96, "x2": 21.92, "y2": 48.89, "w": 12 }, { "x1": 37.85, "y1": 33.28, "x2": 35.8, "y2": 50, "w": 12 }, { "x1": 32.17, "y1": 50.78, "x2": 22.23, "y2": 49.52, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260304",
+    "clue": "Find the [man]",
+    "credit": "neil kelly",
+    "creditUrl": "https://www.pexels.com/photo/photo-of-a-man-in-white-long-sleeved-top-on-blue-and-white-pop-up-camper-753603/",
+    "imageKey": "MWtihYEsmQ",
+    "hitAreas": [{ "x1": 63.4, "y1": 50.31, "x2": 60.41, "y2": 63.4, "w": 12 }, { "x1": 65.93, "y1": 50, "x2": 65.14, "y2": 76.02, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260305",
+    "clue": "Got a [light]?",
+    "credit": "Adrian Szczygieł",
+    "creditUrl": "https://www.pexels.com/photo/black-orange-silver-and-white-motorcycle-60163/",
+    "imageKey": "dvjF0iwe0r",
+    "hitAreas": [{ "x1": 23.5, "y1": 29.02, "x2": 25.39, "y2": 26.97, "w": 12 }, { "x1": 24.44, "y1": 33.28, "x2": 28.86, "y2": 29.81, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260306",
+    "clue": "Pull my [chain]",
+    "credit": "Trace Hudson",
+    "creditUrl": "https://www.pexels.com/photo/photo-of-old-ship-under-cloudy-sky-2618797/",
+    "imageKey": "45cTWTX29d",
+    "hitAreas": [{ "x1": 10.88, "y1": 59.46, "x2": 8.51, "y2": 81.38, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260307",
+    "clue": "Got a [smoke]?",
+    "credit": "omar alnahi",
+    "creditUrl": "https://www.pexels.com/photo/man-smoking-cigarette-18496/",
+    "imageKey": "HpSkUrHQrC",
+    "hitAreas": [{ "x1": 14.98, "y1": 50, "x2": 26.49, "y2": 51.57, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260308",
+    "clue": "Spot the [teacher]",
+    "credit": "Tima Miroshnichenko",
+    "creditUrl": "https://www.pexels.com/photo/teacher-teaching-students-about-geography-using-a-globe-5428267/",
+    "imageKey": "oXyIzHfLdx",
+    "hitAreas": [{ "x1": 20.03, "y1": 84.38, "x2": 24.92, "y2": 63.24, "w": 12 }, { "x1": 26.81, "y1": 61.35, "x2": 34.85, "y2": 58.99, "w": 12 }, { "x1": 36.59, "y1": 55.52, "x2": 32.33, "y2": 52.68, "w": 12 }, { "x1": 32.17, "y1": 51.73, "x2": 38.48, "y2": 41.32, "w": 12 }, { "x1": 39.11, "y1": 40.37, "x2": 46.84, "y2": 42.11, "w": 12 }, { "x1": 46.68, "y1": 42.11, "x2": 48.1, "y2": 53.78, "w": 12 }, { "x1": 44.63, "y1": 53.47, "x2": 42.58, "y2": 56.46, "w": 12 }, { "x1": 40.85, "y1": 57.88, "x2": 55.04, "y2": 64.03, "w": 12 }, { "x1": 55.52, "y1": 66.08, "x2": 58.35, "y2": 87.69, "w": 12 }, { "x1": 58.2, "y1": 88.01, "x2": 77.44, "y2": 86.9, "w": 12 }, { "x1": 54.25, "y1": 88.8, "x2": 19.4, "y2": 87.22, "w": 12 }, { "x1": 23.34, "y1": 80.75, "x2": 51.73, "y2": 81.23, "w": 12 }, { "x1": 52.99, "y1": 74.76, "x2": 26.65, "y2": 72.39, "w": 12 }, { "x1": 31.07, "y1": 63.88, "x2": 49.68, "y2": 68.13, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260309",
+    "clue": "Where's the [rest]?",
+    "credit": "Rachel Clair",
+    "creditUrl": "https://www.pexels.com/photo/slender-woman-resting-in-hammock-under-glowing-garlands-4577191/",
+    "imageKey": "D6SQui5AQB",
+    "hitAreas": [{ "x1": 21.6, "y1": 62.46, "x2": 39.11, "y2": 73.18, "w": 12 }, { "x1": 38.17, "y1": 74.76, "x2": 38.17, "y2": 86.59, "w": 12 }, { "x1": 39.11, "y1": 86.59, "x2": 53.31, "y2": 80.75, "w": 12 }, { "x1": 53.31, "y1": 79.81, "x2": 66.56, "y2": 67.03, "w": 12 }, { "x1": 51.26, "y1": 78.54, "x2": 39.74, "y2": 74.44, "w": 12 }, { "x1": 26.34, "y1": 69.4, "x2": 36.43, "y2": 74.6, "w": 12 }, { "x1": 29.81, "y1": 76.34, "x2": 33.59, "y2": 78.39, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260310",
+    "clue": "Seek [shelter]",
+    "credit": "eberhard grossgasteiger",
+    "creditUrl": "https://www.pexels.com/photo/brown-rocky-mountain-under-white-cloudy-sky-12527039/",
+    "imageKey": "56nSk1K7Ja",
+    "hitAreas": [{ "x1": 62.93, "y1": 75.39, "x2": 70.82, "y2": 74.6, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260311",
+    "clue": "Wish upon a [star]",
+    "credit": "Jonathan Borba",
+    "creditUrl": "https://www.pexels.com/photo/family-decorating-their-christmas-tree-3303614/",
+    "imageKey": "at1xsk1dFh",
+    "hitAreas": [{ "x1": 50.88, "y1": 21.09, "x2": 51.24, "y2": 21.63, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260312",
+    "clue": "Have a [drink]",
+    "credit": "Anna Shvets",
+    "creditUrl": "https://www.pexels.com/photo/woman-with-prosthetic-leg-on-bench-5069137/",
+    "imageKey": "zxxjaS4Eve",
+    "hitAreas": [{ "x1": 23.93, "y1": 49.64, "x2": 39.18, "y2": 47.34, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260313",
+    "clue": "Get your butt in [here].",
+    "credit": "Harry Cooke",
+    "creditUrl": "https://www.pexels.com/photo/backyard-of-modern-cottage-with-chair-6195012/",
+    "imageKey": "pWc2WhoaPe",
+    "hitAreas": [{ "x1": 52.48, "y1": 72.69, "x2": 60.63, "y2": 73.04, "w": 12 }, { "x1": 60.46, "y1": 72.87, "x2": 53.9, "y2": 62.41, "w": 12 }, { "x1": 54.43, "y1": 67.02, "x2": 55.14, "y2": 68.26, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260314",
+    "clue": "Spot the [horse]",
+    "credit": "Rodolfo Clix",
+    "creditUrl": "https://www.pexels.com/photo/black-and-white-photos-of-toddlers-1596882/",
+    "imageKey": "CbwaDeE6F3",
+    "hitAreas": [{ "x1": 21.98, "y1": 28.01, "x2": 44.14, "y2": 45.21, "w": 12 }, { "x1": 25.88, "y1": 35.63, "x2": 35.81, "y2": 41.13, "w": 12 }, { "x1": 29.07, "y1": 29.6, "x2": 35.28, "y2": 23.04, "w": 12 }, { "x1": 35.63, "y1": 23.04, "x2": 33.15, "y2": 34.57, "w": 12 }],
+    "goals": [30, 50, 70, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260315",
+    "clue": "Yes, you [can]",
+    "credit": " Brian Jiz",
+    "creditUrl": "https://www.pexels.com/photo/woman-posing-with-soda-can-14934308/",
+    "imageKey": "CqHLptLKwV",
+    "hitAreas": [{ "x1": 37.58, "y1": 18.79, "x2": 37.41, "y2": 25.35, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260316",
+    "clue": "See you [ladle]",
+    "credit": "Proxyclick",
+    "creditUrl": "https://www.pexels.com/photo/person-holding-ladle-2451305/",
+    "imageKey": "rqP0IPhsIj",
+    "hitAreas": [{ "x1": 30.67, "y1": 35.63, "x2": 54.6, "y2": 19.5, "w": 12 }, { "x1": 30.67, "y1": 40.07, "x2": 38.29, "y2": 43.97, "w": 12 }, { "x1": 41.31, "y1": 44.14, "x2": 39.53, "y2": 38.82, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260317",
+    "clue": "Get a [handle] on it",
+    "credit": "Eugenia Remark",
+    "creditUrl": "https://www.pexels.com/photo/modern-french-style-bedroom-14426078/",
+    "imageKey": "Inggoihbno",
+    "hitAreas": [{ "x1": 19.32, "y1": 94.85, "x2": 20.92, "y2": 90.24, "w": 12 }, { "x1": 18.61, "y1": 89, "x2": 16.31, "y2": 88.65, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260318",
+    "clue": "Get on [board]",
+    "credit": "Tima Miroshnichenko",
+    "creditUrl": "https://www.pexels.com/photo/pretty-woman-wearing-a-red-beret-6598866/",
+    "imageKey": "9PoU8w2oFk",
+    "hitAreas": [{ "x1": 36.87, "y1": 69.32, "x2": 62.94, "y2": 69.5, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260319",
+    "clue": "Where's the [weapon]?",
+    "credit": "RODNAE Productions",
+    "creditUrl": "https://www.pexels.com/photo/landscape-man-people-woman-6257694/",
+    "imageKey": "GWGhO6Aqev",
+    "hitAreas": [{ "x1": 16.66, "y1": 73.04, "x2": 19.68, "y2": 85.28, "w": 12 }, { "x1": 21.27, "y1": 71.98, "x2": 20.39, "y2": 85.63, "w": 12 }, { "x1": 15.24, "y1": 70.74, "x2": 22.34, "y2": 70.21, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260320",
+    "clue": "Got a [smoke]?",
+    "credit": "COPPERTIST WU",
+    "creditUrl": "https://www.pexels.com/photo/arowana-box-opener-15863795/",
+    "imageKey": "pWtYO4ICom",
+    "hitAreas": [{ "x1": 25.35, "y1": 10.1, "x2": 100, "y2": 48.75, "w": 12 }, { "x1": 26.59, "y1": 4.78, "x2": 106.2, "y2": 45.92, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260321",
+    "clue": "Get on the [ball]",
+    "credit": "cottonbro studio",
+    "creditUrl": "https://www.pexels.com/photo/man-in-white-shorts-holding-tennis-racket-5739196/",
+    "imageKey": "uySEBOFQkI",
+    "hitAreas": [{ "x1": 21.09, "y1": 6.56, "x2": 18.43, "y2": 8.86, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260322",
+    "clue": "Here comes the [sun]",
+    "credit": "Andreas",
+    "creditUrl": "https://pixabay.com/photos/lapland-winter-snow-landscape-2984828/",
+    "imageKey": "LV5h7SCfof",
+    "hitAreas": [{ "x1": 23.56, "y1": 44.96, "x2": 24.46, "y2": 45.5, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260323",
+    "clue": "[Mask] up",
+    "credit": "Jason Goh",
+    "creditUrl": "https://pixabay.com/photos/japan-tokyo-shibuya-japanese-217882/",
+    "imageKey": "FiiYeDR4XU",
+    "hitAreas": [{ "x1": 39.02, "y1": 86.51, "x2": 39.2, "y2": 85.97, "w": 12 }],
+    "goals": [35, 60, 75, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260324",
+    "clue": "Get [cable]",
+    "credit": "Andreas",
+    "creditUrl": "https://pixabay.com/photos/mining-serifos-ore-mining-legacy-7671915/",
+    "imageKey": "TWWQA2IsYO",
+    "hitAreas": [{ "x1": 47.12, "y1": 55.21, "x2": 58.81, "y2": 57.01, "w": 12 }, { "x1": 61.51, "y1": 49.64, "x2": 54.49, "y2": 72.3, "w": 12 }, { "x1": 53.77, "y1": 72.3, "x2": 48.56, "y2": 72.3, "w": 12 }, { "x1": 48.2, "y1": 72.48, "x2": 48.56, "y2": 58.27, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260325",
+    "clue": "Taste the [wasabi]",
+    "credit": "Jason Goh",
+    "creditUrl": "https://pixabay.com/photos/sashimi-salmon-fish-food-seafood-471795/",
+    "imageKey": "jUzZ5Ds6nz",
+    "hitAreas": [{ "x1": 19.6, "y1": 85.43, "x2": 23.2, "y2": 73.56, "w": 12 }, { "x1": 23.2, "y1": 73.38, "x2": 29.67, "y2": 71.04, "w": 12 }, { "x1": 29.13, "y1": 71.04, "x2": 33.99, "y2": 76.43, "w": 12 }, { "x1": 35.61, "y1": 78.95, "x2": 34.71, "y2": 84.89, "w": 12 }, { "x1": 35.61, "y1": 85.79, "x2": 21.76, "y2": 88.12, "w": 12 }, { "x1": 25.35, "y1": 84.53, "x2": 28.41, "y2": 78.59, "w": 12 }],
+    "goals": [30, 50, 70, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260326",
+    "clue": "Welcome [home]",
+    "credit": "Andreas",
+    "creditUrl": "https://pixabay.com/photos/winter-winter-landscape-snow-4066632/",
+    "imageKey": "Dw89ipXylu",
+    "hitAreas": [{ "x1": 59.71, "y1": 83.27, "x2": 66.72, "y2": 79.67, "w": 12 }, { "x1": 62.94, "y1": 73.38, "x2": 92.62, "y2": 78.23, "w": 12 }, { "x1": 66, "y1": 79.85, "x2": 74.1, "y2": 76.97, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260327",
+    "clue": "Salute the [flag]",
+    "credit": "Brigitte Werner",
+    "creditUrl": "https://pixabay.com/photos/sheriff-office-heritage-old-58517/",
+    "imageKey": "74DwwPoHFn",
+    "hitAreas": [{ "x1": 60.97, "y1": 5.75, "x2": 60.97, "y2": 44.06, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260328",
+    "clue": "I'm [tired]",
+    "credit": "Andreas",
+    "creditUrl": "https://pixabay.com/photos/mining-serifos-ore-mining-legacy-7671908/",
+    "imageKey": "wGqF5Ayjzt",
+    "hitAreas": [{ "x1": 20.5, "y1": 97.12, "x2": 15.46, "y2": 89.92, "w": 12 }, { "x1": 14.74, "y1": 90.1, "x2": 19.42, "y2": 81.47, "w": 12 }, { "x1": 21.04, "y1": 79.49, "x2": 29.67, "y2": 78.95, "w": 12 }, { "x1": 29.67, "y1": 78.59, "x2": 34.17, "y2": 82.73, "w": 12 }, { "x1": 34.17, "y1": 83.45, "x2": 31.83, "y2": 93.52, "w": 12 }, { "x1": 31.83, "y1": 93.7, "x2": 24.1, "y2": 95.86, "w": 12 }, { "x1": 22.3, "y1": 90.46, "x2": 28.41, "y2": 83.09, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260329",
+    "clue": "Find a [person]",
+    "credit": "Andreas",
+    "creditUrl": "https://pixabay.com/photos/greece-serifos-piazza-siesta-7671907/",
+    "imageKey": "7aSYb0GdBg",
+    "hitAreas": [{ "x1": 85.25, "y1": 51.79, "x2": 85.43, "y2": 53.41, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260330",
+    "clue": "Go with [the flow]",
+    "credit": "Andreas",
+    "creditUrl": "https://pixabay.com/photos/alpine-roses-alprosen-alpine-flowers-5353700/",
+    "imageKey": "arjxZmHkn9",
+    "hitAreas": [{ "x1": 24.64, "y1": 39.74, "x2": 77.69, "y2": 51.25, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260331",
+    "clue": "Touch the [frog]",
+    "credit": "Jason Goh",
+    "creditUrl": "https://pixabay.com/photos/japan-tokyo-ueno-park-japanese-218646/",
+    "imageKey": "vZQA4ed7Rw",
+    "hitAreas": [{ "x1": 24.64, "y1": 97.84, "x2": 30.03, "y2": 76.61, "w": 12 }, { "x1": 30.03, "y1": 76.97, "x2": 51.25, "y2": 75.53, "w": 12 }, { "x1": 51.97, "y1": 75.71, "x2": 46.94, "y2": 85.43, "w": 12 }, { "x1": 48.02, "y1": 89.2, "x2": 60.79, "y2": 94.96, "w": 12 }, { "x1": 61.15, "y1": 98.02, "x2": 30.57, "y2": 98.92, "w": 12 }, { "x1": 31.65, "y1": 94.42, "x2": 39.02, "y2": 80.75, "w": 12 }, { "x1": 39.02, "y1": 85.25, "x2": 43.16, "y2": 93.34, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260401",
+    "clue": "Get the [bill]",
+    "credit": "Domenic Hoffmann",
+    "creditUrl": "https://pixabay.com/photos/greylag-goose-goose-water-bird-2139296/",
+    "imageKey": "LwocUkDgL6",
+    "hitAreas": [{ "x1": 48.83, "y1": 46.58, "x2": 48.83, "y2": 51.25, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260402",
+    "clue": "Where's my [water]?",
+    "credit": "Hai Nguyen Tien",
+    "creditUrl": "https://pixabay.com/photos/people-children-child-happy-1560569/",
+    "imageKey": "cgAFUyL9k4",
+    "hitAreas": [{ "x1": 47.75, "y1": 99.1, "x2": 54.04, "y2": 93.16, "w": 12 }, { "x1": 56.2, "y1": 94.42, "x2": 101.52, "y2": 100.17, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260403",
+    "clue": "[Face] it",
+    "credit": "Angela",
+    "creditUrl": "https://pixabay.com/photos/turtle-chinese-stripe-necked-turtle-7809341/",
+    "imageKey": "e5n5fYOT49",
+    "hitAreas": [{ "x1": 60.16, "y1": 45.5, "x2": 78.5, "y2": 44.24, "w": 12 }, { "x1": 78.32, "y1": 45.32, "x2": 78.5, "y2": 50.89, "w": 12 }, { "x1": 78.5, "y1": 50.71, "x2": 71.13, "y2": 55.39, "w": 12 }, { "x1": 70.41, "y1": 56.11, "x2": 60.16, "y2": 47.84, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260404",
+    "clue": "Sit right [here]",
+    "credit": "Hai Nguyen Tien",
+    "creditUrl": "https://pixabay.com/photos/pagoda-old-religion-asia-2962214/",
+    "imageKey": "bmmaO1VykI",
+    "hitAreas": [{ "x1": 0.44, "y1": 69.42, "x2": 17.17, "y2": 67.62, "w": 12 }, { "x1": 17.17, "y1": 67.62, "x2": 22.57, "y2": 75, "w": 12 }, { "x1": 22.39, "y1": 75.35, "x2": -3.68, "y2": 80.93, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260405",
+    "clue": "Find the [top]",
+    "credit": "Ezequiel Octaviano",
+    "creditUrl": "https://pixabay.com/photos/palace-fine-arts-architecture-5293011/",
+    "imageKey": "CcJYs2lqSN",
+    "hitAreas": [{ "x1": 60.88, "y1": 7.19, "x2": 60.88, "y2": 16.54, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260406",
+    "clue": "Collect the [shell]",
+    "credit": "Rinki Lohia",
+    "creditUrl": "https://pixabay.com/photos/varah-vishnu-avatar-god-religion-4838076/",
+    "imageKey": "P6UIOcfala",
+    "hitAreas": [{ "x1": 54.94, "y1": 42.98, "x2": 57.1, "y2": 54.31, "w": 12 }, { "x1": 57.82, "y1": 54.67, "x2": 72.03, "y2": 62.23, "w": 12 }, { "x1": 73.83, "y1": 63.48, "x2": 55.84, "y2": 43.52, "w": 12 }],
+    "goals": [30, 50, 70, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260407",
+    "clue": "Find a [needle]",
+    "credit": "chiến nguyễn bá",
+    "creditUrl": "https://pixabay.com/photos/music-player-record-player-7792956/",
+    "imageKey": "KciUdNpTd2",
+    "hitAreas": [{ "x1": 59.62, "y1": 68.34, "x2": 57.46, "y2": 58.99, "w": 12 }, { "x1": 61.42, "y1": 69.6, "x2": 61.78, "y2": 55.75, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260408",
+    "clue": "Look me in the [eye]",
+    "credit": "Angela",
+    "creditUrl": "https://pixabay.com/photos/elephant-pachyderm-trunk-7760124/",
+    "imageKey": "7VwjxXpazP",
+    "hitAreas": [{ "x1": 49.91, "y1": 42.26, "x2": 50.44, "y2": 41.72, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260409",
+    "clue": "Find [Jesus]",
+    "credit": "Myriams-Fotos",
+    "creditUrl": "https://pixabay.com/photos/rosary-faith-pray-hands-folded-1211064/",
+    "imageKey": "ctYeqvEf0p",
+    "hitAreas": [{ "x1": 37.14, "y1": 55.57, "x2": 44.69, "y2": 56.65, "w": 12 }, { "x1": 41.45, "y1": 58.99, "x2": 40.01, "y2": 68.7, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260410",
+    "clue": "Hold my [hands]",
+    "credit": "Katarzyna",
+    "creditUrl": "https://pixabay.com/photos/figurine-the-statue-buddha-2637695/",
+    "imageKey": "VSznBQR5Ln",
+    "hitAreas": [{ "x1": 64.65, "y1": 62.23, "x2": 79.04, "y2": 63.12, "w": 12 }, { "x1": 65.55, "y1": 66.18, "x2": 76.7, "y2": 66.54, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260411",
+    "clue": "A good [pupil]",
+    "credit": "Katarzyna",
+    "creditUrl": "https://pixabay.com/photos/face-medical-model-profile-2712217/",
+    "imageKey": "yjSy5Nydlf",
+    "hitAreas": [{ "x1": 35.16, "y1": 43.52, "x2": 35.88, "y2": 43.52, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260412",
+    "clue": "Get to the [stem]",
+    "credit": "Myléne",
+    "creditUrl": "https://pixabay.com/photos/apple-fruit-red-healthy-food-4833764/",
+    "imageKey": "0THnqOr04v",
+    "hitAreas": [{ "x1": 75.62, "y1": 23.74, "x2": 71.31, "y2": 35.79, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260413",
+    "clue": "[Buckle] down",
+    "credit": "ErikaWittlieb",
+    "creditUrl": "https://pixabay.com/photos/photographer-camera-camera-man-lego-1702074/",
+    "imageKey": "SaqEHu5WCn",
+    "hitAreas": [{ "x1": 25.44, "y1": 77.15, "x2": 27.42, "y2": 76.79, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260414",
+    "clue": "Get to the [door]",
+    "credit": "Norbert",
+    "creditUrl": "https://pixabay.com/photos/lisbon-historic-center-tram-1395924/",
+    "imageKey": "NcMGtqL23D",
+    "hitAreas": [{ "x1": 26.88, "y1": 57.91, "x2": 29.94, "y2": 79.85, "w": 12 }, { "x1": 35.88, "y1": 80.57, "x2": 33.54, "y2": 58.09, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260415",
+    "clue": "Find the [bell]",
+    "credit": "congerdesign",
+    "creditUrl": "https://pixabay.com/photos/vegetables-basket-vegetable-basket-752153/",
+    "imageKey": "8naKaRpK7E",
+    "hitAreas": [{ "x1": 47.39, "y1": 46.76, "x2": 58.9, "y2": 47.48, "w": 12 }, { "x1": 59.08, "y1": 47.48, "x2": 59.44, "y2": 55.03, "w": 12 }, { "x1": 58.72, "y1": 55.03, "x2": 51.34, "y2": 57.19, "w": 12 }, { "x1": 50.98, "y1": 57.37, "x2": 50.62, "y2": 48.92, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260416",
+    "clue": "Pet the [dog]",
+    "credit": "5688709",
+    "creditUrl": "https://pixabay.com/photos/man-woman-dog-pet-pug-owners-2425121/",
+    "imageKey": "E2TA57Tp32",
+    "hitAreas": [{ "x1": 22.21, "y1": 40.82, "x2": 47.21, "y2": 62.58, "w": 12 }, { "x1": 48.29, "y1": 62.41, "x2": 51.52, "y2": 54.67, "w": 12 }, { "x1": 51.34, "y1": 53.41, "x2": 28.5, "y2": 37.94, "w": 12 }],
+    "goals": [10, 20, 30, 40, 60],
+    "beforeMessages": []
+  },
+  {
+    "date": "260417",
+    "clue": "Have a [cookie]",
+    "credit": "Jill Wellington",
+    "creditUrl": "https://pixabay.com/photos/socks-fireplace-comfort-chocolate-5795254/",
+    "imageKey": "OqbZ1a40Ci",
+    "hitAreas": [{ "x1": 11.6, "y1": 89.2, "x2": 38.39, "y2": 89.02, "w": 12 }, { "x1": 17.71, "y1": 85.43, "x2": 31.38, "y2": 85.61, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260418",
+    "clue": "Get on the [cart]",
+    "credit": "Melanie",
+    "creditUrl": "https://pixabay.com/photos/farmhouse-homestead-court-building-2853047/",
+    "imageKey": "s2maXy72f2",
+    "hitAreas": [{ "x1": 58.05, "y1": 70.29, "x2": 99.61, "y2": 70.67, "w": 12 }, { "x1": 60.38, "y1": 78.25, "x2": 100.77, "y2": 80.19, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260419",
+    "clue": "Gimme a [ring]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/bride-groom-girl-woman-guy-man-2607219/",
+    "imageKey": "nQNr4ve351",
+    "hitAreas": [{ "x1": 47.18, "y1": 49.51, "x2": 46.6, "y2": 51.45, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260420",
+    "clue": "Boop the [nose]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/leopard-predator-wild-cat-animal-2578114/",
+    "imageKey": "gPbPi9hrUh",
+    "hitAreas": [{ "x1": 73, "y1": 54.75, "x2": 76.5, "y2": 54.75, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260421",
+    "clue": "Take a [fork]",
+    "credit": "Melanie",
+    "creditUrl": "https://pixabay.com/photos/apple-cake-fall-dessert-cakes-4464826/",
+    "imageKey": "DUyoeYq1KE",
+    "hitAreas": [{ "x1": 1.74, "y1": 80.97, "x2": 26.21, "y2": 69.7, "w": 12 }, { "x1": 2.71, "y1": 81.55, "x2": 35.72, "y2": 71.84, "w": 12 }, { "x1": 35.72, "y1": 71.84, "x2": 27.96, "y2": 69.7, "w": 12 }],
+    "goals": [30, 50, 70, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260422",
+    "clue": "Find the [treasure]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/people-father-man-baby-girl-kid-2557510/",
+    "imageKey": "eEmFydba5t",
+    "hitAreas": [{ "x1": 50.48, "y1": 36.89, "x2": 65.04, "y2": 31.26, "w": 12 }, { "x1": 64.85, "y1": 31.06, "x2": 91.65, "y2": 33.98, "w": 12 }, { "x1": 91.84, "y1": 35.33, "x2": 91.06, "y2": 39.61, "w": 12 }, { "x1": 90.67, "y1": 40.19, "x2": 54.17, "y2": 40, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260423",
+    "clue": "Grab a [beer]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/restaurant-people-men-women-eating-2602736/",
+    "imageKey": "2F6YgCALhw",
+    "hitAreas": [{ "x1": 17.86, "y1": 73.78, "x2": 26.21, "y2": 61.74, "w": 12 }, { "x1": 26.21, "y1": 62.33, "x2": 28.93, "y2": 72.62, "w": 12 }, { "x1": 28.73, "y1": 73.59, "x2": 19.41, "y2": 74.36, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260424",
+    "clue": "The team [leaves]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/interior-design-tables-chairs-2591368/",
+    "imageKey": "xnNqlQjSYO",
+    "hitAreas": [{ "x1": 83.68, "y1": 56.11, "x2": 83.68, "y2": 61.74, "w": 12 }, { "x1": 87.37, "y1": 55.92, "x2": 87.18, "y2": 61.55, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260425",
+    "clue": "Acknowledge the [worker]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/people-man-office-work-computer-2567566/",
+    "imageKey": "TZSjqJmCGE",
+    "hitAreas": [{ "x1": 82.33, "y1": 19.41, "x2": 76.89, "y2": 40.97, "w": 12 }, { "x1": 77.08, "y1": 41.35, "x2": 93, "y2": 43.3, "w": 12 }, { "x1": 93, "y1": 43.3, "x2": 90.87, "y2": 33.2, "w": 12 }, { "x1": 86.6, "y1": 35.33, "x2": 82.91, "y2": 21.16, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260426",
+    "clue": "Pick up the [guitar]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/room-chairs-white-electric-guitar-2589987/",
+    "imageKey": "LG7JfzP3Ym",
+    "hitAreas": [{ "x1": 45.63, "y1": 72.23, "x2": 50.09, "y2": 49.7, "w": 12 }, { "x1": 50.09, "y1": 49.7, "x2": 53, "y2": 73.59, "w": 12 }, { "x1": 51.84, "y1": 74.75, "x2": 48.93, "y2": 73.59, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260427",
+    "clue": "Get to the [core]",
+    "credit": "Ri Butov",
+    "creditUrl": "https://pixabay.com/photos/wood-dry-wood-tree-trunk-bark-7402014/",
+    "imageKey": "jue5LQi0S7",
+    "hitAreas": [{ "x1": 59.8, "y1": 23.88, "x2": 63.68, "y2": 24.07, "w": 12 }, { "x1": 58.64, "y1": 27.18, "x2": 64.46, "y2": 25.43, "w": 12 }, { "x1": 60.58, "y1": 30.87, "x2": 63.49, "y2": 28.73, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260428",
+    "clue": "Hunt down the [canines]",
+    "credit": "Brigitte Werner",
+    "creditUrl": "https://pixabay.com/photos/hippopotamus-animals-wildlife-hippo-95472/",
+    "imageKey": "NqC6BFYDu1",
+    "hitAreas": [{ "x1": 51.45, "y1": 41.16, "x2": 52.03, "y2": 45.82, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260429",
+    "clue": "Watch his [stream]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/people-police-protest-water-shield-2591693/",
+    "imageKey": "0TNOwZbZ5p",
+    "hitAreas": [{ "x1": 49.9, "y1": 46.21, "x2": 0.77, "y2": 33, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260430",
+    "clue": "Touch the [neck]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/black-and-white-people-man-sleeping-2600656/",
+    "imageKey": "tXmojej4Vg",
+    "hitAreas": [{ "x1": 15.33, "y1": 74.95, "x2": 39.61, "y2": 75.53, "w": 12 }, { "x1": 40.58, "y1": 75.53, "x2": 53, "y2": 100.19, "w": 12 }, { "x1": 15.33, "y1": 76.31, "x2": -0.58, "y2": 88.15, "w": 12 }, { "x1": 0.58, "y1": 88.54, "x2": 0.38, "y2": 99.61, "w": 12 }, { "x1": 2.52, "y1": 96.89, "x2": 49.9, "y2": 99.02, "w": 12 }, { "x1": 44.46, "y1": 90.29, "x2": 6.6, "y2": 87.37, "w": 12 }, { "x1": 13.2, "y1": 82.71, "x2": 38.83, "y2": 83.49, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260501",
+    "clue": "Take [hold]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/green-grass-trees-plants-forests-2561901/",
+    "imageKey": "lzg1FkfMGH",
+    "hitAreas": [{ "x1": 66.01, "y1": 54.95, "x2": 66.4, "y2": 58.83, "w": 12 }],
+    "goals": [10, 20, 30, 40, 60],
+    "beforeMessages": []
+  },
+  {
+    "date": "260502",
+    "clue": "Hello [Kitty]",
+    "credit": "Sasin Tipchai",
+    "creditUrl": "https://pixabay.com/photos/grandmother-kids-laptop-myanmar-1807515/",
+    "imageKey": "rtHf3OcLhy",
+    "hitAreas": [{ "x1": 69.9, "y1": 60.38, "x2": 70.67, "y2": 66.4, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260503",
+    "clue": "[Where] is this going?",
+    "credit": "StockSnap ",
+    "creditUrl": "https://pixabay.com/photos/forest-woods-trees-nature-path-2619496/",
+    "imageKey": "zhR48RHJK1",
+    "hitAreas": [{ "x1": 52.62, "y1": 50.48, "x2": 59.22, "y2": 48.15, "w": 12 }, { "x1": 52.81, "y1": 45.43, "x2": 59.02, "y2": 44.07, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260504",
+    "clue": "Can you [handle] this?",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/food-cook-kitchen-chef-apron-work-2616326/",
+    "imageKey": "ViXdUHpWyc",
+    "hitAreas": [{ "x1": 33.2, "y1": 86.79, "x2": 57.66, "y2": 84.66, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260505",
+    "clue": "Who's the [man]?",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/people-women-man-lighting-fire-2604058/",
+    "imageKey": "UZPVpMNm9O",
+    "hitAreas": [{ "x1": 37.08, "y1": 9.32, "x2": 35.33, "y2": 21.16, "w": 12 }, { "x1": 35.53, "y1": 23.68, "x2": 35.33, "y2": 36.31, "w": 12 }, { "x1": 39.61, "y1": 20.19, "x2": 40.19, "y2": 16.31, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260506",
+    "clue": "Get on [board]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/woman-skateboard-adventure-leisure-2563474/",
+    "imageKey": "n4wUQlsMsD",
+    "hitAreas": [{ "x1": 4.85, "y1": 77.28, "x2": 8.73, "y2": 68.54, "w": 12 }, { "x1": 21.35, "y1": 69.32, "x2": 22.13, "y2": 64.85, "w": 12 }, { "x1": 22.71, "y1": 64.66, "x2": 32.03, "y2": 64.27, "w": 12 }, { "x1": 7.18, "y1": 78.83, "x2": 32.42, "y2": 65.43, "w": 12 }, { "x1": 11.26, "y1": 69.9, "x2": 18.05, "y2": 70.87, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260507",
+    "clue": "Find the [veil]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/marriage-wedding-couple-love-man-2604963/",
+    "imageKey": "2dhfN2t5vZ",
+    "hitAreas": [{ "x1": 33, "y1": 58.05, "x2": 40.77, "y2": 44.07, "w": 12 }, { "x1": 40.77, "y1": 44.66, "x2": 37.08, "y2": 55.72, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260508",
+    "clue": "Look at the [index]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/hands-palms-black-and-white-698561/",
+    "imageKey": "Qp3tHxV8J7",
+    "hitAreas": [{ "x1": 18.83, "y1": 82.91, "x2": 27.76, "y2": 64.66, "w": 12 }, { "x1": 31.65, "y1": 66.79, "x2": 23.3, "y2": 84.85, "w": 12 }, { "x1": 31.26, "y1": 61.55, "x2": 20.38, "y2": 86.6, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260509",
+    "clue": "Go to the [ball]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/fitness-athlete-soccer-ball-shoes-698669/",
+    "imageKey": "TMcqTLgJ3X",
+    "hitAreas": [{ "x1": 20.42, "y1": 28.75, "x2": 23.35, "y2": 31.31, "w": 12 }, { "x1": 22.61, "y1": 24.35, "x2": 27.38, "y2": 28.38, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260510",
+    "clue": "Just the [tip]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/sketch-drawing-design-paper-pen-926667/",
+    "imageKey": "xGB9c75JW3",
+    "hitAreas": [{ "x1": 11.26, "y1": 87.91, "x2": 18.95, "y2": 73.26, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260511",
+    "clue": "Look into the [hole]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/donut-dessert-sweets-treats-food-2616841/",
+    "imageKey": "Cd5LgmXZDU",
+    "hitAreas": [{ "x1": 43.24, "y1": 44.28, "x2": 50.1, "y2": 45.32, "w": 12 }, { "x1": 50.1, "y1": 45.32, "x2": 51.97, "y2": 49.68, "w": 12 }, { "x1": 52.8, "y1": 50.51, "x2": 49.27, "y2": 54.26, "w": 12 }, { "x1": 48.44, "y1": 54.26, "x2": 44.07, "y2": 47.81, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260512",
+    "clue": "Find the [dog]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/people-friends-couple-smiles-happy-2570821/",
+    "imageKey": "U6iaZRMRGp",
+    "hitAreas": [{ "x1": 43.86, "y1": 69.85, "x2": 51.35, "y2": 81.08, "w": 12 }, { "x1": 51.76, "y1": 81.28, "x2": 66.94, "y2": 78.17, "w": 12 }, { "x1": 67.77, "y1": 78.37, "x2": 66.94, "y2": 69.43, "w": 12 }],
+    "goals": [30, 50, 70, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260513",
+    "clue": "Have a [ball]",
+    "credit": "",
+    "creditUrl": "https://pixabay.com/photos/boy-child-kid-playing-sports-2619201/",
+    "imageKey": "UTqdHhW5ke",
+    "hitAreas": [{ "x1": 78.58, "y1": 47.19, "x2": 91.06, "y2": 54.46, "w": 12 }, { "x1": 66.52, "y1": 57.58, "x2": 88.35, "y2": 68.81, "w": 12 }, { "x1": 89.18, "y1": 70.06, "x2": 74.63, "y2": 74.63, "w": 12 }, { "x1": 70.47, "y1": 74.22, "x2": 64.44, "y2": 59.25, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260514",
+    "clue": "Pick some [flowers]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/woman-girl-lady-people-back-2609533/",
+    "imageKey": "0hFQSVd0Br",
+    "hitAreas": [{ "x1": 16, "y1": 62.99, "x2": 23.07, "y2": 67.77, "w": 12 }, { "x1": 22.66, "y1": 67.77, "x2": 21.62, "y2": 77.54, "w": 12 }, { "x1": 20.99, "y1": 77.54, "x2": 13.72, "y2": 66.52, "w": 12 }, { "x1": 13.51, "y1": 66.52, "x2": 5.82, "y2": 71.93, "w": 12 }, { "x1": 6.65, "y1": 71.93, "x2": 19.33, "y2": 74.22, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260515",
+    "clue": "It's a [tie]!",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/black-red-suit-tie-clothing-2597198/",
+    "imageKey": "7b60LURKem",
+    "hitAreas": [{ "x1": 24.32, "y1": 37.21, "x2": 46.56, "y2": 46.36, "w": 12 }, { "x1": 46.56, "y1": 46.36, "x2": 46.15, "y2": 36.59, "w": 12 }, { "x1": 46.15, "y1": 36.59, "x2": 24.32, "y2": 47.81, "w": 12 }, { "x1": 24.32, "y1": 47.81, "x2": 24.32, "y2": 38.46, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260516",
+    "clue": "Get her [number]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/color-run-rainbow-run-running-698417/",
+    "imageKey": "NllRQMbf8I",
+    "hitAreas": [{ "x1": 73.59, "y1": 60.49, "x2": 79.2, "y2": 61.33, "w": 12 }, { "x1": 80.04, "y1": 66.11, "x2": 75.25, "y2": 66.94, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260517",
+    "clue": "Get the [door]!",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/chair-old-papers-books-mess-2589501/",
+    "imageKey": "Oh2gfw4Tye",
+    "hitAreas": [{ "x1": 70.47, "y1": 36.79, "x2": 91.68, "y2": 35.55, "w": 12 }, { "x1": 92.72, "y1": 36.79, "x2": 93.55, "y2": 49.06, "w": 12 }, { "x1": 92.93, "y1": 49.06, "x2": 70.06, "y2": 50.1, "w": 12 }, { "x1": 70.06, "y1": 50.1, "x2": 70.06, "y2": 38.66, "w": 12 }, { "x1": 71.93, "y1": 44.07, "x2": 95.01, "y2": 42.82, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260518",
+    "clue": "Take the [pen]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/notebook-pen-people-girl-hand-2605910/",
+    "imageKey": "y55w6XRzAC",
+    "hitAreas": [{ "x1": 44.56, "y1": 47.39, "x2": 52.68, "y2": 54.05, "w": 12 }, { "x1": 51.81, "y1": 56.81, "x2": 42.53, "y2": 49.42, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260519",
+    "clue": "Take a [bow]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/violin-music-musician-boy-2606655/",
+    "imageKey": "hQK2Zie0fN",
+    "hitAreas": [{ "x1": 45.43, "y1": 40.14, "x2": 42.1, "y2": 58.4, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260520",
+    "clue": "This is the last [straw]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/juice-smoothie-drink-beverage-2561161/",
+    "imageKey": "luPxEfkZJ5",
+    "hitAreas": [{ "x1": 60.65, "y1": 53.04, "x2": 66.01, "y2": 53.91, "w": 12 }, { "x1": 66.44, "y1": 54.2, "x2": 85.43, "y2": 69.85, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260521",
+    "clue": "Find the [chain]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/people-man-male-hand-sacred-2597903/",
+    "imageKey": "j4Wu2v6Z6i",
+    "hitAreas": [{ "x1": 99.78, "y1": 44.34, "x2": 85.14, "y2": 18.69, "w": 12 }, { "x1": 81.08, "y1": 20.14, "x2": 86.01, "y2": 22.89, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260522",
+    "clue": "Follow these [steps]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/table-chairs-setup-restaurant-2600106/",
+    "imageKey": "jukMj70lGt",
+    "hitAreas": [{ "x1": 33.4, "y1": 95.65, "x2": 101.66, "y2": 96.08, "w": 12 }, { "x1": 37.75, "y1": 89.27, "x2": 77.46, "y2": 60.43, "w": 12 }, { "x1": 79.2, "y1": 59.85, "x2": 99.2, "y2": 75.79, "w": 12 }, { "x1": 99.2, "y1": 75.79, "x2": 99.34, "y2": 91.59, "w": 12 }, { "x1": 97.17, "y1": 87.97, "x2": 44.42, "y2": 88.11, "w": 12 }, { "x1": 56.3, "y1": 79.13, "x2": 99.05, "y2": 81.88, "w": 12 }, { "x1": 69.49, "y1": 72.31, "x2": 94.27, "y2": 76.23, "w": 12 }, { "x1": 76.3, "y1": 66.66, "x2": 84.56, "y2": 68.69, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260523",
+    "clue": "Get on the [ladder]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/dock-lake-water-nature-outdoors-926624/",
+    "imageKey": "Ux9MyekZ1o",
+    "hitAreas": [{ "x1": 66.39, "y1": 62.91, "x2": 69.37, "y2": 60.09, "w": 12 }, { "x1": 70.36, "y1": 59.93, "x2": 70.86, "y2": 63.24, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260524",
+    "clue": "Nice [doggy]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/street-performer-musician-music-926746/",
+    "imageKey": "athz7pHX5M",
+    "hitAreas": [{ "x1": 43.37, "y1": 87.08, "x2": 50.66, "y2": 91.22, "w": 12 }, { "x1": 50.82, "y1": 90.89, "x2": 56.95, "y2": 89.73, "w": 12 }, { "x1": 57.11, "y1": 88.24, "x2": 49.17, "y2": 82.11, "w": 12 }, { "x1": 49.17, "y1": 82.11, "x2": 43.7, "y2": 83.94, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260525",
+    "clue": "Find the [sink]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/kitchen-sink-faucet-tiles-2619008/",
+    "imageKey": "1SZSkzTGgF",
+    "hitAreas": [{ "x1": 18.21, "y1": 79.13, "x2": 36.09, "y2": 79.47, "w": 12 }, { "x1": 34.43, "y1": 75.33, "x2": 22.84, "y2": 75.33, "w": 12 }, { "x1": 28.64, "y1": 73.5, "x2": 27.81, "y2": 67.05, "w": 12 }],
+    "goals": [30, 50, 70, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260526",
+    "clue": "Attack the [castle]!",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/mind-games-chess-sculpted-2616307/",
+    "imageKey": "y0YDGqcVFY",
+    "hitAreas": [{ "x1": 9.51, "y1": 50.49, "x2": 7.86, "y2": 91.88, "w": 12 }, { "x1": 7.86, "y1": 91.88, "x2": 17.46, "y2": 93.04, "w": 12 }, { "x1": 18.12, "y1": 92.88, "x2": 21.1, "y2": 77.48, "w": 12 }, { "x1": 21.1, "y1": 75.99, "x2": 19.95, "y2": 46.35, "w": 12 }, { "x1": 19.95, "y1": 46.35, "x2": 12, "y2": 49.17, "w": 12 }, { "x1": 14.48, "y1": 50.33, "x2": 12, "y2": 92.88, "w": 12 }],
+    "goals": [30, 50, 70, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260527",
+    "clue": "Grab the [pot]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/kitchen-stove-pots-2616983/",
+    "imageKey": "dOeDimJcpf",
+    "hitAreas": [{ "x1": 34.85, "y1": 63.74, "x2": 57.69, "y2": 66.72, "w": 12 }, { "x1": 53.89, "y1": 63.74, "x2": 65.97, "y2": 64.4, "w": 12 }, { "x1": 65.81, "y1": 64.56, "x2": 65.97, "y2": 73.34, "w": 12 }, { "x1": 65.97, "y1": 73.34, "x2": 54.55, "y2": 73.84, "w": 12 }, { "x1": 54.55, "y1": 73.67, "x2": 53.39, "y2": 69.53, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260528",
+    "clue": "Get the [umbrella]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/art-rain-symmetry-woman-alone-sad-2606653/",
+    "imageKey": "OtF6HQv7YU",
+    "hitAreas": [{ "x1": 45.94, "y1": 58.27, "x2": 48.92, "y2": 56.62, "w": 12 }, { "x1": 48.42, "y1": 60.09, "x2": 52.23, "y2": 58.44, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260529",
+    "clue": "Click on the [basket]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/bike-bicycle-travel-wall-2606642/",
+    "imageKey": "mqWHFzLVpt",
+    "hitAreas": [{ "x1": 50.08, "y1": 40.56, "x2": 56.7, "y2": 39.23, "w": 12 }, { "x1": 57.03, "y1": 39.23, "x2": 67.63, "y2": 43.37, "w": 12 }, { "x1": 67.63, "y1": 43.37, "x2": 64.98, "y2": 56.45, "w": 12 }, { "x1": 64.81, "y1": 56.45, "x2": 49.75, "y2": 54.63, "w": 12 }, { "x1": 49.75, "y1": 54.47, "x2": 49.75, "y2": 40.89, "w": 12 }, { "x1": 55.21, "y1": 43.21, "x2": 63.16, "y2": 53.64, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260530",
+    "clue": "Check the [tire]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/yellow-car-vintage-city-town-2616678/",
+    "imageKey": "YARkXqmq5C",
+    "hitAreas": [{ "x1": 53.39, "y1": 82.61, "x2": 59.02, "y2": 75.99, "w": 12 }, { "x1": 60.01, "y1": 74.66, "x2": 66.3, "y2": 74.66, "w": 12 }, { "x1": 66.97, "y1": 76.15, "x2": 68.79, "y2": 84.27, "w": 12 }, { "x1": 68.95, "y1": 84.6, "x2": 65.14, "y2": 89.9, "w": 12 }, { "x1": 64.98, "y1": 90.39, "x2": 59.18, "y2": 92.05, "w": 12 }, { "x1": 59.02, "y1": 92.38, "x2": 54.05, "y2": 85.26, "w": 12 }, { "x1": 59.18, "y1": 86.58, "x2": 61.83, "y2": 81.78, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260531",
+    "clue": "[Tag]. You're it.",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/german-shepherd-pet-animal-friend-2567118/",
+    "imageKey": "59gUZCP1NX",
+    "hitAreas": [{ "x1": 61.17, "y1": 79.8, "x2": 61.34, "y2": 91.72, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260601",
+    "clue": "Find [me]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/nature-landscape-mountains-sky-2569639/",
+    "imageKey": "YWINVmEPhX",
+    "hitAreas": [{ "x1": 50.24, "y1": 63.24, "x2": 50.08, "y2": 69.03, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260602",
+    "clue": "Go to [space]",
+    "credit": "Csaba Nagy",
+    "creditUrl": "https://pixabay.com/photos/smartwatch-keyboard-mouse-desk-1783180/",
+    "imageKey": "M4vVfXCqg8",
+    "hitAreas": [{ "x1": 62.37, "y1": 8.41, "x2": 72.64, "y2": 37.71, "w": 12 }, { "x1": 74.49, "y1": 37.54, "x2": 81.9, "y2": 35.18, "w": 12 }, { "x1": 82.07, "y1": 34.84, "x2": 68.26, "y2": 6.56, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260603",
+    "clue": "Oh, [deer]!",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/deer-animal-wildlife-green-grass-2598453/",
+    "imageKey": "dtRT1v1gfC",
+    "hitAreas": [{ "x1": 56.64, "y1": 66.83, "x2": 57.65, "y2": 59.25, "w": 12 }, { "x1": 57.82, "y1": 58.24, "x2": 77.86, "y2": 48.31, "w": 12 }, { "x1": 77.69, "y1": 48.82, "x2": 81.56, "y2": 62.62, "w": 12 }, { "x1": 81.39, "y1": 62.62, "x2": 76.51, "y2": 80.97, "w": 12 }, { "x1": 76.01, "y1": 81.14, "x2": 57.49, "y2": 75.42, "w": 12 }, { "x1": 57.49, "y1": 75.08, "x2": 56.98, "y2": 67.67, "w": 12 }, { "x1": 59.68, "y1": 70.37, "x2": 75.67, "y2": 57.4, "w": 12 }, { "x1": 68.43, "y1": 71.38, "x2": 74.49, "y2": 67.84, "w": 12 }],
+    "goals": [10, 20, 30, 40, 60],
+    "beforeMessages": []
+  },
+  {
+    "date": "260604",
+    "clue": "Where's my [water]?",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/vegetable-salad-food-health-green-2564945/",
+    "imageKey": "XugAN1GVmS",
+    "hitAreas": [{ "x1": 79.63, "y1": 31.12, "x2": 81.78, "y2": 15.72, "w": 12 }, { "x1": 80.79, "y1": 15.23, "x2": 90.06, "y2": 11.75, "w": 12 }, { "x1": 91.72, "y1": 12.41, "x2": 95.03, "y2": 19.03, "w": 12 }, { "x1": 95.03, "y1": 19.03, "x2": 92.88, "y2": 27.98, "w": 12 }, { "x1": 92.88, "y1": 27.98, "x2": 83.11, "y2": 33.44, "w": 12 }, { "x1": 81.95, "y1": 31.45, "x2": 88.41, "y2": 18.87, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260605",
+    "clue": "Get me a [coffee]!",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/architecture-building-infrastructure-2567904/",
+    "imageKey": "loXCKguf1Q",
+    "hitAreas": [{ "x1": 7.28, "y1": 56.95, "x2": 36.58, "y2": 61.75, "w": 12 }, { "x1": 36.58, "y1": 62.74, "x2": 2.48, "y2": 73.84, "w": 12 }, { "x1": 8.77, "y1": 69.53, "x2": 8.6, "y2": 58.27, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260606",
+    "clue": "Find [Jesus]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/christmas-day-holy-family-figure-2597791/",
+    "imageKey": "cvj174pHEb",
+    "hitAreas": [{ "x1": 24.66, "y1": 68.54, "x2": 33.6, "y2": 74.33, "w": 12 }, { "x1": 32.45, "y1": 76.98, "x2": 26.15, "y2": 72.68, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260607",
+    "clue": "Get on the [table]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/chair-couch-sofa-table-2576358/",
+    "imageKey": "Ee4Unfzpb9",
+    "hitAreas": [{ "x1": 26.98, "y1": 83.6, "x2": 25.33, "y2": 75, "w": 12 }, { "x1": 25.16, "y1": 75, "x2": 30.46, "y2": 71.02, "w": 12 }, { "x1": 30.79, "y1": 71.35, "x2": 43.87, "y2": 72.68, "w": 12 }, { "x1": 43.87, "y1": 72.51, "x2": 40.56, "y2": 84.27, "w": 12 }, { "x1": 40.56, "y1": 84.27, "x2": 28.47, "y2": 83.27, "w": 12 }, { "x1": 30.79, "y1": 76.98, "x2": 37.08, "y2": 76.49, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260608",
+    "clue": "Tap the [horn]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/people-man-girls-kid-dog-pet-2604341/",
+    "imageKey": "kvuqO8EXW7",
+    "hitAreas": [{ "x1": 44.37, "y1": 60.92, "x2": 47.51, "y2": 64.56, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260609",
+    "clue": "Oh, [man]!",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/chamber-street-wall-art-people-2583406/",
+    "imageKey": "wcpvc9QdA7",
+    "hitAreas": [{ "x1": 8.77, "y1": 92.54, "x2": 9.76, "y2": 60.59, "w": 12 }, { "x1": 9.76, "y1": 60.59, "x2": 19.86, "y2": 46.35, "w": 12 }, { "x1": 23.01, "y1": 47.01, "x2": 24.83, "y2": 73.01, "w": 12 }, { "x1": 24.83, "y1": 73.01, "x2": 22.01, "y2": 97.51, "w": 12 }, { "x1": 21.35, "y1": 96.85, "x2": 10.76, "y2": 89.07, "w": 12 }, { "x1": 16.39, "y1": 89.9, "x2": 19.86, "y2": 51.49, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260610",
+    "clue": "Look at the [birdie]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/origami-paper-crafts-books-923862/",
+    "imageKey": "quOngLuLz2",
+    "hitAreas": [{ "x1": 70.03, "y1": 16.55, "x2": 75.99, "y2": 14.56, "w": 12 }, { "x1": 73.01, "y1": 21.52, "x2": 74.66, "y2": 20.52, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260611",
+    "clue": "Hunt for the [hunter]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/tree-plant-nature-snow-winter-2597806/",
+    "imageKey": "FbTKv6RrZb",
+    "hitAreas": [{ "x1": 59.27, "y1": 59.1, "x2": 62.41, "y2": 56.29, "w": 12 }, { "x1": 63.24, "y1": 55.62, "x2": 77.98, "y2": 60.43, "w": 12 }, { "x1": 80.96, "y1": 60.92, "x2": 85.76, "y2": 68.21, "w": 12 }, { "x1": 83.77, "y1": 69.37, "x2": 82.45, "y2": 72.01, "w": 12 }, { "x1": 81.62, "y1": 72.84, "x2": 67.71, "y2": 65.89, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260612",
+    "clue": "Find a [bug]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/lavender-flower-garden-field-farm-2559812/",
+    "imageKey": "JWLVYGhMk1",
+    "hitAreas": [{ "x1": 36.92, "y1": 35.09, "x2": 43.87, "y2": 30.79, "w": 12 }, { "x1": 44.53, "y1": 30.46, "x2": 45.69, "y2": 36.92, "w": 12 }, { "x1": 44.03, "y1": 39.56, "x2": 42.71, "y2": 39.56, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260613",
+    "clue": "Go [inside]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/patio-backyard-umbrella-bench-2628075/",
+    "imageKey": "KFt9bQYy6I",
+    "hitAreas": [{ "x1": 0.16, "y1": 1.15, "x2": 22.68, "y2": 7.61, "w": 12 }, { "x1": 23.84, "y1": 7.94, "x2": 25.66, "y2": 57.94, "w": 12 }, { "x1": 25.66, "y1": 57.78, "x2": -5.29, "y2": 82.11, "w": 12 }, { "x1": 3.8, "y1": 76.32, "x2": 2.31, "y2": 5.46, "w": 12 }, { "x1": 12.25, "y1": 6.95, "x2": 12.74, "y2": 63.57, "w": 12 }, { "x1": 19.86, "y1": 61.25, "x2": 17.88, "y2": 9.27, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260614",
+    "clue": "It's a [tie]!",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/christmas-season-cookie-bokeh-2569602/",
+    "imageKey": "rBwDPqHUKv",
+    "hitAreas": [{ "x1": 23.01, "y1": 54.13, "x2": 37.91, "y2": 52.15, "w": 12 }, { "x1": 25, "y1": 50.49, "x2": 37.41, "y2": 55.96, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260615",
+    "clue": "Look me in the [eye]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/wall-art-mural-painting-2565195/",
+    "imageKey": "3jao0p4aib",
+    "hitAreas": [{ "x1": 7.11, "y1": 34.93, "x2": 12.25, "y2": 26.15, "w": 12 }],
+    "goals": [30, 50, 70, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260616",
+    "clue": "Find a [lady]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/business-establishments-shops-2608585/",
+    "imageKey": "CrSYPwyUut",
+    "hitAreas": [{ "x1": 12.41, "y1": 69.7, "x2": 9.1, "y2": 90.39, "w": 12 }, { "x1": 9.1, "y1": 90.39, "x2": 24.66, "y2": 92.71, "w": 12 }, { "x1": 24, "y1": 91.72, "x2": 15.39, "y2": 69.53, "w": 12 }],
+    "goals": [25, 40, 60, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260617",
+    "clue": "Got a [smoke]?",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/people-man-old-beard-smoke-2587127/",
+    "imageKey": "dlciLyp1NV",
+    "hitAreas": [{ "x1": 11.75, "y1": 50.66, "x2": 16.55, "y2": 48.84, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260618",
+    "clue": "Find my [whistle]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/jamaica-culture-people-man-woman-698620/",
+    "imageKey": "9lKQXEYzDx",
+    "hitAreas": [{ "x1": 36.58, "y1": 85.59, "x2": 36.58, "y2": 93.7, "w": 12 }],
+    "goals": [30, 50, 70, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260619",
+    "clue": "Get on [board]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/skateboard-skateboarder-jump-flip-2620012/",
+    "imageKey": "R6ANFZjumx",
+    "hitAreas": [{ "x1": 23.01, "y1": 62.91, "x2": 45.52, "y2": 75.16, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260620",
+    "clue": "Pet the [dog]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/people-man-silhouette-alone-dog-2592574/",
+    "imageKey": "zEWRWO7Q36",
+    "hitAreas": [{ "x1": 38.24, "y1": 85.26, "x2": 51.15, "y2": 67.54, "w": 12 }, { "x1": 53.47, "y1": 68.04, "x2": 50.33, "y2": 85.92, "w": 12 }, { "x1": 50, "y1": 86.09, "x2": 40.06, "y2": 87.08, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260621",
+    "clue": "Locate the [blade]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/black-and-white-people-barbershop-2566973/",
+    "imageKey": "Q1KjChV85a",
+    "hitAreas": [{ "x1": 49.17, "y1": 35.26, "x2": 50.82, "y2": 33.11, "w": 12 }],
+    "goals": [30, 50, 70, 90, 120],
+    "beforeMessages": []
+  },
+  {
+    "date": "260622",
+    "clue": "See you in [court]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/architecture-building-residences-2564183/",
+    "imageKey": "Rn9AJZ3r8J",
+    "hitAreas": [{ "x1": 37.91, "y1": 59.6, "x2": 37.74, "y2": 41.05, "w": 12 }, { "x1": 37.74, "y1": 41.05, "x2": 72.68, "y2": 40.72, "w": 12 }, { "x1": 72.84, "y1": 40.89, "x2": 73.01, "y2": 59.1, "w": 12 }, { "x1": 72.84, "y1": 59.6, "x2": 37.41, "y2": 59.6, "w": 12 }, { "x1": 41.22, "y1": 51.32, "x2": 68.7, "y2": 50.16, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260623",
+    "clue": "In your [face]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/people-man-hand-eagle-bird-animal-2583664/",
+    "imageKey": "lt6EkMJy8X",
+    "hitAreas": [{ "x1": 15.89, "y1": 13.74, "x2": 18.37, "y2": 8.94, "w": 12 }, { "x1": 18.37, "y1": 8.77, "x2": 23.5, "y2": 7.78, "w": 12 }, { "x1": 24.83, "y1": 8.6, "x2": 19.7, "y2": 17.05, "w": 12 }],
+    "goals": [20, 30, 40, 60, 90],
+    "beforeMessages": []
+  },
+  {
+    "date": "260624",
+    "clue": "Pick up the [guitar]",
+    "credit": "StockSnap",
+    "creditUrl": "https://pixabay.com/photos/tree-woods-nature-plant-green-2603524/",
+    "imageKey": "YEvFKhzDA4",
+    "hitAreas": [{ "x1": 16.22, "y1": 66.39, "x2": 42.38, "y2": 64.73, "w": 12 }, { "x1": 41.72, "y1": 64.73, "x2": 15.06, "y2": 75.49, "w": 12 }, { "x1": 15.06, "y1": 75.49, "x2": 15.89, "y2": 66.39, "w": 12 }],
+    "goals": [15, 25, 40, 60, 90],
+    "beforeMessages": []
+  }
+]
