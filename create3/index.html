@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link type="text/css" rel="stylesheet" href="styles.css" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <title id="page-title">✨ Magic Puzzle Maker - Hocus Focus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="icon" href="../img/icons/favicon.ico?v=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/icons/180.png?v=1" />
+    <link rel="shortcut icon" href="../img/icons/favicon.ico?v=1" />
+    <link href="../img/icons/32.png?v=1" rel="icon shortcut" sizes="3232" />
+    <link href="../img/icons/192.png?v=1" rel="apple-touch-icon" />
+    <meta name="apple-mobile-web-app-title" content="Hocus Focus" />
+    <meta name="application-name" content="Hocus Focus" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="theme-color" content="#000000" />
+    <meta property="description" content="Turn Any Photo Into Magic in 30 Seconds" />
+    <meta property="og:title" content="✨ Magic Puzzle Maker - Hocus Focus" />
+    <meta property="og:url" content="http://holiday.hocusfocus.fun" />
+    <meta property="og:description" content="The easiest way to create amazing interactive puzzles. Just upload, click, and share the magic!" />
+    <meta property="og:image" content="https://www.hocusfocus.fun/img/icons/1200.png?v=1" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="hocusfocus.fun" />
+  </head>
+
+  <body>
+    <div id="all">
+
+      <header>
+        <img src="../img/hocus.png" id="logo" />
+        <h1 id="logotype">Hocus <span class="bold">Focus</span></h1>
+        <div class="magic-badge">✨ MAGIC MAKER</div>
+      </header>
+
+        <div class="board square-block">
+
+          <div id="upload" class="board square-block">
+            <!-- Create mode intro (default) -->
+            <div id="create-intro">
+              <div class="magic-hero">
+                <div class="sparkle-icon">✨</div>
+                <h2>Turn Any Photo Into Magic</h2>
+                <p class="magic-subtitle">Create amazing interactive puzzles in just 30 seconds</p>
+              </div>
+              
+              <div class="simple-steps">
+                <div class="magic-step">
+                  <span class="step-emoji">📸</span>
+                  <span class="step-text">Upload your photo</span>
+                </div>
+                <div class="magic-arrow">→</div>
+                <div class="magic-step">
+                  <span class="step-emoji">👆</span>
+                  <span class="step-text">Tap what to find</span>
+                </div>
+                <div class="magic-arrow">→</div>
+                <div class="magic-step">
+                  <span class="step-emoji">🎉</span>
+                  <span class="step-text">Share the magic!</span>
+                </div>
+              </div>
+              
+              <div class="wow-factor">
+                <p>✨ <strong>It's that simple!</strong> Watch your friends be amazed.</p>
+              </div>
+              
+              <div id="advanced-options">
+                <input type="text" id="credit-url-field" placeholder="Photo source (optional)">
+                <input type="text" id="credit-field" placeholder="Photographer name">
+                <input type="text" id="date-field" placeholder="Date">
+                <label for="difficulty">How tricky should it be?</label>
+                <select id="difficulty">
+                  <option value="10">Super tricky (10 seconds)</option>
+                  <option value="15">Pretty hard (15 seconds)</option>
+                  <option value="20" selected>Just right (20 seconds)</option>
+                  <option value="25">Nice and easy (25 seconds)</option>
+                  <option value="30">Very easy (30 seconds)</option>
+                  <option value="35">Super easy (35 seconds)</option>
+                  <option value="40">Beginner friendly (40 seconds)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Holiday mode intro -->
+            <div id="holiday-intro" style="display: none;">
+              <div class="magic-hero">
+                <div class="sparkle-icon">🎄</div>
+                <h2>Create Holiday Magic</h2>
+                <p class="magic-subtitle">Turn your holiday photos into delightful surprises</p>
+              </div>
+              <p>Your family will love discovering the hidden details in your photos!</p>
+              <p><a href="http://www.hocusfocus.fun?id=639636736b3ee2ea3c813cb2" target="example">✨ See the magic in action</a><br/>Then make your own!</p>
+            </div>
+
+            <label id="upload-label" for="upload-field">✨ Start the Magic</label>
+            <input type="file" id="upload-field" accept="image/*">
+          </div>
+
+          <div id="hit" class="square-block">
+            <canvas class="square-block" id="pic" width="1000" height="1000"></canvas>
+            <div id="canvases">
+              <canvas class="square-block" id="hit-applied" width="1000" height="1000"></canvas>
+              <canvas class="square-block" id="hit-drawing" width="1000" height="1000"></canvas>
+            </div>
+            <!-- Using create version instructions -->
+            <div class="instructions-modal" id="hit-instructions">
+              <div class="modal-icon">👆</div>
+              <h3>Tap What People Should Find</h3>
+              <p>Just draw over the area you want people to discover. Make it as easy or tricky as you like!</p>
+              <button class="button" id="hide-hit-instructions">Got it! ✨</button>
+            </div>
+            <!-- Using create version clue instructions -->
+            <div class="instructions-modal" id="clue-instructions">
+              <div class="modal-icon">💭</div>
+              <h3>Give Them a Hint</h3>
+              <p>Write a simple clue about what to find. Keep it fun and not too obvious!</p>
+              <p><strong>Tip:</strong> Put the important word in [brackets] to make it stand out</p>
+              <button class="button" id="hide-clue-instructions">Perfect! 🎯</button>
+            </div>
+          </div>
+
+          <!-- Message section (always included from holiday version) -->
+          <div id="message" class="square-block">
+            <input id="message-title" placeholder="✨ Give your puzzle a fun title"></input>
+            <textarea id="message-body" placeholder="Add a personal message (optional)
+
+'I found something cool in this photo... 
+Can you spot it too? 😊'"></textarea>
+            
+            <div class="instructions-modal" id="message-instructions">
+              <div class="modal-icon">🎨</div>
+              <h3>Make It Personal</h3>
+              <p>Add a message to make your puzzle extra special. You can also pick a pretty background!</p>
+              <button class="button" id="hide-message-instructions">Looks great! ✨</button>
+            </div>
+            <div class="instructions-modal" id="theme-select">
+              <div>
+                <p><strong>🎨 Pick a background:</strong></p>
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjx0ZXh0IHg9IjIwIiB5PSIyNSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmaWxsPSJibGFjayIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Tm9uZTwvdGV4dD4KPC9zdmc+" data-value="none"/>
+                <img src="../img/themes/icons/1.jpg" data-value="1"/>
+                <img src="../img/themes/icons/2.jpg" data-value="2"/>
+                <img src="../img/themes/icons/3.jpg" data-value="3"/>
+                <img src="../img/themes/icons/4.jpg" data-value="4"/>
+                <img src="../img/themes/icons/5.jpg" data-value="5"/>
+                <img src="../img/themes/icons/6.jpg" data-value="6"/>
+                <img src="../img/themes/icons/7.jpg" data-value="7"/>
+                <img src="../img/themes/icons/8.jpg" data-value="8"/>
+                <img src="../img/themes/icons/9.jpg" data-value="9"/>
+                <img src="../img/themes/icons/10.jpg" data-value="10"/>
+                <img src="../img/themes/icons/11.jpg" data-value="11"/>
+                <img src="../img/themes/icons/12.jpg" data-value="12"/>
+              </div>
+            </div>
+          </div>
+
+          <div id="confirm" class="square-block">
+            <div class="magic-success">
+              <div class="success-icon">🎉</div>
+              <h2>Your Magic Puzzle is Ready!</h2>
+              <p class="success-subtitle">Amazing! You just created something that will surprise and delight people.</p>
+              
+              <div class="share-magic">
+                <p><strong>✨ Share your creation:</strong></p>
+                <a id="puzzle-link" href="#" target="puzzle" class="magic-link"></a>
+                <div class="easy-share">
+                  <button class="share-button">📋 Copy Link</button>
+                  <button class="share-button">📱 Share Now</button>
+                </div>
+              </div>
+              
+              <div class="magic-tip">
+                <p>💡 <strong>Pro tip:</strong> Send this to your friends and watch them try to solve it!</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="controls horizontal-block" id="hit-controls">
+          <button class="button secondary" id="change-image">🔄 Different Photo</button>
+          <button class="button secondary" id="clear-hit">↩️ Try Again</button>
+          <button class="button primary" id="submit-hit">Next Step ✨</button>
+        </div>
+
+        <div class="controls horizontal-block" id="clue-controls">
+          <input type="text" id="clue-field" placeholder="💭 What should they look for?">
+          <button class="button primary" id="submit-clue">Almost Done! 🎯</button>
+        </div>
+
+        <div class="controls horizontal-block" id="message-controls">
+          <button class="button secondary" id="show-themes-button">🎨 Change Background</button>
+          <button class="button primary" id="submit-message">Create Magic! ✨</button>
+        </div>
+      
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script type="module" src="script.js"></script>
+    <script type="module" src="hitArea.js"></script>
+  </body>
+</html>
