@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link type="text/css" rel="stylesheet" href="styles.css" />
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-    <title>Hocus Focus Puzzle Creator</title>
+    <title id="page-title">Hocus Focus Puzzle Creator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet" />
@@ -38,22 +38,37 @@
         <div class="board square-block">
 
           <div id="upload" class="board square-block">
-            <p>Create a custom Hocus Focus puzzle in three steps:</p>
-            <p>Upload your picture, select the target area, then write a short clue</p>
-            <div id="advanced-options">
-              <input type="text" id="credit-url-field" placeholder="URL of source">
-              <input type="text" id="credit-field" placeholder="Photographer">
-              <input type="text" id="date-field" placeholder="date">
-              Seconds for 5 Stars: <select id="difficulty">
-                <option value="10">10</option>
-                <option value="15">15</option>
-                <option value="20" selected>20</option>
-                <option value="25">25</option>
-                <option value="30">30</option>
-                <option value="35">35</option>
-                <option value="40">40</option>
-              </select>
+            <!-- Create mode intro (default) -->
+            <div id="create-intro">
+              <p>Create a custom picture search puzzle in three steps:</p>
+              <ul>
+                <li><b>1</b>Upload your picture</li>
+                <li><b>2</b>select the target area</li>
+                <li><b>3</b>write a short clue</li>
+              </ul>
+              <div id="advanced-options">
+                <input type="text" id="credit-url-field" placeholder="URL of source">
+                <input type="text" id="credit-field" placeholder="Photographer">
+                <input type="text" id="date-field" placeholder="date">
+                Seconds for 5 Stars: <select id="difficulty">
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="20" selected>20</option>
+                  <option value="25">25</option>
+                  <option value="30">30</option>
+                  <option value="35">35</option>
+                  <option value="40">40</option>
+                </select>
+              </div>
             </div>
+
+            <!-- Holiday mode intro -->
+            <div id="holiday-intro" style="display: none;">
+              <h2>Create a holiday card that's also a fun picture search puzzle</h2>
+              <p>Just upload your own photo and pick something in it for your loved ones to find. They'll paint the picture until they can find that goal.</p>
+              <p><a href="http://www.hocusfocus.fun?id=639636736b3ee2ea3c813cb2" target="example">Check out an example</a><br/>then make your own!</p>
+            </div>
+
             <label id="upload-label" for="upload-field">Upload Picture</label>
             <input type="file" id="upload-field" accept="image/*">
           </div>
@@ -64,14 +79,48 @@
               <canvas class="square-block" id="hit-applied" width="1000" height="1000"></canvas>
               <canvas class="square-block" id="hit-drawing" width="1000" height="1000"></canvas>
             </div>
+            <!-- Using create version instructions -->
             <div class="instructions-modal" id="hit-instructions">
               <p>Next, highlight the target area that the player should click.</p>
               <button class="button" id="hide-hit-instructions">Got it!</button>
             </div>
+            <!-- Using create version clue instructions -->
             <div class="instructions-modal" id="clue-instructions">
-              <p>In a few words, describe what the  player has to find.</p>
+              <p>In a few words, describe what the player has to find.</p>
               <p>To make part of the clue boldfaced,<br/>put it in <b>[square brackets]</b></p>
               <button class="button" id="hide-clue-instructions">Got it!</button>
+            </div>
+          </div>
+
+          <!-- Message section (always included from holiday version) -->
+          <div id="message" class="square-block">
+            <input id="message-title" placeholder="Your title here"></input>
+            <textarea id="message-body" placeholder="Edit this text to write
+a short message
+to your loved ones"></textarea>
+            
+            <div class="instructions-modal" id="message-instructions">
+              <p>If you want, add a message to go with your custom puzzle.</p>
+              <p>Also, you can select a background theme for your message.</p>
+              <button class="button" id="hide-message-instructions">Got it!</button>
+            </div>
+            <div class="instructions-modal" id="theme-select">
+              <div>
+                <p>Select a theme:</p>
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjx0ZXh0IHg9IjIwIiB5PSIyNSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmaWxsPSJibGFjayIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Tm9uZTwvdGV4dD4KPC9zdmc+" data-value="none"/>
+                <img src="../img/themes/icons/1.jpg" data-value="1"/>
+                <img src="../img/themes/icons/2.jpg" data-value="2"/>
+                <img src="../img/themes/icons/3.jpg" data-value="3"/>
+                <img src="../img/themes/icons/4.jpg" data-value="4"/>
+                <img src="../img/themes/icons/5.jpg" data-value="5"/>
+                <img src="../img/themes/icons/6.jpg" data-value="6"/>
+                <img src="../img/themes/icons/7.jpg" data-value="7"/>
+                <img src="../img/themes/icons/8.jpg" data-value="8"/>
+                <img src="../img/themes/icons/9.jpg" data-value="9"/>
+                <img src="../img/themes/icons/10.jpg" data-value="10"/>
+                <img src="../img/themes/icons/11.jpg" data-value="11"/>
+                <img src="../img/themes/icons/12.jpg" data-value="12"/>
+              </div>
             </div>
           </div>
 
@@ -89,10 +138,14 @@
           <button class="button" id="submit-hit">Done</button>
         </div>
 
-        
         <div class="controls horizontal-block" id="clue-controls">
           <input type="text" id="clue-field" placeholder="Type your clue here">
           <button class="button" id="submit-clue">Next</button>
+        </div>
+
+        <div class="controls horizontal-block" id="message-controls">
+          <button class="button" id="show-themes-button">Change Theme</button>
+          <button class="button" id="submit-message">Done</button>
         </div>
       
     </div>

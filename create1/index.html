@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link type="text/css" rel="stylesheet" href="styles.css" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <title id="page-title">🎯 Challenge Creator - Hocus Focus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700;800&display=swap" rel="stylesheet" />
+
+    <link rel="icon" href="../img/icons/favicon.ico?v=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/icons/180.png?v=1" />
+    <link rel="shortcut icon" href="../img/icons/favicon.ico?v=1" />
+    <link href="../img/icons/32.png?v=1" rel="icon shortcut" sizes="3232" />
+    <link href="../img/icons/192.png?v=1" rel="apple-touch-icon" />
+    <meta name="apple-mobile-web-app-title" content="Hocus Focus" />
+    <meta name="application-name" content="Hocus Focus" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="theme-color" content="#000000" />
+    <meta property="description" content="Create Epic Visual Challenges That Will Stump Your Friends!" />
+    <meta property="og:title" content="🎯 Challenge Creator - Hocus Focus" />
+    <meta property="og:url" content="http://holiday.hocusfocus.fun" />
+    <meta property="og:description" content="Become a puzzle master! Create mind-bending visual challenges that will test your friends' observation skills." />
+    <meta property="og:image" content="https://www.hocusfocus.fun/img/icons/1200.png?v=1" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="hocusfocus.fun" />
+  </head>
+
+  <body>
+    <div id="all">
+
+      <header>
+        <img src="../img/hocus.png" id="logo" />
+        <h1 id="logotype">Hocus <span class="bold">Focus</span></h1>
+        <div class="creator-badge">🏆 CHALLENGE CREATOR</div>
+      </header>
+
+        <div class="board square-block">
+
+          <div id="upload" class="board square-block">
+            <!-- Create mode intro (default) -->
+            <div id="create-intro">
+              <div class="hero-section">
+                <h2>🎯 Become a Puzzle Master!</h2>
+                <p class="tagline">Create <strong>epic visual challenges</strong> that will stump your friends and family!</p>
+              </div>
+              
+              <div class="game-steps">
+                <div class="step-card">
+                  <div class="step-number">1</div>
+                  <div class="step-content">
+                    <h3>📸 Upload Your Photo</h3>
+                    <p>Any image becomes a challenge!</p>
+                  </div>
+                </div>
+                <div class="step-card">
+                  <div class="step-number">2</div>
+                  <div class="step-content">
+                    <h3>🎯 Mark the Target</h3>
+                    <p>Choose what players must find</p>
+                  </div>
+                </div>
+                <div class="step-card">
+                  <div class="step-number">3</div>
+                  <div class="step-content">
+                    <h3>💡 Write Your Clue</h3>
+                    <p>Give them a hint (or don't!)</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="achievement-preview">
+                <p>🏅 <strong>Challenge your friends to beat your puzzle!</strong></p>
+                <p>⚡ Set difficulty levels • 🎖️ Track completion rates • 🔥 Go viral!</p>
+              </div>
+              
+              <div id="advanced-options">
+                <input type="text" id="credit-url-field" placeholder="URL of source">
+                <input type="text" id="credit-field" placeholder="Photographer">
+                <input type="text" id="date-field" placeholder="date">
+                Difficulty Level: <select id="difficulty">
+                  <option value="10">🔥 Insane (10s)</option>
+                  <option value="15">😤 Hard (15s)</option>
+                  <option value="20" selected>⚡ Medium (20s)</option>
+                  <option value="25">😊 Easy (25s)</option>
+                  <option value="30">🐌 Beginner (30s)</option>
+                  <option value="35">👶 Super Easy (35s)</option>
+                  <option value="40">🎈 Kids Mode (40s)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Holiday mode intro -->
+            <div id="holiday-intro" style="display: none;">
+              <h2>🎄 Create Epic Holiday Challenges!</h2>
+              <p>Turn your holiday photos into mind-bending puzzles that will have your family competing to solve them first!</p>
+              <p><a href="http://www.hocusfocus.fun?id=639636736b3ee2ea3c813cb2" target="example">🎯 See a Challenge in Action</a><br/>Then create your own masterpiece!</p>
+            </div>
+
+            <label id="upload-label" for="upload-field">🚀 START CREATING YOUR CHALLENGE</label>
+            <input type="file" id="upload-field" accept="image/*">
+          </div>
+
+          <div id="hit" class="square-block">
+            <canvas class="square-block" id="pic" width="1000" height="1000"></canvas>
+            <div id="canvases">
+              <canvas class="square-block" id="hit-applied" width="1000" height="1000"></canvas>
+              <canvas class="square-block" id="hit-drawing" width="1000" height="1000"></canvas>
+            </div>
+            <!-- Using create version instructions -->
+            <div class="instructions-modal" id="hit-instructions">
+              <h3>🎯 Mark Your Target Zone!</h3>
+              <p>Draw over the area where players need to click. Make it challenging but fair!</p>
+              <p><strong>Pro tip:</strong> Smaller areas = higher difficulty = more bragging rights! 🏆</p>
+              <button class="button" id="hide-hit-instructions">Let's Do This! 🔥</button>
+            </div>
+            <!-- Using create version clue instructions -->
+            <div class="instructions-modal" id="clue-instructions">
+              <h3>💡 Craft Your Challenge Clue!</h3>
+              <p>Give players a hint about what to find. Be clever, be tricky, be creative!</p>
+              <p>Want to make text <strong>pop</strong>? Put it in <b>[square brackets]</b></p>
+              <p><strong>Examples:</strong> "Find the [red button]" or "Spot the hidden [emoji]"</p>
+              <button class="button" id="hide-clue-instructions">I'm Ready! ⚡</button>
+            </div>
+          </div>
+
+          <!-- Message section (always included from holiday version) -->
+          <div id="message" class="square-block">
+            <input id="message-title" placeholder="🏆 Challenge Title (e.g., 'Can You Beat This?')"></input>
+            <textarea id="message-body" placeholder="🎯 Add a message to taunt your friends!
+
+'Think you're observant? 
+Prove it by solving my puzzle! 
+I bet you can't find it in under 20 seconds... 😏'"></textarea>
+            
+            <div class="instructions-modal" id="message-instructions">
+              <h3>🎨 Customize Your Challenge!</h3>
+              <p>Add a personal message to make your challenge even more engaging!</p>
+              <p>Choose a theme that matches your puzzle's vibe. Make it memorable! 🌟</p>
+              <button class="button" id="hide-message-instructions">Perfect! 🎯</button>
+            </div>
+            <div class="instructions-modal" id="theme-select">
+              <div>
+                <p><strong>🎨 Choose Your Challenge Theme:</strong></p>
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjx0ZXh0IHg9IjIwIiB5PSIyNSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmaWxsPSJibGFjayIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Tm9uZTwvdGV4dD4KPC9zdmc+" data-value="none"/>
+                <img src="../img/themes/icons/1.jpg" data-value="1"/>
+                <img src="../img/themes/icons/2.jpg" data-value="2"/>
+                <img src="../img/themes/icons/3.jpg" data-value="3"/>
+                <img src="../img/themes/icons/4.jpg" data-value="4"/>
+                <img src="../img/themes/icons/5.jpg" data-value="5"/>
+                <img src="../img/themes/icons/6.jpg" data-value="6"/>
+                <img src="../img/themes/icons/7.jpg" data-value="7"/>
+                <img src="../img/themes/icons/8.jpg" data-value="8"/>
+                <img src="../img/themes/icons/9.jpg" data-value="9"/>
+                <img src="../img/themes/icons/10.jpg" data-value="10"/>
+                <img src="../img/themes/icons/11.jpg" data-value="11"/>
+                <img src="../img/themes/icons/12.jpg" data-value="12"/>
+              </div>
+            </div>
+          </div>
+
+          <div id="confirm" class="square-block">
+            <div class="success-celebration">
+              <h2>🎉 Challenge Created Successfully!</h2>
+              <div class="achievement-badge">🏆 PUZZLE MASTER ACHIEVEMENT UNLOCKED! 🏆</div>
+              <p>Your epic visual challenge is ready to stump the world! Share this link and watch your friends struggle to beat your creation.</p>
+              <div class="share-section">
+                <p><strong>🔗 Your Challenge Link:</strong></p>
+                <a id="puzzle-link" href="#" target="puzzle" class="challenge-link"></a>
+                <div class="share-buttons">
+                  <button class="share-btn">📱 Copy Link</button>
+                  <button class="share-btn">🐦 Tweet Challenge</button>
+                  <button class="share-btn">📘 Share on Facebook</button>
+                </div>
+              </div>
+              <p class="challenge-stats">⚡ Challenge others • 📊 Track completion rates • 🏅 Earn bragging rights!</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="controls horizontal-block" id="hit-controls">
+          <button class="button secondary" id="change-image">🔄 Change Picture</button>
+          <button class="button secondary" id="clear-hit">🗑️ Reset Target</button>
+          <button class="button primary" id="submit-hit">Next Step! 🎯</button>
+        </div>
+
+        <div class="controls horizontal-block" id="clue-controls">
+          <input type="text" id="clue-field" placeholder="💡 Enter your challenge clue here...">
+          <button class="button primary" id="submit-clue">Create Challenge! ⚡</button>
+        </div>
+
+        <div class="controls horizontal-block" id="message-controls">
+          <button class="button secondary" id="show-themes-button">🎨 Change Theme</button>
+          <button class="button primary" id="submit-message">Launch Challenge! 🚀</button>
+        </div>
+      
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script type="module" src="script.js"></script>
+    <script type="module" src="hitArea.js"></script>
+  </body>
+</html>

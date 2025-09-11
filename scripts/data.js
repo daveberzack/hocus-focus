@@ -44,6 +44,18 @@ let cachedResults = [];
 let cachedChallenges = null; // Cache for local challenges file
 let cachedTutorialChallenges = [];
 
+/**
+ * Parse tokenized hitAreas string back into array of objects
+ * @param {string} tokenString - Tokenized string like "x1,y1,x2,y2|x1,y1,x2,y2"
+ * @returns {Array} Array of hitArea objects with x1,y1,x2,y2,w properties
+ */
+const parseHitAreas = (tokenString) => {
+  if (!tokenString || typeof tokenString !== 'string') return [];
+  return tokenString.split('|').map(token => {
+    const [x1, y1, x2, y2] = token.split(',').map(Number);
+    return { x1, y1, x2, y2, w: 12 }; // Default width of 12
+  });
+};
 
 /**
  * Get today's date in YYMMDD format
@@ -265,20 +277,37 @@ const getNextChallenge = async () => {
   try {
     const results = await getGameResults();
     
+    let challenge = null;
+    
     // Handle challenges in priority order
     const specifiedChallenge = await handleSpecifiedChallenge();
-    if (specifiedChallenge) return specifiedChallenge;
+    if (specifiedChallenge) {
+      challenge = specifiedChallenge;
+    } else {
+      const tutorialChallenge = await handleTutorialProgression(results);
+      if (tutorialChallenge) {
+        challenge = tutorialChallenge;
+      } else {
+        const dailyChallenge = await handleDailyChallenge(results);
+        if (dailyChallenge) {
+          challenge = dailyChallenge;
+        } else {
+          const archiveChallenge = await handleArchiveChallenge(results);
+          if (archiveChallenge) {
+            challenge = archiveChallenge;
+          } else {
+            challenge = getErrorChallenge();
+          }
+        }
+      }
+    }
     
-    const tutorialChallenge = await handleTutorialProgression(results);
-    if (tutorialChallenge) return tutorialChallenge;
+    // Parse hitAreas if it's a tokenized string
+    if (challenge && challenge.hitAreas && typeof challenge.hitAreas === 'string') {
+      challenge.hitAreas = parseHitAreas(challenge.hitAreas);
+    }
     
-    const dailyChallenge = await handleDailyChallenge(results);
-    if (dailyChallenge) return dailyChallenge;
-
-    const archiveChallenge = await handleArchiveChallenge(results);
-    if (archiveChallenge) return archiveChallenge;
-
-    return getErrorChallenge();
+    return challenge;
     
   } catch (error) {
     return createUserFriendlyError(error, 'Challenge Loading');

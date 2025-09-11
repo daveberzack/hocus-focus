@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link type="text/css" rel="stylesheet" href="styles.css" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <title id="page-title">✨ Visual Story Creator - Hocus Focus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+    <link rel="icon" href="../img/icons/favicon.ico?v=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/icons/180.png?v=1" />
+    <link rel="shortcut icon" href="../img/icons/favicon.ico?v=1" />
+    <link href="../img/icons/32.png?v=1" rel="icon shortcut" sizes="3232" />
+    <link href="../img/icons/192.png?v=1" rel="apple-touch-icon" />
+    <meta name="apple-mobile-web-app-title" content="Hocus Focus" />
+    <meta name="application-name" content="Hocus Focus" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="theme-color" content="#000000" />
+    <meta property="description" content="Transform Your Photos Into Interactive Visual Stories" />
+    <meta property="og:title" content="✨ Visual Story Creator - Hocus Focus" />
+    <meta property="og:url" content="http://holiday.hocusfocus.fun" />
+    <meta property="og:description" content="Create beautiful, interactive visual narratives that captivate and inspire. Turn any image into an artistic journey of discovery." />
+    <meta property="og:image" content="https://www.hocusfocus.fun/img/icons/1200.png?v=1" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="hocusfocus.fun" />
+  </head>
+
+  <body>
+    <div id="all">
+
+      <header>
+        <img src="../img/hocus.png" id="logo" />
+        <h1 id="logotype">Hocus <span class="bold">Focus</span></h1>
+        <div class="creator-badge">✨ VISUAL STORYTELLER</div>
+      </header>
+
+        <div class="board square-block">
+
+          <div id="upload" class="board square-block">
+            <!-- Create mode intro (default) -->
+            <div id="create-intro">
+              <div class="artistic-hero">
+                <h2>✨ Craft Visual Stories</h2>
+                <p class="artistic-tagline">Transform your photographs into <em>interactive narratives</em> that invite exploration and wonder</p>
+              </div>
+              
+              <div class="creative-process">
+                <div class="process-step">
+                  <div class="step-icon">🎨</div>
+                  <div class="step-text">
+                    <h3>Choose Your Canvas</h3>
+                    <p>Every image holds untold stories waiting to be discovered</p>
+                  </div>
+                </div>
+                <div class="process-step">
+                  <div class="step-icon">🔍</div>
+                  <div class="step-text">
+                    <h3>Guide the Journey</h3>
+                    <p>Direct attention to the heart of your visual narrative</p>
+                  </div>
+                </div>
+                <div class="process-step">
+                  <div class="step-icon">📝</div>
+                  <div class="step-text">
+                    <h3>Weave the Tale</h3>
+                    <p>Craft words that breathe life into your imagery</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="inspiration-quote">
+                <blockquote>
+                  "Every photograph is a story waiting to be told, every detail a chapter waiting to be explored."
+                </blockquote>
+              </div>
+              
+              <div id="advanced-options">
+                <input type="text" id="credit-url-field" placeholder="Source URL (optional)">
+                <input type="text" id="credit-field" placeholder="Artist/Photographer">
+                <input type="text" id="date-field" placeholder="Creation date">
+                <label for="difficulty">Discovery Time:</label>
+                <select id="difficulty">
+                  <option value="10">Swift Glance (10s)</option>
+                  <option value="15">Thoughtful Gaze (15s)</option>
+                  <option value="20" selected>Contemplative Study (20s)</option>
+                  <option value="25">Patient Observation (25s)</option>
+                  <option value="30">Meditative Viewing (30s)</option>
+                  <option value="35">Deep Reflection (35s)</option>
+                  <option value="40">Immersive Experience (40s)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Holiday mode intro -->
+            <div id="holiday-intro" style="display: none;">
+              <h2>🎄 Create Enchanting Holiday Memories</h2>
+              <p>Transform your cherished holiday moments into interactive visual stories that your loved ones will treasure forever.</p>
+              <p><a href="http://www.hocusfocus.fun?id=639636736b3ee2ea3c813cb2" target="example">✨ Experience the Magic</a><br/>Then create your own masterpiece</p>
+            </div>
+
+            <label id="upload-label" for="upload-field">🎨 Begin Your Creative Journey</label>
+            <input type="file" id="upload-field" accept="image/*">
+          </div>
+
+          <div id="hit" class="square-block">
+            <canvas class="square-block" id="pic" width="1000" height="1000"></canvas>
+            <div id="canvases">
+              <canvas class="square-block" id="hit-applied" width="1000" height="1000"></canvas>
+              <canvas class="square-block" id="hit-drawing" width="1000" height="1000"></canvas>
+            </div>
+            <!-- Using create version instructions -->
+            <div class="instructions-modal" id="hit-instructions">
+              <h3>🎯 Define Your Focal Point</h3>
+              <p>Gently guide your viewer's eye to the essence of your story. Paint over the area that holds the key to your narrative.</p>
+              <p><em>Consider the emotional weight of your choice—what detail will resonate most deeply?</em></p>
+              <button class="button" id="hide-hit-instructions">I Understand ✨</button>
+            </div>
+            <!-- Using create version clue instructions -->
+            <div class="instructions-modal" id="clue-instructions">
+              <h3>📝 Craft Your Narrative Thread</h3>
+              <p>Write a clue that doesn't just describe, but <em>evokes</em>. Let your words paint emotions and spark curiosity.</p>
+              <p>Use <b>[brackets]</b> to emphasize the soul of your message</p>
+              <p><strong>Examples:</strong> "Find the [whisper of autumn]" or "Discover the [hidden smile]"</p>
+              <button class="button" id="hide-clue-instructions">Ready to Write ✍️</button>
+            </div>
+          </div>
+
+          <!-- Message section (always included from holiday version) -->
+          <div id="message" class="square-block">
+            <input id="message-title" placeholder="✨ Your Story's Title"></input>
+            <textarea id="message-body" placeholder="Share the inspiration behind your creation...
+
+What drew you to this moment? 
+What story does this image tell?
+What emotions do you hope to evoke?
+
+Let your words be as beautiful as your image."></textarea>
+            
+            <div class="instructions-modal" id="message-instructions">
+              <h3>🎨 Complete Your Artistic Vision</h3>
+              <p>Add a personal reflection or story to accompany your visual creation. This is where your art becomes truly personal.</p>
+              <p>Choose a theme that complements the mood and atmosphere of your piece.</p>
+              <button class="button" id="hide-message-instructions">Perfect ✨</button>
+            </div>
+            <div class="instructions-modal" id="theme-select">
+              <div>
+                <p><strong>🎨 Select Your Aesthetic:</strong></p>
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjx0ZXh0IHg9IjIwIiB5PSIyNSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmaWxsPSJibGFjayIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Tm9uZTwvdGV4dD4KPC9zdmc+" data-value="none"/>
+                <img src="../img/themes/icons/1.jpg" data-value="1"/>
+                <img src="../img/themes/icons/2.jpg" data-value="2"/>
+                <img src="../img/themes/icons/3.jpg" data-value="3"/>
+                <img src="../img/themes/icons/4.jpg" data-value="4"/>
+                <img src="../img/themes/icons/5.jpg" data-value="5"/>
+                <img src="../img/themes/icons/6.jpg" data-value="6"/>
+                <img src="../img/themes/icons/7.jpg" data-value="7"/>
+                <img src="../img/themes/icons/8.jpg" data-value="8"/>
+                <img src="../img/themes/icons/9.jpg" data-value="9"/>
+                <img src="../img/themes/icons/10.jpg" data-value="10"/>
+                <img src="../img/themes/icons/11.jpg" data-value="11"/>
+                <img src="../img/themes/icons/12.jpg" data-value="12"/>
+              </div>
+            </div>
+          </div>
+
+          <div id="confirm" class="square-block">
+            <div class="artistic-completion">
+              <h2>🌟 Your Visual Story is Complete</h2>
+              <div class="creation-celebration">
+                <p class="artistic-quote">"Art is not what you see, but what you make others see." - Edgar Degas</p>
+              </div>
+              <p>Your interactive visual narrative is ready to inspire and captivate. Share this unique creation and let others experience the story you've woven.</p>
+              <div class="share-gallery">
+                <p><strong>🔗 Your Creation:</strong></p>
+                <a id="puzzle-link" href="#" target="puzzle" class="artwork-link"></a>
+                <div class="sharing-options">
+                  <button class="share-btn elegant">📋 Copy Link</button>
+                  <button class="share-btn elegant">🐦 Share Story</button>
+                  <button class="share-btn elegant">📘 Showcase Art</button>
+                </div>
+              </div>
+              <p class="artistic-footer">✨ Every view is a new interpretation • 🎨 Every discovery is a shared moment • 💫 Every story matters</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="controls horizontal-block" id="hit-controls">
+          <button class="button secondary" id="change-image">🔄 Choose Different Image</button>
+          <button class="button secondary" id="clear-hit">🗑️ Refine Focus</button>
+          <button class="button primary" id="submit-hit">Continue Creating 🎨</button>
+        </div>
+
+        <div class="controls horizontal-block" id="clue-controls">
+          <input type="text" id="clue-field" placeholder="✍️ Write your evocative clue here...">
+          <button class="button primary" id="submit-clue">Weave the Story ✨</button>
+        </div>
+
+        <div class="controls horizontal-block" id="message-controls">
+          <button class="button secondary" id="show-themes-button">🎨 Change Aesthetic</button>
+          <button class="button primary" id="submit-message">Complete Artwork 🌟</button>
+        </div>
+      
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script type="module" src="script.js"></script>
+    <script type="module" src="hitArea.js"></script>
+  </body>
+</html>
