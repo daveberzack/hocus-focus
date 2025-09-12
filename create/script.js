@@ -71,7 +71,7 @@ const submit = async () => {
   $("#submit-message").text("Sending");
 
   // Use conditional endpoint based on mode
-  const url = `https://cerulean-api.onrender.com/challenge`;
+  const url = `https://cerulean-api.onrender.com/api/hocus-focus/challenge`;
   
   const response = await fetch(url, {
     method: "POST",
