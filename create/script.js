@@ -41,32 +41,29 @@ const deserializeHitAreas = (tokenString) => {
 const submit = async () => {
   const clue = $("#clue-field").val();
   const canvas = document.getElementById("pic");
-  const image = canvas.toDataURL('image/jpeg', .4);
   
-  // Base data structure
-  const data = {
-    clue,
-    image,
-    hitAreas: serializeHitAreas(strokes), // Store as tokenized string
-    mode
-  };
+  // Convert canvas to blob for proper file upload
+  const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/jpeg', 0.4));
+  
+  // Create FormData for multipart upload
+  const formData = new FormData();
+  formData.append('image', blob, 'puzzle-image.jpg');
+  formData.append('clue', clue);
+  formData.append('hitAreas', serializeHitAreas(strokes));
+  formData.append('mode', mode);
 
   // Add mode-specific data
   if (mode === 'create') {
-    Object.assign(data, {
-      credit: $("#credit-field").val(),
-      creditUrl: $("#credit-url-field").val(),
-      date: $("#date-field").val(),
-      difficulty: $("#difficulty").val()
-    });
+    formData.append('credit', $("#credit-field").val());
+    formData.append('creditUrl', $("#credit-url-field").val());
+    formData.append('date', $("#date-field").val());
+    formData.append('difficulty', $("#difficulty").val());
   }
 
   // Always include message/theme data (from holiday version)
-  Object.assign(data, {
-    theme,
-    beforeMessage: $("#message-body").val().replace(/(?:\r\n|\r|\n)/g, '<br>'),
-    beforeTitle: $("#message-title").val()
-  });
+  formData.append('theme', theme);
+  formData.append('beforeMessage', $("#message-body").val().replace(/(?:\r\n|\r|\n)/g, '<br>'));
+  formData.append('beforeTitle', $("#message-title").val());
 
   $("#submit-message").text("Sending");
 
@@ -76,14 +73,11 @@ const submit = async () => {
   const response = await fetch(url, {
     method: "POST",
     mode: "cors",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
+    body: formData, // Send FormData directly, don't set Content-Type header
   });
   const newChallenge = await response.json();
   showConfirm(newChallenge._id);
-}; 
+};
 
 // File upload handler
 const uploadField = document.getElementById("upload-field");
