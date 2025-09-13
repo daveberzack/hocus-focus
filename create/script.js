@@ -29,14 +29,6 @@ const serializeHitAreas = (strokes) => {
   ).join('|');
 };
 
-// Deserialize hit areas from tokenized string
-const deserializeHitAreas = (tokenString) => {
-  if (!tokenString) return [];
-  return tokenString.split('|').map(token => {
-    const [x1, y1, x2, y2] = token.split(',').map(Number);
-    return { x1, y1, x2, y2, w: 12 }; // Default width of 12 (since it's stored as percentage)
-  });
-};
 
 const submit = async () => {
   const clue = $("#clue-field").val();
@@ -44,26 +36,16 @@ const submit = async () => {
   
   // Convert canvas to blob for proper file upload
   const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/jpeg', 0.4));
-  
+
   // Create FormData for multipart upload
   const formData = new FormData();
   formData.append('image', blob, 'puzzle-image.jpg');
   formData.append('clue', clue);
-  formData.append('hitAreas', serializeHitAreas(strokes));
+  formData.append('hitareas', serializeHitAreas(strokes)); 
+  formData.append('before_message_body', $("#message-body").val().replace(/(?:\r\n|\r|\n)/g, '<br>')); 
+  formData.append('before_message_title', $("#message-title").val()); 
   formData.append('mode', mode);
-
-  // Add mode-specific data
-  if (mode === 'create') {
-    formData.append('credit', $("#credit-field").val());
-    formData.append('creditUrl', $("#credit-url-field").val());
-    formData.append('date', $("#date-field").val());
-    formData.append('difficulty', $("#difficulty").val());
-  }
-
-  // Always include message/theme data (from holiday version)
   formData.append('theme', theme);
-  formData.append('beforeMessage', $("#message-body").val().replace(/(?:\r\n|\r|\n)/g, '<br>'));
-  formData.append('beforeTitle', $("#message-title").val());
 
   $("#submit-message").text("Sending");
 

@@ -119,7 +119,7 @@ const loadTutorialChallenges = async () => {
  * Handle specified challenge from URL parameters
  * @returns {Promise<Challenge|null>} Challenge object or null if none specified
  */
-const handleSpecifiedChallenge = async () => {
+const handleSpecifiedLocalChallenge = async () => {
 
   const allChallenges = await loadLocalChallenges();
 
@@ -127,7 +127,7 @@ const handleSpecifiedChallenge = async () => {
   const specifiedKey = getParameter("key");
   if (!specifiedDate && !specifiedKey) return null;
 
-  let specifiedChallenge;
+  let specifiedChallenge = null;
 
   try {
     validateUrlParameter(specifiedDate, 'date');
@@ -148,6 +148,31 @@ const handleSpecifiedChallenge = async () => {
     return null;
   }
 };
+
+/**
+ * Handle specified challenge from URL parameters
+ * @returns {Promise<Challenge|null>} Challenge object or null if none specified
+ */
+const handleSpecifiedDatabaseChallenge = async () => {
+  const specifiedId = getParameter("id");
+  if (!specifiedId) return null;
+
+  try {
+    const url = `https://cerulean-api.onrender.com/api/hocus-focus/challenge/`+specifiedId;
+    const response = await fetch(url, {
+      method: "GET",
+      mode: "cors",
+    });
+    const challenge = await response.json();
+
+    challenge.isSpecified = true;
+    return challenge;
+    
+  } catch (error) {
+    return null;
+  }
+};
+
 
 /**
  * Handle tutorial progression logic
@@ -280,27 +305,13 @@ const getNextChallenge = async () => {
     let challenge = null;
     
     // Handle challenges in priority order
-    const specifiedChallenge = await handleSpecifiedChallenge();
-    if (specifiedChallenge) {
-      challenge = specifiedChallenge;
-    } else {
-      const tutorialChallenge = await handleTutorialProgression(results);
-      if (tutorialChallenge) {
-        challenge = tutorialChallenge;
-      } else {
-        const dailyChallenge = await handleDailyChallenge(results);
-        if (dailyChallenge) {
-          challenge = dailyChallenge;
-        } else {
-          const archiveChallenge = await handleArchiveChallenge(results);
-          if (archiveChallenge) {
-            challenge = archiveChallenge;
-          } else {
-            challenge = getErrorChallenge();
-          }
-        }
-      }
-    }
+    challenge = await handleSpecifiedLocalChallenge();
+    if (!challenge) challenge = await handleSpecifiedDatabaseChallenge();
+    if (!challenge) challenge = await handleTutorialProgression(results);
+    if (!challenge) challenge = await handleDailyChallenge(results);
+    if (!challenge) challenge = await handleArchiveChallenge(results);
+    if (!challenge) challenge = await handleArchiveChallenge(results); 
+    if (!challenge) challenge = getErrorChallenge();
     
     // Parse hitAreas if it's a tokenized string
     if (challenge && challenge.hitAreas && typeof challenge.hitAreas === 'string') {
