@@ -21,13 +21,20 @@ class Canvas {
       self.isSourceLoaded = true;
     };
     
-    // Handle both tutorial challenges (with imageUrl) and regular challenges (with imageKey)
+    // Handle different image sources:
+    // - tutorial challenges (with imageUrl)
+    // - regular challenges (with imageKey)
+    // - database challenges (with image data)
     if (challenge.imageUrl) {
       sourceImage.src = challenge.imageUrl;
     } else if (challenge.imageKey) {
       sourceImage.src = "./data/images/"+challenge.imageKey+".jpeg";
+    } else if (challenge.image_base64) {
+      // Handle database-stored images (base64 data URL or blob URL)
+      //sourceImage.src = challenge.image_base64;
+      sourceImage.src = `data:image/jpeg;base64,${challenge.image_base64}`;
     } else {
-      console.error("Challenge has no imageUrl or imageKey:", challenge);
+      console.error("Challenge has no imageUrl, imageKey, or image data:", challenge);
     }
 
     const $hitElement = $("#hit");
