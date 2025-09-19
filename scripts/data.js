@@ -58,6 +58,16 @@ const parseHitAreas = (tokenString) => {
 };
 
 /**
+ * Parse tokenized goals string back into array of numbers
+ * @param {string} tokenString - Tokenized string like "15,30,45,60,90"
+ * @returns {Array} Array of goal numbers
+ */
+const parseGoals = (tokenString) => {
+  if (!tokenString || typeof tokenString !== 'string') return [];
+  return tokenString.split(',').map(Number);
+};
+
+/**
  * Get today's date in YYMMDD format
  * @returns {string} Date string in YYMMDD format
  */
@@ -79,12 +89,7 @@ const loadLocalChallenges = async () => {
   }
   
   try {
-    const response = await fetch(ENDPOINTS.LOCAL_CHALLENGES);
-    if (!response.ok) {
-      throw new NetworkError(`Failed to load challenges file: ${response.status}`, ENDPOINTS.LOCAL_CHALLENGES, response.status);
-    }
-    
-    cachedChallenges = await response.json();
+    cachedChallenges = await getJSON(ENDPOINTS.LOCAL_CHALLENGES);
     return cachedChallenges;
     
   } catch (error) {
@@ -102,12 +107,7 @@ const loadTutorialChallenges = async () => {
   }
   
   try {
-    const response = await fetch(ENDPOINTS.TUTORIAL_CHALLENGES);
-    if (!response.ok) {
-      throw new NetworkError(`Failed to load challenges file: ${response.status}`, ENDPOINTS.TUTORIAL_CHALLENGES, response.status);
-    }
-    
-    cachedTutorialChallenges = await response.json();
+    cachedTutorialChallenges = await getJSON(ENDPOINTS.TUTORIAL_CHALLENGES);
     return cachedTutorialChallenges;
     
   } catch (error) {
@@ -153,19 +153,26 @@ const handleSpecifiedLocalChallenge = async () => {
  * Handle specified challenge from URL parameters
  * @returns {Promise<Challenge|null>} Challenge object or null if none specified
  */
+let hasLoadedSpecifiedChallenge = false;
 const handleSpecifiedDatabaseChallenge = async () => {
   const specifiedId = getParameter("id");
-  if (!specifiedId) return null;
-
+  if (!specifiedId || hasLoadedSpecifiedChallenge) return null;
   try {
-    const url = `https://cerulean-api.onrender.com/api/hocus-focus/challenge/`+specifiedId;
-    const response = await fetch(url, {
-      method: "GET",
-      mode: "cors",
-    });
-    const challenge = await response.json();
+    const url = `${CONFIG.API_BASE_URL}/api/hocus-focus/challenge/${specifiedId}`;
+    const challenge = await getJSON(url);
 
+    // Parse tokenized strings to match local challenge format
+    if (challenge.hitareas && typeof challenge.hitareas === 'string') {
+      challenge.hitAreas = parseHitAreas(challenge.hitareas);
+    }
+    
+    if (challenge.goals && typeof challenge.goals === 'string') {
+      challenge.goals = parseGoals(challenge.goals);
+    }
+
+    // Use the challenge ID as the date for tracking completion
     challenge.isSpecified = true;
+    hasLoadedSpecifiedChallenge=true;
     return challenge;
     
   } catch (error) {
@@ -336,6 +343,8 @@ const getNextChallenge = async () => {
  * @throws {ValidationError|DatabaseError} When validation fails or database operation fails
  */
 async function saveGameResult(challengeDate, timePassed, mistakes, stars) {
+  if (!challengeDate) return;
+  
   try {
     // Create and validate the result object
     const newResult = { 

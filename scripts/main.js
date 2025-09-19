@@ -113,10 +113,13 @@ export const reset = async () => {
 };
 
 function showBeforeMessage() {
-  $("#before-message .title").show().html(challenge.beforeMessages[nextBeforeMessage].title);
-  $("#before-message .content").show().html(challenge.beforeMessages[nextBeforeMessage].body);
-  $("#before-message button").show().html(challenge.beforeMessages[nextBeforeMessage].button);
-  const imageUrl = challenge.beforeMessages[nextBeforeMessage]?.backgroundImageUrl;
+  const data = challenge.beforeMessages[nextBeforeMessage];
+  $("#before-message .title").show().html(data.title);
+  $("#before-message .content").show().html(data.body);
+  $("#before-message button").show().html(data.button);
+  let imageUrl = data.backgroundImageUrl;
+  if (!imageUrl && data.theme) imageUrl = "./img/themes/bgs/"+data.theme+".jpg";
+  
   if (imageUrl) $("#before-message").css("background-image", "url(" + imageUrl + ")");
   else $("#before-message").css("background-image", "none");
   showView("before-message");

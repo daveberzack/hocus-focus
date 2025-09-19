@@ -3,7 +3,7 @@
  */
 
 // Environment detection
-const isDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+const isDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.hostname === '';
 
 /**
  * @typedef {Object} AppConfig
@@ -17,7 +17,7 @@ const isDevelopment = window.location.hostname === 'localhost' || window.locatio
 export const CONFIG = {
   // API Configuration
   API_BASE_URL: isDevelopment
-    ? 'http://localhost:5000'
+    ? 'http://localhost:8000'
     : 'https://hocus-focus-api.onrender.com',
   
   // Database Configuration

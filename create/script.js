@@ -1,4 +1,5 @@
 import { strokes, clearStrokes, setHitActive, startHitInterval, clearHitInterval } from "./hitArea.js";
+import { CONFIG } from "../scripts/config.js";
 
 // Detect mode from URL parameter (default to 'create')
 const urlParams = new URLSearchParams(window.location.search);
@@ -46,11 +47,14 @@ const submit = async () => {
   formData.append('before_message_title', $("#message-title").val()); 
   formData.append('mode', mode);
   formData.append('theme', theme);
+  formData.append('goals','30,60,90,120,150');  
+  formData.append('before_message_button', "PLAY"); 
+
 
   $("#submit-message").text("Sending");
 
   // Use conditional endpoint based on mode
-  const url = `https://cerulean-api.onrender.com/api/hocus-focus/challenge`;
+  const url = `${CONFIG.API_BASE_URL}/api/hocus-focus/challenge`;
   
   const response = await fetch(url, {
     method: "POST",
@@ -58,7 +62,7 @@ const submit = async () => {
     body: formData, // Send FormData directly, don't set Content-Type header
   });
   const newChallenge = await response.json();
-  showConfirm(newChallenge._id);
+  showConfirm(newChallenge.id);
 };
 
 // File upload handler
@@ -204,7 +208,7 @@ const showConfirm = (id) => {
   $("#message, #message-controls").hide(); 
   clearHitInterval();
   $("#confirm").show(); 
-  const url = "www.hocusfocus.fun?id=" + id;
+  const url = "hocusfocus.daveberzack.com?id=" + id;
   $("#puzzle-link").text(url).attr("href", "https://" + url);
 };
 
